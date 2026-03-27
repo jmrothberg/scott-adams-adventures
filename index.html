@@ -765,31 +765,39 @@ async function newGame() {
   const file = document.getElementById('game-select').value;
   currentGameId = file.replace('.dat', '');
   try {
-    const resp = await fetch('Game_Data/' + file);
-    if (!resp.ok) throw new Error('Could not load ' + file);
-    const text = await resp.text();
-    const game = parseGameData(text);
+    var text;
+    try {
+      var resp = await fetch('Game_Data/' + file);
+      if (!resp.ok) throw new Error('fetch failed');
+      text = await resp.text();
+    } catch(fetchErr) {
+      // Fallback: XHR works on file:// in Safari and some browsers
+      text = await new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'Game_Data/' + file);
+        xhr.onload = function() { resolve(xhr.responseText); };
+        xhr.onerror = function() { reject(new Error('Could not load ' + file)); };
+        xhr.send();
+      });
+    }
+    if (!text || text.length < 10) throw new Error('Empty or missing file');
+    var game = parseGameData(text);
     engine = new Engine(game);
     clearMapState();
     clearOut();
-    const out = engine.turn('');
+    var out = engine.turn('');
     appendOut(out);
     showRoomImg(engine.roomNum);
     recordMapState();
     cmdEl.focus();
   } catch(e) {
     clearOut();
-    if (location.protocol === 'file:') {
-      appendOut('Error loading game: browser blocked file access.\n\n' +
-        'Option 1 — Local server (one command):\n' +
-        '  cd ' + location.pathname.replace(/\/[^\/]*$/, '') + '\n' +
-        '  python3 -m http.server 8090\n' +
-        '  Then open http://localhost:8090\n\n' +
-        'Option 2 — Play online:\n' +
-        '  https://jmrothberg.github.io/scott-adams-adventures/');
-    } else {
-      appendOut('Error loading game: ' + e.message + '\nMake sure game .dat files are in the Game_Data folder.');
-    }
+    appendOut('Error loading game: ' + e.message + '\nMake sure game .dat files are in the Game_Data folder.\n\n' +
+      'If opened from a local file, try:\n' +
+      '  python3 -m http.server 8090\n' +
+      '  then open http://localhost:8090\n\n' +
+      'Or play online:\n' +
+      '  https://jmrothberg.github.io/scott-adams-adventures/');
   }
 }
 
