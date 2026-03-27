@@ -671,23 +671,26 @@ function appendOut(text) {
 function clearOut() { outputEl.innerHTML = ''; }
 
 function showRoomImg(num) {
+  // Remove previous room image and map (only latest visible)
+  outputEl.querySelectorAll('.room-img, .inline-map').forEach(el => el.remove());
   const pad = String(num).padStart(2, '0');
   const url = 'images/' + currentGameId + '/room_' + pad + '.png';
-  // Create image inside output div (no gap)
   const img = document.createElement('img');
+  img.className = 'room-img';
   img.src = url;
   img.style.cssText = 'max-width:400px;max-height:250px;margin:2px 0 0;border:1px solid #0f3460;border-radius:4px;display:block';
   img.onerror = function() { this.remove(); };
   outputEl.appendChild(img);
-  // Show inline mini-map next to image
-  showInlineMap();
   outputEl.scrollTop = outputEl.scrollHeight;
 }
 
 function showInlineMap() {
+  // Remove previous image and map — map replaces image
+  outputEl.querySelectorAll('.room-img, .inline-map').forEach(el => el.remove());
   if (!engine || mapVisited.size === 0) return;
   const mapDiv = document.createElement('div');
-  mapDiv.style.cssText = 'max-width:600px;overflow:auto;border:1px solid #0f3460;border-radius:4px;background:#0d0d1a;max-height:250px;margin:2px 0 4px';
+  mapDiv.className = 'inline-map';
+  mapDiv.style.cssText = 'max-width:600px;overflow:auto;max-height:300px;margin:2px 0 4px';
   mapDiv.innerHTML = buildMapSvg();
   outputEl.appendChild(mapDiv);
 }
