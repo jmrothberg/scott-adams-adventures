@@ -18,6 +18,15 @@ button:hover{background:#1a4a8a}
 #output::-webkit-scrollbar-thumb{background:#0f3460}
 #room-img{max-width:400px;max-height:250px;display:none;margin:5px 0;border:1px solid #0f3460;border-radius:4px}
 .treasure{color:#ffd700}
+.llm-enhanced{color:#c8a85a;font-style:italic;border-left:2px solid rgba(200,168,90,0.2);padding-left:8px;margin-top:4px;font-size:14px}
+.llm-translated{color:#666;font-size:12px;margin-top:2px}
+#llm-toggle{transition:border-color 0.3s,color 0.3s}
+#llm-toggle.active{border-color:#c8a85a;color:#c8a85a}
+#llm-toggle.loading{border-color:#ffc46e;color:#ffc46e;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+#llm-progress{height:3px;background:#333;margin-top:4px;display:none;border-radius:2px;overflow:hidden;width:200px}
+#llm-progress-bar{height:100%;background:#6eb5ff;width:0%;transition:width 0.3s}
+#llm-model{font-size:12px}
 #input-row{display:flex;align-items:center;border-top:1px solid #0f3460;padding-top:8px;margin-top:4px}
 #prompt{color:#e94560;margin-right:8px;font-size:15px}
 #cmd{flex:1;background:transparent;border:none;outline:none;color:#00ff41;font-family:inherit;font-size:15px;caret-color:#00ff41}
@@ -59,6 +68,13 @@ button:hover{background:#1a4a8a}
   <button onclick="saveGame()">Save</button>
   <button onclick="loadGame()">Load</button>
   <button onclick="showMap()">Map</button>
+  <select id="llm-model" style="display:none">
+    <option value="Qwen3-1.7B-q4f16_1-MLC">Qwen3 1.7B</option>
+    <option value="Qwen3-0.6B-q4f16_1-MLC">Qwen3 0.6B (light)</option>
+  </select>
+  <button id="llm-toggle" onclick="window.toggleLLM && window.toggleLLM()">Classic</button>
+  <span id="llm-status" style="font-size:11px;color:#666"></span>
+  <div id="llm-progress"><div id="llm-progress-bar"></div></div>
 </div>
 <div id="game-area">
   <div id="output"></div>
@@ -69,7 +85,7 @@ button:hover{background:#1a4a8a}
   </div>
 </div>
 <div id="help-bar">
-  N/S/E/W/U/D=move | I=inventory | L=look | GET/DROP item | SAVE/LOAD/QUIT | MAP=show map | Images: add images/&lt;game&gt;/room_NN.png
+  N/S/E/W/U/D=move | I=inventory | L=look | GET/DROP item | SAVE/LOAD/QUIT | MAP=show map | HINT=get help | Classic/LLM toggle for natural language
 </div>
 
 <!-- Map overlay -->
@@ -506,8 +522,8 @@ class Engine {
 const outputEl = document.getElementById('output');
 const cmdEl = document.getElementById('cmd');
 const imgEl = document.getElementById('room-img');
-let engine = null;
-let currentGameId = 'adv01';
+var engine = null;
+var currentGameId = 'adv01';
 
 /* ===== MAP STATE ===== */
 let mapVisited = new Set();
@@ -895,5 +911,6 @@ cmdEl.addEventListener('keydown', e => {
 // Auto-start Adventureland
 newGame();
 </script>
+<script type="module" src="llm-enhanced.js"></script>
 </body>
 </html>
