@@ -991,6 +991,20 @@ cmdEl.addEventListener('keydown', e => {
 // Auto-start Adventureland
 newGame();
 </script>
+<script>
+// Detect file:// protocol and warn
+if (location.protocol === 'file:') {
+  document.getElementById('output').innerHTML = '<div style="color:#e94560;padding:20px;line-height:1.6">' +
+    '<b>Cannot open directly as a file.</b><br><br>' +
+    'The game needs a local web server to load .dat files.<br><br>' +
+    '<b>Option 1 — Local server (one command):</b><br>' +
+    '<span style="color:#00ff41">python3 -m http.server 8090</span><br>' +
+    'Then open <span style="color:#6eb5ff">http://localhost:8090</span><br><br>' +
+    '<b>Option 2 — Play online:</b><br>' +
+    '<span style="color:#6eb5ff">https://jmrothberg.github.io/scott-adams-adventures/</span>' +
+    '</div>';
+}
+</script>
 <script type="module" src="llm-enhanced.js"></script>
 </body>
 </html>
