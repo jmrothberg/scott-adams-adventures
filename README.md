@@ -61,27 +61,41 @@ Play all 17 classic Scott Adams text adventures (1978-84) right in your browser.
 
 The interpreter supports optional images for each room. When an image exists, it displays automatically. When it doesn't, nothing happens - the game works fine either way.
 
-### Image format
+### Image folder structure
+
+Each game has its own image folder, named after the `.dat` file:
 
 ```
-images/room_NN.png
+images/
+  adv01/
+    room_01.png    <- Adventureland room 1 (dismal swamp)
+    room_02.png    <- Adventureland room 2 (top of cypress tree)
+    ...
+  adv02/
+    room_01.png    <- Pirate Adventure room 1 (flat in London)
+    room_06.png    <- Pirate Adventure room 6 (sandy beach)
+    ...
+  quest1/
+    room_01.png    <- The Hulk room 1
+    ...
 ```
 
-Where `NN` is the **two-digit room number** (zero-padded): `room_00.png`, `room_01.png`, etc.
+Room numbers are **two-digit, zero-padded** (`room_01.png`, not `room_1.png`). You don't need images for every room — missing images are silently skipped.
 
-### Per-game images
+### Per-game image guides
 
-Since each game has its own set of rooms, images are loaded based on the **currently active game's room numbers**. To support images for multiple games, you can organize them in subfolders and the interpreter will look in `images/`:
+The `image_guides/` folder has a markdown file for each game listing every room with a description suitable as an image generation prompt. For example, `image_guides/adv01_adventureland.md` lists all 33 rooms with descriptions like:
 
-To generate images, see the per-game room guides in the `image_guides/` folder. Each guide lists every room with a description suitable for use as an image generation prompt.
+> **room_01.png** — Dismal swamp: A dark, foggy swamp with gnarled trees, murky water, hanging moss, and an oppressive grey-green atmosphere.
 
 ### Quick start for adding images
 
 1. Pick a game (e.g., Adventureland = `adv01.dat`)
-2. Open `image_guides/adv01_adventureland.md` for the room list and image prompts
+2. Open `image_guides/adv01_adventureland.md` for the room list and prompts
 3. Generate images using your preferred diffusion model (Stable Diffusion, DALL-E, Midjourney, etc.)
-4. Save as `images/room_01.png`, `images/room_02.png`, etc.
-5. Push to the repo - they'll appear in the game automatically
+4. Create the folder `images/adv01/`
+5. Save images as `room_01.png`, `room_02.png`, etc. inside that folder
+6. Push to the repo — they'll appear in the game automatically
 
 **Recommended style:** Pixel art or retro illustration, 400x250px or similar landscape ratio, to match the 1980s adventure game aesthetic.
 

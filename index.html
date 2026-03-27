@@ -59,7 +59,7 @@ button:hover{background:#1a4a8a}
   </div>
 </div>
 <div id="help-bar">
-  N/S/E/W/U/D=move | I=inventory | L=look | GET/DROP item | SAVE/LOAD/QUIT | Images: add images/room_NN.png
+  N/S/E/W/U/D=move | I=inventory | L=look | GET/DROP item | SAVE/LOAD/QUIT | Images: add images/&lt;game&gt;/room_NN.png
 </div>
 
 <script>
@@ -485,6 +485,7 @@ const outputEl = document.getElementById('output');
 const cmdEl = document.getElementById('cmd');
 const imgEl = document.getElementById('room-img');
 let engine = null;
+let currentGameId = 'adv01';
 
 function appendOut(text) {
   // Highlight treasures
@@ -499,13 +500,14 @@ function clearOut() { outputEl.innerHTML = ''; }
 
 function showRoomImg(num) {
   const pad = String(num).padStart(2, '0');
-  imgEl.src = 'images/room_' + pad + '.png';
+  imgEl.src = 'images/' + currentGameId + '/room_' + pad + '.png';
   imgEl.style.display = 'block';
   imgEl.onerror = function() { this.style.display = 'none'; };
 }
 
 async function newGame() {
   const file = document.getElementById('game-select').value;
+  currentGameId = file.replace('.dat', '');
   try {
     const resp = await fetch(file);
     if (!resp.ok) throw new Error('Could not load ' + file);
