@@ -1,6 +1,6 @@
 # Scott Adams Adventures - Browser Edition
 
-Play all 17 classic Scott Adams text adventures (1978-84) right in your browser. These are the original TRS-80 / Apple II era games that launched the home computer adventure game genre.
+Play all 17 classic Scott Adams text adventures (1978-84) right in your browser. Created by Jonathan Rothberg using the original Scott Adams game data files. The originals ran as Level II BASIC programs on the TRS-80, reading from separate data files. This project replaces the BASIC interpreter with HTML and JavaScript, and adds AI-generated room images to bring the classic text descriptions to life.
 
 ## Play Now
 
@@ -126,9 +126,10 @@ After generating, commit and push to see them on GitHub Pages.
 
 ## Credits
 
-- All games (c) 1978-1984 by Scott Adams / Adventure International
+- **Browser edition** by Jonathan Rothberg (2026) — HTML/JavaScript interpreter and AI-generated room images
+- **Original games** (c) 1978-1984 by Scott Adams / Adventure International
 - Games written by Scott Adams, with contributions from Alexis Adams, Alvin Files, Russ Wetmore, William Demas, and Phillip Case
 - Data files in ScottFree format, converted by Paul David Doherty
-- Browser interpreter built 2026
+- Room images generated with SDXL Turbo using prompts derived from the original game data
 
 These games are shareware. See `0readme.txt` for the original shareware notice.
