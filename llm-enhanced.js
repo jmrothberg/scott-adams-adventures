@@ -11,9 +11,71 @@
  *
  * Toggle button switches between Classic (unchanged) and LLM Enhanced mode.
  * Works without WebGPU — falls back to Classic mode gracefully.
+ *
+ * Offline use: put MLC model files under webllm-assets/ (see README). Optional: copy
+ * npm package to vendor/mlc-ai-web-llm so this script loads without the CDN.
  */
 
-import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.82/lib/index.js";
+const webllm = await (async function loadWebLLM() {
+  try {
+    return await import(new URL('./vendor/mlc-ai-web-llm/lib/index.js', import.meta.url));
+  } catch (e) {
+    console.warn('[LLM] vendor/mlc-ai-web-llm missing — using CDN (needs network for this script).', e);
+    return await import('https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.82/lib/index.js');
+  }
+})();
+
+/** Prebuilt wasm filenames for the two models in index.html (must match @mlc-ai/web-llm 0.2.x). */
+const WASM_BY_MODEL_ID = {
+  'Qwen3-1.7B-q4f16_1-MLC': 'Qwen3-1.7B-q4f16_1-ctx4k_cs1k-webgpu.wasm',
+  'Qwen3-0.6B-q4f16_1-MLC': 'Qwen3-0.6B-q4f16_1-ctx4k_cs1k-webgpu.wasm',
+};
+
+let cachedAppConfig = null;
+
+/** If webllm-assets/<model_id>/resolve/main/ exists, point that model at disk + local wasm (HF-style path; see scripts/ensure-webllm-resolve-layout.mjs). */
+async function buildMergedAppConfig() {
+  const base = webllm.prebuiltAppConfig;
+  const modelsDir = new URL('webllm-assets/', window.location.href);
+  const wasmDir = new URL('webllm-assets/wasm/', window.location.href);
+  const list = base.model_list.map((r) => ({ ...r }));
+  let anyLocal = false;
+  for (const modelId of Object.keys(WASM_BY_MODEL_ID)) {
+    const wasmName = WASM_BY_MODEL_ID[modelId];
+    try {
+      // WebLLM cleanModelUrl() appends resolve/main/ unless already present — local static server must serve that path (symlink from ensure-webllm-resolve-layout.mjs).
+      const cfgUrl = new URL(modelId + '/resolve/main/mlc-chat-config.json', modelsDir).href;
+      const r = await fetch(cfgUrl);
+      if (!r.ok) continue;
+      const idx = list.findIndex((m) => m.model_id === modelId);
+      if (idx < 0) continue;
+      list[idx] = {
+        ...list[idx],
+        model: new URL(modelId + '/resolve/main/', modelsDir).href,
+        model_lib: new URL(wasmName, wasmDir).href,
+      };
+      anyLocal = true;
+      console.log('[LLM] Local webllm-assets for', modelId);
+    } catch (err) {
+      console.warn('[LLM] Skip local bundle for', modelId, err);
+    }
+  }
+  if (anyLocal) {
+    console.log('[LLM] Model weights + wasm: loaded from this site (webllm-assets/) — local/offline-capable.');
+  } else {
+    console.log('[LLM] Model weights: default Hugging Face URLs (typical for GitHub Pages). WebLLM JS: ./vendor if present, else CDN.');
+  }
+  return {
+    ...base,
+    model_list: list,
+    useIndexedDBCache: anyLocal ? true : base.useIndexedDBCache,
+  };
+}
+
+async function getAppConfig() {
+  if (!cachedAppConfig) cachedAppConfig = await buildMergedAppConfig();
+  return cachedAppConfig;
+}
 
 // ============================================================
 // STATE
@@ -79,6 +141,7 @@ async function loadModel() {
 
   try {
     llmEngine = await webllm.CreateMLCEngine(modelId, {
+      appConfig: await getAppConfig(),
       initProgressCallback: (report) => {
         statusEl.textContent = report.text || '';
         // Try to extract percentage from report text

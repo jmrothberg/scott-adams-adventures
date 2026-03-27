@@ -12,6 +12,66 @@ In-browser LLM experiment (WebGPU), **not** the adventure game:
 **https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html**  
 Details: [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
 
+### Offline LLM Enhanced (Qwen3, no internet)
+
+The game’s **LLM Enhanced** mode uses [WebLLM](https://webllm.mlc.ai/) in the browser. By default it loads the library from a CDN and model weights from Hugging Face. To make it **fully offline** on this machine **or a new computer** after one online setup:
+
+**One command (from the repo root, needs network once — large download):**
+
+```bash
+npm install
+npm run setup-offline-llm
+```
+
+This runs `scripts/setup-offline-llm.mjs`, which:
+
+- Installs `node_modules` and copies **`vendor/mlc-ai-web-llm/`** (so `llm-enhanced.js` does not need the CDN for the library).
+- Downloads the two **WebGPU `.wasm`** files into **`webllm-assets/wasm/`**.
+- Downloads both dropdown models (**Qwen3 1.7B** and **0.6B** MLC builds) into **`webllm-assets/<model_id>/`** using **`hf download`** (or **`huggingface-cli download`**), otherwise **`python3 scripts/hf_download.py`** (requires `pip install huggingface_hub`).
+
+Re-run the same command if a download **times out** — Hugging Face tools **resume** partial folders.
+
+Then serve with `python3 -m http.server` (not `file://`). WebLLM expects Hugging Face–style paths (`.../resolve/main/...`). After download, run **`npm run ensure-webllm-layout`** once (or rely on `setup-offline-llm`, which runs it) so `webllm-assets/<model_id>/resolve/main/` resolves to your files.
+
+#### What lives where (so an LLM or future-you can fix the other machine)
+
+| Path | In git? | Purpose |
+|------|---------|---------|
+| `vendor/mlc-ai-web-llm/` | **Yes** (after commit) | WebLLM JavaScript — **no CDN** needed if this folder exists. |
+| `node_modules/` | No | From `npm install` — small; uses `package-lock.json`. |
+| `webllm-assets/` | **No** (~1GB+) | Model weights + `.wasm` — **must** be copied or downloaded (see checklist). |
+
+#### GitHub Pages vs your computer
+
+- **Published site** (e.g. `https://jmrothberg.github.io/scott-adams-adventures/`) does **not** include `webllm-assets/` (too large for git). The game **detects** that: if `webllm-assets/.../resolve/main/mlc-chat-config.json` is missing, it uses the **normal Hugging Face** model URLs in the browser — same as before, **no extra setup**. The **WebLLM library** loads from **`vendor/mlc-ai-web-llm/`** in the repo when present (no jsDelivr CDN for that script).
+- **Your machine** with `webllm-assets/` + `npm run ensure-webllm-layout`: weights and wasm are served **from your own URL** (localhost or file server). Open DevTools → **Console** when you enable LLM Enhanced: you’ll see either **`Model weights + wasm: loaded from this site`** (local) or **`Model weights: default Hugging Face URLs`** (GitHub / no local folder).
+
+#### New machine: offline LLM checklist (follow in order)
+
+Use this on a **second computer** so **LLM Enhanced** works **without** relying on a CDN or Hugging Face in the browser. An AI assistant can execute or verify each step.
+
+1. **Clone / copy the repo** into a folder (e.g. `scott-adams-adventures`). Ensure **`vendor/mlc-ai-web-llm/`** exists after `git pull` (it should if `vendor/` was committed on the main machine).
+2. **Install Node dependencies** (from repo root):  
+   `npm install`
+3. **Get `webllm-assets/`** — pick one:
+   - **Copy** the whole `webllm-assets/` directory from the first machine (USB, cloud drive, `rsync`, etc.), **or**
+   - **Download again** (needs internet once):  
+     `npm run setup-offline-llm`  
+     If it errors, install Hugging Face tools (`pip install huggingface_hub` gives `hf` / `huggingface-cli`) and re-run; partial downloads **resume**.
+4. **Confirm files** (paths relative to repo root):
+   - `vendor/mlc-ai-web-llm/lib/index.js` exists  
+   - `webllm-assets/wasm/*.wasm` exists (two files)  
+   - `npm run ensure-webllm-layout` has been run if you copied an **old** flat `webllm-assets/` (creates `resolve/main` links WebLLM needs).
+   - `webllm-assets/Qwen3-1.7B-q4f16_1-MLC/resolve/main/mlc-chat-config.json` exists (same for `Qwen3-0.6B-q4f16_1-MLC` if needed) — or the flat file exists **and** `ensure-webllm-layout` was run.
+5. **Serve over HTTP** (required; `file://` breaks loading):  
+   `python3 -m http.server 8090`  
+   Open **http://localhost:8090** in **Chrome or Edge** (WebGPU).
+6. In the game, click **Classic** / **LLM Enhanced** to enable LLM mode; first load may take a while while the model initializes.
+
+**If LLM mode fails on the new machine:** re-check step 3–4, confirm WebGPU (Chrome), and that nothing blocked `webllm-assets/` (wrong folder name or missing `wasm/`).
+
+**Manual download** (if `npm run setup-offline-llm` fails): same layout as the script — HF repos [`Qwen3-1.7B-q4f16_1-MLC`](https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC) and [`Qwen3-0.6B-q4f16_1-MLC`](https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f16_1-MLC), wasm from [`binary-mlc-llm-libs` `web-llm-models`](https://github.com/mlc-ai/binary-mlc-llm-libs/tree/main/web-llm-models) **`v0_2_80`** into `webllm-assets/wasm/`.
+
 ## How to Play
 
 - **Select a game** from the dropdown menu and click **New Game**

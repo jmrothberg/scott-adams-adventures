@@ -1,0 +1,11 @@
+{
+  "name": "scott-adams-adventures",
+  "private": true,
+  "scripts": {
+    "setup-offline-llm": "node scripts/setup-offline-llm.mjs",
+    "ensure-webllm-layout": "node scripts/ensure-webllm-resolve-layout.mjs"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "0.2.82"
+  }
+}
