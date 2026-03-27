@@ -6,6 +6,12 @@ Play all 17 classic Scott Adams text adventures (1978-84) right in your browser.
 
 **https://jmrothberg.github.io/scott-adams-adventures/**
 
+### WebLLM browser test (separate page)
+
+In-browser LLM experiment (WebGPU), **not** the adventure game:  
+**https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html**  
+Details: [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
+
 ## How to Play
 
 - **Select a game** from the dropdown menu and click **New Game**

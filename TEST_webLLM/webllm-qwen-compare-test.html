@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebLLM Qwen compare (test harness)</title>
+  <style>
+    :root {
+      --bg: #12121a;
+      --panel: #1c1c28;
+      --border: #2a2a3d;
+      --text: #e8e8ef;
+      --muted: #9898a8;
+      --accent: #6eb5ff;
+      --ok: #7dffb2;
+      --warn: #ffc46e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, Segoe UI, Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+    }
+    header h1 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 600; }
+    header p { margin: 0; color: var(--muted); font-size: 0.85rem; max-width: 900px; }
+    main { padding: 16px 20px 32px; max-width: 1400px; margin: 0 auto; }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 12px; }
+    label { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 4px; }
+    input[type="text"], textarea, select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+    }
+    textarea { min-height: 72px; resize: vertical; }
+    button {
+      background: var(--border);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    button.primary { background: #2a3f5c; border-color: var(--accent); }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--panel);
+    }
+    .panel h2 { margin: 0 0 10px; font-size: 0.95rem; color: var(--accent); }
+    .status { font-size: 12px; color: var(--muted); min-height: 1.2em; margin-top: 6px; }
+    .status.loading { color: var(--warn); }
+    .status.err { color: #ff8a8a; }
+    .out {
+      margin-top: 10px;
+      padding: 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      min-height: 120px;
+      max-height: 360px;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+    }
+    .meta { font-size: 11px; color: var(--muted); margin-top: 8px; }
+    #gpu-banner {
+      padding: 10px 20px;
+      background: #3a2a1a;
+      color: var(--warn);
+      font-size: 13px;
+      display: none;
+    }
+    #gpu-banner.visible { display: block; }
+  </style>
+</head>
+<body>
+  <div id="gpu-banner"></div>
+  <header>
+    <h1>WebLLM browser test — two-model compare</h1>
+    <p>
+      Standalone harness for <strong>@mlc-ai/web-llm</strong> (WebGPU). Defaults use the closest
+      <strong>official prebuilt</strong> Qwen3 q4-style weights in the current catalog:
+      <code>Qwen3-0.6B-q4f16_1-MLC</code> vs <code>Qwen3-1.7B-q4f16_1-MLC</code>
+      (nearest sizes to “~0.8B q4” and “~2B” until Qwen3.5 prebuilts appear — you can paste other
+      <code>model_id</code> strings below). Not wired into the adventure game; for experimentation only.
+    </p>
+  </header>
+  <main>
+    <div class="row">
+      <div style="flex:1; min-width:200px">
+        <label for="model-a">Model A ID</label>
+        <input type="text" id="model-a" spellcheck="false"
+          value="Qwen3-0.6B-q4f16_1-MLC"
+          title="WebLLM prebuilt model_id">
+      </div>
+      <div style="flex:1; min-width:200px">
+        <label for="model-b">Model B ID</label>
+        <input type="text" id="model-b" spellcheck="false"
+          value="Qwen3-1.7B-q4f16_1-MLC"
+          title="WebLLM prebuilt model_id">
+      </div>
+    </div>
+    <div class="row">
+      <button type="button" id="btn-load-a">Load model A</button>
+      <button type="button" id="btn-load-b">Load model B</button>
+      <button type="button" class="primary" id="btn-both">Run prompt on both (A then B)</button>
+    </div>
+
+    <div class="row" style="align-items:stretch">
+      <div style="flex:1; min-width:240px">
+        <label for="system">System (optional)</label>
+        <textarea id="system" placeholder="e.g. You help parse player commands for a text adventure. Reply with compact JSON only."></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div style="flex:1; min-width:240px">
+        <label for="user-prompt">User message</label>
+        <textarea id="user-prompt">Player typed: "open the chest". Room has a chest and a key. Output JSON: {"verb":"","object":"","target":""}</textarea>
+      </div>
+    </div>
+    <div class="row">
+      <label style="display:flex; align-items:center; gap:8px; cursor:pointer">
+        <input type="checkbox" id="stream-chk" checked>
+        Stream tokens (recommended)
+      </label>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h2>Model A output</h2>
+        <div class="status" id="status-a"></div>
+        <div class="out" id="out-a"></div>
+        <div class="meta" id="meta-a"></div>
+      </div>
+      <div class="panel">
+        <h2>Model B output</h2>
+        <div class="status" id="status-b"></div>
+        <div class="out" id="out-b"></div>
+        <div class="meta" id="meta-b"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    /**
+     * WebLLM standalone compare page — not integrated with index.html / game.
+     * Uses official prebuilt model_id strings by default (see MLC web-llm config).
+     */
+    import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.82/lib/index.js";
+
+    const banner = document.getElementById("gpu-banner");
+    if (!navigator.gpu) {
+      banner.textContent = "WebGPU not available in this context. Use a Chromium-based browser with WebGPU enabled, and serve this file over http(s) (not file://) if modules fail to load.";
+      banner.classList.add("visible");
+    }
+
+    /** @type {import("@mlc-ai/web-llm").MLCEngine | null} */
+    let engineA = null;
+    /** @type {import("@mlc-ai/web-llm").MLCEngine | null} */
+    let engineB = null;
+    let loadedIdA = "";
+    let loadedIdB = "";
+
+    function setStatus(side, text, kind) {
+      const el = document.getElementById("status-" + side);
+      el.textContent = text;
+      el.className = "status" + (kind ? " " + kind : "");
+    }
+
+    function setMeta(side, text) {
+      document.getElementById("meta-" + side).textContent = text;
+    }
+
+    function getMessages() {
+      const sys = document.getElementById("system").value.trim();
+      const user = document.getElementById("user-prompt").value;
+      const messages = [];
+      if (sys) messages.push({ role: "system", content: sys });
+      messages.push({ role: "user", content: user });
+      return messages;
+    }
+
+    async function ensureEngine(side, modelId, initProgressCallback) {
+      const existing = side === "a" ? engineA : engineB;
+      const loadedId = side === "a" ? loadedIdA : loadedIdB;
+      if (existing && loadedId === modelId) return existing;
+
+      setStatus(side, "Loading " + modelId + "…", "loading");
+      // Reuse MLCEngine and reload() when switching model_id to avoid leaking GPU memory.
+      if (existing) {
+        await existing.reload(modelId);
+        if (side === "a") loadedIdA = modelId;
+        else loadedIdB = modelId;
+        setStatus(side, "Ready: " + modelId, "");
+        return existing;
+      }
+      const engine = await webllm.CreateMLCEngine(modelId, {
+        initProgressCallback,
+        logLevel: "INFO",
+      });
+      if (side === "a") {
+        engineA = engine;
+        loadedIdA = modelId;
+      } else {
+        engineB = engine;
+        loadedIdB = modelId;
+      }
+      setStatus(side, "Ready: " + modelId, "");
+      return engine;
+    }
+
+    async function runOne(side, modelId) {
+      const outEl = document.getElementById("out-" + side);
+      outEl.textContent = "";
+      setMeta(side, "");
+
+      const stream = document.getElementById("stream-chk").checked;
+      const messages = getMessages();
+
+      const initProgressCallback = (report) => {
+        setStatus(side, report.text, "loading");
+      };
+
+      const t0 = performance.now();
+      const engine = await ensureEngine(side, modelId, initProgressCallback);
+
+      if (stream) {
+        const chunks = await engine.chat.completions.create({
+          messages,
+          temperature: 0.2,
+          max_tokens: 512,
+          stream: true,
+          stream_options: { include_usage: true },
+        });
+        let text = "";
+        let usage = null;
+        for await (const ch of chunks) {
+          text += ch.choices[0]?.delta?.content ?? "";
+          outEl.textContent = text;
+          if (ch.usage) usage = ch.usage;
+        }
+        const ms = Math.round(performance.now() - t0);
+        const u = usage
+          ? " time " + ms + " ms | tokens prompt " + (usage.prompt_tokens ?? "?") + " / completion " + (usage.completion_tokens ?? "?")
+          : " time " + ms + " ms";
+        setMeta(side, u);
+      } else {
+        const reply = await engine.chat.completions.create({
+          messages,
+          temperature: 0.2,
+          max_tokens: 512,
+        });
+        const ms = Math.round(performance.now() - t0);
+        const c = reply.choices[0].message.content;
+        outEl.textContent = c ?? "";
+        const u = reply.usage
+          ? " time " + ms + " ms | tokens prompt " + reply.usage.prompt_tokens + " / completion " + reply.usage.completion_tokens
+          : " time " + ms + " ms";
+        setMeta(side, u);
+      }
+    }
+
+    function busy(on) {
+      document.getElementById("btn-load-a").disabled = on;
+      document.getElementById("btn-load-b").disabled = on;
+      document.getElementById("btn-both").disabled = on;
+    }
+
+    document.getElementById("btn-load-a").addEventListener("click", async () => {
+      busy(true);
+      try {
+        const id = document.getElementById("model-a").value.trim();
+        await ensureEngine("a", id, (r) => setStatus("a", r.text, "loading"));
+      } catch (e) {
+        setStatus("a", String(e), "err");
+      } finally {
+        busy(false);
+      }
+    });
+
+    document.getElementById("btn-load-b").addEventListener("click", async () => {
+      busy(true);
+      try {
+        const id = document.getElementById("model-b").value.trim();
+        await ensureEngine("b", id, (r) => setStatus("b", r.text, "loading"));
+      } catch (e) {
+        setStatus("b", String(e), "err");
+      } finally {
+        busy(false);
+      }
+    });
+
+    document.getElementById("btn-both").addEventListener("click", async () => {
+      const idA = document.getElementById("model-a").value.trim();
+      const idB = document.getElementById("model-b").value.trim();
+      busy(true);
+      try {
+        await runOne("a", idA);
+        await runOne("b", idB);
+      } catch (e) {
+        console.error(e);
+        setStatus("a", String(e), "err");
+        setStatus("b", String(e), "err");
+      } finally {
+        busy(false);
+      }
+    });
+  </script>
+</body>
+</html>
