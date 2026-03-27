@@ -95,6 +95,10 @@ let generationId = 0;           // Incremented to cancel stale LLM outputs
 // DOM REFERENCES
 // ============================================================
 const toggleBtn = document.getElementById('llm-toggle');
+/** Button label when playing in Classic mode (click = turn LLM on). */
+const TOGGLE_LABEL_CLASSIC_MODE = 'LLM Enhanced!';
+/** Button label when LLM Enhanced is on (click = return to Classic). */
+const TOGGLE_LABEL_LLM_ACTIVE = 'Classic!';
 const statusEl = document.getElementById('llm-status');
 const modelSelect = document.getElementById('llm-model');
 const progressDiv = document.getElementById('llm-progress');
@@ -154,7 +158,7 @@ async function loadModel() {
     modelLoaded = true;
     modelLoading = false;
     toggleBtn.className = 'active';
-    toggleBtn.textContent = 'LLM Enhanced';
+    toggleBtn.textContent = TOGGLE_LABEL_LLM_ACTIVE;
     statusEl.textContent = modelId.split('-').slice(0, 2).join(' ') + ' ready';
     progressDiv.style.display = 'none';
 
@@ -171,7 +175,7 @@ async function loadModel() {
     llmEngine = null;
     llmMode = false;
     toggleBtn.className = '';
-    toggleBtn.textContent = 'Classic';
+    toggleBtn.textContent = TOGGLE_LABEL_CLASSIC_MODE;
     statusEl.textContent = friendlyError(e);
     progressDiv.style.display = 'none';
   }
@@ -188,7 +192,7 @@ async function switchModel() {
   try {
     await llmEngine.reload(newId);
     toggleBtn.className = 'active';
-    toggleBtn.textContent = 'LLM Enhanced';
+    toggleBtn.textContent = TOGGLE_LABEL_LLM_ACTIVE;
     statusEl.textContent = newId.split('-').slice(0, 2).join(' ') + ' ready';
     progressDiv.style.display = 'none';
   } catch (e) {
@@ -220,11 +224,11 @@ function toggleLLM() {
       loadModel();
     } else if (modelLoaded) {
       toggleBtn.className = 'active';
-      toggleBtn.textContent = 'LLM Enhanced';
+      toggleBtn.textContent = TOGGLE_LABEL_LLM_ACTIVE;
     }
   } else {
     toggleBtn.className = '';
-    toggleBtn.textContent = 'Classic';
+    toggleBtn.textContent = TOGGLE_LABEL_CLASSIC_MODE;
     statusEl.textContent = '';
     modelSelect.style.display = 'none';
     progressDiv.style.display = 'none';
@@ -350,7 +354,7 @@ async function translateInput(rawInput, roomData) {
   const nouns = getVocabNouns(roomData);
 
   const systemPrompt = `You translate natural language into text adventure game commands. /no_think
-Output ONLY the game command (1-2 uppercase words). Nothing else. No explanation. No thinking.
+Output ONLY the game command (1-2 uppercase words). Nothing else. No square brackets. No explanation. No thinking.
 
 Valid verbs: GO,GET,DROP,LOOK,OPEN,CLOSE,UNLOCK,SAY,CLIMB,READ,LIGHT,SWIM,FILL,WAVE,THROW,RUB,SCORE,INVENTORY,SAVE,HELP,JUMP,ATTACK,DRINK,EAT,WAKE,FIND,MAKE,CUT
 Valid nouns: ${nouns.slice(0, 30).join(',')}
@@ -359,6 +363,7 @@ Examples:
 "pick up the axe" → GET AXE
 "go north" → GO NORTH
 "what am I carrying" → INVENTORY
+"what is the score" → SCORE
 "look around" → LOOK
 "open the door" → OPEN DOOR
 "climb the tree" → CLIMB TREE
@@ -394,7 +399,8 @@ Player: "${rawInput}"
     // Parse: extract first line that looks like 1-2 uppercase words
     const lines = raw.split('\n');
     for (const line of lines) {
-      const clean = line.replace(/[→\-\*\`\"\']/g, '').trim().toUpperCase();
+      // Strip brackets (model sometimes prints [INVENTORY] — engine needs bare INV token)
+      const clean = line.replace(/[\[\]→\-\*`"']/g, '').trim().toUpperCase();
       // Match 1-2 words (letters only)
       const match = clean.match(/^([A-Z]+(?:\s+[A-Z]+)?)$/);
       if (match) return match[1];
@@ -635,6 +641,9 @@ async function handleCmdEnhanced() {
   cmdEl.placeholder = 'Thinking...';
 
   try {
+    // Cancel any in-flight enhanceOutput() from the previous command so its stream cannot reorder DOM after this turn.
+    generationId++;
+
     const roomData = await loadRoomHints(window.currentGameId, eng.loc);
 
     // Check if it's a hint request
@@ -664,10 +673,11 @@ async function handleCmdEnhanced() {
     window.recordMapState();
     window.showRoomImg(eng.roomNum);
 
-    // Feature B: Enhance output if we moved to a new room or got a substantial response
-    if (eng.loc !== prevRoom || out.length > 60) {
+    // Feature B: Enhance room narration only — not I/INVENTORY/SCORE/LOOK (short meta; also avoids stream races with the next command).
+    const tw = translated.trim().toUpperCase();
+    const isMeta = /^(I|L|INVENTORY|SCORE|LOOK)$/.test(tw);
+    if (!isMeta && (eng.loc !== prevRoom || out.length > 60)) {
       const newRoomData = await loadRoomHints(window.currentGameId, eng.loc);
-      // Fire and forget — streams asynchronously below terse text
       enhanceOutput(out, newRoomData);
     }
 
@@ -736,4 +746,4 @@ window.newGame = async function() {
   }
 })();
 
-console.log('[LLM] llm-enhanced.js loaded. Click "Classic" button to enable LLM mode.');
+console.log('[LLM] llm-enhanced.js loaded. Click "' + TOGGLE_LABEL_CLASSIC_MODE + '" to enable LLM mode.');

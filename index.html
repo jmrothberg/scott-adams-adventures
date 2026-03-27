@@ -64,7 +64,7 @@ button:hover{background:#1a4a8a}
     <option value="Qwen3-1.7B-q4f16_1-MLC">Qwen3 1.7B</option>
     <option value="Qwen3-0.6B-q4f16_1-MLC">Qwen3 0.6B (light)</option>
   </select>
-  <button id="llm-toggle" onclick="window.toggleLLM && window.toggleLLM()">Classic</button>
+  <button id="llm-toggle" onclick="window.toggleLLM && window.toggleLLM()">LLM Enhanced!</button>
   <span id="llm-status" style="font-size:11px;color:#666"></span>
   <div id="llm-progress"><div id="llm-progress-bar"></div></div>
 </div>
@@ -435,9 +435,26 @@ class Engine {
   }
 
   expand(input) {
-    const u = input.trim().toUpperCase();
+    let t = input.trim();
+    // LLM may output a single line like [INVENTORY] — strip so findWord sees INV / one token
+    const bracketed = t.match(/^\[([^\]]+)\]\s*$/);
+    if (bracketed) t = bracketed[1].trim();
+    let u = t.toUpperCase().replace(/\?+$/, '').trim();
+    // Multi-word English → same commands as N/S/E (game verbs match first wordLen letters, e.g. INV)
+    if (/^WHAT\s+AM\s+I\s+CARRYING/.test(u) || /^WHAT\s+DO\s+I\s+HAVE/.test(u) ||
+        u === 'INVENTORY' || u === 'ITEMS' || /^SHOW\s+INVENTORY/.test(u) ||
+        /^LIST\s+(MY\s+)?(ITEMS|STUFF)$/.test(u)) {
+      u = 'I';
+    }
+    if (/^WHAT'?S\s+MY\s+SCORE$/.test(u) || /^WHAT\s+IS\s+THE\s+SCORE$/.test(u) ||
+        /^WHATS\s+THE\s+SCORE/.test(u) || /^HOW\s+AM\s+I\s+DOING$/.test(u) ||
+        /^HOW\s+MANY\s+TREASURES/.test(u)) {
+      u = 'SCORE';
+    }
     const m = {N:'GO NORTH',S:'GO SOUTH',E:'GO EAST',W:'GO WEST',U:'GO UP',D:'GO DOWN',I:'INVENTORY',L:'LOOK'};
-    return m[u] || input;
+    if (m[u]) return m[u];
+    if (u === 'SCORE') return 'SCORE';
+    return t;
   }
 
   turn(input) {
@@ -492,6 +509,10 @@ class Engine {
       else if (verb === 10) this.doGet(nounW);
       else if (verb === 18) this.doDrop(nounW);
       else this.out("I don't understand what you want me to do.\n");
+    } else if (noun === 0 && !nounW) {
+      // Some Scott Adams .dat files (e.g. Adventureland) encode INVENTORY with an opcode this engine maps to a no-op (case 66 = flag only). SCORE still uses the opcode that prints carrying here, so leave SCORE / expand() as-is; only ensure INVENTORY actually lists items.
+      const invV = this.findWord('INVENTORY', this.g.verbs);
+      if (invV >= 0 && verb === invV && !this.buf.includes("I'm carrying:")) this.exec(65, [], 0);
     }
 
     if (this.redraw) { this.look(); this.redraw = false; }
@@ -505,6 +526,11 @@ const cmdEl = document.getElementById('cmd');
 // room images now created inline inside outputEl
 var engine = null;
 var currentGameId = 'adv01';
+
+/** Absolute URL for images — fixes SVG <image href> resolution; pairs with threaded local server when WebLLM loads big files. */
+function resolveAssetUrl(relPath) {
+  return new URL(relPath, window.location.href).href;
+}
 
 /* ===== MAP STATE ===== */
 let mapVisited = new Set();
@@ -674,7 +700,7 @@ function showRoomImg(num) {
   // Remove previous room image and map (only latest visible)
   outputEl.querySelectorAll('.room-img, .inline-map').forEach(el => el.remove());
   const pad = String(num).padStart(2, '0');
-  const url = 'images/' + currentGameId + '/room_' + pad + '.png';
+  const url = resolveAssetUrl('images/' + currentGameId + '/room_' + pad + '.png');
   const img = document.createElement('img');
   img.className = 'room-img';
   img.src = url;
@@ -752,7 +778,8 @@ function buildMapSvg() {
     const bg = isCur ? '#1a1a3e' : '#111122';
     svg += '<rect x="'+rx+'" y="'+ry+'" width="'+thumbW+'" height="'+thumbH+'" fill="'+bg+'" stroke="'+bc+'" stroke-width="'+bw+'" rx="3"/>';
     const pad2 = String(room).padStart(2, '0');
-    svg += '<image href="images/'+currentGameId+'/room_'+pad2+'.png" x="'+(rx+2)+'" y="'+(ry+2)+'" width="'+(thumbW-4)+'" height="'+(thumbH-12)+'" preserveAspectRatio="xMidYMid slice"/>';
+    const thumbSrc = resolveAssetUrl('images/' + currentGameId + '/room_' + pad2 + '.png');
+    svg += '<image href="' + thumbSrc + '" x="'+(rx+2)+'" y="'+(ry+2)+'" width="'+(thumbW-4)+'" height="'+(thumbH-12)+'" preserveAspectRatio="xMidYMid slice"/>';
     const lc = isCur ? '#e94560' : '#00ff41';
     svg += '<text x="'+p.sx+'" y="'+(ry+thumbH-2)+'" text-anchor="middle" fill="'+lc+'" font-size="9" font-family="monospace">'+room+'</text>';
   }
@@ -794,7 +821,8 @@ async function newGame() {
     clearOut();
     appendOut('Error loading game: ' + e.message + '\nMake sure game .dat files are in the Game_Data folder.\n\n' +
       'If opened from a local file, try:\n' +
-      '  python3 -m http.server 8090\n' +
+      '  python3 scripts/serve-threaded.py 8090   (threaded; use with LLM)\n' +
+      '  or: python3 -m http.server 8090\n' +
       '  then open http://localhost:8090\n\n' +
       'Or play online:\n' +
       '  https://jmrothberg.github.io/scott-adams-adventures/');

@@ -124,7 +124,7 @@ async function main() {
     } catch (e) {
       console.warn('[setup-offline-llm] ensure-webllm-resolve-layout failed:', e.message);
     }
-    console.log('[setup-offline-llm] Done. Serve with: python3 -m http.server 8090');
+    console.log('[setup-offline-llm] Done. Serve with: python3 scripts/serve-threaded.py 8090 (or npm run serve-game)');
     console.log('[setup-offline-llm] Open http://localhost:8090 — LLM Enhanced uses local vendor + webllm-assets.');
   }
 }

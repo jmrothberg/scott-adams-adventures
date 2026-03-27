@@ -6,6 +6,16 @@ Play all 17 classic Scott Adams text adventures (1978-84) right in your browser.
 
 **https://jmrothberg.github.io/scott-adams-adventures/**
 
+### Run locally (recommended)
+
+From the repo root, after **`npm install`**:
+
+```bash
+npm run serve-game
+```
+
+Then open **http://localhost:8090** in your browser. This starts **`scripts/serve-threaded.py`** — a **threaded** static server so **room images**, **map thumbnails**, **Game_Data**, and **offline WebLLM** shards can load **in parallel**. In practice it works **much** better than `python3 -m http.server` for this project (the built-in server is single-threaded and can stall images while big model files download). Requires **Python 3** on your PATH as `python3`.
+
 ### WebLLM browser test (separate page)
 
 In-browser LLM experiment (WebGPU), **not** the adventure game:  
@@ -31,7 +41,10 @@ This runs `scripts/setup-offline-llm.mjs`, which:
 
 Re-run the same command if a download **times out** — Hugging Face tools **resume** partial folders.
 
-Then serve with `python3 -m http.server` (not `file://`). WebLLM expects Hugging Face–style paths (`.../resolve/main/...`). After download, run **`npm run ensure-webllm-layout`** once (or rely on `setup-offline-llm`, which runs it) so `webllm-assets/<model_id>/resolve/main/` resolves to your files.
+Then serve over HTTP (not `file://`). WebLLM expects Hugging Face–style paths (`.../resolve/main/...`). After download, run **`npm run ensure-webllm-layout`** once (or rely on `setup-offline-llm`, which runs it) so `webllm-assets/<model_id>/resolve/main/` resolves to your files.
+
+**LLM + room images / map:** The built-in `python3 -m http.server` serves **one request at a time**. Loading multi‑hundred‑MB model shards can **block** PNGs and map thumbnails on the same port. Use a **threaded** server instead:  
+`python3 scripts/serve-threaded.py 8091` or **`npm run serve-game`** (default port 8090). GitHub Pages does not have this issue (CDN serves files in parallel).
 
 #### What lives where (so an LLM or future-you can fix the other machine)
 
@@ -63,8 +76,7 @@ Use this on a **second computer** so **LLM Enhanced** works **without** relying 
    - `webllm-assets/wasm/*.wasm` exists (two files)  
    - `npm run ensure-webllm-layout` has been run if you copied an **old** flat `webllm-assets/` (creates `resolve/main` links WebLLM needs).
    - `webllm-assets/Qwen3-1.7B-q4f16_1-MLC/resolve/main/mlc-chat-config.json` exists (same for `Qwen3-0.6B-q4f16_1-MLC` if needed) — or the flat file exists **and** `ensure-webllm-layout` was run.
-5. **Serve over HTTP** (required; `file://` breaks loading):  
-   `python3 -m http.server 8090`  
+5. **Serve over HTTP** (required; `file://` breaks loading). Prefer **`npm run serve-game`** (same as `python3 scripts/serve-threaded.py 8090`) so images, map, and model shards do not block each other. Plain `python3 -m http.server` is OK for Classic-only.  
    Open **http://localhost:8090** in **Chrome or Edge** (WebGPU).
 6. In the game, click **Classic** / **LLM Enhanced** to enable LLM mode; first load may take a while while the model initializes.
 
