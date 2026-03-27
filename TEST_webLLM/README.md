@@ -20,8 +20,6 @@ After you push to GitHub and Pages is enabled for this repository, open:
 
 If modules or model downloads fail from `file://`, serve the repo folder over HTTP (see below).
 
-There is also a **redirect** at the repository root: `webllm-qwen-compare-test.html` → points into `TEST_webLLM/` so old links keep working.
-
 ## Optional: tiny local HTTP server
 
 Some browsers restrict `file://` for ES modules or large fetches. From the **repository root**:
