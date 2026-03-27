@@ -88,16 +88,41 @@ The `image_guides/` folder has a markdown file for each game listing every room 
 
 > **room_01.png** — Dismal swamp: A dark, foggy swamp with gnarled trees, murky water, hanging moss, and an oppressive grey-green atmosphere.
 
-### Quick start for adding images
+### Generating images locally (SDXL Turbo)
+
+The included `generate_images.py` script uses SDXL Turbo to generate room images locally on your Mac (Apple Silicon) or any machine with a GPU.
+
+**One-time setup:**
+```bash
+pip install torch diffusers transformers accelerate
+```
+
+**Generate images for a game:**
+```bash
+python3 generate_images.py adv01              # Adventureland
+python3 generate_images.py adv05              # The Count
+python3 generate_images.py adv01 adv02 adv03  # Multiple games
+python3 generate_images.py --all              # All 17 games (takes a while!)
+```
+
+The script:
+- Reads room descriptions from `image_guides/<game>_*.md`
+- Generates 512x320 PNG images into `images/<game>/room_NN.png`
+- Skips images that already exist (safe to re-run)
+- Uses MPS (Apple Silicon), CUDA (NVIDIA), or CPU fallback
+- First run downloads the SDXL Turbo model (~5GB, cached after that)
+
+After generating, commit and push to see them on GitHub Pages.
+
+### Adding images manually
 
 1. Pick a game (e.g., Adventureland = `adv01.dat`)
 2. Open `image_guides/adv01_adventureland.md` for the room list and prompts
-3. Generate images using your preferred diffusion model (Stable Diffusion, DALL-E, Midjourney, etc.)
-4. Create the folder `images/adv01/`
-5. Save images as `room_01.png`, `room_02.png`, etc. inside that folder
-6. Push to the repo — they'll appear in the game automatically
+3. Generate images using your preferred tool (Stable Diffusion, DALL-E, Midjourney, etc.)
+4. Save images as `images/adv01/room_01.png`, `room_02.png`, etc.
+5. Push to the repo — they'll appear in the game automatically
 
-**Recommended style:** Pixel art or retro illustration, 400x250px or similar landscape ratio, to match the 1980s adventure game aesthetic.
+**Recommended size:** 512x320px landscape. **Style:** Retro 1980s adventure game illustration.
 
 ## Credits
 
