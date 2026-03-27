@@ -1,0 +1,45 @@
+# Mystery Fun House - Room Images
+
+**Game:** Adventure #7 - Mystery Fun House (1979)
+**Setting:** A sinister carnival fun house - trapped inside
+**Style suggestion:** Creepy carnival, bright garish colors hiding menace, fun house distortion
+
+## Rooms
+
+| File | Room | Image Description |
+|------|------|-------------------|
+| `room_01.png` | Front of the fun house | Standing outside a gaudy carnival fun house entrance. Flashing lights, painted clown face doorway, "FUN HOUSE" sign. Ominous despite the bright colors. |
+| `room_02.png` | Magical mirror room | A room filled with distorting carnival mirrors. Your reflection stretches, compresses, multiplies. Disorienting and surreal. |
+| `room_03.png` | Small landing | A small landing/platform inside the fun house. Stairs leading in different directions. Peeling paint, rickety railings. |
+| `room_04.png` | Beside a large tank | Standing next to a large glass tank filled with water. Something might be inside. Carnival attraction turned sinister. |
+| `room_05.png` | Windowed tank | Inside or looking into a tank with windows. Fish? Something stranger? Bubbles, green-tinted water, distorted views. |
+| `room_06.png` | Hidden laboratory | A secret laboratory hidden behind the fun house facade. Beakers, strange equipment, not what you'd expect in a carnival. |
+| `room_07.png` | Merry-go-round on a wooden horse | Sitting on a painted wooden horse on a carousel. Carnival music, colored lights, other wooden animals spinning past. |
+| `room_08.png` | Small room | A small, nondescript room in the fun house. Plain walls, a door, maybe a trick panel. |
+| `room_09.png` | Sloping hallway | A hallway that slopes at a disorienting angle. The gravity-defying fun house trick. Furniture bolted to walls at odd angles. |
+| `room_10.png` | Room with low ceiling | A room where the ceiling is uncomfortably low. Forces you to crouch. Claustrophobic, pressing down. |
+| `room_11.png` | Large rolling barrel room | A room with a large rotating barrel you must walk through. Spinning wooden cylinder, difficult to keep balance. Classic fun house obstacle. |
+| `room_12.png` | Store room | A backstage storage room. Props, spare parts for rides, boxes of prizes. The mundane behind the magic. |
+| `room_13.png` | Manhole | A manhole in the floor, leading down to sewers. Metal cover, dark hole, the sound of dripping water from below. |
+| `room_14.png` | Shooting gallery | A carnival shooting gallery. Rows of tin duck targets, pop guns, prize shelves. Faded and slightly menacing. |
+| `room_15.png` | Ledge over a deep pit | A narrow ledge overlooking a deep, dark pit inside the fun house. One wrong step and you fall. Safety rails missing. |
+| `room_16.png` | Pit | At the bottom of a deep pit. Looking up at the ledge above. Dark, damp, trapped. |
+| `room_17.png` | Observation chamber | A hidden observation room with one-way mirrors or peepholes. Someone has been watching the fun house visitors. Creepy. |
+| `room_18.png` | On a merry-go-round | On the merry-go-round platform between the horses. Spinning, colorful horses bobbing up and down, calliope music. |
+| `room_19.png` | Windy hall | A hallway with powerful fans blowing air. Hair and clothes whipping around. Industrial fans visible. |
+| `room_20.png` | Rickety staircase | A staircase that sways and creaks with every step. Missing treads, wobbly railings. Could collapse at any moment. |
+| `room_21.png` | Large room with tall ceiling | A cavernous room inside the fun house. High ceiling lost in darkness above, echoing sounds, feeling small and exposed. |
+| `room_22.png` | Top of the ride | On top of a carnival ride mechanism. Gears, motors, structural framework. Behind-the-scenes view from above. |
+| `room_23.png` | Small room (variant) | Another small room. Different trick - maybe a tilting floor or a hidden door. |
+| `room_24.png` | Small room (variant) | A third small room. Perhaps with a puzzle or mechanism. |
+| `room_25.png` | Large room | A large open room in the fun house. Painted scenes on walls, possibly an arena for some attraction. |
+| `room_26.png` | Parking lot | The parking lot outside the fun house. Cars, the fun house exterior visible, carnival lights in the distance. Escape is close. |
+| `room_27.png` | On a trampoline | Bouncing on a large trampoline. Springy surface, the ceiling getting closer with each bounce. Fun house walls around you. |
+| `room_28.png` | Sewer system | Underground sewers beneath the fun house. Brick tunnels, flowing water, rats, dim light from grates above. |
+| `room_29.png` | Windy maze | A maze section with wind blowing through. Turns and dead ends, air currents giving false directional cues. |
+| `room_30.png` | Windy maze (variant) | More of the windy maze. Different turns, wind from a different direction. |
+| `room_31.png` | Windy maze (variant) | Another maze section. Getting more lost. |
+| `room_32.png` | Windy maze (variant) | Deep in the windy maze. Panic setting in. |
+| `room_33.png` | Catwalk | A narrow metal catwalk high above the fun house floor. Grid flooring you can see through. Structural beams and ride machinery around you. |
+| `room_34.png` | Long tunnel | A long, dark tunnel. Could be a ride track, could be an escape route. Light at the far end. |
+| `room_35.png` | Lot of trouble (Limbo) | Trapped in a nightmarish carnival dimension. Distorted clown faces, spinning rides, garish colors. The fun house consumed you. |
