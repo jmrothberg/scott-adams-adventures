@@ -9,11 +9,16 @@
   "exits": {
     "E": 22
   },
-  "hints": [],
+  "hints": [
+    "An alien metal room with a force field blocking passage and a control console!",
+    "The control console operates the force field. You need to figure out how to deactivate it.",
+    "Interact with the control console to disable the force field. This is a critical endgame puzzle.",
+    "E=metal tunnel (22). USE CONS or PUSH CONS to operate console. Force field blocks access to rooms beyond."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Alien room with force field and control console. E=metal tunnel (22). Console controls force field. Critical endgame location."
 }

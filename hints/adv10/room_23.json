@@ -7,11 +7,16 @@
     "S": 24,
     "W": 22
   },
-  "hints": [],
+  "hints": [
+    "A dimly lit room carved from rock, between the metal tunnels and deeper chambers.",
+    "This connects the alien tunnels to the alien machinery room to the south.",
+    "S leads to the alien machinery room. W goes back to the metal tunnel.",
+    "S=rock room with alien machinery (24). W=metal tunnel (22)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Dimly lit rock room connector. S=alien machinery room (24). W=metal tunnel (22)."
 }

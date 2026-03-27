@@ -9,11 +9,16 @@
     "E": 25,
     "W": 27
   },
-  "hints": [],
+  "hints": [
+    "Another maze room. They all look the same - drop items to mark where you've been.",
+    "S loops back to this same room (26). N and E both go to room 25. W goes to room 27.",
+    "To navigate: go W to room 27, then N to reach room 28 (the maze exit).",
+    "N=25. S=26 (self-loop). E=25. W=27. Drop items to track position."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Maze room. N=25. S=26 (self-loop). E=25. W=27. Drop items to map."
 }

@@ -9,7 +9,12 @@
   "exits": {
     "W": 14
   },
-  "hints": [],
+  "hints": [
+    "Another tunnel going outside with a sign and a gem.",
+    "GET GEM (treasure). READ SIGN for information. WEST enters a dome, GO DOME exits to the field.",
+    "GET GEM. GO DOME exits to field (room 7) and sets transformation flags. WEST goes to a dome (room 14) with another gem.",
+    "Collect the gem. WEST leads to a dome with a gem and a hidden base to search. GO DOME goes to the field."
+  ],
   "key_actions": [
     "GO DOME"
   ],
@@ -29,5 +34,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Tunnel with a sign and *Gem* treasure. GO DOME exits to field (room 7) with transformation flags. WEST goes to dome (room 14)."
 }

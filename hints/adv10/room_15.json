@@ -4,11 +4,16 @@
   "description": "I'm on a small atoll",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "A tiny atoll in the ocean! You reached it by raft from the island.",
+    "Search the atoll carefully. There may be items buried or hidden here.",
+    "DIG in the sand to find something important. This is a key location in the game.",
+    "No standard exits. Must raft back. DIG to find buried items critical for endgame."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Small atoll reached by raft. DIG to find buried items. Key location for game progression. No standard exits - must raft back."
 }

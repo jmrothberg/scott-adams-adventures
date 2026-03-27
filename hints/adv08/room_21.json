@@ -11,7 +11,12 @@
   "exits": {
     "D": 20
   },
-  "hints": [],
+  "hints": [
+    "The throne room! An iron statue guards a chest. There's a chain and a mural.",
+    "REA MUR or LOO MUR: 'Seek ye well the HEART of Iron' - a clue about the statue.",
+    "PUL CHA to pull the chain - it reveals something. The iron statue won't let you unlock the chest.",
+    "The statue has a heart - find it. BUR (burn) the tanna leaves near the statue. PUL CHA reveals a passage up to the treasure room. D=ledge (20)."
+  ],
   "key_actions": [
     "BUR",
     "UNL CHE",
@@ -77,5 +82,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Throne room with iron statue (guards chest), chain (reveals passage), and mural ('Seek the HEART of Iron'). PUL CHA reveals access up. The chest contains treasures but statue blocks it. D=ledge (20)."
 }

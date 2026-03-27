@@ -8,7 +8,12 @@
   "exits": {
     "U": 33
   },
-  "hints": [],
+  "hints": [
+    "A root cellar under the line shack! Pelts treasure is here.",
+    "GET PELT for the Pelts treasure.",
+    "Bring the pelts to the Dry-Goods store (room 15).",
+    "GET PELT. U=line shack (33)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +21,5 @@
     "PELT"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Root cellar under line shack. Pelts treasure here. U=line shack (33)."
 }

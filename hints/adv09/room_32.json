@@ -8,11 +8,16 @@
   "exits": {
     "E": 18
   },
-  "hints": [],
+  "hints": [
+    "A mountain trail with a line shack visible.",
+    "GO SHAC to enter the line shack.",
+    "The shack has a telegraph key and a hidden root cellar with treasures.",
+    "GO SHAC enters line shack (33). E=ridge (18)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Mountain trail with line shack (room 33). E=ridge (18)."
 }

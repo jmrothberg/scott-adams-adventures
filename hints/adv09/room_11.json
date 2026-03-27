@@ -9,7 +9,12 @@
   "exits": {
     "S": 2
   },
-  "hints": [],
+  "hints": [
+    "The old saloon. There's a mirror and a large bell.",
+    "GET BELL - the bell is useful elsewhere. LOOK MIRR to examine the mirror.",
+    "The mirror may reveal a hidden room behind it. MOVE MIRR or LOOK behind it.",
+    "MOVE MIRR reveals a hidden office (room 12) with the Go Board treasure. GET BELL for the hotel. S=town (2)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -17,5 +22,5 @@
     "BELL"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Saloon with mirror (hides office room 12) and bell (needed in hotel). S=town (2)."
 }

@@ -10,11 +10,16 @@
     "S": 17,
     "E": 15
   },
-  "hints": [],
+  "hints": [
+    "A round altar room with a blood-stained altar. Multiple exits lead deeper.",
+    "LOO ALT to examine the altar. It may hide something underneath.",
+    "E leads to the hieroglyphics room (treasure room!). S leads to the crawlway.",
+    "This is a hub room. E=hieroglyphics/treasure room (15), S=crawlway (17), N=hallway with oyster (13)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Round altar room - hub. Blood-stained altar may hide items. N=hallway (13), S=crawlway (17), E=hieroglyphics/treasure room (15)."
 }

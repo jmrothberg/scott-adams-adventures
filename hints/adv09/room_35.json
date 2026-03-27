@@ -9,7 +9,12 @@
   "exits": {
     "N": 28
   },
-  "hints": [],
+  "hints": [
+    "Behind the hotel counter! The Cashbox treasure is here, plus a sign.",
+    "GET BOX for the Cashbox treasure. READ SIGN says 'Ring for ROOM service'.",
+    "The sign hints at using the bell in the hotel room for a ghost to appear.",
+    "GET BOX. The sign tells you to HIT BELL in the hotel room (27). N=lobby (28)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -18,5 +23,5 @@
     "BOX"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Behind hotel counter. Cashbox treasure and room service sign here. N=lobby (28)."
 }

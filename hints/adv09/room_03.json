@@ -10,11 +10,16 @@
     "E": 2,
     "W": 4
   },
-  "hints": [],
+  "hints": [
+    "More town. A telegraph office and a hotel are here.",
+    "GO TELE to enter the telegraph office. GO HOTE to enter the hotel.",
+    "The telegraph office has a key and a safe. The hotel has rooms to sleep in.",
+    "E=town with saloon/store (2), W=town with stable (4)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Ghost town with telegraph office (room 24) and hotel (room 28). E=town (2), W=town (4)."
 }

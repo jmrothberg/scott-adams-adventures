@@ -8,7 +8,12 @@
   "exits": {
     "D": 19
   },
-  "hints": [],
+  "hints": [
+    "You're on the horse! Silver Spurs treasure is here.",
+    "GET SPUR for the Silver Spurs treasure. SAY GIDD to make the horse go.",
+    "SAY GIDD makes the horse ride to a hidden canyon. SPUR bucks you off into the manure.",
+    "GET SPUR. SAY GIDD for a long ride to the hidden canyon (room 36). D=dismount to stall (19)."
+  ],
   "key_actions": [
     "SAY GIDD",
     "SAY GIDD",
@@ -63,5 +68,5 @@
     "SPUR"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "On 'Ole Paint. Silver Spurs treasure here. SAY GIDD rides to hidden canyon (36). SPUR bucks you into manure (30). D=stall (19)."
 }

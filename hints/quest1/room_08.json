@@ -12,7 +12,12 @@
     "E": 17,
     "W": 17
   },
-  "hints": [],
+  "hints": [
+    "A field with a dome and a gem. All directions lead to warps. The dome has something special about it.",
+    "GET GEM. LOOK DOME carefully - there's wire mesh in the side you can look through. DIG to go below.",
+    "GET GEM (treasure). LOOK DOME reveals wire mesh in the side. LOOK MESH lets you see inside the dome. DIG drops items and creates a hole to room 11. All compass warps to room 17.",
+    "Collect the gem. LOOK DOME then LOOK MESH to peek inside. DIG to access the hole below. GO DOME returns to the tunnel."
+  ],
   "key_actions": [
     "LOOK MESH",
     "LOOK DOME",
@@ -51,5 +56,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Field with dome and *Gem*. LOOK DOME shows wire mesh in side. LOOK MESH peers inside. DIG creates hole to room 11 below (drops items). All compass directions warp to room 17. GO DOME returns to tunnel (room 6)."
 }

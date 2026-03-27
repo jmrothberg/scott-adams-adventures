@@ -2,22 +2,18 @@
   "room": 1,
   "name": "Beach by ocean",
   "description": "I'm in a Beach by ocean",
-  "items_start": [
-    "Sand",
-    "Large stone head",
-    "Edge of impenetrable jungle"
+  "items_start": ["Sand", "Large stone head", "Edge of impenetrable jungle"],
+  "exits": {"S": 7, "E": 4, "W": 2, "D": 5},
+  "hints": [
+    "A beach with sand, a large stone head, and impenetrable jungle.",
+    "The stone head can be climbed for a view. The jungle blocks passage.",
+    "CLIM HEAD to get on top of the head and see an atoll offshore.",
+    "S=plain (7), E=palm beach (4), W=cliff beach (2), D=tidepool (5). CLIM HEAD=top (10)."
   ],
-  "exits": {
-    "S": 7,
-    "E": 4,
-    "W": 2,
-    "D": 5
-  },
-  "hints": [],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Starting room. Beach hub. Stone head climbable (room 10). S=plain (7), E=palm beach (4), W=cliff beach (2), D=tidepool (5)."
 }

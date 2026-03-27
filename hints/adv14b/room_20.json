@@ -10,7 +10,12 @@
     "N": 21,
     "S": 19
   },
-  "hints": [],
+  "hints": [
+    "A beach with a lifeguard shack and sand. The lake is to the north.",
+    "GO SHACK to check the lifeguard shack for items. You can DIG in the sand but nothing special happens.",
+    "GO SHACK enters the lifeguard shack (room 25) which has a ham radio - essential for the endgame. DIG yields nothing special. NORTH to the lake (room 21). SOUTH to the parking lot (room 19).",
+    "Visit the lifeguard shack to get the ham radio. The sand and beach are mostly decorative."
+  ],
   "key_actions": [
     "GO SHAC",
     "DIG"
@@ -40,5 +45,5 @@
     "SAND"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Beach with lifeguard shack and sand. GO SHACK enters the lifeguard shack (room 25) containing the ham radio needed for endgame. DIG does nothing useful. NORTH to cold lake (room 21). SOUTH to west parking lot (room 19)."
 }

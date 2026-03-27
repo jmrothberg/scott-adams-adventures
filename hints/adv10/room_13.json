@@ -4,7 +4,12 @@
   "description": "I'm above the lake bottom",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're underwater near the lake bottom! Air is limited.",
+    "SWIM in various directions to explore. Items may be hidden on the bottom.",
+    "SWIM EAST and SWIM NORTH reveal hidden items on the lake bottom. SWIM UP to return to the surface.",
+    "SWIM UP=lake surface (12). SWIM EAST and SWIM NORTH find items. Don't linger too long underwater."
+  ],
   "key_actions": [
     "SWIM UP",
     "SWIM EAST",
@@ -50,6 +55,6 @@
   ],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Underwater at lake bottom. SWIM UP=lake surface (12). SWIM EAST and SWIM NORTH discover hidden items. Limited air supply."
 }

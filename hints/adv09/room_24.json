@@ -9,11 +9,16 @@
   "exits": {
     "S": 3
   },
-  "hints": [],
+  "hints": [
+    "The telegraph office. There's a telegraph key and a large safe.",
+    "The safe is locked tight. You need to break it open somehow.",
+    "HIT SAFE with the hammer to break it open and find treasures inside.",
+    "HIT SAFE (need hammer from jail cell). The telegraph key connects to the line shack. S=town (3)."
+  ],
   "key_actions": [],
   "action_details": [],
-  "items_needed": [],
+  "items_needed": ["HAMM"],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Telegraph office with safe (break with hammer for $200 treasure) and telegraph key. S=town (3)."
 }

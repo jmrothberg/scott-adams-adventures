@@ -4,7 +4,12 @@
   "description": "I'm on a raft",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're on a raft at sea! The raft is hard to steer.",
+    "PADD to paddle the raft toward the atoll you saw from the stone head.",
+    "The raft eventually reaches the atoll. You need to have built the raft first using logs and vines.",
+    "PADD=sets course for atoll (room 15). Hard to steer but it works."
+  ],
   "key_actions": [
     "PADD"
   ],
@@ -21,5 +26,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "On a raft at sea. PADD to steer toward atoll (15). Must have built raft from logs and vines first."
 }

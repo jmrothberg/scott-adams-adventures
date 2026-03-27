@@ -7,7 +7,11 @@
     "W": 15,
     "D": 11
   },
-  "hints": [],
+  "hints": [
+    "Top of the elevator shaft (level 4). It's dimly lit - look around carefully.",
+    "LOOK SHAFT reveals tool niches. LOOK NICHE finds hidden items. WEST to penthouse.",
+    "LOOK NICHE auto-drops a hidden item. DOWN to shaft level 3 (room 11). WEST to penthouse (room 15)."
+  ],
   "key_actions": [
     "LOOK NICH",
     "LOOK SHAF"
@@ -33,5 +37,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Top of elevator shaft (level 4). LOOK NICHE finds hidden item. LOOK SHAFT gives clue about niches. WEST to penthouse (room 15). DOWN to shaft level 3 (room 11)."
 }

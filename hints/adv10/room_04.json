@@ -2,17 +2,18 @@
   "room": 4,
   "name": "Beach by ocean",
   "description": "I'm in a Beach by ocean",
-  "items_start": [
-    "Palm trees"
+  "items_start": ["Palm trees"],
+  "exits": {"W": 1},
+  "hints": [
+    "Eastern beach with palm trees.",
+    "CLIM TREE to climb a palm tree for coconuts.",
+    "Coconuts provide food and the shells are useful containers.",
+    "CLIM TREE=treetop (19) for coconuts. W=main beach (1)."
   ],
-  "exits": {
-    "W": 1
-  },
-  "hints": [],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Eastern beach. CLIM TREE to treetop (19) for coconuts. W=main beach (1)."
 }

@@ -8,11 +8,15 @@
   "exits": {
     "D": 2
   },
-  "hints": [],
+  "hints": [
+    "Limbo! You've died or been sent here. Read the sign.",
+    "READ SIGN for a message. DOWN returns you to Tony's office (room 2) to try again.",
+    "Death/reset room. DOWN→room 2 (Tony's office, start). Sign has a message. You end up here after fatal encounters."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Limbo/death room. DOWN→room 2 (restart at Tony's office). Sign readable. Players sent here after dying."
 }

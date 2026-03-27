@@ -9,7 +9,11 @@
   "exits": {
     "D": 24
   },
-  "hints": [],
+  "hints": [
+    "Air duct with a gem and a large fan blocking passage. Dangerous!",
+    "GET GEM. The fan must be stopped from elsewhere (thermostat in penthouse). AT BUTTON is FATAL.",
+    "GET GEM (treasure). LOOK FAN shows RPM. AT BUTTON kills you. PUSH BUTTON says 'How?' DOWN to ceiling (room 24). Stop fan via penthouse thermostat."
+  ],
   "key_actions": [
     "LOOK FAN",
     "PUSH BUTT",
@@ -46,5 +50,5 @@
     "GEM"
   ],
   "danger": true,
-  "notes": ""
+  "notes": "Air duct with *Gem* and blocking fan. AT BUTTON is fatal. Stop fan via penthouse thermostat. DOWN to ceiling (room 24)."
 }

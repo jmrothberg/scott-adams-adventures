@@ -3,14 +3,17 @@
   "name": "I'm on top of the head, offshore I see an atoll",
   "description": "I'm on top of the head, offshore I see an atoll",
   "items_start": [],
-  "exits": {
-    "D": 1
-  },
-  "hints": [],
+  "exits": {"D": 1},
+  "hints": [
+    "On top of the stone head! An atoll is visible offshore.",
+    "You need a raft to reach the atoll. Look for building materials.",
+    "Build a raft from logs and vines, then paddle to the atoll.",
+    "D=main beach (1). The atoll (room 15) requires a raft."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Top of stone head. View of atoll (room 15). D=beach (1). Need raft to reach atoll."
 }

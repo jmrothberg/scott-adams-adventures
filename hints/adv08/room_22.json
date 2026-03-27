@@ -9,7 +9,12 @@
   "exits": {
     "D": 21
   },
-  "hints": [],
+  "hints": [
+    "A treasure room with a coffer and a barred window. The window leads outside!",
+    "The barred window needs the saw to cut through. The coffer contains treasures.",
+    "SAW BAR to cut through the window bars, then GO BAR to reach the pyramid top.",
+    "SAW BAR opens the window. GO BAR leads to pyramid top (room 23) with the platinum bar. LOO COF for treasures. D=throne room (21)."
+  ],
   "key_actions": [
     "GO BAR",
     "SAW BAR",
@@ -40,8 +45,8 @@
       "effects": []
     }
   ],
-  "items_needed": [],
+  "items_needed": ["SAW"],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Treasure room above the throne room. Coffer has treasures. SAW BAR on the window to access pyramid top (23). D=throne room (21)."
 }

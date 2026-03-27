@@ -8,7 +8,12 @@
   "exits": {
     "S": 1
   },
-  "hints": [],
+  "hints": [
+    "The barbershop. There's a Stetson hat here.",
+    "GET HAT - wear it for protection from the sun.",
+    "WEAR HAT may be needed for certain areas.",
+    "GET HAT. S=town (1)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +21,5 @@
     "HAT"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Barbershop with Stetson hat. S=town (1)."
 }

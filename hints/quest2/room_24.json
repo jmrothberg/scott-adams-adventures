@@ -9,11 +9,15 @@
   "exits": {
     "D": 18
   },
-  "hints": [],
+  "hints": [
+    "On the office ceiling - spider-sense tingling! Air intake mesh and strange mist below.",
+    "GO MESH to enter the duct system. The mist below may be dangerous.",
+    "Air intake mesh leads to ducts (room 7). DOWN drops to floating area (room 18). Strange mist is atmospheric."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Office ceiling. Air mesh connects to duct (room 7). DOWN to floating area (room 18)."
 }

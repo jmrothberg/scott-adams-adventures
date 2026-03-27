@@ -11,11 +11,15 @@
     "U": 28,
     "D": 28
   },
-  "hints": [],
+  "hints": [
+    "Duct maze node. N and S both loop to the same room.",
+    "EAST to room 26. WEST/UP/DOWN all lead to room 28. NORTH and SOUTH both lead to room 31.",
+    "E→room 26, W/U/D→room 28, N/S→room 31. Accessed from room 26 (down)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze node. E→26, W/U/D→28, N/S→31. Reached from room 26 (down)."
 }

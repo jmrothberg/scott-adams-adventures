@@ -11,11 +11,15 @@
     "U": 31,
     "D": 27
   },
-  "hints": [],
+  "hints": [
+    "Duct maze node. Map every exit carefully - most directions loop back.",
+    "EAST leads to room 28. DOWN to room 27. UP to room 31. N/S/W all lead to room 30.",
+    "E→room 28, D→room 27, U→room 31. N/S/W all→room 30 (trap loop). Reached from rooms 25, 30, 33."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze node. E→28, D→27, U→31. N/S/W all→30. Reached from rooms 25 (E or W), 30, 33."
 }

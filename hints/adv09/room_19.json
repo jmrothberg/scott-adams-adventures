@@ -9,7 +9,12 @@
   "exits": {
     "S": 5
   },
-  "hints": [],
+  "hints": [
+    "A stall with 'Ole Paint the horse and a horseshoe.",
+    "GET HORS for the horseshoe (lucky item). GO PAIN or RIDE PAIN to mount the horse.",
+    "Riding the horse takes you to room 25 where the silver spurs treasure is.",
+    "GET HORS. RIDE PAIN mounts the horse (room 25). S=stable (5)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -17,5 +22,5 @@
     "HORS"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Stall with 'Ole Paint (rideable horse to room 25) and horseshoe. S=stable (5)."
 }

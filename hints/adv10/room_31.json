@@ -4,11 +4,16 @@
   "description": "I'm in a small metal room",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "Another small metal room in the alien complex, beyond the force field.",
+    "This is part of the inner alien sanctum. Search for controls or hidden items.",
+    "These rooms contain the alien technology needed for the endgame of Savage Island.",
+    "No standard exits. Part of the force field complex accessed from room 29-30 area."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Small metal room in alien inner sanctum. No standard exits. Part of endgame force field complex."
 }

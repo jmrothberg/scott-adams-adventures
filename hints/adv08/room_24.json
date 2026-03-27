@@ -8,7 +8,12 @@
   "exits": {
     "E": 3
   },
-  "hints": [],
+  "hints": [
+    "You're in the pool of water! There's a large key here.",
+    "GET KEY - the large key is needed to unlock a door at the pyramid.",
+    "SWI to swim, DRI WAT to drink (safe water here, unlike the acid pool inside).",
+    "GET KEY. CLE COA if you have coal to clean it. E=back to desert pool area (3)."
+  ],
   "key_actions": [
     "SWI",
     "GET WAT",
@@ -57,5 +62,5 @@
     "KEY"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Pool of water (safe). Large key is here - needed for pyramid doors. Can fill canteen here. E=desert pool area (3)."
 }

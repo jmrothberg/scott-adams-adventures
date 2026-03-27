@@ -9,7 +9,12 @@
     "U": 10,
     "D": 22
   },
-  "hints": [],
+  "hints": [
+    "Inside the mine! The Silver Bullet treasure is here.",
+    "GET BULL for the Silver Bullet treasure.",
+    "D goes deeper into the mine. U goes back to the ravine.",
+    "GET BULL. D=deeper mine (22) with candle. U=ravine (10)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -17,5 +22,5 @@
     "BULL"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Mine with Silver Bullet treasure. U=ravine (10), D=deeper mine (22)."
 }

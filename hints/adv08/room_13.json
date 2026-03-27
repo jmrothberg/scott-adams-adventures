@@ -10,7 +10,12 @@
   "exits": {
     "W": 12
   },
-  "hints": [],
+  "hints": [
+    "A hallway with an archway blocked by a giant oyster, and a flute.",
+    "GET FLU - the flute is needed to charm the cobra in the sitting room.",
+    "The oyster blocks the archway. You need to get past it somehow.",
+    "PLA FLU (play flute) in the sitting room to charm the cobra. The oyster can be moved or opened for a pearl treasure. GO ARC once the oyster is dealt with. W=dining hall (12)."
+  ],
   "key_actions": [
     "GO ARC",
     "GO ARC"
@@ -36,5 +41,5 @@
     "FLU"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Hallway with oyster blocking archway and flute. Flute is needed to charm cobra in sitting room. Oyster contains black pearl treasure. GO ARC leads to altar room (14). W=dining hall (12)."
 }

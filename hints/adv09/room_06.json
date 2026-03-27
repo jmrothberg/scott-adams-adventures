@@ -7,11 +7,15 @@
     "E": 4,
     "W": 7
   },
-  "hints": [],
+  "hints": [
+    "A road leading out of town toward the wilderness.",
+    "E goes back to town. W leads to a fork in the road.",
+    "The fork leads to the mine, the field, and the ravine area."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Road connector. E=town (4), W=fork (7)."
 }

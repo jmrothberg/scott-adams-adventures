@@ -9,7 +9,12 @@
   "exits": {
     "S": 8
   },
-  "hints": [],
+  "hints": [
+    "A narrow passageway with a bricked up doorway and a rope.",
+    "GET ROP - the rope is essential for reaching the throne room later.",
+    "The bricked up doorway may hide something. You might need to break through it.",
+    "GET ROP for later use. BRE DOO or BRE BRI to break through the bricked doorway. S=burial room (8)."
+  ],
   "key_actions": [
     "GO PAS"
   ],
@@ -27,5 +32,5 @@
     "ROP"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Narrow passageway with rope (important!) and bricked up doorway. S=burial room (8). The doorway may lead to hidden areas."
 }

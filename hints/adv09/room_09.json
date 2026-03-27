@@ -6,7 +6,12 @@
   "exits": {
     "S": 7
   },
-  "hints": [],
+  "hints": [
+    "A large open field. Try digging if you have a shovel.",
+    "DIG here to uncover something buried in the field.",
+    "DIG reveals a buried item. You need the shovel from the Dry-Goods store.",
+    "DIG with shovel finds hidden items. S=fork in the road (7)."
+  ],
   "key_actions": [
     "DIG"
   ],
@@ -22,8 +27,8 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["SHOV"],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Large field. DIG with shovel reveals buried items. S=fork (7)."
 }

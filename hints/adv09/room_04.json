@@ -9,11 +9,16 @@
     "E": 3,
     "W": 6
   },
-  "hints": [],
+  "hints": [
+    "The western end of town. A stable is here.",
+    "GO STAB to enter the stable. The horse inside may be useful.",
+    "The stable leads to 'Ole Paint the horse and a stall with items.",
+    "E=town (3), W=road out of town (6)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Ghost town with stable (room 5). E=town (3), W=road (6)."
 }

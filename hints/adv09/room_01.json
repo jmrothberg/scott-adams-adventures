@@ -10,11 +10,16 @@
     "E": 17,
     "W": 2
   },
-  "hints": [],
+  "hints": [
+    "The main street of a ghost town. There's a barbershop and a jail here.",
+    "GO BARB to enter the barbershop. GO JAIL to enter the jail.",
+    "The barbershop has a Stetson hat. The jail has a golden derringer treasure.",
+    "Explore both buildings. E=road east (17), W=more town west (2)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Starting room. Main street with barbershop (room 16) and jail (room 13). E=road (17), W=town (2)."
 }

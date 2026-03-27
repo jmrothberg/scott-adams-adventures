@@ -6,7 +6,12 @@
   "exits": {
     "N": 22
   },
-  "hints": [],
+  "hints": [
+    "The deepest part of the mine. Try digging in unusual places.",
+    "DIG ROOF to dig upward in the mine ceiling.",
+    "DIG ROOF with the shovel reveals something hidden above.",
+    "DIG ROOF reveals a gold nugget treasure. N=mine with candle (22)."
+  ],
   "key_actions": [
     "DIG ROOF"
   ],
@@ -23,8 +28,8 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["SHOV"],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Deepest mine. DIG ROOF reveals gold nugget treasure. N=mine (22)."
 }

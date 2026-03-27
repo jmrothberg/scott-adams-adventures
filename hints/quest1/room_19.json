@@ -6,7 +6,12 @@
     "Door"
   ],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "The Chief Examiner's room - a meta/easter egg area. He's working on a computer program and doesn't notice you initially.",
+    "LOOK DESK to find items. LOOK CHIEF to see he's writing a program. Almost anything you do alerts him and he banishes you.",
+    "LOOK DESK drops held item and reveals something. LOOK PROGRAM reveals 'the next Scott Adams Marvel Adventure!' Most actions (HIT CHIEF, OPEN DOOR, GO DOOR, SAY anything, GET PROGRAM) alert the Chief who says 'How did you get out of the Computer?' and sends you to room 16.",
+    "This is a meta-joke room. LOOK DESK quickly for hidden items before the Chief notices. He sends you back to the fuzzy area (room 16) when alerted. He's writing the next Marvel adventure game."
+  ],
   "key_actions": [
     "LOOK DESK",
     "HIT CHIE",
@@ -87,5 +92,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Meta/easter egg room - the Chief Examiner (Scott Adams) is writing the next Marvel Adventure game. LOOK DESK finds items (drops held). LOOK CHIEF reveals he's programming. LOOK PROGRAM shows 'the next Scott Adams Marvel Adventure!' Most actions alert him and he banishes you to the fuzzy area (room 16). A fun fourth-wall-breaking room."
 }

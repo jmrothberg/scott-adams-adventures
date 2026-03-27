@@ -6,7 +6,12 @@
   "exits": {
     "W": 28
   },
-  "hints": [],
+  "hints": [
+    "A hotel room. Try ringing a bell here.",
+    "HIT BELL (if carrying the bell) to ring for room service.",
+    "HIT BELL summons a ghost who drops something useful.",
+    "HIT BELL with the large bell from the saloon. The ghost appears and drops an item. W=lobby (28)."
+  ],
   "key_actions": [
     "HIT BELL"
   ],
@@ -24,8 +29,8 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["BELL"],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hotel room. HIT BELL (from saloon) summons a ghost who drops an item. W=lobby (28)."
 }

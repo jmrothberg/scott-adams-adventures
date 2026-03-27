@@ -12,7 +12,12 @@
     "E": 17,
     "W": 17
   },
-  "hints": [],
+  "hints": [
+    "An open field with a large dome and a gem. All compass directions lead to warps.",
+    "GET GEM. DIG in the field to find something below. Be careful - all N/S/E/W exits warp you.",
+    "GET GEM (treasure). DIG creates a hole and drops items below. All four compass directions go to warp (room 17) which may transport you randomly. GO DOME returns inside.",
+    "Collect the gem. DIG to access the hole (room 9) below. Avoid compass directions as they all lead to warp. GO DOME to re-enter the tunnel."
+  ],
   "key_actions": [
     "DIG"
   ],
@@ -31,5 +36,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Field outside the first dome. Contains *Gem* and a large dome. All N/S/E/W exits warp to room 17. DIG creates a hole (drops items) leading to room 9 below. GO DOME returns to the tunnel."
 }

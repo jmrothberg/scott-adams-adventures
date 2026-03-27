@@ -2,54 +2,23 @@
   "room": 3,
   "name": "I'm on the edge of a hot rocky cliff\noutside the Volcano",
   "description": "I'm on the edge of a hot rocky cliff\noutside the Volcano",
-  "items_start": [
-    "Crevice"
-  ],
+  "items_start": ["Crevice"],
   "exits": {},
-  "hints": [],
-  "key_actions": [
-    "LOOK CLIF",
-    "LOOK DOWN",
-    "JUMP",
-    "EMPT BOTT"
+  "hints": [
+    "Hot rocky cliff outside the volcano. There's a crevice here.",
+    "LOOK DOWN reveals a cave at sea level far below. DO NOT JUMP!",
+    "GO CREV to enter the crevice. Jumping from here is fatal.",
+    "GO CREV leads deeper. JUMP=death. LOOK DOWN sees the beach cave (room 16)."
   ],
+  "key_actions": ["LOOK CLIF", "LOOK DOWN", "JUMP", "EMPT BOTT"],
   "action_details": [
-    {
-      "command": "LOOK CLIF",
-      "needs": [],
-      "effects": [
-        "Message: Far below",
-        "Message: I see",
-        "Message: a cave",
-        "Message: at sea level"
-      ]
-    },
-    {
-      "command": "LOOK DOWN",
-      "needs": [],
-      "effects": [
-        "Message: Far below",
-        "Message: I see",
-        "Message: a cave",
-        "Message: at sea level"
-      ]
-    },
-    {
-      "command": "JUMP",
-      "needs": [],
-      "effects": [
-        "Message: OK",
-        "Move item 0 to room 0"
-      ]
-    },
-    {
-      "command": "EMPT BOTT",
-      "needs": [],
-      "effects": []
-    }
+    {"command": "LOOK CLIF", "needs": [], "effects": ["Message: Far below", "Message: I see", "Message: a cave", "Message: at sea level"]},
+    {"command": "LOOK DOWN", "needs": [], "effects": ["Message: Far below", "Message: I see", "Message: a cave", "Message: at sea level"]},
+    {"command": "JUMP", "needs": [], "effects": ["Message: OK", "Move item 0 to room 0"]},
+    {"command": "EMPT BOTT", "needs": [], "effects": []}
   ],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Hot cliff outside volcano. GO CREV enters crevice. JUMP is fatal! Cave visible below at sea level."
 }

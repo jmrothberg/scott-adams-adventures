@@ -7,7 +7,12 @@
     "S": 20,
     "E": 22
   },
-  "hints": [],
+  "hints": [
+    "A cold shallow lake. You can fuel batteries here and wash things, but be careful.",
+    "FUEL BATTERY charges an old car battery in the water. Be very careful about washing certain items here.",
+    "FUEL BATTERY with the old car battery recharges it (sets flag 31). WASH HOSE is FATAL - the fuel residue is dangerous. SWIM is safe. SOUTH to beach (room 20), EAST to mountain foot (room 22).",
+    "Use this lake to recharge the car battery. Never WASH HOSE here - it kills you. SWIM is fine."
+  ],
   "key_actions": [
     "FUEL BATT",
     "WASH HOSE",
@@ -42,8 +47,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": [
+    "Old car battery"
+  ],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Cold shallow lake. FUEL BATTERY recharges the car battery here. WASH HOSE is FATAL (fuel residue). SWIM is safe. SOUTH to beach (room 20). EAST to mountain foot (room 22). Key location for battery recharging."
 }

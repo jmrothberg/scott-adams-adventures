@@ -11,11 +11,15 @@
     "U": 8,
     "D": 31
   },
-  "hints": [],
+  "hints": [
+    "Duct maze dead-end loop! All horizontal directions return to this same room.",
+    "Only UP escapes this room. UP leads to duct room 8. Every other direction loops back here.",
+    "UP→room 8 (escape). N/S/E/W/D all→room 31 (self-loop). Complete dead end except UP."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze dead-end. N/S/E/W/D all self-loop to room 31. Only UP→room 8 escapes."
 }

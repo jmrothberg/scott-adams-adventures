@@ -9,7 +9,11 @@
     "W": 6,
     "D": 8
   },
-  "hints": [],
+  "hints": [
+    "Inside the sarcophagus! There are stairs leading down.",
+    "GO STA or D to descend to the burial room below.",
+    "W exits back to the entrance. D leads to the burial room with the mummy and tapestry treasure."
+  ],
   "key_actions": [
     "GO STA"
   ],
@@ -25,5 +29,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Inside the sarcophagus. Stairs lead down to burial room (8). W=entrance (6), D=burial room (8)."
 }

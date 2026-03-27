@@ -8,7 +8,11 @@
     "U": 11,
     "D": 6
   },
-  "hints": [],
+  "hints": [
+    "Elevator shaft level 2. Check niches for items.",
+    "LOOK NICHE finds hidden items. Multiple exits available.",
+    "LOOK NICHE finds items. WEST to waiting room (room 10). UP to level 3 (room 11). DOWN to level 1 (room 6)."
+  ],
   "key_actions": [
     "LOOK SHAF",
     "LOOK NICH"
@@ -34,5 +38,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Shaft level 2. LOOK NICHE finds items. W to room 10, U to room 11, D to room 6."
 }

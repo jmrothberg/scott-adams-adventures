@@ -9,7 +9,11 @@
     "E": 38,
     "W": 36
   },
-  "hints": [],
+  "hints": [
+    "A hallway hub with threadbare carpeting. Four directions lead to important rooms.",
+    "LOOK WEST reveals Bio Gem. WEST to office with Bio Gem and natter egg. NORTH to Madame Web. EAST to Hydroman.",
+    "N→room 37 (Madame Web), S→room 2 (Tony's office), E→room 38 (Hydroman + aquarium), W→room 36 (Bio Gem + egg). LOOK WEST, AT GEM, AT BIO are special actions."
+  ],
   "key_actions": [
     "LOOK WEST",
     "AT GEM",
@@ -46,5 +50,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Central hall hub. N→37 (Madame Web), S→2 (Tony's office), E→38 (Hydroman), W→36 (Bio Gem). LOOK WEST reveals gem. AT GEM/AT BIO can retrieve items from hallway."
 }

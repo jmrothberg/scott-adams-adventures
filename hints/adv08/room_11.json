@@ -10,7 +10,12 @@
   "exits": {
     "N": 8
   },
-  "hints": [],
+  "hints": [
+    "A tall room with a metal bar in the ceiling (too high to reach), a headless skeleton, and a saw.",
+    "GET SAW - you'll need it later. The metal bar is out of reach for now.",
+    "You need something to stand on to reach the bar. A table would help.",
+    "Bring the table from the dining hall (room 12), DROP TAB, then SAW BAR to cut it. N=burial room (8)."
+  ],
   "key_actions": [
     "SAW BAR",
     "GET BAR"
@@ -33,10 +38,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["TAB"],
   "items_available": [
     "SAW"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Tall room with unreachable metal bar in ceiling. Need table to stand on, then SAW BAR. Saw is here. Skeleton warns of the chopping block trap. N=burial room (8)."
 }

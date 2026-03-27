@@ -9,11 +9,15 @@
     "E": 5,
     "W": 4
   },
-  "hints": [],
+  "hints": [
+    "Ground floor hallway hub with four exits.",
+    "NORTH to upper hall. SOUTH to The Lizard's office. EAST to elevator. WEST to office.",
+    "NORTH to room 35. SOUTH to room 1 (Lizard). EAST to elevator waiting room (room 5). WEST to office with crib/sand (room 4)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Starting room. Ground floor hub. N to room 35, S to room 1, E to room 5, W to room 4."
 }

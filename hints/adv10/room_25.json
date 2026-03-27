@@ -9,11 +9,16 @@
     "E": 26,
     "W": 27
   },
-  "hints": [],
+  "hints": [
+    "A maze of caves! All the rooms look alike. Drop items to mark your path.",
+    "N loops back to this same room (25). S and W both go to room 27. E goes to room 26.",
+    "To navigate the maze: from here go S or W to reach room 27, then N to room 28 (the exit with guano).",
+    "N=25 (loop). S=27. E=26. W=27. Drop items to map. Goal: reach room 28 (has opening and bat guano)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Maze room. N=25 (self-loop). S=27. E=26. W=27. Drop items to map. Target: room 28 (opening + guano)."
 }

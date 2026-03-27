@@ -6,7 +6,12 @@
   "exits": {
     "N": 7
   },
-  "hints": [],
+  "hints": [
+    "A ridge above a ravine. The ravine is full of sagebrush and impassable.",
+    "You need to clear the ravine first. BURN the sagebrush with matches.",
+    "BURN clears the ravine so you can GO RAVI to enter. JUMP RAVI jumps across to the other side.",
+    "BURN with matches clears brush (needs matches). Then GO RAVI to mine entrance (10). JUMP RAVI crosses to ridge (18). N=fork (7)."
+  ],
   "key_actions": [
     "GO RAVI",
     "GO RAVI",
@@ -59,8 +64,8 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["MATC"],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Ridge above ravine. BURN sagebrush with matches to clear path, then GO RAVI to mine area (10). JUMP RAVI crosses to opposite ridge (18). N=fork (7)."
 }

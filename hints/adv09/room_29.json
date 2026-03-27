@@ -9,7 +9,12 @@
   "exits": {
     "U": 20
   },
-  "hints": [],
+  "hints": [
+    "Inside a grave! There's a gold coin treasure and a purple worm.",
+    "GET COIN for the Gold Coin treasure. GET WORM for the purple worm.",
+    "The worm may be useful as bait or for other purposes.",
+    "GET COIN and GET WORM. U=Boot Hill (20)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -18,5 +23,5 @@
     "WORM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Inside a grave. Gold Coin treasure and purple worm (may be useful). U=Boot Hill (20)."
 }

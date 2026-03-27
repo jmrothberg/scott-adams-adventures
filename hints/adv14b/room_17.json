@@ -11,7 +11,12 @@
   "exits": {
     "E": 4
   },
-  "hints": [],
+  "hints": [
+    "The hardware store is loaded with essential tools. Take everything you can carry.",
+    "GET PICK, GET HYDROMETER, GET PUMP, and GET CABLES. All four items are needed at different points.",
+    "Climber's pick: for digging and extracting quartz. Hydrometer: for testing battery acid. Pump: for extracting gasoline. Jumper cables: for charging batteries. EAST exits to Main & Mountain View.",
+    "You'll need multiple trips since max carry is 5. Prioritize the climber's pick (for quartz and digging) and pump (for gasoline) first."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -22,5 +27,5 @@
     "CABL"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Hardware store with four critical items: Climber's Pick (extract quartz, dig in field), Hydrometer (test battery), Manual hand pump (extract gasoline from underground tank), Jumper Cables (charge battery). EAST exits to Main & Mountain View (room 4). With max carry of 5, plan multiple trips."
 }

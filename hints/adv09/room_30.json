@@ -4,7 +4,11 @@
   "description": "I'm flat on my back in a manure pile",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You got thrown off the horse into the manure pile! Gross.",
+    "GET UP to stand back up.",
+    "GET UP takes you back to the stable."
+  ],
   "key_actions": [
     "GET UP"
   ],
@@ -21,5 +25,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Manure pile. Landed here after SPUR on the horse. GET UP to stable (5)."
 }

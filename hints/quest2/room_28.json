@@ -11,11 +11,15 @@
     "U": 30,
     "D": 30
   },
-  "hints": [],
+  "hints": [
+    "Duct maze node. Most directions here loop to the same place.",
+    "EAST to room 27. WEST to room 26. All other directions (N/S/U/D) lead to room 30.",
+    "E→room 27, W→room 26, N/S/U/D→room 30. Heavy loop node - careful navigation needed."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze node. E→27, W→26, N/S/U/D→30. Heavy loop - most exits lead to room 30."
 }

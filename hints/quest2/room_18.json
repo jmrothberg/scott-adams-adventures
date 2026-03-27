@@ -9,7 +9,12 @@
     "E": 17,
     "W": 19
   },
-  "hints": [],
+  "hints": [
+    "Floating in the sky! Most directions lead to unknown areas. FEEL around to find hidden doors.",
+    "FEEL NORTH, FEEL SOUTH, FEEL WEST, and FEEL EAST to search for invisible doors in each direction.",
+    "FEEL NORTH finds a door leading to a hidden office (room 21) with a gem. FEEL SOUTH finds a door to another office (room 23) with a gem. FEEL WEST/EAST/UP find nothing special. FEEL DOWN detects the floor. EAST returns to the skyscraper.",
+    "Use FEEL NORTH to enter room 21 and FEEL SOUTH to enter room 23 - both have gems. N/S/W exits without feeling lead to room 19 (mystery)."
+  ],
   "key_actions": [
     "FEEL NORT",
     "FEEL SOUT",
@@ -82,5 +87,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Floating in the sky - invisible room with hidden doors. FEEL NORTH enters office with gem (room 21). FEEL SOUTH enters office with gem (room 23). N/S/W exits without FEEL go to room 19. EAST returns to skyscraper side (room 17). FEEL DOWN/AROUND detects the floor."
 }

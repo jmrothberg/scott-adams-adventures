@@ -3,17 +3,17 @@
   "name": "metal lined tunnel",
   "description": "I'm in a metal lined tunnel",
   "items_start": [],
-  "exits": {
-    "N": 22,
-    "S": 17,
-    "E": 20,
-    "W": 21
-  },
-  "hints": [],
+  "exits": {"N": 22, "S": 17, "E": 20, "W": 21},
+  "hints": [
+    "A metal-lined tunnel - alien construction! Four-way intersection.",
+    "The alien complex under the volcano. Explore carefully.",
+    "E and W lead to rooms with sealed display cases - dangerous if opened!",
+    "N=tunnel (22), S=ancient cave (17), E=display room (20), W=display room (21)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Metal tunnel hub in alien complex. N=tunnel (22), S=ancient cave (17), E=display room (20), W=display room (21)."
 }

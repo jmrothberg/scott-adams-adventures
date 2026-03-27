@@ -11,7 +11,12 @@
     "E": 18,
     "W": 18
   },
-  "hints": [],
+  "hints": [
+    "A fuzzy area with warped space. There's a sign. This is the TREASURE ROOM where you drop gems for points.",
+    "READ SIGN. LOOK AREA reveals space is warped. DROP all your *Gem* treasures here and SCORE to check progress.",
+    "This is the treasure storage room (room 16). DROP all 17 gems here and SCORE. NORTH goes to the underground room (room 15). S/E/W all go to warp (room 18).",
+    "Store all gems here for maximum score. NORTH to the underground room. The warped space in S/E/W directions leads to warp room 18."
+  ],
   "key_actions": [
     "LOOK AREA"
   ],
@@ -29,5 +34,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "TREASURE ROOM. Drop all 17 *Gem* treasures here and SCORE. Fuzzy area with warped space. NORTH to underground room (room 15). S/E/W all warp to room 18. Sign provides information about the treasure goal."
 }

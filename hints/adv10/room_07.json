@@ -2,17 +2,18 @@
   "room": 7,
   "name": "large plain",
   "description": "I'm in a large plain",
-  "items_start": [
-    "Extinct volcano"
+  "items_start": ["Extinct volcano"],
+  "exits": {"N": 1},
+  "hints": [
+    "A large plain with the extinct volcano visible.",
+    "CLIM VOLC to climb up to the volcano rim.",
+    "Make sure you have all needed supplies before entering the volcano.",
+    "CLIM VOLC=rim (6). N=main beach (1)."
   ],
-  "exits": {
-    "N": 1
-  },
-  "hints": [],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Large plain. CLIM VOLC to rim (6). N=main beach (1)."
 }

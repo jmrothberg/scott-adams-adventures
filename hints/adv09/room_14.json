@@ -8,7 +8,12 @@
   "exits": {
     "N": 13
   },
-  "hints": [],
+  "hints": [
+    "A jail cell with a hammer inside.",
+    "GET HAMM - the hammer is needed for breaking or building things.",
+    "The hammer can break open the safe in the telegraph office.",
+    "GET HAMM. Use it to HIT SAFE in the telegraph office. N=jail (13)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +21,5 @@
     "HAMM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Jail cell with hammer (needed to break the safe in telegraph office). N=jail (13)."
 }

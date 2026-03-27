@@ -8,11 +8,16 @@
     "S": 20,
     "D": 11
   },
-  "hints": [],
+  "hints": [
+    "A revolving cavern - the exits may shift! Be careful mapping.",
+    "N leads to the prison cell. S leads to the narrow ledge over the acid pool.",
+    "D leads back to the tall room. This room connects the upper and lower pyramid.",
+    "Hub room in the lower pyramid. N=prison cell (19), S=ledge/acid pool (20), D=tall room (11)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Revolving cavern hub. Exits may rotate. N=prison cell (19), S=narrow ledge (20), D=tall room (11)."
 }

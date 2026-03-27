@@ -8,11 +8,15 @@
   "exits": {
     "D": 2
   },
-  "hints": [],
+  "hints": [
+    "You're in a state of limbo. There's a sign and a way down.",
+    "READ SIGN for information about where you are. DOWN leads back to the starting dome.",
+    "DOWN returns to the dome (room 2). This is a transition state - you may arrive here after dying or through warps. READ SIGN."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Limbo state. DOWN leads to the starting dome (room 2). Transition/rebirth room after death or warp. Sign provides information. Connect between death and restart."
 }

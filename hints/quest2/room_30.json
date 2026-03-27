@@ -11,11 +11,15 @@
     "U": 31,
     "D": 26
   },
-  "hints": [],
+  "hints": [
+    "Duct maze trap room. Almost every direction leads to the same place.",
+    "N/S/E/W/D all lead to room 26. Only UP goes somewhere different (room 31).",
+    "All horizontal exits + DOWN→room 26. UP→room 31. This is a convergence trap in the maze."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze trap node. N/S/E/W/D all→26. U→31. Convergence point that funnels you back to room 26."
 }

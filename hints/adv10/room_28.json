@@ -12,11 +12,16 @@
     "E": 25,
     "W": 33
   },
-  "hints": [],
+  "hints": [
+    "A maze room with an opening and a pile of bat guano! This is the key room in the maze.",
+    "The bat guano is useful - it contains saltpeter for making explosives. The opening leads somewhere new.",
+    "GET GUAN for the guano (saltpeter = explosive ingredient). W leads to another cave (33). GO OPEN to exit.",
+    "N=28 (self-loop). S=26. E=25. W=cave (33). GET GUAN for explosives. Opening leads out of maze area."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Key maze room with opening and bat guano. W=cave (33). N=28 (loop). S=26. E=25. GET GUAN for saltpeter (explosives). GO OPEN exits maze."
 }

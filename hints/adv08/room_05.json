@@ -8,7 +8,12 @@
   "exits": {
     "U": 4
   },
-  "hints": [],
+  "hints": [
+    "You're in a hole with a tiny locked door. You need a tiny key to unlock it.",
+    "UNL DOO with the tiny key triggers strange noises and machinery.",
+    "The tiny door is too small to enter even when unlocked. It triggers a mechanism elsewhere.",
+    "Unlocking this door with the tiny key activates machinery that opens something else in the pyramid. U=back to pyramid entrance (room 4)."
+  ],
   "key_actions": [
     "UNL DOO",
     "UNL DOO",
@@ -57,8 +62,8 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["KEY"],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hole with tiny locked door. Unlocking with tiny key triggers remote machinery (flag 6). Can't enter the door - too small. U=pyramid entrance (room 4)."
 }

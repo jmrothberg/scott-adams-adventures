@@ -9,7 +9,12 @@
     "Small cage"
   ],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "A cavern with a crack in the rock, a gem, the villain ULTRON, and a small cage. Be careful with ULTRON.",
+    "GET GEM. The crack in the rock may lead somewhere. ULTRON is dangerous - you may need Hulk strength to deal with him. The cage may hold something.",
+    "GET GEM (treasure). Examine the crack - GO CRACK may lead to new areas. ULTRON is a Marvel villain who may attack. HIT ULTRON as the Hulk to defeat him. The cage may contain an ally.",
+    "Collect the gem. Deal with ULTRON using Hulk strength (HIT ULTRON). Explore the crack in the rock. OPEN CAGE or look inside it for items or allies."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -17,5 +22,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Underground cavern with *Gem* treasure, crack in rock, ULTRON (Marvel villain), and a small cage. ULTRON may need to be defeated with Hulk strength. The cage may contain Ant-Man or another ally. Crack in rock may lead to new areas. No standard exits - reached through digging."
 }

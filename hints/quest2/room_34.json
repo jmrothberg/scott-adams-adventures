@@ -11,13 +11,19 @@
     "W": 22,
     "U": 33
   },
-  "hints": [],
+  "hints": [
+    "The basement! Doctor Octopus and Electro are here with printing presses. Danger!",
+    "You need web fluid to deal with the villains. WEST leads to the paper room with a gem.",
+    "WEST→room 22 (paper room with gem). UP→room 33 (duct maze). Doctor Octopus and Electro guard this area. Need web to defeat them."
+  ],
   "key_actions": [],
   "action_details": [],
-  "items_needed": [],
+  "items_needed": [
+    "Web fluid"
+  ],
   "items_available": [
     "ELEC"
   ],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Basement with Doctor Octopus and Electro villains. Printing presses. WEST→room 22 (paper room, gem). UP→room 33 (duct maze). Need web fluid to defeat villains."
 }

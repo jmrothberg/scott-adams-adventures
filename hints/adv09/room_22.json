@@ -9,13 +9,18 @@
     "S": 23,
     "U": 21
   },
-  "hints": [],
+  "hints": [
+    "Deeper in the mine. An unlit candle is here.",
+    "GET CAND - light it with matches to see in dark areas.",
+    "LIGH CAND with matches to use as a light source.",
+    "GET CAND. S=deepest mine (23). U=mine with bullet (21)."
+  ],
   "key_actions": [],
   "action_details": [],
-  "items_needed": [],
+  "items_needed": ["MATC"],
   "items_available": [
     "CAND"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Mine with unlit candle (light source). S=deepest mine (23), U=mine (21)."
 }

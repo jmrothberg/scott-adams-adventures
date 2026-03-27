@@ -11,11 +11,16 @@
     "S": 20,
     "W": 18
   },
-  "hints": [],
+  "hints": [
+    "A prison cell with a dead explorer, rubbish, and a closed portal.",
+    "LOO RUB to search through the rubbish for useful items. LOO EXP to examine the explorer.",
+    "The explorer may have useful items. The portal might open somehow.",
+    "Search the rubbish for hidden items. The explorer's body may have tools. S=ledge (20), W=revolving cavern (18)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Prison cell with dead explorer (may have items), rubbish pile (search for items), and closed portal. S=ledge (20), W=revolving cavern (18)."
 }

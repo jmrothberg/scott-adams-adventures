@@ -9,7 +9,12 @@
   "exits": {
     "U": 8
   },
-  "hints": [],
+  "hints": [
+    "Down in the ravine. There's charcoal from the burned sagebrush and a mine entrance.",
+    "GET CHAR for sagebrush charcoal - it's an ingredient for making gunpowder.",
+    "GO MINE or GO ENTR to enter the mine. The mine has treasures and a candle.",
+    "GET CHAR (for gunpowder). GO MINE enters the mine (room 21). U=ridge (8)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -17,5 +22,5 @@
     "CHAR"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Ravine with charcoal (for gunpowder) and mine entrance (room 21). U=ridge (8)."
 }

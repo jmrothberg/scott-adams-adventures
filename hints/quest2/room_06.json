@@ -7,7 +7,11 @@
     "W": 5,
     "U": 9
   },
-  "hints": [],
+  "hints": [
+    "Ground level elevator shaft. Check tool niches for hidden items.",
+    "LOOK NICHE finds something hidden (drops held item). LOOK SHAFT shows niches.",
+    "LOOK NICHE finds items. UP to shaft level 2 (room 9). WEST to waiting room (room 5). Check niches at every level."
+  ],
   "key_actions": [
     "LOOK SHAF",
     "LOOK NICH"
@@ -33,5 +37,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Shaft level 1. LOOK NICHE finds items. UP to level 2 (room 9). WEST to waiting room (room 5)."
 }

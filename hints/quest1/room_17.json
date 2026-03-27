@@ -4,11 +4,15 @@
   "description": "I'm in a warp",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You've been warped! This warp zone connects the field areas. You'll be transported somewhere.",
+    "The warp randomly moves you. There are no manual exits. You'll end up somewhere on the map.",
+    "Warp zone reached by going N/S/E/W from the field areas (rooms 4, 7, 8). Transports you automatically. No controllable exits."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Warp zone reached from all field compass directions (rooms 4, 7, 8 all warp here via N/S/E/W). Automatically transports the player. No items or manual exits."
 }

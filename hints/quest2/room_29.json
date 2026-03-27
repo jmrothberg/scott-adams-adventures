@@ -11,11 +11,15 @@
     "U": 25,
     "D": 32
   },
-  "hints": [],
+  "hints": [
+    "Duct maze node. UP and DOWN are the only useful directions here.",
+    "UP returns to room 25. DOWN goes deeper to room 32. N/S/E/W all loop to room 30.",
+    "U→room 25, D→room 32. N/S/E/W all→room 30 (loop trap). Key vertical passage in the maze."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze node. U→25, D→32. N/S/E/W all→30. Vertical passage - go DOWN toward basement."
 }

@@ -6,7 +6,12 @@
     "Dashboard"
   ],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "Inside the jet car cockpit. The dashboard has a starter button and glove compartment. This is extremely dangerous if not properly prepared.",
+    "LOOK DASHBOARD to see controls. OPEN GLOVE or LOOK GLOVE to check the glove compartment. CLOSE COCKPIT before starting.",
+    "The jet car sequence is very specific: LOOK DASHBOARD, OPEN GLOVE for items, CLOSE COCKPIT, then PUSH BUTTON to start. Without proper fuel, pushing the button is FATAL. GET UP or GET OUT exits.",
+    "Full sequence: LOOK GLOVE (get item), CLOSE COCKPIT, PUSH BUTTON (must have fuel - otherwise car explodes). After successful mountain penetration, GET UP/GET OUT exits to current location. Multiple PUSH BUTTON states exist - car fire, nothing, engine idle, then mountain drive."
+  ],
   "key_actions": [
     "LOOK GLOV",
     "CLOS COCK",
@@ -192,8 +197,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": [
+    "Jet fuel"
+  ],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Jet car cockpit - EXTREMELY DANGEROUS. Multiple PUSH BUTTON outcomes depending on game state: car fire (death), nothing, engine idle, mountain drive. Must have proper fuel and cockpit closed. LOOK/OPEN GLOVE finds items. GET UP/GET OUT exits to different rooms depending on state (parking lot room 19, Main St room 3, or cavern room 24 after mountain penetration). OPEN COCKPIT while driving is fatal."
 }

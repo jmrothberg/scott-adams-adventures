@@ -11,11 +11,15 @@
     "U": 32,
     "D": 34
   },
-  "hints": [],
+  "hints": [
+    "Deepest duct maze node. DOWN exits the ducts into the basement!",
+    "DOWN drops into the basement (room 34) with Doctor Octopus and Electro. UP back to room 32.",
+    "D→room 34 (basement exit!), U→room 32, N/S/E/W→room 26. This is the bottom of the duct maze."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Bottom of duct maze. D→room 34 (basement with villains). U→32. N/S/E/W→26. Key exit point."
 }

@@ -9,11 +9,15 @@
   "exits": {
     "E": 2
   },
-  "hints": [],
+  "hints": [
+    "Small office with a crib and sand on the floor. Possibly Sandman related.",
+    "Search the crib and examine the sand. EAST returns to the hall.",
+    "LOOK CRIB and LOOK SAND to investigate. EAST to hall (room 2)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Office with crib and sand. Sand may relate to Sandman. EAST to hall (room 2)."
 }

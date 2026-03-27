@@ -11,7 +11,12 @@
   "exits": {
     "N": 2
   },
-  "hints": [],
+  "hints": [
+    "The Dry-Goods store! Essential supplies here: shovel, matches, compass. READ SIGN!",
+    "GET SHOV, GET MATC, GET COMP. The sign tells you this is the treasure room.",
+    "READ SIGN says to leave treasures here and SAY SCORE. This is THE treasure room!",
+    "Take the supplies you need. Drop all 13 treasures here and SCOR to win. N=town (2)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -22,5 +27,5 @@
     "SIGN"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "THE TREASURE ROOM. Dry-Goods store with essential supplies (shovel, matches, compass). Drop all 13 treasures and SCORE. N=town (2)."
 }

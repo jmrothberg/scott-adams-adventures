@@ -7,7 +7,12 @@
     "*Bio gem"
   ],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "A small underground room with a natter energy egg and a bio gem. The walls have scratch marks.",
+    "GET EGG and GET BIO GEM. LOOK WALL to see scratch marks - someone has been trying to claw their way out.",
+    "GET the natter energy egg and *Bio gem* (treasure). LOOK WALL shows scratch marks. SCRATCH WALL as the Hulk (with rage) opens a passage. No standard exits - must scratch wall to escape.",
+    "Collect both items. SCRATCH WALL while in Hulk rage mode to claw through the wall and create an exit. This requires being angry/transformed."
+  ],
   "key_actions": [
     "LOOK WALL",
     "SCRA WALL"
@@ -41,5 +46,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Small underground room with the natter energy egg and *Bio gem* treasure. No exits until you SCRATCH WALL with Hulk rage (drops item, reveals something). LOOK WALL shows scratch marks as a hint. NORTH from the fuzzy area (room 16) leads here."
 }

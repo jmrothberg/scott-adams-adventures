@@ -10,11 +10,16 @@
     "W": 25,
     "D": 17
   },
-  "hints": [],
+  "hints": [
+    "A maze room with five exits - more than the others! D leads out of the maze entirely.",
+    "D goes down to the ancient cave (room 17) - this is the connection between the cave maze and the main underground.",
+    "This is the maze exit room. D=ancient cave. The other directions loop back into the maze.",
+    "N=28. S=27. E=26. W=25. D=ancient cave (17). Use D to escape the maze to the main underground area."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Maze room with 5 exits. D=ancient cave (17) - maze exit to main underground. N=28. S=27. E=26. W=25."
 }

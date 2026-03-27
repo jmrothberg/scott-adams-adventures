@@ -2,27 +2,20 @@
   "room": 5,
   "name": "shallow tidepool",
   "description": "I'm in a shallow tidepool",
-  "items_start": [
-    "Water"
+  "items_start": ["Water"],
+  "exits": {"S": 1},
+  "hints": [
+    "A shallow tidepool with water.",
+    "SWIM to splash around. Fill containers with salt water here.",
+    "The salt water may have survival uses.",
+    "S=main beach (1). Safe to swim here."
   ],
-  "exits": {
-    "S": 1
-  },
-  "hints": [],
-  "key_actions": [
-    "SWIM"
-  ],
+  "key_actions": ["SWIM"],
   "action_details": [
-    {
-      "command": "SWIM",
-      "needs": [],
-      "effects": [
-        "Message: OK"
-      ]
-    }
+    {"command": "SWIM", "needs": [], "effects": ["Message: OK"]}
   ],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Shallow tidepool. Safe swimming. Can fill containers. S=main beach (1)."
 }

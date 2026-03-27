@@ -9,7 +9,12 @@
   "exits": {
     "W": 2
   },
-  "hints": [],
+  "hints": [
+    "A tunnel with a sign and a button in the wall. The tunnel goes outside to a dome.",
+    "READ SIGN for information. PUSH BUTTON to see what it does. GO DOME exits to the field.",
+    "GO DOME takes you outside to a field (room 4) and sets flags 3 and 4. PUSH BUTTON may trigger effects. WEST returns to the dome (room 2).",
+    "GO DOME to exit to the field. The button may need to be pressed at the right time. WEST goes back to the starting dome."
+  ],
   "key_actions": [
     "GO DOME"
   ],
@@ -27,5 +32,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Tunnel from the starting dome going outside. Sign and button in wall. GO DOME exits to field (room 4) and sets flags 3+4 (likely triggers Hulk/Banner transformation). WEST returns to dome (room 2)."
 }

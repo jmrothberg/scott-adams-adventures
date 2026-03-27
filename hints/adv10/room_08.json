@@ -2,30 +2,20 @@
   "room": 8,
   "name": "volcano",
   "description": "I'm in a volcano",
-  "items_start": [
-    "Lake",
-    "Cave"
+  "items_start": ["Lake", "Cave"],
+  "exits": {"U": 6},
+  "hints": [
+    "Inside the volcano! Lake and cave visible.",
+    "GO CAVE to enter the deep cave (bear lives there!). SWIM enters the lake.",
+    "The cave has fish bones and a bear. The lake connects to underwater areas.",
+    "GO CAVE=deep cave (11). SWIM=lake (12). U=rim (6) but ash makes it very difficult."
   ],
-  "exits": {
-    "U": 6
-  },
-  "hints": [],
-  "key_actions": [
-    "GET OUT"
-  ],
+  "key_actions": ["GET OUT"],
   "action_details": [
-    {
-      "command": "GET OUT",
-      "needs": [],
-      "effects": [
-        "Message: Sorry",
-        "Message: ash is loose, I slide down",
-        "Message: I shawda picked another proffesion!"
-      ]
-    }
+    {"command": "GET OUT", "needs": [], "effects": ["Message: Sorry", "Message: ash is loose, I slide down", "Message: I shawda picked another proffesion!"]}
   ],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Inside volcano. GO CAVE=deep cave (11) with bear. SWIM=lake (12). U=rim (6) but very hard to climb."
 }

@@ -9,7 +9,12 @@
     "S": 6,
     "E": 13
   },
-  "hints": [],
+  "hints": [
+    "A dining hall with a table. The table can be taken.",
+    "GET TAB to take the table - it's needed to reach the metal bar in the tall room.",
+    "S goes to the pyramid entrance. E goes to the hallway with the oyster.",
+    "The table is essential - bring it to the tall room (room 11) to reach the metal bar. S=entrance (6), E=hallway (13)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -17,5 +22,5 @@
     "TAB"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Dining hall with portable table (needed in tall room 11 to reach metal bar). S=entrance (6), E=hallway (13)."
 }

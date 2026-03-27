@@ -8,7 +8,12 @@
   "exits": {
     "E": 11
   },
-  "hints": [],
+  "hints": [
+    "A hidden office behind the saloon mirror! The Oriental Go Board treasure is here.",
+    "GET GO for the Oriental Go Board treasure.",
+    "Bring it to the Dry-Goods store (room 15) with other treasures.",
+    "GET GO. E=saloon (11)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +21,5 @@
     "GO"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Hidden office behind saloon mirror. Oriental Go Board treasure here. E=saloon (11)."
 }

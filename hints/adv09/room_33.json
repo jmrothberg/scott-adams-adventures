@@ -8,7 +8,12 @@
   "exits": {
     "S": 32
   },
-  "hints": [],
+  "hints": [
+    "A remote line shack with a telegraph key. Look around carefully.",
+    "LOOK FLOO to examine the floor - there's a loose plank!",
+    "MOVE PLAN or OPEN PLAN to reveal a root cellar below with treasures.",
+    "LOOK FLOO reveals loose plank. Remove it to access root cellar (34) with pelts treasure. S=trail (32)."
+  ],
   "key_actions": [
     "LOOK FLOO"
   ],
@@ -26,5 +31,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Line shack. LOOK FLOO reveals loose plank hiding root cellar (34) with pelts treasure. S=trail (32)."
 }

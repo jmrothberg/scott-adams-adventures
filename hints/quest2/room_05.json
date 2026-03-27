@@ -9,11 +9,15 @@
   "exits": {
     "W": 2
   },
-  "hints": [],
+  "hints": [
+    "Elevator waiting room with closed doors and a call button.",
+    "PUSH BUTTON to call elevator. Force open doors as Spiderman to access the shaft.",
+    "OPEN DOOR to force elevator doors. WEST to hall (room 2). The shaft (room 6) is behind the doors."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Ground floor elevator waiting room. PUSH BUTTON calls elevator. Force doors to access shaft (room 6). WEST to hall (room 2)."
 }

@@ -9,11 +9,16 @@
     "N": 20,
     "E": 18
   },
-  "hints": [],
+  "hints": [
+    "The jet car is parked here! This is Buckaroo's famous vehicle for penetrating the mountain.",
+    "GO CAR to enter the jet car cockpit. You need to fuel and prepare it before driving through the mountain.",
+    "GO CAR enters the cockpit (room 29). The jet car needs fuel and proper preparation before the mountain run. NORTH goes to the beach (room 20). EAST to the east parking lot (room 18).",
+    "The jet car is the key vehicle. You must: make fuel in the lab, fuel the car, close the cockpit, then push the starter button in the right sequence."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "West end of parking lot with Buckaroo Banzai's jet car. GO CAR enters the cockpit (room 29). NORTH to beach (room 20). EAST to east parking lot (room 18). The jet car must be fueled and prepared before attempting the mountain penetration."
 }

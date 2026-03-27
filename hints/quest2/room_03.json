@@ -9,7 +9,11 @@
   "exits": {
     "E": 16
   },
-  "hints": [],
+  "hints": [
+    "Computer lab with the Ringmaster villain and a computer terminal with a knob.",
+    "TYPE RUN to execute a program. GO COMP drops items and enters the computer. Beware the Ringmaster's hypnosis.",
+    "TYPE RUN runs a program. Plain TYPE gives SYNTAX ERROR. GO COMP drops items. EAST to hall (room 16). Deal with the Ringmaster."
+  ],
   "key_actions": [
     "TYPE RUN",
     "GO COMP",
@@ -45,5 +49,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Computer lab with Ringmaster villain. TYPE RUN executes program. GO COMP enters computer (drops items). EAST to hall (room 16)."
 }

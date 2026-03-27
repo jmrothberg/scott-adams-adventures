@@ -12,7 +12,12 @@
     "N": 12,
     "S": 16
   },
-  "hints": [],
+  "hints": [
+    "The pyramid entrance has a sarcophagus, bandages, a door, and a pistol.",
+    "GET PIS for the pistol and GET BAN for the bandages. OPEN SAR to open the sarcophagus.",
+    "The sarcophagus contains hidden stairs going down. N leads to the dining hall.",
+    "OPEN SAR reveals stairs inside (room 7). GET PIS for protection. N=dining hall (12), S=sitting room (16). GO DOO exits to desert (room 4)."
+  ],
   "key_actions": [
     "GO DOO"
   ],
@@ -33,5 +38,5 @@
     "PIS"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Pyramid entrance. Sarcophagus contains stairs to lower levels. Pistol and bandages are important. N=dining hall (12), S=sitting room (16), GO DOO=desert (4)."
 }

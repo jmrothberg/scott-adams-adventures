@@ -9,13 +9,19 @@
   "exits": {
     "W": 35
   },
-  "hints": [],
+  "hints": [
+    "Office with Hydroman villain and an aquarium. Be careful!",
+    "Hydroman is a water-based villain. The aquarium may be relevant to defeating him. Need web fluid.",
+    "Hydroman needs to be dealt with (web fluid or other means). GET AQUARIUM may be useful. WEST→room 35 (hall)."
+  ],
   "key_actions": [],
   "action_details": [],
-  "items_needed": [],
+  "items_needed": [
+    "Web fluid"
+  ],
   "items_available": [
     "AQUA"
   ],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Office with Hydroman villain and aquarium. WEST→room 35 (hall). Need web fluid to defeat Hydroman."
 }

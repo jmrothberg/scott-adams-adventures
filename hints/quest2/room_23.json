@@ -8,7 +8,11 @@
   "exits": {
     "N": 18
   },
-  "hints": [],
+  "hints": [
+    "Hidden office with a gem, accessed by FEEL SOUTH from the floating sky.",
+    "GET GEM (treasure). NORTH returns to the floating area.",
+    "GET GEM. NORTH to room 18. Found via FEEL SOUTH from sky."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +20,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Hidden office with *Gem*. Via FEEL SOUTH from sky (room 18). NORTH returns to sky."
 }

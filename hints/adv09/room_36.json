@@ -6,11 +6,16 @@
     "TeePee"
   ],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "A hidden canyon with a TeePee! The horse brought you here.",
+    "GO TEEP to enter the teepee and find treasures inside.",
+    "The teepee contains the Sacred Tom Tom and Turquoise Necklace treasures.",
+    "GO TEEP enters the teepee (room 37). SAY GIDD on the horse to return."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hidden canyon reached by riding 'Ole Paint (SAY GIDD). TeePee (room 37) contains two treasures."
 }

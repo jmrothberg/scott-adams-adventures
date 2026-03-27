@@ -8,7 +8,12 @@
   "exits": {
     "W": 13
   },
-  "hints": [],
+  "hints": [
+    "A tunnel going out with a sign. WEST enters the bee dome - be prepared.",
+    "WEST leads to a dome with killer bees. You need the metal hand fan to deal with them.",
+    "WAVE FAN AT BEES in this tunnel to blow them away. GO DOME exits to the field (room 8). WEST goes to the bee dome (room 13).",
+    "Have the metal fan before going WEST to the bee dome. WAVE FAN AT BEES clears them. GO DOME exits to a field. Be careful - bees can be deadly."
+  ],
   "key_actions": [
     "AT BEES",
     "GO DOME"
@@ -36,8 +41,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": [
+    "Metal Hand Fan"
+  ],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Tunnel with sign. WAVE FAN AT BEES uses the metal fan to blow away the killer bees (DEATH flag + clears flag 17 - the bees die, not you). GO DOME exits to field (room 8). WEST goes to bee dome (room 13). The AT BEES action has a DEATH flag but it kills the bees, clearing the threat."
 }

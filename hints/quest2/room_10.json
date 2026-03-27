@@ -9,7 +9,11 @@
   "exits": {
     "W": 17
   },
-  "hints": [],
+  "hints": [
+    "Middle floor waiting room with a mirror and open shaft. A mysterious figure was here.",
+    "FOLLOW MYSTERIOUS - 'He went west!' GO SHAFT enters the elevator shaft.",
+    "GO SHAFT to room 9. WEST to skyscraper exterior (room 17). FOLLOW MYSTERIOUS points west."
+  ],
   "key_actions": [
     "FOLL MYST",
     "GO SHAF"
@@ -34,5 +38,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Middle floor waiting room. GO SHAFT to room 9. WEST to skyscraper side (room 17). Mysterious figure went west."
 }

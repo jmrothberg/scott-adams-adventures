@@ -6,11 +6,16 @@
     "Cave in cliff"
   ],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "A beach on the far side of the island with a cave visible in the cliff.",
+    "GO CAVE to enter the cave in the cliff. This connects to the ancient cave system.",
+    "The cave leads to the ancient cave with primitive drawings and a passage to the alien tunnels.",
+    "GO CAVE=ancient cave (17). This beach is accessed from the ancient cave heading S."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Beach by ocean with cave in cliff. GO CAVE=ancient cave (17). Accessed via S from ancient cave."
 }

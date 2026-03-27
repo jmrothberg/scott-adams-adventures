@@ -11,7 +11,12 @@
     "U": 9,
     "D": 9
   },
-  "hints": [],
+  "hints": [
+    "A dark or unnamed room. Most exits loop back to the same place!",
+    "FEE (feel around) to find a coin on the floor. E is the only unique exit.",
+    "DO NOT break the mirror - it causes a cave-in (death)!",
+    "FEE finds a gold coin treasure. E leads to the dressing room with the gold scarab. All other exits go to room 9. BRE MIR = death."
+  ],
   "key_actions": [
     "BRE MIR",
     "FEE"
@@ -36,6 +41,6 @@
   ],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Mystery room with mirror. FEE finds gold coin treasure. BRE MIR is fatal (cave-in). E=dressing room (26). All other exits loop to passageway (9)."
 }

@@ -8,7 +8,11 @@
   "exits": {
     "S": 10
   },
-  "hints": [],
+  "hints": [
+    "The garage of the large house at the east cul-de-sac. There's a small toolbox here.",
+    "GET TOOLBOX - it may contain useful items. LOOK TOOLBOX or OPEN TOOLBOX to see what's inside.",
+    "GET TOOLBOX for items inside. SOUTH returns to the east cul-de-sac (room 10)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +20,5 @@
     "TOOL"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Garage of the east cul-de-sac large house. Contains a small toolbox with potential items inside. SOUTH returns to the east cul-de-sac (room 10)."
 }

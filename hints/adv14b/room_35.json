@@ -4,11 +4,15 @@
   "description": "I'm in the hereafter.",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "The hereafter - you're dead. This is the death/game-over room.",
+    "There are no exits. You must restore a saved game.",
+    "This is the death state. You ended up here from a fatal action (car explosion, washing the hose, etc.). SAVE frequently and restore from your last save."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Death/game-over room (the hereafter). No exits - must restore a saved game. Reached by fatal actions like the jet car exploding, washing the fuel hose in the lake, etc."
 }

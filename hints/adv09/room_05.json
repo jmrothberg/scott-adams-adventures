@@ -9,11 +9,16 @@
   "exits": {
     "S": 4
   },
-  "hints": [],
+  "hints": [
+    "Inside the stable. There's a stall and a manure pile.",
+    "GO STAL to enter the stall with the horse. The manure pile hides something.",
+    "DIG or LOOK MANU to search the manure pile for hidden items.",
+    "GO STAL leads to 'Ole Paint and the horseshoe/silver spurs. S=town (4)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Stable with stall (room 19) and manure pile. S=town (4)."
 }

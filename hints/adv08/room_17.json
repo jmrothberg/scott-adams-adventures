@@ -8,7 +8,12 @@
   "exits": {
     "N": 14
   },
-  "hints": [],
+  "hints": [
+    "A sloping crawlway with starving rats! They're dangerous.",
+    "The rats will attack you if you stay. You need to scare them off.",
+    "SHO RAT to fire the pistol and scare the rats away with the noise.",
+    "SHO RAT scares rats (the noise, not the aim). N=altar room (14). GO PAS returns to sitting room (16) if the passage is open."
+  ],
   "key_actions": [
     "GO PAS",
     "SHO RAT"
@@ -35,10 +40,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["PIS"],
   "items_available": [
     "RAT"
   ],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Sloping crawlway with dangerous rats. SHO RAT with pistol scares them away. N=altar room (14), GO PAS=sitting room (16)."
 }

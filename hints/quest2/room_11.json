@@ -8,7 +8,11 @@
     "U": 14,
     "D": 9
   },
-  "hints": [],
+  "hints": [
+    "Shaft level 3. The elevator bottom is visible above. Use spider strength!",
+    "PUSH UP or PUSH SHAFT uses spider strength on the elevator. LOOK NICHE for items.",
+    "PUSH UP/PUSH SHAFT moves elevator (sets flag 3). LOOK NICHE finds items. W to room 12, U to room 14, D to room 9."
+  ],
   "key_actions": [
     "LOOK SHAF",
     "LOOK NICH",
@@ -64,5 +68,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Shaft level 3. PUSH UP/PUSH SHAFT uses spider strength (flag 3). W to room 12, U to room 14, D to room 9."
 }

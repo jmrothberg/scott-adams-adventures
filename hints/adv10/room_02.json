@@ -3,14 +3,17 @@
   "name": "Beach by ocean, a cliff towers over\nwest end",
   "description": "I'm in a Beach by ocean, a cliff towers over\nwest end",
   "items_start": [],
-  "exits": {
-    "E": 1
-  },
-  "hints": [],
+  "exits": {"E": 1},
+  "hints": [
+    "Western beach with a towering cliff. Only exit is east.",
+    "The cliff is too steep to climb normally.",
+    "Look for alternative ways up - maybe from inside the volcano.",
+    "E=main beach (1). Can reach this from room 32 by jumping down."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Western beach with cliff. E=main beach (1). Can be reached from cliff (32) by jumping."
 }

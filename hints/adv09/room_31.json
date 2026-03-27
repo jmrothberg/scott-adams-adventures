@@ -8,7 +8,12 @@
   "exits": {
     "N": 19
   },
-  "hints": [],
+  "hints": [
+    "A storeroom behind the stable with a keg of nails.",
+    "GET KEG - nails may be useful for building or repairs.",
+    "The nails can be combined with other items for gunpowder or construction.",
+    "GET KEG. N=stall (19)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +21,5 @@
     "KEG"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Storeroom with keg of nails (useful ingredient). N=stall (19)."
 }

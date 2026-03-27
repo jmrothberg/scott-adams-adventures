@@ -12,13 +12,18 @@
   "exits": {
     "E": 8
   },
-  "hints": [],
+  "hints": [
+    "A deep cave with a bear! Fish bones suggest it feeds here. There's a stone basin and openings.",
+    "The bear is dangerous but not immediately hostile. The crevice and dark opening lead deeper.",
+    "GET BONE for later use. GO CREV to reach the alien tunnels. The dark opening leads to the ancient cave.",
+    "E=volcano interior (8). GO CREV=metal tunnel (9). GO DARK=ancient cave (17). Bear blocks items if angered."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [
     "BONE"
   ],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Deep cave with bear. Fish bones (GET BONE) useful later. GO CREV reaches alien tunnels (9). GO DARK reaches ancient cave (17). E=volcano (8). Bear is a threat."
 }

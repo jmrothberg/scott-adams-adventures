@@ -8,11 +8,16 @@
     "S": 8,
     "E": 6
   },
-  "hints": [],
+  "hints": [
+    "A fork in the road with three choices.",
+    "N leads to a large field. S leads to a ridge above a ravine.",
+    "The field has buried items. The ravine leads to the mine.",
+    "N=field (9), S=ridge/ravine (8), E=road back to town (6)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Fork in the road hub. N=field (9), S=ridge (8), E=road to town (6)."
 }

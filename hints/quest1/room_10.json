@@ -6,7 +6,11 @@
   "exits": {
     "U": 7
   },
-  "hints": [],
+  "hints": [
+    "A hole dug from the field above (room 7 with tiny holes). DIG deeper.",
+    "DIG to continue underground. UP returns to the field with the tiny holes.",
+    "DIG goes further down. UP returns to field (room 7). This connects the surface to underground areas."
+  ],
   "key_actions": [
     "DIG"
   ],
@@ -22,5 +26,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hole below field (room 7). DIG goes deeper. UP returns to the field with tiny holes. Connects surface to underground."
 }

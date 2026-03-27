@@ -4,11 +4,14 @@
   "description": "I'm in a     ",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "This appears to be an unused or placeholder room in the game data.",
+    "There are no exits, items, or actions. If you end up here, restore a saved game."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Unused/placeholder room with blank name and description. No exits or items. May be a leftover from development."
 }

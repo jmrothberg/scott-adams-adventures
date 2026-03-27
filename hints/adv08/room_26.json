@@ -8,7 +8,12 @@
   "exits": {
     "W": 25
   },
-  "hints": [],
+  "hints": [
+    "A dressing room with the Gold Scarab treasure!",
+    "GET SCA for the Gold Scarab treasure.",
+    "W goes back to the mirror room. Bring the scarab to room 15.",
+    "GET SCA and bring it to the hieroglyphics room (15) with all other treasures. W=mirror room (25)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +21,5 @@
     "SCA"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Dressing room with Gold Scarab treasure. W=mirror room (25)."
 }

@@ -6,7 +6,11 @@
   "exits": {
     "S": 16
   },
-  "hints": [],
+  "hints": [
+    "Chemical laboratory for mixing web fluid and other reactions.",
+    "MIX WEB needs torn paper formula + exotic chemicals. MIX acid + calcium carbonate for another reaction.",
+    "MIX WEB: needs formula + chemicals. Wrong formula = 'baby formula!' No formula = 'no formula.' MIX acid + carbonate clears flags 39/40. SOUTH to hall."
+  ],
   "key_actions": [
     "MIX WEB",
     "MIX",
@@ -91,8 +95,13 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": [
+    "Torn paper (formula)",
+    "Exotic chemicals",
+    "Acid(Hydrochloric)",
+    "Calcium Carbonate"
+  ],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Chemical lab for web fluid. MIX WEB needs torn paper + exotic chems. MIX acid + carbonate for reactions. SOUTH to hall (room 16)."
 }

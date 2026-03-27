@@ -7,7 +7,12 @@
     "S": 18,
     "W": 21
   },
-  "hints": [],
+  "hints": [
+    "At the foot of the mountain. You can see a ledge about 15 feet up with a small peak.",
+    "LOOK MOUNTAIN to see the ledge. You need a rope or line to climb up. CLIMB MOUNTAIN asks 'How?'",
+    "THROW LINE with 20 ft of phone line to create a climbing route to the ledge. Then CLIMB to ascend. SOUTH to parking lot (room 18). WEST to lake (room 21).",
+    "Get the phone line, THROW LINE at the mountain, then CLIMB to reach the mountain ledge (room 23) where the quartz is."
+  ],
   "key_actions": [
     "LOOK MOUN",
     "THRO LINE",
@@ -40,8 +45,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": [
+    "20 ft of phone line"
+  ],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Foot of the mountain. THROW LINE with 20 ft phone line creates a climbing route. CLIMB MOUNTAIN without the line asks 'How?' LOOK MOUNTAIN shows ledge 15 ft up. SOUTH to east parking lot (room 18). WEST to cold lake (room 21)."
 }

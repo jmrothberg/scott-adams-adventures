@@ -8,11 +8,16 @@
     "E": 23,
     "W": 29
   },
-  "hints": [],
+  "hints": [
+    "Another section of the metal-lined alien tunnel system. Three-way junction.",
+    "This connects the main tunnel hub to the rock rooms and the force field room.",
+    "W leads to the force field and control console - a critical endgame area.",
+    "S=metal tunnel hub (9). E=dimly lit rock room (23). W=force field room (29)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Metal tunnel junction. S=tunnel hub (9). E=rock room (23). W=force field/console room (29). Key connector in alien complex."
 }

@@ -11,7 +11,11 @@
   "exits": {
     "E": 34
   },
-  "hints": [],
+  "hints": [
+    "Paper room with a gem, blank paper, dial, and weight scale floor.",
+    "GET GEM. The scale/dial may reveal information. Blank paper might have hidden writing.",
+    "GET GEM (treasure). EAST to basement (room 34) with Doctor Octopus and Electro. Scale/dial is a puzzle."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -19,5 +23,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Paper room with *Gem*, blank paper, dial, weight scale. EAST to basement (room 34)."
 }

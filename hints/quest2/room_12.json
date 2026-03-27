@@ -8,7 +8,11 @@
   "exits": {
     "W": 16
   },
-  "hints": [],
+  "hints": [
+    "Upper floor waiting room with an open shaft.",
+    "GO SHAFT enters elevator shaft level 3. WEST to upper hallway.",
+    "GO SHAFT to room 11. WEST to hallway (room 16) connecting lab and computer areas."
+  ],
   "key_actions": [
     "GO SHAF"
   ],
@@ -25,5 +29,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Upper waiting room. GO SHAFT to room 11. WEST to hallway (room 16)."
 }

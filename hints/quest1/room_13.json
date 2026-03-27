@@ -10,13 +10,20 @@
   "exits": {
     "E": 6
   },
-  "hints": [],
+  "hints": [
+    "A dome with killer bees, wax, and wire mesh with bee-sized holes. The bees are dangerous!",
+    "The bees will attack. You need to fan them away. GET WAX - it's useful for plugging holes. EAST leads to the tunnel.",
+    "You need the metal hand fan from room 2 to blow the bees away (WAVE FAN AT BEES from the tunnel). GET WAX (useful for plugging holes elsewhere). The wire mesh has bee-sized holes they use to get in.",
+    "Fan the bees away first (WAVE FAN AT BEES from room 6), then GET WAX. Plug bee holes with wax elsewhere. EAST goes to tunnel (room 6)."
+  ],
   "key_actions": [],
   "action_details": [],
-  "items_needed": [],
+  "items_needed": [
+    "Metal Hand Fan"
+  ],
   "items_available": [
     "WAX"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Dome with killer bees, wax, and wire mesh with bee holes. Bees must be dealt with using the metal fan (WAVE FAN AT BEES from tunnel room 6). GET WAX for plugging holes. EAST to tunnel (room 6). Wire mesh connects to the outside (room 8 can peek in through it)."
 }

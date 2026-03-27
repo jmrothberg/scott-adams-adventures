@@ -4,11 +4,15 @@
   "description": "I'm in a ?",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "Mystery room - you shouldn't normally be here.",
+    "This room may be used internally by the game engine or accessed through unusual means.",
+    "Room 20 appears to be an unused or special-purpose room with no standard exits."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Mystery/unused room with no exits. May be an internal game engine room or placeholder."
 }

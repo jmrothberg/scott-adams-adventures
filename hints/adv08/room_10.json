@@ -10,7 +10,12 @@
   "exits": {
     "W": 8
   },
-  "hints": [],
+  "hints": [
+    "A hidden alcove with a chopping block, skull, and a box.",
+    "LOO SKU or LOO BOX to examine the items. The box may contain something.",
+    "OPEN BOX to find treasures inside. The skull may contain something too.",
+    "LOO SKU reveals gold teeth. OPEN BOX or LOO BOX reveals hidden items. W=burial room (8)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -20,5 +25,5 @@
     "BOX"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Hidden alcove with skull (contains gold teeth treasure), box (contains treasures), and chopping block. W=burial room (8)."
 }

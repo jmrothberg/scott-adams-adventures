@@ -8,7 +8,12 @@
   "exits": {
     "W": 9
   },
-  "hints": [],
+  "hints": [
+    "An alien metal room with a sealed display case! This is part of the underground complex.",
+    "The display case contains something important but is sealed. Look for a way to open it.",
+    "MOVE BUTT (press a button) on the case is FATAL. You need another way to open or break it.",
+    "W=metal tunnel (9). DO NOT MOVE BUTT = DEATH. Find another method to access the case contents."
+  ],
   "key_actions": [
     "MOVE BUTT"
   ],
@@ -27,5 +32,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Alien metal room with sealed display case. W=metal tunnel (9). MOVE BUTT=DEATH. Must find safe way to access case contents."
 }

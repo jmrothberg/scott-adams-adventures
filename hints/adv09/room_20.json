@@ -8,7 +8,12 @@
   "exits": {
     "W": 17
   },
-  "hints": [],
+  "hints": [
+    "Boot Hill - the cemetery. A rattlesnake is here! Be careful.",
+    "DIG to uncover a grave. The rattlesnake may attack - deal with it first.",
+    "SHOO SNAK or KILL SNAK to deal with the rattlesnake before digging.",
+    "DIG reveals a grave (room 29) with gold coin and purple worm. W=road (17)."
+  ],
   "key_actions": [
     "DIG"
   ],
@@ -22,10 +27,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["SHOV"],
   "items_available": [
     "SNAK"
   ],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Boot Hill cemetery with rattlesnake (dangerous). DIG reveals grave (room 29) with gold coin treasure. W=road (17)."
 }

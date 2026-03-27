@@ -11,11 +11,15 @@
     "U": 8,
     "D": 29
   },
-  "hints": [],
+  "hints": [
+    "Duct maze node. All directions look the same - map carefully!",
+    "NORTH exits to Tony's office (room 2). SOUTH leads to junction room 7. UP goes to duct room 8.",
+    "Key node: N→room 2 (Tony's office), S→room 7 (junction), E/W→room 26, U→room 8 (duct with gem), D→room 29."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze node. N→room 2 (Tony's office exit), S→room 7, E/W→room 26, U→room 8, D→room 29. One of the key navigable nodes."
 }

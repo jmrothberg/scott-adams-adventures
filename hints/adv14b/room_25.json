@@ -8,7 +8,11 @@
   "exits": {
     "E": 20
   },
-  "hints": [],
+  "hints": [
+    "The lifeguard shack has a small ham radio - an essential item for the endgame.",
+    "GET RADIO - you need it to transmit the bomb deactivation code from the antenna shed.",
+    "GET RADIO (the small ham radio) and bring it to the antenna shed (room 13). EAST returns to the beach (room 20)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -16,5 +20,5 @@
     "RADI"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Lifeguard shack on the beach. Contains the small ham radio needed for the endgame TRANSMIT command in the antenna shed (room 13). EAST returns to the beach (room 20)."
 }

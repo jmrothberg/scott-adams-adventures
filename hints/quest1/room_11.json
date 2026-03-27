@@ -6,7 +6,11 @@
   "exits": {
     "U": 8
   },
-  "hints": [],
+  "hints": [
+    "A hole dug from the field above (room 8 with wire mesh dome). DIG deeper.",
+    "DIG to continue underground. UP returns to the field by the mesh dome.",
+    "DIG goes further down. UP returns to field (room 8). May connect to the cavern system."
+  ],
   "key_actions": [
     "DIG"
   ],
@@ -22,5 +26,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hole below field (room 8). DIG goes deeper. UP returns to the field with the wire mesh dome. Part of the underground tunnel network."
 }

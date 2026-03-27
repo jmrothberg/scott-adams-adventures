@@ -8,11 +8,15 @@
   "exits": {
     "N": 2
   },
-  "hints": [],
+  "hints": [
+    "A deserted office with The Lizard - a dangerous Marvel villain.",
+    "The Lizard needs to be dealt with using spider powers or web fluid.",
+    "NORTH leads to the hall (room 2). Handle The Lizard before exploring further."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Deserted office with The Lizard villain. NORTH to hall (room 2)."
 }

@@ -8,11 +8,16 @@
   "exits": {
     "N": 23
   },
-  "hints": [],
+  "hints": [
+    "A rock room containing alien machinery! This is deep in the underground complex.",
+    "Examine the alien machinery carefully. It may be operational or contain useful components.",
+    "The machinery relates to the alien technology throughout the complex. Interact with it to learn its purpose.",
+    "N=dimly lit rock room (23). The alien machinery is part of the endgame puzzle sequence."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Rock room with alien machinery. N=dimly lit rock room (23). Machinery is part of endgame puzzle."
 }

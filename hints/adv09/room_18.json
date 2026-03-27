@@ -6,7 +6,12 @@
   "exits": {
     "W": 32
   },
-  "hints": [],
+  "hints": [
+    "The opposite side of the ravine from room 8. You jumped across.",
+    "W leads to a mountain trail. JUMP RAVI jumps back across.",
+    "The mountain trail leads to a line shack with hidden areas.",
+    "W=mountain trail (32). JUMP RAVI returns to ridge (8)."
+  ],
   "key_actions": [
     "GO RAVI",
     "JUMP RAVI"
@@ -32,5 +37,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Far ridge. W=mountain trail (32). JUMP RAVI=back to other ridge (8)."
 }

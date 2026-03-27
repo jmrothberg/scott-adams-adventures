@@ -3,36 +3,20 @@
   "name": "I'm on the rim of an extinct volcano",
   "description": "I'm on the rim of an extinct volcano",
   "items_start": [],
-  "exits": {
-    "D": 7
-  },
-  "hints": [],
-  "key_actions": [
-    "GO VOLC",
-    "LOOK VOLC"
+  "exits": {"D": 7},
+  "hints": [
+    "On the rim of the extinct volcano!",
+    "GO VOLC slides down into the volcano - one-way due to loose ash!",
+    "LOOK VOLC shows the interior far below. Be fully prepared before entering.",
+    "GO VOLC=inside volcano (8) - practically one-way! D=plain (7)."
   ],
+  "key_actions": ["GO VOLC", "LOOK VOLC"],
   "action_details": [
-    {
-      "command": "GO VOLC",
-      "needs": [],
-      "effects": [
-        "Message: ash is loose, I slide down",
-        "Move to room 8",
-        "Set flag 12"
-      ]
-    },
-    {
-      "command": "LOOK VOLC",
-      "needs": [],
-      "effects": [
-        "Message: I can",
-        "Message: go there",
-        "Message: Far below"
-      ]
-    }
+    {"command": "GO VOLC", "needs": [], "effects": ["Message: ash is loose, I slide down", "Move to room 8", "Set flag 12"]},
+    {"command": "LOOK VOLC", "needs": [], "effects": ["Message: I can", "Message: go there", "Message: Far below"]}
   ],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Volcano rim. GO VOLC slides to interior (8) - one-way! D=plain (7). Prepare fully before entering."
 }

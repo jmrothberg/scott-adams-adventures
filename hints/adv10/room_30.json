@@ -4,11 +4,16 @@
   "description": "I'm in a small metal room",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "A small metal room beyond the force field. Part of the alien complex's inner sanctum.",
+    "This room is accessed by deactivating the force field in room 29.",
+    "Search carefully for items or controls. This is deep in the alien complex.",
+    "No standard exits listed. Accessed through force field room (29). Part of endgame sequence."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Small metal room beyond force field. Accessed from room 29 after disabling force field. Part of endgame."
 }

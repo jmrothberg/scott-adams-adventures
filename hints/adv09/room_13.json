@@ -9,13 +9,18 @@
   "exits": {
     "N": 1
   },
-  "hints": [],
+  "hints": [
+    "The jail! The Golden Derringer treasure is here, plus a locked door.",
+    "GET DERR for the Golden Derringer treasure. The locked door leads to a cell.",
+    "OPEN DOOR or UNL DOOR with a key to access the cell with a hammer inside.",
+    "GET DERR. The cell (room 14) has a hammer. N=town (1)."
+  ],
   "key_actions": [],
   "action_details": [],
-  "items_needed": [],
+  "items_needed": ["KEY"],
   "items_available": [
     "DERR"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Jail with Golden Derringer treasure and locked door to cell (room 14). N=town (1)."
 }

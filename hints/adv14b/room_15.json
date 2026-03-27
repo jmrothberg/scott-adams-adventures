@@ -8,11 +8,15 @@
   "exits": {
     "E": 7
   },
-  "hints": [],
+  "hints": [
+    "A cul-de-sac at the west end of Hickory with another large house.",
+    "GO HOUSE to enter this house. It may have different contents than the east house.",
+    "GO HOUSE to explore inside. EAST returns to Hickory Ave (room 7) near the antenna shed."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "West end cul-de-sac on Hickory Ave. GO HOUSE enters the large house (living room, room 16). EAST returns to Hickory Ave (room 7)."
 }

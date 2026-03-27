@@ -8,7 +8,12 @@
   "exits": {
     "D": 22
   },
-  "hints": [],
+  "hints": [
+    "A mountain ledge with quartz embedded in the rock. The quartz is needed for making jet fuel.",
+    "The quartz is embedded and can't be taken by hand. You need a tool to extract it.",
+    "GET QUARTZ with the climber's pick in your inventory extracts the quartz. Without the pick, it says 'It's imbedded in rock.' You can also GET LINE or PUSH LINE to retrieve the climbing line.",
+    "Bring the climber's pick from the hardware store, then GET QUARTZ. Be careful with the line - retrieving it may strand you if you still need to climb."
+  ],
   "key_actions": [
     "GET QUAR",
     "GET QUAR",
@@ -71,8 +76,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": [
+    "Climbers Pick"
+  ],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Mountain ledge with quartz embedded in rock. GET QUARTZ requires the climber's pick - without it, says 'imbedded in rock.' GET LINE or PUSH LINE retrieves the climbing line (but may destroy it in certain states). DOWN returns to mountain foot (room 22)."
 }

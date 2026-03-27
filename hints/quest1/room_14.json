@@ -8,7 +8,12 @@
   "exits": {
     "E": 5
   },
-  "hints": [],
+  "hints": [
+    "A dome with a gem. Look around carefully - there's more here than meets the eye.",
+    "GET GEM. Try LOOK BASE to search the base of the dome for hidden items.",
+    "GET GEM (treasure). LOOK BASE drops your held item but reveals something hidden at the dome's base. EAST goes to the tunnel (room 5).",
+    "Collect the gem. LOOK BASE to find a hidden item (warning: drops what you're holding). EAST exits to the tunnel."
+  ],
   "key_actions": [
     "LOOK BASE"
   ],
@@ -28,5 +33,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Dome with *Gem* treasure. LOOK BASE drops held item but finds something hidden. EAST goes to tunnel (room 5)."
 }

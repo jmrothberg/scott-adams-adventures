@@ -9,11 +9,16 @@
     "E": 27,
     "W": 25
   },
-  "hints": [],
+  "hints": [
+    "Another maze room. Getting closer to the exit if you know the way.",
+    "N is the key direction here - it leads to room 28 which has the opening and bat guano.",
+    "E loops back to this room (27). Go N to reach the maze exit area.",
+    "N=28 (opening/guano). S=26. E=27 (self-loop). W=25. Go N to escape maze."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Maze room. N=28 (maze exit with opening and guano). S=26. E=27 (self-loop). W=25. Go N to exit maze."
 }

@@ -4,11 +4,16 @@
   "description": "I'm in a lot of trouble",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're in a lot of trouble! This is a death/game-over state.",
+    "Something went very wrong. You likely triggered a fatal trap or ran out of resources.",
+    "Restore a saved game or restart. Avoid the action that brought you here.",
+    "Death room. No exits. Reached by fatal actions (drowning, button traps, sleeping on ledge, etc.)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Death/game-over room. No exits. Reached by fatal actions throughout the game. Must restore or restart."
 }

@@ -4,7 +4,12 @@
   "description": "I'm in a lake. There's shore to North,\nSouth & East",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're swimming in the volcanic lake! Shore is visible in several directions and a ledge to the west.",
+    "SWIM directions to move. You can drown if carrying too much! Drop heavy items before swimming.",
+    "SWIM DOWN to explore the lake bottom. GO LEDG or SWIM WEST to reach the volcano wall ledge. GET WATE with empty bottle.",
+    "SWIM=volcano (8). SWIM DOWN=lake bottom (13). GO LEDG/SWIM WEST=ledge (18). Carrying items causes drowning!"
+  ],
   "key_actions": [
     "GO LEDG",
     "SWIM WEST",
@@ -93,8 +98,8 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["Empty bottle"],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Volcanic lake. SWIM=volcano (8). SWIM DOWN=lake bottom (13). GO LEDG/SWIM WEST=ledge (18). Drowning if carrying too much. GET WATE with empty bottle. TREA WATE=death."
 }

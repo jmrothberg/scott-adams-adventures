@@ -14,7 +14,11 @@
     "U": 8,
     "D": 25
   },
-  "hints": [],
+  "hints": [
+    "Duct maze room with a gem and stopped fan. Key landmark for navigation.",
+    "GET GEM. The stopped fan is a reference point. Map all exits carefully.",
+    "GET GEM (treasure). N/S to room 30, E to room 26, W to room 27, U loops here, D to room 25."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -22,5 +26,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Duct maze landmark with *Gem* and stopped fan. N/S->30, E->26, W->27, U->self, D->25."
 }

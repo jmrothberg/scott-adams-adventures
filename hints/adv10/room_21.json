@@ -8,7 +8,12 @@
   "exits": {
     "E": 9
   },
-  "hints": [],
+  "hints": [
+    "Another alien metal room with a sealed display case! Mirror image of the room to the east.",
+    "Like room 20, the display case is sealed and dangerous. Don't press any buttons.",
+    "MOVE BUTT is FATAL here too. You need a different approach to access the contents.",
+    "E=metal tunnel (9). MOVE BUTT=DEATH. Same trap as room 20. Find safe method to open case."
+  ],
   "key_actions": [
     "MOVE BUTT"
   ],
@@ -27,5 +32,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Alien metal room with sealed display case. E=metal tunnel (9). MOVE BUTT=DEATH. Same trap as room 20."
 }

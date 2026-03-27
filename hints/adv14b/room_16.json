@@ -6,11 +6,15 @@
   "exits": {
     "E": 15
   },
-  "hints": [],
+  "hints": [
+    "The living room of the large house at the west cul-de-sac. Look around for anything useful.",
+    "Search the room carefully. There may be items hidden in furniture or on shelves.",
+    "EAST exits back to the cul-de-sac (room 15). Explore the room thoroughly for hidden items."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Living room of the west cul-de-sac house. EAST returns to the west cul-de-sac (room 15). May contain items depending on game state."
 }

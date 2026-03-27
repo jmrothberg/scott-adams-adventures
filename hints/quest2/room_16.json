@@ -9,11 +9,15 @@
     "E": 12,
     "W": 3
   },
-  "hints": [],
+  "hints": [
+    "An upper floor hallway connecting key rooms. Multiple exits in all directions.",
+    "NORTH to the chemical lab. SOUTH to a chemical supply office. EAST to elevator waiting room. WEST to computer lab.",
+    "NORTH to chemical lab (room 13) for mixing web fluid. SOUTH to chemical supply office (room 39). EAST to upper waiting room (room 12). WEST to computer lab (room 3) with Ringmaster."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Upper floor hallway hub. NORTH to chemical lab (room 13). SOUTH to chemical supply office (room 39). EAST to waiting room (room 12). WEST to computer lab (room 3)."
 }

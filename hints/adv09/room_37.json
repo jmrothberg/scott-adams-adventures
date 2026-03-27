@@ -9,7 +9,12 @@
   "exits": {
     "N": 36
   },
-  "hints": [],
+  "hints": [
+    "Inside the teepee! Two treasures: the Sacred Tom Tom and Turquoise Necklace.",
+    "GET TOM and GET NECK for both treasures.",
+    "Bring both back to the Dry-Goods store (room 15).",
+    "GET TOM and GET NECK. N=hidden canyon (36)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -18,5 +23,5 @@
     "NECK"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Teepee with Sacred Tom Tom and Turquoise Necklace treasures. N=hidden canyon (36)."
 }

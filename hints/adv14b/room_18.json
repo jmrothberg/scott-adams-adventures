@@ -8,11 +8,15 @@
     "S": 4,
     "W": 19
   },
-  "hints": [],
+  "hints": [
+    "East end of a parking lot north of Main Street. The mountain is nearby.",
+    "NORTH leads toward the mountain. WEST goes to the other end of the parking lot where the jet car is parked.",
+    "NORTH to the foot of the mountain (room 22). SOUTH back to Main & Mountain View (room 4). WEST to the west parking lot (room 19) with the jet car."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "East end of parking lot. NORTH to mountain foot (room 22). SOUTH to Main & Mountain View (room 4). WEST to west parking lot (room 19) where the jet car is."
 }

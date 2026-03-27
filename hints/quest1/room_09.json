@@ -6,7 +6,11 @@
   "exits": {
     "U": 4
   },
-  "hints": [],
+  "hints": [
+    "You're in a hole dug from the field above. You can dig deeper.",
+    "DIG to go further underground. UP returns to the field (room 4).",
+    "DIG continues downward. UP returns to field (room 4). Items dropped from digging above may be here."
+  ],
   "key_actions": [
     "DIG"
   ],
@@ -22,5 +26,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hole below field (room 4). DIG goes deeper. UP returns to the field. Items dropped when digging from above land here."
 }

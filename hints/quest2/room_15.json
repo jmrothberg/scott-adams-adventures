@@ -11,7 +11,12 @@
     "Clock"
   ],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "The luxury penthouse at the top of the building. Many interactive objects including a thermostat, desk, couch, painting, and clock.",
+    "The thermostat controls the building's air system - turning it down may stop the fan in the air ducts. Search the desk and couch.",
+    "SET THERMOSTAT or TURN THERMOSTAT to control the air system and stop the duct fan. LOOK DESK, LOOK COUCH for hidden items. GO SHAFT returns to the elevator shaft (room 14).",
+    "Turn down the thermostat to stop the duct fan (needed to pass through ducts). Search everything - desk drawers, under the couch, behind the painting. GO SHAFT to leave."
+  ],
   "key_actions": [
     "GO SHAF"
   ],
@@ -33,5 +38,5 @@
     "CLOC"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Luxury penthouse at the top. Thermostat controls air system (stop duct fan). Desk, couch, painting, clock - all searchable. GO SHAFT returns to elevator shaft (room 14). The thermostat is key to making the duct maze passable."
 }

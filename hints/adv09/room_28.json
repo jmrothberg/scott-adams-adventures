@@ -9,11 +9,16 @@
     "N": 3,
     "E": 27
   },
-  "hints": [],
+  "hints": [
+    "The hotel lobby. There's a counter here.",
+    "GO COUN or LOOK COUN to check behind the counter.",
+    "Behind the counter is the cashbox treasure and a sign about room service.",
+    "GO COUN leads behind the counter (room 35) with cashbox. N=town (3), E=hotel room (27)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hotel lobby. GO COUN to go behind counter (room 35) for cashbox treasure. N=town (3), E=hotel room (27)."
 }

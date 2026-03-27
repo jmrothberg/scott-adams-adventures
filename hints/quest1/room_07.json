@@ -13,7 +13,12 @@
     "E": 17,
     "W": 17
   },
-  "hints": [],
+  "hints": [
+    "A field with a dome, tiny holes in the ground, and a gem. All compass directions lead to warps.",
+    "GET GEM. The tiny holes are suspicious - something lives underground. DIG to investigate.",
+    "GET GEM (treasure). DIG creates a hole below (room 10). The tiny holes are where bees or ants come from. All compass directions warp to room 17. GO DOME returns inside.",
+    "Collect the gem and DIG to access the hole below. Avoid compass directions. The tiny holes may be ant holes."
+  ],
   "key_actions": [
     "DIG"
   ],
@@ -32,5 +37,5 @@
     "GEM"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Field with dome, tiny holes, and *Gem*. DIG creates hole to room 10 below (drops items). All compass directions warp to room 17. GO DOME returns to tunnel (room 5). Tiny holes may be ant holes (Ant-Man reference)."
 }

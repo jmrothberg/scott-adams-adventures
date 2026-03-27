@@ -10,11 +10,16 @@
     "E": 1,
     "W": 3
   },
-  "hints": [],
+  "hints": [
+    "More of the ghost town. A saloon and a Dry-Goods store are here.",
+    "GO SALO to enter the saloon. GO STOR to enter the Dry-Goods store.",
+    "The Dry-Goods store is the TREASURE ROOM! Drop all treasures there and SCORE.",
+    "The store has essential supplies (shovel, matches, compass). The saloon has a mirror and bell. E=town (1), W=town (3)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Ghost town with saloon (room 11) and Dry-Goods store (room 15 = TREASURE ROOM). E=town (1), W=town (3)."
 }

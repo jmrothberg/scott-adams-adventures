@@ -4,11 +4,15 @@
   "description": "I'm in a ?",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "A mystery room - you've gotten lost in the sky. No exits.",
+    "This is effectively a dead end. You need to restore a saved game.",
+    "You ended up here by going N/S/W from the floating area without FEELing for doors first. Restore a save."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Dead end mystery room. No exits. Reached by going N/S/W from the floating sky (room 18) without using FEEL. Must restore a save."
 }

@@ -12,13 +12,18 @@
     "S": 11,
     "U": 7
   },
-  "hints": [],
+  "hints": [
+    "The burial room has a fearsome mummy, a tapestry treasure, and burning tanna leaves.",
+    "The mummy is dangerous! The tanna leaves keep it calm. Don't take them away carelessly.",
+    "GET TAP for the Antique Tapestry treasure. Be careful of the mummy.",
+    "The mummy follows the tanna leaves. Use the pistol if threatened (SHO MUM). N=passageway (9), S=tall room (11), U=sarcophagus (7)."
+  ],
   "key_actions": [],
   "action_details": [],
-  "items_needed": [],
+  "items_needed": ["PIS"],
   "items_available": [
     "TAP"
   ],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Burial room with mummy (dangerous!), tapestry treasure, and tanna leaves. Mummy follows the leaves. Hub room: N=passageway (9), S=tall room (11), U=sarcophagus (7)."
 }

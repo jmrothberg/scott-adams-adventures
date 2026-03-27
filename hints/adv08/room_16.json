@@ -10,7 +10,12 @@
   "exits": {
     "N": 6
   },
-  "hints": [],
+  "hints": [
+    "A sitting room with ashes, a basket, and a fireplace. Examine everything!",
+    "LOO ASH to search the ashes. LOO BAS to look inside the basket. There's a cobra inside!",
+    "PLA FLU (play flute) to charm the cobra out of the basket. It presses a brick and reveals a passage.",
+    "PLA FLU charms the cobra which opens a secret passage behind the fireplace. GO PAS to enter. LOO ASH finds hidden items. N=entrance (6)."
+  ],
   "key_actions": [
     "LOO ASH",
     "LOO BAS",
@@ -63,10 +68,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["FLU"],
   "items_available": [
     "BAS"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "Sitting room with cobra in basket, ashes with hidden items, and fireplace with secret passage. PLA FLU charms cobra to open passage. N=entrance (6)."
 }

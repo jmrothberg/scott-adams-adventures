@@ -4,11 +4,16 @@
   "description": "I'm in a lot of TROUBLE!",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're in big trouble! Something went very wrong.",
+    "This usually means you died from a trap - acid pool, cave-in, or the mummy.",
+    "Common causes: jumping into the acid pool, breaking the mirror, or the mummy killing you.",
+    "You'll need to restart. Avoid acid, don't break mirrors, and keep the tanna leaves burning."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Death/failure room. Reached by dying from acid, cave-in (breaking mirror), mummy, or other traps. Must restart."
 }

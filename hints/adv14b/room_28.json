@@ -7,11 +7,15 @@
     "E": 4,
     "W": 4
   },
-  "hints": [],
+  "hints": [
+    "Behind the mountain on Mountain View road. Both directions lead back to the same place.",
+    "EAST and WEST both return to Main & Mountain View. This is where the mine shaft door exits to.",
+    "Both EAST and WEST go to Main & Mountain View (room 4). You end up here after going through the stone door in the mine shaft."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Behind the mountain on Mountain View. Both EAST and WEST lead to Main & Mountain View (room 4). Reached by going through the stone door in the mine shaft (room 14) or from Main & Mountain View."
 }

@@ -10,11 +10,16 @@
   "exits": {
     "S": 16
   },
-  "hints": [],
+  "hints": [
+    "An ancient cave with primitive drawings on the walls! A stalactite hangs from the roof and there's a dark opening above.",
+    "The cave drawings may contain clues. The stalactite and dark opening are both important.",
+    "BREA STAL (break stalactite) to get a sharp tool. GO DARK leads up through the roof to the deep cave.",
+    "S=beach (16). GO DARK=deep cave (11). N=metal tunnel (9). Break stalactite for a weapon/tool."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Ancient cave with drawings, stalactite, dark opening. S=beach (16). GO DARK=deep cave (11). N=metal tunnel (9). Break stalactite for tool."
 }

@@ -8,7 +8,12 @@
     "U": 20,
     "D": 20
   },
-  "hints": [],
+  "hints": [
+    "Clinging to the side of the skyscraper! You're on the top floor. LOOK SKYSCRAPER to search the exterior.",
+    "LOOK SKYSCRAPER finds something hidden on the building's exterior. You can JUMP to another building or GO FORWARD.",
+    "LOOK SKYSCRAPER finds items (drops held). JUMP, GO SKYSCRAPER, or GO FORWARD all move to a floating area (room 18). LOOK DOWN confirms you're on the top floor. EAST returns to the waiting room (room 10). UP and DOWN both go to room 20.",
+    "Search the building exterior with LOOK SKYSCRAPER. JUMP or GO FORWARD to leap across. EAST to re-enter the building."
+  ],
   "key_actions": [
     "LOOK SKY",
     "JUMP",
@@ -62,5 +67,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Side of the skyscraper, top floor. LOOK SKYSCRAPER finds items (drops held). JUMP/GO FORWARD/GO SKYSCRAPER all go to floating area (room 18). EAST to waiting room (room 10). UP/DOWN both go to room 20."
 }

@@ -4,11 +4,14 @@
   "description": "I'm in a BH",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "Internal storeroom (Black Hole). Not reachable during normal play.",
+    "Items stored in room 0 are hidden from the player. This is a game engine placeholder."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Internal storeroom (BH = Black Hole). Not reachable by player. Used to hold items not yet in play."
 }

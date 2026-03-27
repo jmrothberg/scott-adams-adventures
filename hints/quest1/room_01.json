@@ -4,7 +4,12 @@
   "description": "I'm Bruce Banner, tied hand & foot to a chair",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're Bruce Banner, tied to a chair. You need to get angry to transform into the Hulk and break free.",
+    "Try to hurt yourself to trigger the transformation. BITE something painful, or ROCK the chair to fall and hit your head.",
+    "BITE TONGUE triggers pain and anger (sets flags 7 and 8) but causes death first - the transformation happens after. ROCK the chair to fall and hit your head (sets the same anger flags without dying).",
+    "ROCK the chair to fall and hit your head, triggering the Hulk transformation. BITE LIP also works. You'll transform into the Hulk who can break free. Avoid BITE TONGUE as it can be fatal."
+  ],
   "key_actions": [
     "BITE ROPE",
     "HIT",
@@ -64,5 +69,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Starting room. Bruce Banner tied to a chair. Must get angry to trigger Hulk transformation. ROCK the chair (safest - fall & hit head, sets flags 7+8). BITE TONGUE sets same flags but also triggers DEATH. BITE LIP also works. HIT and BITE ROPE don't work while tied. BITE ME asks 'where?' - specify a body part."
 }

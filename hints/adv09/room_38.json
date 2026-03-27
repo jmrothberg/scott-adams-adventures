@@ -4,11 +4,16 @@
   "description": "I'm in a lot of trouble!",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're in big trouble! Something went very wrong.",
+    "This usually means the rattlesnake got you or another fatal event.",
+    "Common causes: not dealing with the rattlesnake, or getting caught by dangers.",
+    "You'll need to restart. Be careful of the rattlesnake on Boot Hill."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Death/failure room. Reached by dying from the rattlesnake or other hazards. Must restart."
 }

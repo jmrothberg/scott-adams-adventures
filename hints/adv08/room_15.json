@@ -8,7 +8,12 @@
   "exits": {
     "W": 14
   },
-  "hints": [],
+  "hints": [
+    "The hieroglyphics room! There's dried camel jerky and strange markings on the walls.",
+    "REA HIE to try to read the hieroglyphics. You need the Rosetta Stone to understand them.",
+    "With the stone, REA HIE reveals: 'LEAVE *TREASURES* HERE!' - this is the treasure room!",
+    "This is the TREASURE ROOM. Drop all 13 treasures here and SCORE. GET JER for the jerky. W=altar room (14)."
+  ],
   "key_actions": [
     "LOO HIE",
     "REA HIE",
@@ -52,10 +57,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["STO"],
   "items_available": [
     "JER"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "THE TREASURE ROOM. Hieroglyphics say 'LEAVE TREASURES HERE' when read with the Rosetta Stone. Drop all 13 treasures and SCORE to win. W=altar room (14)."
 }

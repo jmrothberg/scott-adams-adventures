@@ -4,7 +4,11 @@
   "description": "I'm in a warm bed",
   "items_start": [],
   "exits": {},
-  "hints": [],
+  "hints": [
+    "You're in a warm bed at the hotel. Time to get up!",
+    "GET UP to get out of bed.",
+    "GET UP takes you to the hotel room."
+  ],
   "key_actions": [
     "GET UP"
   ],
@@ -21,5 +25,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Hotel bed. GET UP to enter hotel room (27). No other exits."
 }

@@ -11,7 +11,12 @@
     "S": 19,
     "W": 18
   },
-  "hints": [],
+  "hints": [
+    "A narrow ledge with a sapphire treasure, a hole in the ceiling, and an acid pool below!",
+    "GET SAP for the Sapphire treasure. DO NOT jump or swim - the liquid is acid!",
+    "THR ROP (throw rope) up through the hole to create a way to climb to the throne room.",
+    "GET SAP. THR ROP through the ceiling hole, then GO ROP or GO HOL to reach the throne room (21). NEVER jump/swim in the acid. S=prison (19), W=revolving cavern (18)."
+  ],
   "key_actions": [
     "JUM",
     "SWI",
@@ -135,10 +140,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": ["ROP"],
   "items_available": [
     "SAP"
   ],
-  "danger": false,
-  "notes": ""
+  "danger": true,
+  "notes": "Narrow ledge over acid pool. Sapphire treasure here. THR ROP through ceiling hole, then GO ROP to throne room (21). Jumping/swimming in acid is fatal. DO NOT throw the ruby into the acid. S=prison (19), W=revolving cavern (18)."
 }

@@ -8,7 +8,12 @@
   "exits": {
     "E": 12
   },
-  "hints": [],
+  "hints": [
+    "A precarious ledge on the volcano's inner wall, west of the lake. A narrow crevice is visible.",
+    "DO NOT SLEEP here - it's fatal! The crevice leads somewhere important.",
+    "GO CREV to squeeze through the narrow crevice. E swims back to the lake. SLEE = death (you fall off the ledge).",
+    "E=lake (12). GO CREV=deeper area. SLEE=DEATH. Also reachable via JUMP from sandy cliff (32)."
+  ],
   "key_actions": [
     "SLEE"
   ],
@@ -24,5 +29,5 @@
   "items_needed": [],
   "items_available": [],
   "danger": true,
-  "notes": ""
+  "notes": "Ledge on volcano wall west of lake. E=lake (12). GO CREV goes deeper. SLEE=DEATH (fall off ledge). Narrow crevice is key passage."
 }

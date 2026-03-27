@@ -12,7 +12,22 @@
   "max_carry": 7,
   "light_time": 175,
   "magic_words": [],
-  "key_mechanics": [],
+  "key_mechanics": [
+    "Day/night cycle: The game alternates between day and night. Dracula is active at night and will bite you if you're unprotected. The pocket watch tracks time.",
+    "COUGHIN/COFFIN pun: Smoking a cigarette in the crypt produces 'a COUGHIN in the room' - a pun that makes Dracula's coffin appear. This is the central puzzle.",
+    "Sheet climbing: TIE SHEETS to the flag pole on the ledge, then CLIMB DOWN to reach the dark window and access the doorless room.",
+    "Dark window: A hidden window below the bedroom ledge, visible from outside the castle (LOOK UP) or revealed when you jump (fatally). Leads to the doorless room.",
+    "Garlic protection: The pillow contains garlic cloves. Wearing garlic (as a necklace with daisies) protects you from Dracula at night.",
+    "Dracula's portrait: In the doorless room, moving/looking behind the portrait reveals a secret passage to the dark passage and crypt.",
+    "Dumb-waiter elevator: Connects three floors - kitchen (room 12), workroom (room 21), and pantry (room 14). RAISE (OPEN DUM) to go up, LOWER (PUT DUM) to go down. Exceeding limits can be fatal.",
+    "Staking the vampire: Use the rubber mallet from the workroom to hammer a stake into Dracula while he's in his coffin during the day.",
+    "Cigarette lighting: Get cigarettes from the parlor (room 13), light them with sulfur matches from the pantry (room 14).",
+    "Iron rings and pit: TIE SHEETS to the iron rings in the dungeon (room 16) to climb down to the pit (room 18) where the unlit torch is.",
+    "Torch lighting: Get the unlit torch from the pit, light it with sulfur matches for exploring dark areas.",
+    "Mirror usage: Vampires cast no reflection - the mirror can be used to detect Dracula's presence.",
+    "Locked door: The workroom has a locked door. Find the key to access additional areas.",
+    "Ventilation system: Vents appear in several rooms and may connect areas of the castle."
+  ],
   "treasures": [],
   "vocabulary": {
     "verbs": [
@@ -172,6 +187,398 @@
       "MEM"
     ]
   },
-  "walkthrough": [],
-  "common_mistakes": []
+  "walkthrough": [
+    {
+      "step": 1,
+      "room": 1,
+      "action": "GET SHEETS",
+      "result": "Pick up the bed sheets (essential for climbing later)."
+    },
+    {
+      "step": 2,
+      "room": 1,
+      "action": "GET PILLOW",
+      "result": "Pick up the pillow (contains hidden garlic cloves)."
+    },
+    {
+      "step": 3,
+      "room": 1,
+      "action": "GET UP",
+      "result": "Stand up and move to the bedroom (room 2)."
+    },
+    {
+      "step": 4,
+      "room": 2,
+      "action": "OPEN WINDOW",
+      "result": "Open the bedroom window to access the ledge outside."
+    },
+    {
+      "step": 5,
+      "room": 2,
+      "action": "N",
+      "result": "Go north to the hall (room 11)."
+    },
+    {
+      "step": 6,
+      "room": 11,
+      "action": "N",
+      "result": "Go north to the bathroom (room 8)."
+    },
+    {
+      "step": 7,
+      "room": 8,
+      "action": "GET WATCH",
+      "result": "Pick up the pocket watch to track the day/night cycle."
+    },
+    {
+      "step": 8,
+      "room": 8,
+      "action": "GET MIRROR",
+      "result": "Pick up the mirror (useful for detecting vampires)."
+    },
+    {
+      "step": 9,
+      "room": 8,
+      "action": "S",
+      "result": "Return south to the hall (room 11)."
+    },
+    {
+      "step": 10,
+      "room": 11,
+      "action": "E",
+      "result": "Go east to outside the castle (room 9)."
+    },
+    {
+      "step": 11,
+      "room": 9,
+      "action": "LOOK UP",
+      "result": "Notice a dark window under the bedroom window ledge (important clue)."
+    },
+    {
+      "step": 12,
+      "room": 9,
+      "action": "W",
+      "result": "Return west to the hall (room 11)."
+    },
+    {
+      "step": 13,
+      "room": 11,
+      "action": "W",
+      "result": "Go west to the kitchen (room 12)."
+    },
+    {
+      "step": 14,
+      "room": 12,
+      "action": "GET GARLIC",
+      "result": "Pick up garlic (or OPEN PILLOW first if garlic is inside the pillow)."
+    },
+    {
+      "step": 15,
+      "room": 12,
+      "action": "GO DUMBWAITER",
+      "result": "Enter the dumb-waiter (room 20)."
+    },
+    {
+      "step": 16,
+      "room": 20,
+      "action": "PUT DUMBWAITER",
+      "result": "Lower the dumb-waiter one floor down."
+    },
+    {
+      "step": 17,
+      "room": 20,
+      "action": "GO ROOM",
+      "result": "Exit to the pantry (room 14)."
+    },
+    {
+      "step": 18,
+      "room": 14,
+      "action": "GET MATCHES",
+      "result": "Pick up the sulfur matches (for lighting torch and cigarettes)."
+    },
+    {
+      "step": 19,
+      "room": 14,
+      "action": "GO DUMBWAITER",
+      "result": "Return to the dumb-waiter (room 20)."
+    },
+    {
+      "step": 20,
+      "room": 20,
+      "action": "OPEN DUMBWAITER",
+      "result": "Raise the dumb-waiter one floor up."
+    },
+    {
+      "step": 21,
+      "room": 20,
+      "action": "OPEN DUMBWAITER",
+      "result": "Raise the dumb-waiter another floor to the workroom level."
+    },
+    {
+      "step": 22,
+      "room": 20,
+      "action": "GO ROOM",
+      "result": "Exit to the workroom (room 21)."
+    },
+    {
+      "step": 23,
+      "room": 21,
+      "action": "GET MALLET",
+      "result": "Pick up the rubber mallet (essential for hammering the stake into Dracula)."
+    },
+    {
+      "step": 24,
+      "room": 21,
+      "action": "READ MEMO",
+      "result": "Read the memo tacked to the door for important clues."
+    },
+    {
+      "step": 25,
+      "room": 21,
+      "action": "E",
+      "result": "Go east to the closet (room 7)."
+    },
+    {
+      "step": 26,
+      "room": 7,
+      "action": "GET VIAL",
+      "result": "Pick up the small vial (may contain holy water)."
+    },
+    {
+      "step": 27,
+      "room": 7,
+      "action": "W",
+      "result": "Return west to the workroom (room 21)."
+    },
+    {
+      "step": 28,
+      "room": 21,
+      "action": "D",
+      "result": "Go down to the dungeon (room 16)."
+    },
+    {
+      "step": 29,
+      "room": 16,
+      "action": "TIE SHEETS",
+      "result": "Tie the sheets to the iron rings in the dungeon."
+    },
+    {
+      "step": 30,
+      "room": 16,
+      "action": "D",
+      "result": "Climb down the sheets to the pit (room 18)."
+    },
+    {
+      "step": 31,
+      "room": 18,
+      "action": "GET TORCH",
+      "result": "Pick up the unlit torch (essential light source)."
+    },
+    {
+      "step": 32,
+      "room": 18,
+      "action": "CLIMB",
+      "result": "Climb back up the sheets to the dungeon (room 16)."
+    },
+    {
+      "step": 33,
+      "room": 16,
+      "action": "LIGHT TORCH",
+      "result": "Light the torch with sulfur matches. Now you have a light source for dark areas."
+    },
+    {
+      "step": 34,
+      "room": 16,
+      "action": "U",
+      "result": "Go up to the workroom (room 21)."
+    },
+    {
+      "step": 35,
+      "room": 21,
+      "action": "DROP MIRROR",
+      "result": "Drop unneeded items to free inventory space."
+    },
+    {
+      "step": 36,
+      "room": 21,
+      "action": "GO DUMBWAITER",
+      "result": "Enter the dumb-waiter from the workroom (room 20)."
+    },
+    {
+      "step": 37,
+      "room": 20,
+      "action": "OPEN DUMBWAITER",
+      "result": "Raise to kitchen level."
+    },
+    {
+      "step": 38,
+      "room": 20,
+      "action": "GO ROOM",
+      "result": "Exit to the kitchen (room 12)."
+    },
+    {
+      "step": 39,
+      "room": 12,
+      "action": "E",
+      "result": "Go east to the hall (room 11)."
+    },
+    {
+      "step": 40,
+      "room": 11,
+      "action": "E",
+      "result": "Go east to outside the castle (room 9)."
+    },
+    {
+      "step": 41,
+      "room": 9,
+      "action": "E",
+      "result": "Go east to the graveyard (room 17)."
+    },
+    {
+      "step": 42,
+      "room": 17,
+      "action": "GET STAKE",
+      "result": "Pick up the wooden stake from the graveyard (or LOOK GRAVES to find it)."
+    },
+    {
+      "step": 43,
+      "room": 17,
+      "action": "W",
+      "result": "Return west to outside the castle (room 9)."
+    },
+    {
+      "step": 44,
+      "room": 9,
+      "action": "W",
+      "result": "Return west to the hall (room 11)."
+    },
+    {
+      "step": 45,
+      "room": 11,
+      "action": "W",
+      "result": "Go west to the kitchen (room 12)."
+    },
+    {
+      "step": 46,
+      "room": 12,
+      "action": "S",
+      "result": "Go south to the parlor (room 13)."
+    },
+    {
+      "step": 47,
+      "room": 13,
+      "action": "GET CIGARETTES",
+      "result": "Pick up the cigarettes (needed for the COUGHIN/COFFIN puzzle)."
+    },
+    {
+      "step": 48,
+      "room": 13,
+      "action": "LIGHT CIGARETTE",
+      "result": "Light a cigarette with the matches."
+    },
+    {
+      "step": 49,
+      "room": 13,
+      "action": "N",
+      "result": "Return north to the kitchen (room 12)."
+    },
+    {
+      "step": 50,
+      "room": 12,
+      "action": "E",
+      "result": "Go east to the hall (room 11)."
+    },
+    {
+      "step": 51,
+      "room": 11,
+      "action": "S",
+      "result": "Go south to the bedroom (room 2)."
+    },
+    {
+      "step": 52,
+      "room": 2,
+      "action": "GO WINDOW",
+      "result": "Go through the open window to the ledge (room 3)."
+    },
+    {
+      "step": 53,
+      "room": 3,
+      "action": "TIE SHEETS",
+      "result": "Tie the sheets to the flag pole (if not already done)."
+    },
+    {
+      "step": 54,
+      "room": 3,
+      "action": "CLIMB DOWN",
+      "result": "Climb down the sheets to the hanging position (room 4)."
+    },
+    {
+      "step": 55,
+      "room": 4,
+      "action": "GO WINDOW",
+      "result": "Enter the flower box (room 5)."
+    },
+    {
+      "step": 56,
+      "room": 5,
+      "action": "GO WINDOW",
+      "result": "Enter the doorless room through the dark window (room 10)."
+    },
+    {
+      "step": 57,
+      "room": 10,
+      "action": "MOVE PORTRAIT",
+      "result": "Move Dracula's portrait to reveal the hidden passage."
+    },
+    {
+      "step": 58,
+      "room": 10,
+      "action": "S",
+      "result": "Go south through the passage to the dark passage (room 19)."
+    },
+    {
+      "step": 59,
+      "room": 19,
+      "action": "N",
+      "result": "Go north to the crypt (room 6)."
+    },
+    {
+      "step": 60,
+      "room": 6,
+      "action": "SMOKE",
+      "result": "Smoke the lit cigarette in the crypt. 'There's a COUGHIN in the room!' - the COFFIN appears!"
+    },
+    {
+      "step": 61,
+      "room": 6,
+      "action": "OPEN COFFIN",
+      "result": "Open Dracula's coffin to reveal the vampire sleeping inside (must be daytime)."
+    },
+    {
+      "step": 62,
+      "room": 6,
+      "action": "PUT STAKE",
+      "result": "Place the wooden stake on Dracula's chest."
+    },
+    {
+      "step": 63,
+      "room": 6,
+      "action": "JAM MALLET",
+      "result": "Hammer the stake with the rubber mallet. Dracula is destroyed! You win!"
+    }
+  ],
+  "common_mistakes": [
+    "Jumping from the ledge (room 3) - This is instantly fatal. You'll see the dark window clue as you fall but it's too late. Use LOOK UP from outside instead.",
+    "Forgetting to GET SHEETS before GET UP - The sheets are essential for climbing down to the dark window. You can't get them after leaving the bed room easily.",
+    "Not opening the window before going to the ledge - You must OPEN WINDOW in the bedroom (room 2) before you can GO WINDOW to the ledge.",
+    "Being caught by Dracula at night without garlic - At nightfall, Dracula becomes active. Without garlic protection, he'll bite you and it's game over (room 22).",
+    "Wasting time and letting night fall - The day/night cycle is time-limited. If you take too many moves during the day, night falls and Dracula becomes dangerous.",
+    "Not getting the pillow - The pillow contains garlic cloves needed for vampire protection. OPEN PILLOW to get the garlic.",
+    "Raising or lowering the dumb-waiter past its limits - Going too high or too low in the dumb-waiter is fatal. Track which floor you're on.",
+    "Trying to smoke in the crypt without a lit cigarette - You need to GET CIGARETTES from the parlor (room 13) and LIGHT them with matches before going to the crypt.",
+    "Missing the portrait puzzle - The doorless room has no regular exits. You must MOVE PORTRAIT or LOOK PORTRAIT to find the hidden passage to the crypt.",
+    "Not getting the mallet - The rubber mallet from the workroom (room 21) is essential for hammering the stake into Dracula. The stake alone won't work.",
+    "Forgetting matches from the pantry - Sulfur matches (room 14) are needed to light both the torch and cigarettes. Get them early.",
+    "Not tying sheets to the flag pole - You must TIE SHEETS to the flag pole on the ledge before you can CLIMB DOWN. Without tying them, you'll fall."
+  ]
 }

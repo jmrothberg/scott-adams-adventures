@@ -8,11 +8,15 @@
   "exits": {
     "S": 35
   },
-  "hints": [],
+  "hints": [
+    "Madame Web's office! She is a key NPC - this is also the TREASURE ROOM (room 37).",
+    "DROP all gems here for points. Madame Web may give cryptic guidance. SOUTH returns to the hall.",
+    "TREASURE ROOM - DROP all *Gem* and *Bio Gem* items here for score. Madame Web is an ally. SOUTH→room 35 (hall)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "TREASURE ROOM (room 37). Drop all gems here. Madame Web is present as ally/oracle. SOUTH→room 35 (hall)."
 }

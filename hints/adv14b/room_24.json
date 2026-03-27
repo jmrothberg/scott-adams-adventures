@@ -9,7 +9,12 @@
   "exits": {
     "N": 14
   },
-  "hints": [],
+  "hints": [
+    "A cavern inside the mountain with a mine shaft and the Red Lectroid bomb housing. This is where the bomb is!",
+    "LOOK BOMB with a flashlight on to examine it. There's an RFI shield that must be deactivated.",
+    "With flashlight on: LOOK BOMB shows the RFI shield light. PUSH SWITCH turns off the RFI shield (sets flag 1). GET ENVELOPE after the shield is off to get the deactivation code. NORTH goes to the mine shaft (room 14).",
+    "Sequence: have flashlight on, LOOK BOMB to see shield status, PUSH SWITCH to disable RFI shield, LOOK BOMB to confirm shield is off, GET ENVELOPE for the code. Then go to the radio shed and transmit."
+  ],
   "key_actions": [
     "LOOK BOMB",
     "PUSH SWIT",
@@ -62,8 +67,10 @@
       ]
     }
   ],
-  "items_needed": [],
+  "items_needed": [
+    "Flashlight (on)"
+  ],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Cavern inside mountain with the Red Lectroid bomb. Flashlight required for all actions. PUSH SWITCH disables RFI shield. GET ENVELOPE after shield is off gets the deactivation code. NORTH to mine shaft (room 14). Reached via the jet car mountain penetration."
 }

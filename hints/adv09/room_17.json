@@ -7,11 +7,15 @@
     "E": 20,
     "W": 1
   },
-  "hints": [],
+  "hints": [
+    "A road leading east out of town.",
+    "E leads to Boot Hill (the cemetery). W goes back to town.",
+    "Boot Hill has graves to dig and a rattlesnake to deal with."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
   "items_available": [],
   "danger": false,
-  "notes": ""
+  "notes": "Road east of town. E=Boot Hill (20), W=town (1)."
 }

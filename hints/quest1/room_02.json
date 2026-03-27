@@ -13,7 +13,12 @@
   "exits": {
     "E": 3
   },
-  "hints": [],
+  "hints": [
+    "A dome with many items after the Hulk transformation. There's a mirror, broken chair, gem, fan, iron ring, and a sign.",
+    "GET GEM (treasure), GET FAN (useful against bees later). READ SIGN for information. The iron ring in the floor may be interactive.",
+    "LIFT RING or PULL RING to open a passage below. The mirror may show your reflection (Hulk or Banner). The fan is needed to blow away killer bees in another dome. EAST leads to a tunnel.",
+    "Collect the gem and fan. LIFT the iron ring to access areas below. EAST goes to the tunnel (room 3). This is also where you arrive from limbo (room 20, down)."
+  ],
   "key_actions": [],
   "action_details": [],
   "items_needed": [],
@@ -24,5 +29,5 @@
     "FAN"
   ],
   "danger": false,
-  "notes": ""
+  "notes": "First dome after Hulk transformation breaks the chair. Contains *Gem* treasure, metal hand fan (needed for bees in room 13), mirror, broken chair, iron ring in floor, and sign. EAST to tunnel (room 3). Down leads to room 20 via limbo. Iron ring may open hidden passage."
 }
