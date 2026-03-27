@@ -12,11 +12,11 @@ body{background:#1a1a2e;color:#00ff41;font-family:'Courier New',Courier,monospac
 select,button{background:#0f3460;color:#00ff41;border:1px solid #00ff41;padding:5px 10px;font-family:inherit;font-size:13px;cursor:pointer;border-radius:3px}
 button:hover{background:#1a4a8a}
 #game-area{flex:1;display:flex;flex-direction:column;padding:10px 20px;overflow:hidden}
-#output{flex:1;overflow-y:auto;white-space:pre-wrap;word-wrap:break-word;font-size:15px;line-height:1.4;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:#0f3460 #1a1a2e}
+#output{flex:1;overflow-y:auto;white-space:pre-wrap;word-wrap:break-word;font-size:15px;line-height:1.4;padding-bottom:2px;scrollbar-width:thin;scrollbar-color:#0f3460 #1a1a2e}
 #output::-webkit-scrollbar{width:8px}
 #output::-webkit-scrollbar-track{background:#1a1a2e}
 #output::-webkit-scrollbar-thumb{background:#0f3460}
-#room-img{max-width:400px;max-height:250px;display:none;margin:5px 0;border:1px solid #0f3460;border-radius:4px}
+/* room images and inline map are created dynamically inside #output */
 .treasure{color:#ffd700}
 .llm-enhanced{color:#c8a85a;font-style:italic;border-left:2px solid rgba(200,168,90,0.2);padding-left:8px;margin-top:4px;font-size:14px}
 .llm-translated{color:#666;font-size:12px;margin-top:2px}
@@ -78,7 +78,6 @@ button:hover{background:#1a4a8a}
 </div>
 <div id="game-area">
   <div id="output"></div>
-  <img id="room-img" src="" alt="" onerror="this.style.display='none'">
   <div id="input-row">
     <span id="prompt">What shall I do? &gt;</span>
     <input id="cmd" type="text" autocomplete="off" autofocus>
@@ -521,7 +520,7 @@ class Engine {
 /* ===== UI ===== */
 const outputEl = document.getElementById('output');
 const cmdEl = document.getElementById('cmd');
-const imgEl = document.getElementById('room-img');
+// room images now created inline inside outputEl
 var engine = null;
 var currentGameId = 'adv01';
 
@@ -809,9 +808,90 @@ function clearOut() { outputEl.innerHTML = ''; }
 
 function showRoomImg(num) {
   const pad = String(num).padStart(2, '0');
-  imgEl.src = 'images/' + currentGameId + '/room_' + pad + '.png';
-  imgEl.style.display = 'block';
-  imgEl.onerror = function() { this.style.display = 'none'; };
+  const url = 'images/' + currentGameId + '/room_' + pad + '.png';
+  // Create image inside output div (no gap)
+  const img = document.createElement('img');
+  img.src = url;
+  img.style.cssText = 'max-width:400px;max-height:250px;margin:2px 0 0;border:1px solid #0f3460;border-radius:4px;display:block';
+  img.onerror = function() { this.remove(); };
+  outputEl.appendChild(img);
+  // Show inline mini-map next to image
+  showInlineMap();
+  outputEl.scrollTop = outputEl.scrollHeight;
+}
+
+function showInlineMap() {
+  if (!engine || mapVisited.size === 0) return;
+  const mapDiv = document.createElement('div');
+  mapDiv.style.cssText = 'max-width:600px;overflow:auto;border:1px solid #0f3460;border-radius:4px;background:#0d0d1a;max-height:250px;margin:2px 0 4px';
+  mapDiv.innerHTML = buildMapSvg();
+  outputEl.appendChild(mapDiv);
+}
+
+function buildMapSvg() {
+  const layout = computeMapLayout();
+  if (layout.size === 0) return '';
+
+  const cellW = 76, cellH = 52, padX = 20, padY = 16, thumbW = 60, thumbH = 38;
+  const dirLabels = ['N','S','E','W','U','D'];
+  const offsets = [{dx:0,dy:-1},{dx:0,dy:1},{dx:1,dy:0},{dx:-1,dy:0},{dx:-1,dy:-1},{dx:1,dy:1}];
+
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  for (const pos of layout.values()) {
+    if (pos.x < minX) minX = pos.x;
+    if (pos.x > maxX) maxX = pos.x;
+    if (pos.y < minY) minY = pos.y;
+    if (pos.y > maxY) maxY = pos.y;
+  }
+
+  const svgW = (maxX - minX + 1) * cellW + padX * 2;
+  const svgH = (maxY - minY + 1) * cellH + padY * 2;
+
+  function toSvg(gx, gy) {
+    return { sx: (gx - minX) * cellW + padX + cellW/2, sy: (gy - minY) * cellH + padY + cellH/2 };
+  }
+
+  let svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + svgW + '" height="' + svgH + '" style="display:block;margin:auto">';
+
+  // Lines
+  for (const [room, pos] of layout) {
+    const edges = mapEdges.get(room);
+    if (!edges) continue;
+    const from = toSvg(pos.x, pos.y);
+    for (const [dir, target] of edges) {
+      const isUD = dir >= 4;
+      const tp = layout.get(target);
+      if (tp) {
+        const to = toSvg(tp.x, tp.y);
+        const stroke = isUD ? '#334' : '#0f3460';
+        const dash = isUD ? ' stroke-dasharray="4,3"' : '';
+        svg += '<line x1="'+from.sx+'" y1="'+from.sy+'" x2="'+to.sx+'" y2="'+to.sy+'" stroke="'+stroke+'" stroke-width="1.5"'+dash+'/>';
+      } else if (!mapVisited.has(target)) {
+        const off = offsets[dir];
+        svg += '<line x1="'+from.sx+'" y1="'+from.sy+'" x2="'+(from.sx+off.dx*30)+'" y2="'+(from.sy+off.dy*22)+'" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>';
+        svg += '<text x="'+(from.sx+off.dx*30)+'" y="'+(from.sy+off.dy*22+4)+'" text-anchor="middle" fill="#555" font-size="10" font-family="monospace">?</text>';
+      }
+    }
+  }
+
+  // Rooms
+  const curRoom = engine ? engine.loc : -1;
+  for (const [room, pos] of layout) {
+    const p = toSvg(pos.x, pos.y);
+    const rx = p.sx - thumbW/2, ry = p.sy - thumbH/2;
+    const isCur = room === curRoom;
+    const bc = isCur ? '#e94560' : '#0f3460';
+    const bw = isCur ? 2 : 1;
+    const bg = isCur ? '#1a1a3e' : '#111122';
+    svg += '<rect x="'+rx+'" y="'+ry+'" width="'+thumbW+'" height="'+thumbH+'" fill="'+bg+'" stroke="'+bc+'" stroke-width="'+bw+'" rx="3"/>';
+    const pad2 = String(room).padStart(2, '0');
+    svg += '<image href="images/'+currentGameId+'/room_'+pad2+'.png" x="'+(rx+2)+'" y="'+(ry+2)+'" width="'+(thumbW-4)+'" height="'+(thumbH-12)+'" preserveAspectRatio="xMidYMid slice"/>';
+    const lc = isCur ? '#e94560' : '#00ff41';
+    svg += '<text x="'+p.sx+'" y="'+(ry+thumbH-2)+'" text-anchor="middle" fill="'+lc+'" font-size="9" font-family="monospace">'+room+'</text>';
+  }
+
+  svg += '</svg>';
+  return svg;
 }
 
 async function newGame() {
