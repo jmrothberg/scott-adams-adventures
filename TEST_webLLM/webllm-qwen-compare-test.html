@@ -102,30 +102,34 @@
 <body>
   <div id="gpu-banner"></div>
   <header>
-    <h1>WebLLM browser test — two-model compare</h1>
+    <h1>WebLLM browser test — two-model compare. Jonathan Rothberg 2026</h1>
     <p>
       Standalone harness for <strong>@mlc-ai/web-llm</strong> (WebGPU). Defaults use the closest
       <strong>official prebuilt</strong> Qwen3 q4-style weights in the current catalog:
       <code>Qwen3-0.6B-q4f16_1-MLC</code> vs <code>Qwen3-1.7B-q4f16_1-MLC</code>
-      (nearest sizes to “~0.8B q4” and “~2B” until Qwen3.5 prebuilts appear — you can paste other
-      <code>model_id</code> strings below). Not wired into the adventure game; for experimentation only.
+      (nearest sizes to “~0.8B q4” and “~2B” until Qwen3.5 prebuilts appear). Each field is tied to a
+      <strong>full list of prebuilt <code>model_id</code>s</strong> (browser autocomplete); defaults stay as below.
+      Large models may fail to load on limited GPU RAM — errors are caught and shown without crashing the page.
+      Not wired into the adventure game; for experimentation only.
     </p>
   </header>
   <main>
+    <datalist id="prebuilt-model-ids"></datalist>
     <div class="row">
       <div style="flex:1; min-width:200px">
         <label for="model-a">Model A ID</label>
-        <input type="text" id="model-a" spellcheck="false"
+        <input type="text" id="model-a" spellcheck="false" list="prebuilt-model-ids" autocomplete="off"
           value="Qwen3-0.6B-q4f16_1-MLC"
-          title="WebLLM prebuilt model_id">
+          title="Pick from list or type a prebuilt model_id">
       </div>
       <div style="flex:1; min-width:200px">
         <label for="model-b">Model B ID</label>
-        <input type="text" id="model-b" spellcheck="false"
+        <input type="text" id="model-b" spellcheck="false" list="prebuilt-model-ids" autocomplete="off"
           value="Qwen3-1.7B-q4f16_1-MLC"
-          title="WebLLM prebuilt model_id">
+          title="Pick from list or type a prebuilt model_id">
       </div>
     </div>
+    <p id="model-catalog-note" style="font-size:12px;color:var(--muted);margin:-4px 0 12px"></p>
     <div class="row">
       <button type="button" id="btn-load-a">Load model A</button>
       <button type="button" id="btn-load-b">Load model B</button>
@@ -174,6 +178,77 @@
      */
     import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.82/lib/index.js";
 
+    /** Fill shared datalist with every prebuilt model_id (sorted). LLM: keeps defaults; enables picking any catalog model. */
+    function populatePrebuiltModelDatalist() {
+      const dl = document.getElementById("prebuilt-model-ids");
+      const note = document.getElementById("model-catalog-note");
+      const cfg = webllm.prebuiltAppConfig;
+      if (!cfg || !Array.isArray(cfg.model_list)) {
+        if (note) note.textContent = "Prebuilt model list unavailable (unexpected WebLLM build).";
+        return;
+      }
+      const ids = cfg.model_list
+        .map((r) => r.model_id)
+        .filter(Boolean)
+        .sort();
+      const frag = document.createDocumentFragment();
+      for (const id of ids) {
+        const opt = document.createElement("option");
+        opt.value = id;
+        frag.appendChild(opt);
+      }
+      dl.appendChild(frag);
+      if (note) {
+        note.textContent =
+          ids.length +
+          " prebuilt model_ids in suggestions — focus a field and type a few letters or use arrow keys to browse.";
+      }
+    }
+    populatePrebuiltModelDatalist();
+
+    function messageOf(err) {
+      if (err == null) return "Unknown error";
+      if (typeof err === "string") return err;
+      return err.message || String(err);
+    }
+
+    /** LLM: user-friendly copy when GPU RAM / WebGPU rejects a model (avoid raw stack / silent crash). */
+    function friendlyLoadError(err) {
+      const full = messageOf(err);
+      const m = full.toLowerCase();
+      if (
+        m.includes("memory") ||
+        m.includes("oom") ||
+        m.includes("out of memory") ||
+        m.includes("allocation") ||
+        m.includes("too large") ||
+        m.includes("insufficient") ||
+        m.includes("rangeerror") ||
+        m.includes("array buffer")
+      ) {
+        return (
+          "Model too large or not enough GPU/RAM for this device. Try a smaller model_id, unload the other slot, or reload the page. Details: " +
+          full
+        );
+      }
+      if (m.includes("device lost") || m.includes("devicelost") || m.includes("webgpu") || m.includes("gpu")) {
+        return "WebGPU/GPU error while loading. Try a smaller model or refresh the tab. Details: " + full;
+      }
+      if (m.includes("abort")) {
+        return "Load aborted. Details: " + full;
+      }
+      return "Load failed: " + full;
+    }
+
+    function friendlyChatError(err) {
+      const full = messageOf(err);
+      const m = full.toLowerCase();
+      if (m.includes("memory") || m.includes("oom") || m.includes("device lost")) {
+        return "Generation failed (GPU/memory). Try a smaller model or reload. Details: " + full;
+      }
+      return "Generation failed: " + full;
+    }
+
     const banner = document.getElementById("gpu-banner");
     if (!navigator.gpu) {
       banner.textContent = "WebGPU not available in this context. Use a Chromium-based browser with WebGPU enabled, and serve this file over http(s) (not file://) if modules fail to load.";
@@ -186,6 +261,17 @@
     let engineB = null;
     let loadedIdA = "";
     let loadedIdB = "";
+
+    /** LLM: after failed load/reload, clear slot so the next attempt uses a fresh engine (best effort). */
+    function resetEngineSide(side) {
+      if (side === "a") {
+        engineA = null;
+        loadedIdA = "";
+      } else {
+        engineB = null;
+        loadedIdB = "";
+      }
+    }
 
     function setStatus(side, text, kind) {
       const el = document.getElementById("status-" + side);
@@ -206,33 +292,45 @@
       return messages;
     }
 
+    /** @returns {Promise<import("@mlc-ai/web-llm").MLCEngine | null>} */
     async function ensureEngine(side, modelId, initProgressCallback) {
+      if (!modelId) {
+        setStatus(side, "Enter a model_id (pick from list or type).", "err");
+        return null;
+      }
       const existing = side === "a" ? engineA : engineB;
       const loadedId = side === "a" ? loadedIdA : loadedIdB;
       if (existing && loadedId === modelId) return existing;
 
       setStatus(side, "Loading " + modelId + "…", "loading");
-      // Reuse MLCEngine and reload() when switching model_id to avoid leaking GPU memory.
-      if (existing) {
-        await existing.reload(modelId);
-        if (side === "a") loadedIdA = modelId;
-        else loadedIdB = modelId;
+      try {
+        // Reuse MLCEngine and reload() when switching model_id to avoid leaking GPU memory.
+        if (existing) {
+          await existing.reload(modelId);
+          if (side === "a") loadedIdA = modelId;
+          else loadedIdB = modelId;
+          setStatus(side, "Ready: " + modelId, "");
+          return existing;
+        }
+        const engine = await webllm.CreateMLCEngine(modelId, {
+          initProgressCallback,
+          logLevel: "INFO",
+        });
+        if (side === "a") {
+          engineA = engine;
+          loadedIdA = modelId;
+        } else {
+          engineB = engine;
+          loadedIdB = modelId;
+        }
         setStatus(side, "Ready: " + modelId, "");
-        return existing;
+        return engine;
+      } catch (e) {
+        console.error(e);
+        resetEngineSide(side);
+        setStatus(side, friendlyLoadError(e), "err");
+        return null;
       }
-      const engine = await webllm.CreateMLCEngine(modelId, {
-        initProgressCallback,
-        logLevel: "INFO",
-      });
-      if (side === "a") {
-        engineA = engine;
-        loadedIdA = modelId;
-      } else {
-        engineB = engine;
-        loadedIdB = modelId;
-      }
-      setStatus(side, "Ready: " + modelId, "");
-      return engine;
     }
 
     async function runOne(side, modelId) {
@@ -249,40 +347,46 @@
 
       const t0 = performance.now();
       const engine = await ensureEngine(side, modelId, initProgressCallback);
+      if (!engine) return;
 
-      if (stream) {
-        const chunks = await engine.chat.completions.create({
-          messages,
-          temperature: 0.2,
-          max_tokens: 512,
-          stream: true,
-          stream_options: { include_usage: true },
-        });
-        let text = "";
-        let usage = null;
-        for await (const ch of chunks) {
-          text += ch.choices[0]?.delta?.content ?? "";
-          outEl.textContent = text;
-          if (ch.usage) usage = ch.usage;
+      try {
+        if (stream) {
+          const chunks = await engine.chat.completions.create({
+            messages,
+            temperature: 0.2,
+            max_tokens: 512,
+            stream: true,
+            stream_options: { include_usage: true },
+          });
+          let text = "";
+          let usage = null;
+          for await (const ch of chunks) {
+            text += ch.choices[0]?.delta?.content ?? "";
+            outEl.textContent = text;
+            if (ch.usage) usage = ch.usage;
+          }
+          const ms = Math.round(performance.now() - t0);
+          const u = usage
+            ? " time " + ms + " ms | tokens prompt " + (usage.prompt_tokens ?? "?") + " / completion " + (usage.completion_tokens ?? "?")
+            : " time " + ms + " ms";
+          setMeta(side, u);
+        } else {
+          const reply = await engine.chat.completions.create({
+            messages,
+            temperature: 0.2,
+            max_tokens: 512,
+          });
+          const ms = Math.round(performance.now() - t0);
+          const c = reply.choices[0].message.content;
+          outEl.textContent = c ?? "";
+          const u = reply.usage
+            ? " time " + ms + " ms | tokens prompt " + reply.usage.prompt_tokens + " / completion " + reply.usage.completion_tokens
+            : " time " + ms + " ms";
+          setMeta(side, u);
         }
-        const ms = Math.round(performance.now() - t0);
-        const u = usage
-          ? " time " + ms + " ms | tokens prompt " + (usage.prompt_tokens ?? "?") + " / completion " + (usage.completion_tokens ?? "?")
-          : " time " + ms + " ms";
-        setMeta(side, u);
-      } else {
-        const reply = await engine.chat.completions.create({
-          messages,
-          temperature: 0.2,
-          max_tokens: 512,
-        });
-        const ms = Math.round(performance.now() - t0);
-        const c = reply.choices[0].message.content;
-        outEl.textContent = c ?? "";
-        const u = reply.usage
-          ? " time " + ms + " ms | tokens prompt " + reply.usage.prompt_tokens + " / completion " + reply.usage.completion_tokens
-          : " time " + ms + " ms";
-        setMeta(side, u);
+      } catch (e) {
+        console.error(e);
+        setStatus(side, friendlyChatError(e), "err");
       }
     }
 
@@ -298,7 +402,9 @@
         const id = document.getElementById("model-a").value.trim();
         await ensureEngine("a", id, (r) => setStatus("a", r.text, "loading"));
       } catch (e) {
-        setStatus("a", String(e), "err");
+        console.error(e);
+        resetEngineSide("a");
+        setStatus("a", friendlyLoadError(e), "err");
       } finally {
         busy(false);
       }
@@ -310,7 +416,9 @@
         const id = document.getElementById("model-b").value.trim();
         await ensureEngine("b", id, (r) => setStatus("b", r.text, "loading"));
       } catch (e) {
-        setStatus("b", String(e), "err");
+        console.error(e);
+        resetEngineSide("b");
+        setStatus("b", friendlyLoadError(e), "err");
       } finally {
         busy(false);
       }
@@ -325,8 +433,8 @@
         await runOne("b", idB);
       } catch (e) {
         console.error(e);
-        setStatus("a", String(e), "err");
-        setStatus("b", String(e), "err");
+        setStatus("a", friendlyLoadError(e), "err");
+        setStatus("b", friendlyLoadError(e), "err");
       } finally {
         busy(false);
       }
