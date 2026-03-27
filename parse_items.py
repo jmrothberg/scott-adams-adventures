@@ -2,7 +2,8 @@
 """Parse all Scott Adams .dat files and extract items by room."""
 import re, glob, os
 
-DAT_DIR = "/Users/jonathanrothberg/Scott_Adams_Adventures/scott-adams-adventures"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DAT_DIR = os.path.join(SCRIPT_DIR, "Game_Data")
 
 def tokenize(text):
     """Extract all tokens (integers and quoted strings) from dat file."""

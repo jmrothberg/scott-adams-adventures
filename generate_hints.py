@@ -437,9 +437,10 @@ def main():
     script_dir = Path(__file__).parent
     os.chdir(script_dir)
 
-    dat_files = sorted(Path('.').glob('*.dat'))
+    dat_dir = script_dir / 'Game_Data'
+    dat_files = sorted(dat_dir.glob('*.dat'))
     if not dat_files:
-        print("No .dat files found in current directory!")
+        print("No .dat files found in Game_Data!")
         sys.exit(1)
 
     total_rooms = 0

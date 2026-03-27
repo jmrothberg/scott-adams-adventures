@@ -122,7 +122,7 @@ After generating, commit and push to see them on GitHub Pages.
 
 ### Adding images manually
 
-1. Pick a game (e.g., Adventureland = `adv01.dat`)
+1. Pick a game (e.g., Adventureland = `Game_Data/adv01.dat`)
 2. Open `image_guides/adv01_adventureland.md` for the room list and prompts
 3. Generate images using your preferred tool (Stable Diffusion, DALL-E, Midjourney, etc.)
 4. Save images as `images/adv01/room_01.png`, `room_02.png`, etc.

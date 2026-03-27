@@ -802,7 +802,7 @@ async function newGame() {
   const file = document.getElementById('game-select').value;
   currentGameId = file.replace('.dat', '');
   try {
-    const resp = await fetch(file);
+    const resp = await fetch('Game_Data/' + file);
     if (!resp.ok) throw new Error('Could not load ' + file);
     const text = await resp.text();
     const game = parseGameData(text);
@@ -816,7 +816,7 @@ async function newGame() {
     cmdEl.focus();
   } catch(e) {
     clearOut();
-    appendOut('Error loading game: ' + e.message + '\nMake sure the .dat file is in the same directory.');
+    appendOut('Error loading game: ' + e.message + '\nMake sure game .dat files are in the Game_Data folder.');
   }
 }
 
