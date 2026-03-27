@@ -31,15 +31,7 @@ button:hover{background:#1a4a8a}
 #prompt{color:#e94560;margin-right:8px;font-size:15px}
 #cmd{flex:1;background:transparent;border:none;outline:none;color:#00ff41;font-family:inherit;font-size:15px;caret-color:#00ff41}
 #help-bar{background:#16213e;color:#555;font-size:11px;padding:4px 20px;border-top:1px solid #0f3460}
-/* Map overlay styles */
-#map-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:100;flex-direction:column;align-items:center;padding:20px}
-#map-overlay.active{display:flex}
-#map-header{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1200px;margin-bottom:10px}
-#map-header h2{color:#e94560;margin:0;font-size:20px}
-#map-close{background:#e94560;color:#fff;border:1px solid #e94560;padding:5px 14px;font-size:14px;cursor:pointer;border-radius:3px}
-#map-close:hover{background:#ff6b8a}
-#map-container{flex:1;overflow:auto;width:100%;max-width:1200px;border:1px solid #0f3460;border-radius:4px;background:#0d0d1a}
-#map-legend{color:#666;font-size:11px;margin-top:8px;text-align:center}
+/* Map is rendered inline inside #output */
 </style>
 </head>
 <body>
@@ -87,17 +79,7 @@ button:hover{background:#1a4a8a}
   N/S/E/W/U/D=move | I=inventory | L=look | GET/DROP item | SAVE/LOAD/QUIT | MAP=show map | HINT=get help | Classic/LLM toggle for natural language
 </div>
 
-<!-- Map overlay -->
-<div id="map-overlay">
-  <div id="map-header">
-    <h2>MAP</h2>
-    <button id="map-close" onclick="hideMap()">Close [ESC]</button>
-  </div>
-  <div id="map-container"></div>
-  <div id="map-legend">
-    Solid lines = N/S/E/W &nbsp;|&nbsp; Dashed lines = Up/Down &nbsp;|&nbsp; Red border = current room &nbsp;|&nbsp; ? = unexplored exit
-  </div>
-</div>
+<!-- Map is now rendered inline in the output area -->
 
 <script>
 'use strict';
@@ -628,136 +610,18 @@ function computeMapLayout() {
   return gridPos;
 }
 
-/* ===== MAP RENDERING (SVG) ===== */
-function renderMap() {
-  const container = document.getElementById('map-container');
-  const layout = computeMapLayout();
-
-  if (layout.size === 0) {
-    container.innerHTML = '<div style="color:#555;text-align:center;padding:40px">No rooms explored yet. Start playing to build the map!</div>';
-    return;
-  }
-
-  const cellW = 100, cellH = 70, padX = 40, padY = 40, thumbW = 80, thumbH = 50;
-  const dirLabels = ['N','S','E','W','U','D'];
-  const offsets = [{dx:0,dy:-1},{dx:0,dy:1},{dx:1,dy:0},{dx:-1,dy:0},{dx:-1,dy:-1},{dx:1,dy:1}];
-
-  // Find bounds
-  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-  for (const pos of layout.values()) {
-    if (pos.x < minX) minX = pos.x;
-    if (pos.x > maxX) maxX = pos.x;
-    if (pos.y < minY) minY = pos.y;
-    if (pos.y > maxY) maxY = pos.y;
-  }
-
-  // Add room for unexplored "?" markers
-  minX--; minY--; maxX++; maxY++;
-
-  const svgW = (maxX - minX + 1) * cellW + padX * 2;
-  const svgH = (maxY - minY + 1) * cellH + padY * 2;
-
-  function toSvg(gx, gy) {
-    return { sx: (gx - minX) * cellW + padX + cellW/2, sy: (gy - minY) * cellH + padY + cellH/2 };
-  }
-
-  let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${svgW}" height="${svgH}" style="display:block;margin:auto">`;
-
-  // Draw connection lines first (under rooms)
-  for (const [room, pos] of layout) {
-    const edges = mapEdges.get(room);
-    if (!edges) continue;
-    const from = toSvg(pos.x, pos.y);
-
-    for (const [dir, target] of edges) {
-      const isUpDown = dir >= 4;
-      const targetPos = layout.get(target);
-
-      if (targetPos) {
-        const to = toSvg(targetPos.x, targetPos.y);
-        const stroke = isUpDown ? '#334' : '#0f3460';
-        const dash = isUpDown ? ' stroke-dasharray="5,3"' : '';
-        svg += `<line x1="${from.sx}" y1="${from.sy}" x2="${to.sx}" y2="${to.sy}" stroke="${stroke}" stroke-width="2"${dash}/>`;
-
-        // Label U/D connections at midpoint
-        if (isUpDown) {
-          const mx = (from.sx + to.sx) / 2, my = (from.sy + to.sy) / 2;
-          svg += `<text x="${mx}" y="${my - 4}" text-anchor="middle" fill="#666" font-size="9" font-family="monospace">${dirLabels[dir]}</text>`;
-        }
-      } else if (!mapVisited.has(target)) {
-        // Unexplored exit: draw short line with "?" at end
-        const off = offsets[dir];
-        const endX = from.sx + off.dx * 40;
-        const endY = from.sy + off.dy * 30;
-        svg += `<line x1="${from.sx}" y1="${from.sy}" x2="${endX}" y2="${endY}" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>`;
-        svg += `<text x="${endX}" y="${endY + 4}" text-anchor="middle" fill="#666" font-size="12" font-family="monospace">?</text>`;
-      }
-    }
-  }
-
-  // Draw rooms on top
-  const currentRoom = engine ? engine.loc : -1;
-  for (const [room, pos] of layout) {
-    const p = toSvg(pos.x, pos.y);
-    const rx = p.sx - thumbW/2, ry = p.sy - thumbH/2;
-    const isCurrent = room === currentRoom;
-
-    // Background rect
-    const borderColor = isCurrent ? '#e94560' : '#0f3460';
-    const borderWidth = isCurrent ? 3 : 1;
-    const bgColor = isCurrent ? '#1a1a3e' : '#111122';
-    svg += `<rect x="${rx}" y="${ry}" width="${thumbW}" height="${thumbH}" fill="${bgColor}" stroke="${borderColor}" stroke-width="${borderWidth}" rx="3"/>`;
-
-    // Room image thumbnail
-    const pad = String(room).padStart(2, '0');
-    const imgUrl = 'images/' + currentGameId + '/room_' + pad + '.png';
-    svg += `<image href="${imgUrl}" x="${rx + 2}" y="${ry + 2}" width="${thumbW - 4}" height="${thumbH - 14}" preserveAspectRatio="xMidYMid slice">`;
-    svg += `<title>Room ${room}: ${(mapRoomDescs.get(room) || '').replace(/"/g, '&quot;')}</title></image>`;
-
-    // Room number label at bottom of cell
-    const labelColor = isCurrent ? '#e94560' : '#00ff41';
-    svg += `<text x="${p.sx}" y="${ry + thumbH - 3}" text-anchor="middle" fill="${labelColor}" font-size="10" font-family="monospace">${room}</text>`;
-
-    // Tooltip rect (invisible, for hover)
-    svg += `<rect x="${rx}" y="${ry}" width="${thumbW}" height="${thumbH}" fill="transparent" stroke="none">`;
-    svg += `<title>Room ${room}: ${(mapRoomDescs.get(room) || '').replace(/"/g, '&quot;')}</title></rect>`;
-  }
-
-  svg += '</svg>';
-  container.innerHTML = svg;
-
-  // Scroll to center on current room
-  if (layout.has(currentRoom)) {
-    const cp = toSvg(layout.get(currentRoom).x, layout.get(currentRoom).y);
-    const cw = container.clientWidth, ch = container.clientHeight;
-    container.scrollLeft = Math.max(0, cp.sx - cw / 2);
-    container.scrollTop = Math.max(0, cp.sy - ch / 2);
-  }
-}
-
 /* ===== MAP SHOW/HIDE ===== */
 function showMap() {
   if (!engine) return;
-  renderMap();
-  document.getElementById('map-overlay').classList.add('active');
+  // Show inline map in the output area
+  showInlineMap();
+  outputEl.scrollTop = outputEl.scrollHeight;
 }
 
 function hideMap() {
-  document.getElementById('map-overlay').classList.remove('active');
+  // no-op now (inline map is part of output flow)
   cmdEl.focus();
 }
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && document.getElementById('map-overlay').classList.contains('active')) {
-    hideMap();
-    e.preventDefault();
-  }
-});
-
-// Close map when clicking outside the map content
-document.getElementById('map-overlay').addEventListener('click', e => {
-  if (e.target === document.getElementById('map-overlay')) hideMap();
-});
 
 /* ===== MAP SAVE/LOAD ===== */
 function saveMapState() {
@@ -988,21 +852,21 @@ cmdEl.addEventListener('keydown', e => {
   }
 });
 
-// Auto-start Adventureland
-newGame();
-</script>
-<script>
-// Detect file:// protocol and warn
+// Auto-start Adventureland (skip if opened as file://)
 if (location.protocol === 'file:') {
   document.getElementById('output').innerHTML = '<div style="color:#e94560;padding:20px;line-height:1.6">' +
     '<b>Cannot open directly as a file.</b><br><br>' +
-    'The game needs a local web server to load .dat files.<br><br>' +
+    'The game needs a local web server to load game data files.<br><br>' +
     '<b>Option 1 — Local server (one command):</b><br>' +
+    'Open Terminal, then type:<br>' +
+    '<span style="color:#00ff41">cd ' + location.pathname.replace(/\/[^\/]*$/, '') + '</span><br>' +
     '<span style="color:#00ff41">python3 -m http.server 8090</span><br>' +
-    'Then open <span style="color:#6eb5ff">http://localhost:8090</span><br><br>' +
+    'Then open <a href="http://localhost:8090" style="color:#6eb5ff">http://localhost:8090</a><br><br>' +
     '<b>Option 2 — Play online:</b><br>' +
-    '<span style="color:#6eb5ff">https://jmrothberg.github.io/scott-adams-adventures/</span>' +
+    '<a href="https://jmrothberg.github.io/scott-adams-adventures/" style="color:#6eb5ff">https://jmrothberg.github.io/scott-adams-adventures/</a>' +
     '</div>';
+} else {
+  newGame();
 }
 </script>
 <script type="module" src="llm-enhanced.js"></script>
