@@ -779,7 +779,17 @@ async function newGame() {
     cmdEl.focus();
   } catch(e) {
     clearOut();
-    appendOut('Error loading game: ' + e.message + '\nMake sure game .dat files are in the Game_Data folder.');
+    if (location.protocol === 'file:') {
+      appendOut('Error loading game: browser blocked file access.\n\n' +
+        'Option 1 — Local server (one command):\n' +
+        '  cd ' + location.pathname.replace(/\/[^\/]*$/, '') + '\n' +
+        '  python3 -m http.server 8090\n' +
+        '  Then open http://localhost:8090\n\n' +
+        'Option 2 — Play online:\n' +
+        '  https://jmrothberg.github.io/scott-adams-adventures/');
+    } else {
+      appendOut('Error loading game: ' + e.message + '\nMake sure game .dat files are in the Game_Data folder.');
+    }
   }
 }
 
@@ -855,22 +865,16 @@ cmdEl.addEventListener('keydown', e => {
   }
 });
 
-// Auto-start Adventureland (skip if opened as file://)
+// Hide LLM toggle on file:// (ES module won't load)
 if (location.protocol === 'file:') {
-  document.getElementById('output').innerHTML = '<div style="color:#e94560;padding:20px;line-height:1.6">' +
-    '<b>Cannot open directly as a file.</b><br><br>' +
-    'The game needs a local web server to load game data files.<br><br>' +
-    '<b>Option 1 — Local server (one command):</b><br>' +
-    'Open Terminal, then type:<br>' +
-    '<span style="color:#00ff41">cd ' + location.pathname.replace(/\/[^\/]*$/, '') + '</span><br>' +
-    '<span style="color:#00ff41">python3 -m http.server 8090</span><br>' +
-    'Then open <a href="http://localhost:8090" style="color:#6eb5ff">http://localhost:8090</a><br><br>' +
-    '<b>Option 2 — Play online:</b><br>' +
-    '<a href="https://jmrothberg.github.io/scott-adams-adventures/" style="color:#6eb5ff">https://jmrothberg.github.io/scott-adams-adventures/</a>' +
-    '</div>';
-} else {
-  newGame();
+  var llmToggle = document.getElementById('llm-toggle');
+  if (llmToggle) llmToggle.style.display = 'none';
+  var llmModel = document.getElementById('llm-model');
+  if (llmModel) llmModel.style.display = 'none';
 }
+
+// Always try to start — error handler will show help if fetch fails
+newGame();
 </script>
 <script type="module" src="llm-enhanced.js"></script>
 </body>
