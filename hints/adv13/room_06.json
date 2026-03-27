@@ -1,0 +1,23 @@
+{
+  "room": 6,
+  "name": "I'm on top of the fountain",
+  "description": "I'm on top of the fountain",
+  "items_start": [
+    "Dark air shaft",
+    "Water outlet"
+  ],
+  "exits": {
+    "D": 4
+  },
+  "hints": [
+    "On top of the fountain with an air shaft and water outlet. Both may lead somewhere.",
+    "The dark air shaft and water outlet are potential passages to other areas of the castle. Try going into them.",
+    "GO SHAFT to enter the dark air shaft. The water outlet may connect to the moat. DOWN returns to inside the fountain."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Top of the magic fountain with a dark air shaft and water outlet. The air shaft likely connects to the dungeon area. The water outlet may connect to the moat. Down returns to inside the fountain (room 4)."
+}

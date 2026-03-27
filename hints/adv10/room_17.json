@@ -1,0 +1,20 @@
+{
+  "room": 17,
+  "name": "ancient cave",
+  "description": "I'm in a ancient cave",
+  "items_start": [
+    "Primitve cave drawings",
+    "Stalactite in roof",
+    "Dark opening in roof"
+  ],
+  "exits": {
+    "S": 16
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

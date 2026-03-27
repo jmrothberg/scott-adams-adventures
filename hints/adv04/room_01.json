@@ -1,0 +1,50 @@
+{
+  "room": 1,
+  "name": "chapel",
+  "description": "I'm in a chapel",
+  "items_start": [
+    "Closed Coffin"
+  ],
+  "exits": {
+    "N": 9,
+    "S": 2,
+    "E": 4,
+    "W": 10
+  },
+  "hints": [
+    "This is the chapel where the final ritual must be performed. The coffin contains Count Cristo.",
+    "OPEN COFFIN to see the cursed Count. You will need specific items to break the curse.",
+    "The counter-spell requires the glowing idol, four-leaf clover, and the doll with pins removed.",
+    "With all items ready: YELL CHANT with the glowing idol, four-leaf clover, and doll (pins removed) to break the curse and win."
+  ],
+  "key_actions": [
+    "CIR COF",
+    "YEL CHA"
+  ],
+  "action_details": [
+    {
+      "command": "CIR COF",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Nothing happened"
+      ]
+    },
+    {
+      "command": "YEL CHA",
+      "needs": [
+        "Brightly glowing idol (need access)",
+        "Four leaf clover (need access)",
+        "Doll (need access)"
+      ],
+      "effects": [
+        "Message: There's a CLAP OF THUNDER!",
+        "Message: Pins fall out of doll"
+      ]
+    }
+  ],
+  "items_needed": ["Brightly glowing idol", "Four leaf clover", "Doll"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Chapel with Count Cristo's coffin - the location where the curse must be broken. YELL CHANT with the glowing idol, clover, and pin-free doll to complete the game. Central hub connecting to all major areas."
+}

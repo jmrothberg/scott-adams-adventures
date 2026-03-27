@@ -1,0 +1,26 @@
+{
+  "room": 18,
+  "name": "methane snow storm",
+  "description": "I'm in a methane snow storm",
+  "items_start": [
+    "Strange light far to the NORTH"
+  ],
+  "exits": {
+    "N": 19,
+    "S": 20,
+    "E": 10,
+    "W": 20
+  },
+  "hints": [
+    "A methane snow storm area. You see a strange light to the NORTH.",
+    "The light to the north is your navigation beacon.",
+    "Follow the light NORTH to find your way through the storm.",
+    "Go NORTH toward the light. S and W lead to the dead-end loop!"
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["SUIT"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Methane storm with visible light to the north. Follow the light. S and W lead to dead-end."
+}

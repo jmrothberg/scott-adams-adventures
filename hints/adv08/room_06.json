@@ -1,0 +1,37 @@
+{
+  "room": 6,
+  "name": "rocky entrance-way",
+  "description": "I'm in a rocky entrance-way",
+  "items_start": [
+    "Closed sarcophagus",
+    "Mouldy bandages",
+    "Open door",
+    "Pistol"
+  ],
+  "exits": {
+    "N": 12,
+    "S": 16
+  },
+  "hints": [],
+  "key_actions": [
+    "GO DOO"
+  ],
+  "action_details": [
+    {
+      "command": "GO DOO",
+      "needs": [
+        "Open door (must be in room)"
+      ],
+      "effects": [
+        "Move to room 4"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "BAN",
+    "PIS"
+  ],
+  "danger": false,
+  "notes": ""
+}

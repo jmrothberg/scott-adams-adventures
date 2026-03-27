@@ -1,0 +1,33 @@
+{
+  "room": 17,
+  "name": "I'm on the engine",
+  "description": "I'm on the engine",
+  "items_start": [],
+  "exits": {
+    "D": 18
+  },
+  "hints": [
+    "You're standing on top of the engine. There might be something hidden here.",
+    "LOOK ENGINE carefully - there may be something concealed on or in the engine.",
+    "LOOK ENGINE finds a hidden item and automatically picks it up. DOWN returns to the engine room (room 18).",
+    "LOOK ENGINE to find and automatically get a hidden item. Then go DOWN to return to the engine room."
+  ],
+  "key_actions": [
+    "LOOK ENGI"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK ENGI",
+      "needs": [],
+      "effects": [
+        "Message: I found",
+        "Message: something",
+        "Message: & I got it!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "On top of the engine, accessed by GO ENGINE from the engine room (room 18). LOOK ENGINE finds a hidden item (auto-pickup). DOWN returns to engine room (room 18)."
+}

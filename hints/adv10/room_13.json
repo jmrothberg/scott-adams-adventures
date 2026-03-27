@@ -1,0 +1,55 @@
+{
+  "room": 13,
+  "name": "I'm above the lake bottom",
+  "description": "I'm above the lake bottom",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "SWIM UP",
+    "SWIM EAST",
+    "SWIM NORTH",
+    "SWIM"
+  ],
+  "action_details": [
+    {
+      "command": "SWIM UP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 12"
+      ]
+    },
+    {
+      "command": "SWIM EAST",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see",
+        "Message: something",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "SWIM NORTH",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see",
+        "Message: something",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

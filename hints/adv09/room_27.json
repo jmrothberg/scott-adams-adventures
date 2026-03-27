@@ -1,0 +1,31 @@
+{
+  "room": 27,
+  "name": "hotel room",
+  "description": "I'm in a hotel room",
+  "items_start": [],
+  "exits": {
+    "W": 28
+  },
+  "hints": [],
+  "key_actions": [
+    "HIT BELL"
+  ],
+  "action_details": [
+    {
+      "command": "HIT BELL",
+      "needs": [
+        "Large bell (need access)"
+      ],
+      "effects": [
+        "Message: Whoosh!",
+        "Message: I see",
+        "Message: something",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

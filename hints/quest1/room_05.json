@@ -1,0 +1,33 @@
+{
+  "room": 5,
+  "name": "tunnel going out",
+  "description": "I'm in a tunnel going out",
+  "items_start": [
+    "Sign",
+    "*Gem"
+  ],
+  "exits": {
+    "W": 14
+  },
+  "hints": [],
+  "key_actions": [
+    "GO DOME"
+  ],
+  "action_details": [
+    {
+      "command": "GO DOME",
+      "needs": [],
+      "effects": [
+        "Move to room 7",
+        "Set flag 3",
+        "Set flag 4"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

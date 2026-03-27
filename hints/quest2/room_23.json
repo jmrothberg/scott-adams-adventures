@@ -1,0 +1,20 @@
+{
+  "room": 23,
+  "name": "small deserted Office",
+  "description": "I'm in a small deserted Office",
+  "items_start": [
+    "*Gem"
+  ],
+  "exits": {
+    "N": 18
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

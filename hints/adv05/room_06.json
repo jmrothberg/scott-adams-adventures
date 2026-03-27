@@ -1,0 +1,39 @@
+{
+  "room": 6,
+  "name": "CRYPT",
+  "description": "I'm in a CRYPT",
+  "items_start": [
+    "Piles of extinguished cigArettes",
+    "Vent",
+    "Sign says: `POSITIVELY NO SMOKING ALLOWED HERE!` signed Dracula"
+  ],
+  "exits": {
+    "S": 19
+  },
+  "hints": [
+    "A crypt with a no-smoking sign from Dracula and piles of extinguished cigarettes. Why would a vampire ban smoking here?",
+    "The no-smoking sign is a reverse clue - you SHOULD smoke here! You need a lit cigarette to trigger the key puzzle.",
+    "SMOKE CIGARETTE here. The result is 'a COUGHIN in the room' - a pun on COFFIN. This makes Dracula's coffin appear!",
+    "SMOKE (with a lit cigarette) produces 'a COUGHIN' = COFFIN. This is the essential pun that makes Dracula's coffin appear, which you need to find to stake the vampire. SOUTH leads to dark passage (room 19)."
+  ],
+  "key_actions": [
+    "SMO"
+  ],
+  "action_details": [
+    {
+      "command": "SMO",
+      "needs": [
+        "LIT cigArette (need access)"
+      ],
+      "effects": [
+        "Message: There's A COUGHIN (sic) in the room.",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": ["Lit cigarette"],
+  "items_available": [],
+  "danger": false,
+  "notes": "The crypt where Dracula's coffin can be summoned. SMOKE a lit cigarette here to trigger the classic Scott Adams pun: 'There's a COUGHIN in the room' = COFFIN appears. The no-smoking sign is a reverse clue. The piles of extinguished cigarettes show others have tried. The coffin is needed to find and stake Dracula. SOUTH leads to the dark passage (room 19). The vent connects to the ventilation system."
+}

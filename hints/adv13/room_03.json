@@ -1,0 +1,60 @@
+{
+  "room": 3,
+  "name": "courtyard",
+  "description": "I'm in a courtyard",
+  "items_start": [
+    "Magic Fountain",
+    "Permeability spell",
+    "Fire bricks"
+  ],
+  "exits": {
+    "N": 21,
+    "S": 10,
+    "E": 7,
+    "W": 28
+  },
+  "hints": [
+    "The castle courtyard is a central hub with several important items and a magic fountain. Take everything!",
+    "GET PERMEABILITY - this spell lets you pass through solid objects. GET BRICKS - fire bricks are useful. The magic fountain can be entered.",
+    "GET PERME (permeability spell) and GET BRICK (fire bricks). GO FOUNTAIN to enter it and find a star. The courtyard connects to most castle areas.",
+    "The permeability spell is essential for passing through doors and walls. NORTH leads to the kitchen, SOUTH to the plain room with hidden passages, EAST to the ballroom, WEST to the entryway."
+  ],
+  "key_actions": [
+    "LOOK UP",
+    "LOOK BATTL",
+    "LOOK CASTL"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK UP",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: battlements above."
+      ]
+    },
+    {
+      "command": "LOOK BATTL",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: a tin can up there."
+      ]
+    },
+    {
+      "command": "LOOK CASTL",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: battlements above."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "PERME",
+    "BRICK"
+  ],
+  "danger": false,
+  "notes": "Central courtyard - the main hub of the castle. Contains the magic fountain (enter it for a star), permeability spell (essential for passing through walls/doors), and fire bricks. Four exits: N to kitchen (21), S to plain room (10), E to ballroom (7), W to entryway (28). LOOK UP reveals battlements with a tin can."
+}

@@ -1,0 +1,21 @@
+{
+  "room": 20,
+  "name": "narrow crawlway",
+  "description": "I'm in a narrow crawlway",
+  "items_start": [],
+  "exits": {
+    "E": 21,
+    "W": 13
+  },
+  "hints": [
+    "A narrow crawlway connecting the smuggler's hold to the ship's hold.",
+    "EAST goes to the ship's hold, WEST returns to the smuggler's hold (treasure room).",
+    "Simple connector passage. EAST leads to the ship's hold (room 21) with items. WEST returns to the smuggler's hold/treasure room (room 13)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Narrow crawlway connecting the smuggler's hold/treasure room (room 13, west) to the ship's hold (room 21, east). Simple passage with no items or puzzles."
+}

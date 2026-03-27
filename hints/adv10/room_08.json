@@ -1,0 +1,31 @@
+{
+  "room": 8,
+  "name": "volcano",
+  "description": "I'm in a volcano",
+  "items_start": [
+    "Lake",
+    "Cave"
+  ],
+  "exits": {
+    "U": 6
+  },
+  "hints": [],
+  "key_actions": [
+    "GET OUT"
+  ],
+  "action_details": [
+    {
+      "command": "GET OUT",
+      "needs": [],
+      "effects": [
+        "Message: Sorry",
+        "Message: ash is loose, I slide down",
+        "Message: I shawda picked another proffesion!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

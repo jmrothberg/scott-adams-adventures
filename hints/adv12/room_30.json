@@ -1,0 +1,56 @@
+{
+  "room": 30,
+  "name": "damp grotto",
+  "description": "I'm in a damp grotto",
+  "items_start": [
+    "Deep pit",
+    "Stalagmite"
+  ],
+  "exits": {
+    "W": 27
+  },
+  "hints": [
+    "A grotto with a deep pit and a stalagmite. The pit leads deeper underground but jumping is fatal.",
+    "TIE ROPE TO STALAGMITE to create a safe way down into the pit. Do NOT jump - it kills you.",
+    "TIE ROPE TO STALAGMITE, then GO PIT to climb down safely. Without the rope, the pit is a death trap. WEST returns to the hallway."
+  ],
+  "key_actions": [
+    "GO PIT",
+    "JUMP PIT",
+    "TO STAL"
+  ],
+  "action_details": [
+    {
+      "command": "GO PIT",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Tell me how?"
+      ]
+    },
+    {
+      "command": "JUMP PIT",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "TO STAL",
+      "needs": [
+        "Rope (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [
+    "ROPE"
+  ],
+  "items_available": [],
+  "danger": true,
+  "notes": "Damp grotto with a deep pit and stalagmite. JUMP PIT is fatal. Must TIE ROPE TO STALAGMITE first to create a safe descent into the pit (room 33). West leads to the musty hallway (room 27). The rope is an essential item for this puzzle."
+}

@@ -1,0 +1,41 @@
+{
+  "room": 25,
+  "name": ".",
+  "description": "I'm in a .",
+  "items_start": [],
+  "exits": {
+    "N": 9,
+    "S": 9,
+    "E": 26,
+    "W": 9,
+    "U": 9,
+    "D": 9
+  },
+  "hints": [],
+  "key_actions": [
+    "BRE MIR",
+    "FEE"
+  ],
+  "action_details": [
+    {
+      "command": "BRE MIR",
+      "needs": [],
+      "effects": [
+        "Message: 1000 years bad luck starts with a cave in!",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "FEE",
+      "needs": [],
+      "effects": [
+        "Message: I feel a coin on the floor",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

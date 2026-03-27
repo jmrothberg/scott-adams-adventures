@@ -1,0 +1,58 @@
+{
+  "room": 4,
+  "name": "I'm hanging on the end of a sheet, I made a fold in the sheet\nso I can leave things here. There's a window box here on the\nside of the castle",
+  "description": "I'm hanging on the end of a sheet, I made a fold in the sheet\nso I can leave things here. There's a window box here on the\nside of the castle",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You're hanging on the sheet with a window box nearby. You can store items in the fold of the sheet.",
+    "GO WINDOW to enter the flower box. CLIMB to go back up to the ledge. The fold in the sheet can hold items.",
+    "GO WINDOW leads to the flower box (room 5) which has daisies and connects to the dark/doorless room. CLIMB returns to the ledge (room 3).",
+    "GO WINDOW to reach the flower box (room 5) and from there GO WINDOW again into the doorless room (room 10). CLIMB returns to ledge (room 3). The sheet fold is a storage spot."
+  ],
+  "key_actions": [
+    "GO WIN",
+    "LOO PAC",
+    "CLI",
+    "OPE WIN"
+  ],
+  "action_details": [
+    {
+      "command": "GO WIN",
+      "needs": [],
+      "effects": [
+        "Move to room 5",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "LOO PAC",
+      "needs": [],
+      "effects": [
+        "Message: There's something there, maybe I should",
+        "Message: go there?"
+      ]
+    },
+    {
+      "command": "CLI",
+      "needs": [],
+      "effects": [
+        "Move to room 3",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "OPE WIN",
+      "needs": [],
+      "effects": [
+        "Message: Sorry I can't do that",
+        "Message: There's something there, maybe I should",
+        "Message: go there?"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hanging on the sheet tied to the flag pole, at the level of the dark window. The fold in the sheet acts as a storage location. GO WINDOW enters the flower box (room 5). CLIMB returns to the ledge (room 3). This is the transit point between the upper floors and the doorless room accessed via the dark window."
+}

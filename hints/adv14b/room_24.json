@@ -1,0 +1,69 @@
+{
+  "room": 24,
+  "name": "cavern inside the mountain",
+  "description": "I'm in a cavern inside the mountain",
+  "items_start": [
+    "Mine shaft",
+    "Bomb housing"
+  ],
+  "exits": {
+    "N": 14
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK BOMB",
+    "PUSH SWIT",
+    "LOOK BOMB",
+    "GET ENVE"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK BOMB",
+      "needs": [
+        "Flashlight (on)"
+      ],
+      "effects": [
+        "Message: I see",
+        "Message: light",
+        "Message: marked 'RFI Shield' is"
+      ]
+    },
+    {
+      "command": "PUSH SWIT",
+      "needs": [
+        "Flashlight (on)"
+      ],
+      "effects": [
+        "Set flag 1",
+        "Message: I see",
+        "Message: something",
+        "Message: happens"
+      ]
+    },
+    {
+      "command": "LOOK BOMB",
+      "needs": [
+        "Flashlight (on)"
+      ],
+      "effects": [
+        "Message: light",
+        "Message: marked 'RFI Shield' is",
+        "Message: off"
+      ]
+    },
+    {
+      "command": "GET ENVE",
+      "needs": [
+        "Flashlight (on)"
+      ],
+      "effects": [
+        "Message: O.K.",
+        "Auto-GET item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

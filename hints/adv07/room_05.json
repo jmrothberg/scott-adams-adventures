@@ -1,0 +1,39 @@
+{
+  "room": 5,
+  "name": "windowed tank",
+  "description": "I'm in a windowed tank",
+  "items_start": [
+    "Closed drain. Water",
+    "Mermaid",
+    "Rusty key",
+    "Bottom of slide"
+  ],
+  "exits": {},
+  "hints": [
+    "You're inside the water tank! There's a mermaid and a rusty key here.",
+    "The drain is closed. You need to open it to drain the water and escape.",
+    "The valve to open the drain is not here - it's in the pit (room 16). You need the valve handle.",
+    "GET KEY for the rusty key. You got here via the slide. To drain the tank, you need to turn the valve in room 16 with the handle from room 17."
+  ],
+  "key_actions": [
+    "KISS MERM"
+  ],
+  "action_details": [
+    {
+      "command": "KISS MERM",
+      "needs": [
+        "Mermaid (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: Wheeee"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "KEY"
+  ],
+  "danger": false,
+  "notes": "Inside the water tank. Contains the rusty key (important!) and a mermaid. Reached via the slide. The drain must be opened by turning the valve in room 16 with the handle from room 17."
+}

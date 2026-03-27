@@ -1,0 +1,32 @@
+{
+  "room": 14,
+  "name": "dome",
+  "description": "I'm in a dome",
+  "items_start": [
+    "*Gem"
+  ],
+  "exits": {
+    "E": 5
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK BASE"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK BASE",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I see",
+        "Message: something"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

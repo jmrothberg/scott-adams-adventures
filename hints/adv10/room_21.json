@@ -1,0 +1,31 @@
+{
+  "room": 21,
+  "name": "metal room",
+  "description": "I'm in a metal room",
+  "items_start": [
+    "Sealed display case"
+  ],
+  "exits": {
+    "E": 9
+  },
+  "hints": [],
+  "key_actions": [
+    "MOVE BUTT"
+  ],
+  "action_details": [
+    {
+      "command": "MOVE BUTT",
+      "needs": [
+        "Open display case (must be in room)"
+      ],
+      "effects": [
+        "DEATH",
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

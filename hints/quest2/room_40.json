@@ -1,0 +1,18 @@
+{
+  "room": 40,
+  "name": "I'm in Limbo",
+  "description": "I'm in Limbo",
+  "items_start": [
+    "Sign"
+  ],
+  "exits": {
+    "D": 2
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

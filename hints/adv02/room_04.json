@@ -1,0 +1,28 @@
+{
+  "room": 4,
+  "name": "musty attic",
+  "description": "I'm in a musty attic",
+  "items_start": [
+    "Pirate's duffel bag",
+    "Unlit torch",
+    "Rum bottle smashed into pieces.\nSign `Opposite of LIGHT is Unlight`"
+  ],
+  "exits": {
+    "W": 3
+  },
+  "hints": [
+    "There are useful items here. The sign gives a hint about conserving light.",
+    "GET BAG and GET TORCH. The bag may contain something. The sign tells you UNLIGHT TORCH saves fuel.",
+    "OPEN BAG to find what is inside. The torch provides light in dark areas but has limited fuel. UNLIGHT it when not needed.",
+    "GET BAG, OPEN BAG to find the map and keys. GET TORCH for light underground. Go WEST to return through the passage."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "BAG",
+    "TOR"
+  ],
+  "danger": false,
+  "notes": "Attic with the pirate's duffel bag (contains map and keys), unlit torch (light source), and a hint about UNLIGHT to conserve fuel. WEST returns through the secret passage to the alcove."
+}

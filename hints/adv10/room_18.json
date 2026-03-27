@@ -1,0 +1,28 @@
+{
+  "room": 18,
+  "name": "I'm west of lake on a small secluded ledge\non volcano's wall",
+  "description": "I'm west of lake on a small secluded ledge\non volcano's wall",
+  "items_start": [
+    "Narrow crevice"
+  ],
+  "exits": {
+    "E": 12
+  },
+  "hints": [],
+  "key_actions": [
+    "SLEE"
+  ],
+  "action_details": [
+    {
+      "command": "SLEE",
+      "needs": [],
+      "effects": [
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

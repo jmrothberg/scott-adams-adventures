@@ -1,0 +1,61 @@
+{
+  "room": 26,
+  "name": "quick-sand bog",
+  "description": "I'm in a quick-sand bog",
+  "items_start": [
+    "*Small statue of a BLUE OX*"
+  ],
+  "exits": {},
+  "hints": [
+    "You are sinking in quicksand! There are no regular exits. You must act quickly.",
+    "You need to swim out, but you cannot carry too much weight. Drop heavy items first.",
+    "SWIM to escape back to the lake. If you are carrying too many items, you are too heavy and will sink. Drop items first.",
+    "Drop everything except the blue ox treasure, then SWIM to escape back to the lake (room 10). If too heavy, you sink and die."
+  ],
+  "key_actions": [
+    "SWI",
+    "SWI",
+    "AT SHO",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "SWI",
+      "needs": [],
+      "effects": [
+        "Message: Somethings too heavy. I fall."
+      ]
+    },
+    {
+      "command": "SWI",
+      "needs": [],
+      "effects": [
+        "Move to room 10",
+        "Show score"
+      ]
+    },
+    {
+      "command": "AT SHO",
+      "needs": [],
+      "effects": [
+        "DEATH",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: Try --> `LOOK, JUMP, SWIM, CLIMB, FIND, TAKE, SCORE, DROP`\nand any other verbs you can think of...",
+        "Message: You may need to say magic words here"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "OX"
+  ],
+  "danger": true,
+  "notes": "Dangerous quicksand bog north of the lake. Contains the blue ox statue treasure. No normal exits - must SWIM out, but only if not carrying too much weight. Drop items to reduce weight before swimming. AT SHORE causes death."
+}

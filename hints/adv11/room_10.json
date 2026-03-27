@@ -1,0 +1,37 @@
+{
+  "room": 10,
+  "name": "metal room",
+  "description": "I'm in a metal room",
+  "items_start": [
+    "Force field",
+    "Blinking red light over force field"
+  ],
+  "exits": {
+    "S": 25
+  },
+  "hints": [
+    "The blinking red light over the force field is a warning. This force field is dangerous.",
+    "Do NOT go through this force field - the red blinking light indicates it is deadly.",
+    "GO SOUTH to retreat to the tunnel. The force field here leads to the exercise room (room 11) but kills you. Find another way to reach that area."
+  ],
+  "key_actions": [
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "Force field (must be in room)"
+      ],
+      "effects": [
+        "Move to room 11",
+        "Auto-DROP item",
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Metal room with a deadly force field marked by a blinking red warning light. Going through it leads to the exercise room (11) but kills you. The south exit leads safely to tunnel room 25. The red light is the game's way of warning you not to enter the force field."
+}

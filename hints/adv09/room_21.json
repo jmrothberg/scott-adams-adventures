@@ -1,0 +1,21 @@
+{
+  "room": 21,
+  "name": "Mine",
+  "description": "I'm in a Mine",
+  "items_start": [
+    "*SILVER BULLET*"
+  ],
+  "exits": {
+    "U": 10,
+    "D": 22
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "BULL"
+  ],
+  "danger": false,
+  "notes": ""
+}

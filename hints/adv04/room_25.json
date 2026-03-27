@@ -1,0 +1,17 @@
+{
+  "room": 25,
+  "name": "lot of TROUBLE!",
+  "description": "I'm in a lot of TROUBLE!",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are in big trouble with no exits. This is effectively a death/game-over state.",
+    "Restore a saved game or restart. Avoid the actions that brought you here."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death/game-over room. No exits. Reached by fatal actions like breaking the crystal ball. Restart or restore a save."
+}

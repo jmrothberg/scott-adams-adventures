@@ -1,0 +1,46 @@
+{
+  "room": 11,
+  "name": "field of tall grass",
+  "description": "I'm in a field of tall grass",
+  "items_start": [],
+  "exits": {
+    "W": 5
+  },
+  "hints": [
+    "A field of tall grass east of the highway ramp. Something may be buried here.",
+    "You need a digging tool to uncover what's hidden. The climber's pick from the hardware store works.",
+    "DIG with the climber's pick to uncover something buried in the field. First DIG sets a flag, second DIG continues. WEST returns to the highway ramp (room 5).",
+    "Get the climber's pick from the hardware store (room 17), then DIG here to find buried items."
+  ],
+  "key_actions": [
+    "DIG",
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Climbers Pick"
+      ],
+      "effects": [
+        "Set flag 26",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [
+        "Climbers Pick"
+      ],
+      "effects": [
+        "Message: O.K."
+      ]
+    }
+  ],
+  "items_needed": [
+    "Climbers Pick"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Field of tall grass east of the highway ramp. DIG with the climber's pick reveals something buried. First DIG sets flag 26. WEST returns to highway ramp (room 5)."
+}

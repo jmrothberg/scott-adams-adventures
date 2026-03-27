@@ -1,0 +1,21 @@
+{
+  "room": 20,
+  "name": "rickety staircase",
+  "description": "I'm in a rickety staircase",
+  "items_start": [],
+  "exits": {
+    "U": 15,
+    "D": 3
+  },
+  "hints": [
+    "A rickety staircase connecting upper and lower areas.",
+    "U leads to the ledge over the pit. D leads to the small landing.",
+    "This staircase connects the landing (room 3) to the ledge/pit area (room 15)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Connector staircase. U=ledge over pit (room 15), D=small landing (room 3)."
+}

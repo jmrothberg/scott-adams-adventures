@@ -1,0 +1,46 @@
+{
+  "room": 3,
+  "name": "desert",
+  "description": "I'm in a desert",
+  "items_start": [
+    "Wooden pole sticking from sand",
+    "Pool of liquid"
+  ],
+  "exits": {
+    "N": 2,
+    "E": 4
+  },
+  "hints": [
+    "A desert area with a wooden pole in the sand and a pool of liquid.",
+    "The pool is safe water here (unlike the acid pool inside the pyramid). You can fill your canteen.",
+    "GET WAT with an empty canteen to fill it. GO POO takes you into the water.",
+    "GO POO leads to a submerged area (room 24) with a large key. E=pyramid entrance, N=more desert."
+  ],
+  "key_actions": [
+    "GO POO",
+    "GET WAT"
+  ],
+  "action_details": [
+    {
+      "command": "GO POO",
+      "needs": [],
+      "effects": [
+        "Move to room 24"
+      ]
+    },
+    {
+      "command": "GET WAT",
+      "needs": [
+        "Empty canteen"
+      ],
+      "effects": [
+        "Destroy item 4",
+        "Auto-GET item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Starting area. Pool of water (safe) leads to room 24 with the large key. Fill canteen here. N=desert (2), E=pyramid entrance (4)."
+}

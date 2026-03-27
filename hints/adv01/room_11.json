@@ -1,0 +1,46 @@
+{
+  "room": 11,
+  "name": "forest",
+  "description": "I'm in a forest",
+  "items_start": [
+    "Trees"
+  ],
+  "exits": {
+    "N": 11,
+    "S": 11,
+    "E": 23,
+    "W": 11
+  },
+  "hints": [
+    "Most directions loop back to the same forest. Try interacting with the trees or going EAST.",
+    "You can climb trees here. Also, EAST leads to the sunny meadow where the adventure really begins.",
+    "GO TREE or CLIMB TREE to reach the top of an oak for a scenic view. Go EAST to reach the meadow.",
+    "CLIMB TREE to reach the oak treetop (room 28). Go EAST to the sunny meadow (room 23). N, S, W all loop back here."
+  ],
+  "key_actions": [
+    "GO TRE",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO TRE",
+      "needs": [],
+      "effects": [
+        "Move to room 28",
+        "Show score"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: Try --> `LOOK, JUMP, SWIM, CLIMB, FIND, TAKE, SCORE, DROP`\nand any other verbs you can think of..."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Starting room of Adventureland. Most directions loop back here. EAST goes to the sunny meadow (room 23). CLIMB/GO TREE reaches the oak treetop (room 28) for a view. The real starting area - explore EAST first."
+}

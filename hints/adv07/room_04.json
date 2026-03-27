@@ -1,0 +1,24 @@
+{
+  "room": 4,
+  "name": "I'm beside a LARGE tank",
+  "description": "I'm beside a LARGE tank",
+  "items_start": [
+    "Window in tank"
+  ],
+  "exits": {
+    "E": 10,
+    "U": 9
+  },
+  "hints": [
+    "There's a large tank here with a window. Look through it to see what's inside.",
+    "The tank contains water, a mermaid, and a rusty key. You need to get inside somehow.",
+    "E leads to the knob room. U leads to the sloping hallway.",
+    "LOOK WIND to see inside the tank. You'll need to find a way to drain it or get in."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Beside the water tank. The window lets you see the mermaid and rusty key inside. E=knob room (room 10), U=sloping hall (room 9)."
+}

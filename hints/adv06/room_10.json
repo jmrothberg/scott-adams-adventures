@@ -1,0 +1,24 @@
+{
+  "room": 10,
+  "name": "methane snow storm",
+  "description": "I'm in a methane snow storm",
+  "items_start": [],
+  "exits": {
+    "N": 19,
+    "S": 19,
+    "E": 19,
+    "W": 20
+  },
+  "hints": [
+    "You're lost in a methane snow storm. Navigation is tricky.",
+    "Some directions lead to other storm areas, some loop back.",
+    "Do NOT go WEST - that leads to the dead-end loop.",
+    "Head N, S, or E to navigate through. Avoid W at all costs."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["SUIT"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Methane snow storm area. W leads to dead-end loop room 20. Need space suit to survive."
+}

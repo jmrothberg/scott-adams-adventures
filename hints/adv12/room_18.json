@@ -1,0 +1,24 @@
+{
+  "room": 18,
+  "name": "I'm on a small island",
+  "description": "I'm on a small island",
+  "items_start": [
+    "Shovel"
+  ],
+  "exits": {
+    "E": 13
+  },
+  "hints": [
+    "Western part of the small island with a shovel lying on the ground.",
+    "GET SHOVEL - essential for digging up buried treasure on the beach island and grassy plain.",
+    "Take the shovel. DIG in various outdoor locations to find buried items. Go EAST to return to the skeleton area."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SHOV"
+  ],
+  "danger": false,
+  "notes": "Western beach of the small island with a shovel. The shovel is essential for digging up buried treasure in the jungle areas (rooms 9, 10) and grassy plain (room 32). East returns to the skeleton area (room 13)."
+}

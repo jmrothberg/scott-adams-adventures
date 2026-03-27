@@ -1,0 +1,20 @@
+{
+  "room": 26,
+  "name": "dressing room",
+  "description": "I'm in a dressing room",
+  "items_start": [
+    "* GOLD SCARAB *"
+  ],
+  "exits": {
+    "W": 25
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SCA"
+  ],
+  "danger": false,
+  "notes": ""
+}

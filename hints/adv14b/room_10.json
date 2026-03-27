@@ -1,0 +1,22 @@
+{
+  "room": 10,
+  "name": "Cul-de-sac at East end of Hickory",
+  "description": "I'm in a Cul-de-sac at East end of Hickory",
+  "items_start": [
+    "Large house"
+  ],
+  "exits": {
+    "W": 6
+  },
+  "hints": [
+    "A cul-de-sac at the east end of Hickory with a large house.",
+    "GO HOUSE to enter the large house. It may contain useful items or information.",
+    "GO HOUSE enters the large house. WEST returns to Hickory Ave (room 6). The house has multiple rooms to explore."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "East end cul-de-sac on Hickory Ave. GO HOUSE enters the large house (which has a garage, room 26). WEST returns to Hickory Ave (room 6)."
+}

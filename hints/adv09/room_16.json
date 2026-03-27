@@ -1,0 +1,20 @@
+{
+  "room": 16,
+  "name": "Barbershop",
+  "description": "I'm in a Barbershop",
+  "items_start": [
+    "Stetson hat"
+  ],
+  "exits": {
+    "S": 1
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "HAT"
+  ],
+  "danger": false,
+  "notes": ""
+}

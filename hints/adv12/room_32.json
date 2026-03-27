@@ -1,0 +1,36 @@
+{
+  "room": 32,
+  "name": "I'm on a grassy plain",
+  "description": "I'm on a grassy plain",
+  "items_start": [],
+  "exits": {
+    "N": 19
+  },
+  "hints": [
+    "A grassy plain south of the rocky strand. There may be something buried here.",
+    "DIG with the shovel to find buried treasure or items beneath the grass.",
+    "DIG with the shovel to unearth a hidden item. Go NORTH to return to the rocky strand with the staircase."
+  ],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Message: I found",
+        "Message: something!",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [
+    "SHOV"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Grassy plain south of the rocky strand. Digging with the shovel reveals a buried item. North returns to the rocky strand (room 19)."
+}

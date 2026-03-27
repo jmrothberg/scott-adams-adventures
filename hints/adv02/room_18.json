@@ -1,0 +1,22 @@
+{
+  "room": 18,
+  "name": "I'm on top of a hill. Below is Pirates Island. Across the sea\nway off in the distance I see Treasure Island",
+  "description": "I'm on top of a hill. Below is Pirates Island. Across the sea\nway off in the distance I see Treasure Island",
+  "items_start": [
+    "Rock wall with narrow crack in it"
+  ],
+  "exits": {
+    "D": 14
+  },
+  "hints": [
+    "From here you can see Treasure Island in the distance. The crack in the wall may lead somewhere.",
+    "GO CRACK to enter the narrow crack and reach the underground cavern with building materials.",
+    "GO CRACK leads to the cavern (room 17) with sails and lumber. DOWN returns to the hill foot (room 14)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hilltop viewpoint showing Treasure Island across the sea. The crack in the rock connects to the underground cavern (room 17). DOWN returns to the hill foot (room 14). You need a boat to reach Treasure Island."
+}

@@ -1,0 +1,29 @@
+{
+  "room": 3,
+  "name": "damp hollow stump in the swamp",
+  "description": "I'm in a damp hollow stump in the swamp",
+  "items_start": [
+    "Old fashioned brass lamp",
+    "Water in bottle",
+    "Sign `Leave *TREASURES* here, then say: SCORE`"
+  ],
+  "exits": {
+    "U": 1,
+    "D": 4
+  },
+  "hints": [
+    "This is the treasure repository! Read the sign to understand what to do here.",
+    "Drop all treasures (items marked with *asterisks*) in this room, then SAY SCORE to check progress.",
+    "GET LAMP and GET BOTTLE - both are essential. The lamp provides light underground (limited to 125 turns). Go DOWN to continue exploring.",
+    "Bring all 13 treasures back here and drop them. SAY SCORE to win. The lamp must be lit with flint & steel before going into dark areas."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "LAM",
+    "BOT"
+  ],
+  "danger": false,
+  "notes": "The treasure room (room 3) where all 13 treasures must be deposited. Also the source of the brass lamp (limited light, 125 turns) and water bottle. Accessed by going DOWN from the swamp (room 1). Go DOWN again to reach the root chamber."
+}

@@ -1,0 +1,19 @@
+{
+  "room": 27,
+  "name": "Memory chip of a COMPUTER!\nI took a wrong turn!",
+  "description": "I'm in a Memory chip of a COMPUTER!\nI took a wrong turn!",
+  "items_start": [],
+  "exits": {
+    "E": 7
+  },
+  "hints": [
+    "This is a humorous dead end. You accidentally entered a computer's memory chip.",
+    "Go EAST to return to the large cavern. There is nothing useful here."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Humorous dead-end room (Easter egg). A wrong turn from the large cavern (room 7) west exit. Go EAST to return to the cavern. Scott Adams humor."
+}

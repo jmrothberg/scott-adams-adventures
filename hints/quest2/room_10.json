@@ -1,0 +1,38 @@
+{
+  "room": 10,
+  "name": "waiting room",
+  "description": "I'm in a waiting room",
+  "items_start": [
+    "Wall mirror",
+    "Open shaft"
+  ],
+  "exits": {
+    "W": 17
+  },
+  "hints": [],
+  "key_actions": [
+    "FOLL MYST",
+    "GO SHAF"
+  ],
+  "action_details": [
+    {
+      "command": "FOLL MYST",
+      "needs": [],
+      "effects": [
+        "Message: He went west!"
+      ]
+    },
+    {
+      "command": "GO SHAF",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 9"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

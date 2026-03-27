@@ -1,0 +1,23 @@
+{
+  "room": 7,
+  "name": "Merry-Go-Round on a wooden horse",
+  "description": "I'm in a Merry-Go-Round on a wooden horse",
+  "items_start": [
+    "Pole coming out of horse's back"
+  ],
+  "exits": {
+    "D": 18
+  },
+  "hints": [
+    "You're riding a wooden horse on the merry-go-round. There's a pole sticking up.",
+    "The pole is important - you can climb it or use it somehow to reach higher.",
+    "GO POLE or CLIM POLE to climb up to the top of the ride.",
+    "D gets off the horse. You need to reach the top of the ride (room 22) to access the catwalk."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "On the merry-go-round horse. The pole can be climbed to reach the top of the ride (room 22). D=merry-go-round floor (room 18)."
+}

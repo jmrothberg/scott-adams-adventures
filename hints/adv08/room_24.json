@@ -1,0 +1,61 @@
+{
+  "room": 24,
+  "name": "Pool of water",
+  "description": "I'm in a Pool of water",
+  "items_start": [
+    "Large key"
+  ],
+  "exits": {
+    "E": 3
+  },
+  "hints": [],
+  "key_actions": [
+    "SWI",
+    "GET WAT",
+    "DRI WAT",
+    "CLE COA"
+  ],
+  "action_details": [
+    {
+      "command": "SWI",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: That feels good."
+      ]
+    },
+    {
+      "command": "GET WAT",
+      "needs": [
+        "Empty canteen"
+      ],
+      "effects": [
+        "Destroy item 4",
+        "Auto-GET item"
+      ]
+    },
+    {
+      "command": "DRI WAT",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Thanks."
+      ]
+    },
+    {
+      "command": "CLE COA",
+      "needs": [
+        "Lump of coal (need access)"
+      ],
+      "effects": [
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "KEY"
+  ],
+  "danger": false,
+  "notes": ""
+}

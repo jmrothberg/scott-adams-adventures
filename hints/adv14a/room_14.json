@@ -1,0 +1,20 @@
+{
+  "room": 14,
+  "name": "hall",
+  "description": "I'm in a hall",
+  "items_start": [],
+  "exits": {
+    "E": 8
+  },
+  "hints": [
+    "A hall connecting areas of the underground cavern system.",
+    "EAST returns to the cavern. Look for other exits or hidden passages.",
+    "EAST goes back to the cavern (room 8). This hall may connect to other areas depending on game state."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hall in the underground cavern system. EAST returns to the cavern (room 8). May have additional connections depending on game flags."
+}

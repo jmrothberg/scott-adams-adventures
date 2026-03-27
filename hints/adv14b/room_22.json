@@ -1,0 +1,47 @@
+{
+  "room": 22,
+  "name": "I'm at the foot of a mountain",
+  "description": "I'm at the foot of a mountain",
+  "items_start": [],
+  "exits": {
+    "S": 18,
+    "W": 21
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK MOUN",
+    "THRO LINE",
+    "CLIM MOUN"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK MOUN",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: a ledge about 15' up with a small peak."
+      ]
+    },
+    {
+      "command": "THRO LINE",
+      "needs": [
+        "20 ft of phone line"
+      ],
+      "effects": [
+        "Clear flag 36",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "CLIM MOUN",
+      "needs": [],
+      "effects": [
+        "Message: How?"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

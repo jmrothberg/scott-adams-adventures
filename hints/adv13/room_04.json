@@ -1,0 +1,34 @@
+{
+  "room": 4,
+  "name": "magic fountain",
+  "description": "I'm in a magic fountain",
+  "items_start": [
+    "*STAR",
+    "Courtyard"
+  ],
+  "exits": {},
+  "hints": [
+    "You are inside the magic fountain! There is a star here - one of the 13 you need to collect.",
+    "GET STAR - this is one of the 13 stars needed to defeat the sorcerer. GO CENTER to climb to the top of the fountain.",
+    "GET STAR, then GO CENTER to reach the top of the fountain (room 6) which has an air shaft and water outlet."
+  ],
+  "key_actions": [
+    "GO CENTE"
+  ],
+  "action_details": [
+    {
+      "command": "GO CENTE",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 6"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "STAR"
+  ],
+  "danger": false,
+  "notes": "Inside the magic fountain in the courtyard. Contains a *STAR* (treasure). GO CENTER climbs to the top of the fountain (room 6) which connects to an air shaft and water outlet. One of 13 stars to collect."
+}

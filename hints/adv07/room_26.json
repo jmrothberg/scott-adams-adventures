@@ -1,0 +1,27 @@
+{
+  "room": 26,
+  "name": "Parking lot",
+  "description": "I'm in a Parking lot",
+  "items_start": [
+    "Rusty closed grating",
+    "Dead tree",
+    "5 Dollar Bill"
+  ],
+  "exits": {
+    "W": 1
+  },
+  "hints": [
+    "The parking lot has a dead tree, a rusty grating, and a $5 bill on the ground.",
+    "GET BILL - you need the money to buy a ticket at the fun house entrance.",
+    "The grating is closed and rusty. You might be able to open it with the right tool.",
+    "OPEN GRAT with the wrench to access the manhole below. W=fun house entrance (room 1)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["WREN"],
+  "items_available": [
+    "BILL"
+  ],
+  "danger": false,
+  "notes": "Parking lot with the $5 bill (needed for ticket), rusty grating (needs wrench to open, leads to manhole room 13), and dead tree. W=fun house entrance (room 1)."
+}

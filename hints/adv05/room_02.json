@@ -1,0 +1,34 @@
+{
+  "room": 2,
+  "name": "bedroom",
+  "description": "I'm in a bedroom",
+  "items_start": [
+    "Closed window",
+    "Brass bed"
+  ],
+  "exits": {
+    "N": 11
+  },
+  "hints": [
+    "The bedroom has a window and connects to the hall. Look at what's around you.",
+    "OPEN WINDOW to access the ledge outside. LOOK WINDOW reveals you're high up in a castle with Voodoo Castle visible in the distance.",
+    "OPEN WINDOW, then GO WINDOW to reach the ledge (room 3). The window is the key to reaching the dark window below via the sheets.",
+    "OPEN WINDOW and GO WINDOW to reach the ledge. From there, TIE SHEETS to the flag pole and CLIMB DOWN to reach the dark window. NORTH goes to the hall (room 11)."
+  ],
+  "key_actions": [
+    "LOO WIN"
+  ],
+  "action_details": [
+    {
+      "command": "LOO WIN",
+      "needs": [],
+      "effects": [
+        "Message: I'm up in A cAstle, in the distAnce I see VOODOO CASTLE. There'sstAnding room outside the window"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "The bedroom where you wake up after getting out of bed. Has a closed window that can be opened to access the ledge (room 3). NORTH leads to the hall (room 11). LOOK WINDOW gives the clue about standing room outside and references Voodoo Castle (adv04). Opening the window and going outside is essential for reaching the dark window below via the sheets."
+}

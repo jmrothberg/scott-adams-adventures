@@ -1,0 +1,27 @@
+{
+  "room": 33,
+  "name": "large misty room with strange\nunreadable letters over all the exits.",
+  "description": "I'm in a large misty room with strange\nunreadable letters over all the exits.",
+  "items_start": [
+    "Sign says `LIMBO. Find right exit and live again!`"
+  ],
+  "exits": {
+    "N": 32,
+    "S": 24,
+    "E": 11,
+    "W": 24,
+    "U": 28,
+    "D": 24
+  },
+  "hints": [
+    "You died and are in Limbo. One exit leads back to life, the others lead to Hell.",
+    "Only one direction leads to safety. Most exits go to Hell (room 24). Choose carefully.",
+    "Go EAST to return to the forest (room 11) and live again. All other directions except NORTH lead to permanent death."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Limbo - the afterlife room reached when you die. EAST returns to the forest (room 11) to live again. NORTH goes to the endless corridor (room 32). S, W, and D all lead to Hell (room 24, permanent death). Critical to go EAST."
+}

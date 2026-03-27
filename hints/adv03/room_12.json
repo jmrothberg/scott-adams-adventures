@@ -1,0 +1,24 @@
+{
+  "room": 12,
+  "name": "maintenance room 1",
+  "description": "I'm in a maintenance room 1",
+  "items_start": [
+    "Empty plastic pail"
+  ],
+  "exits": {
+    "E": 3
+  },
+  "hints": [
+    "There is a useful container here. Take it for later.",
+    "GET PAIL - the empty plastic pail can be filled with water, which you will need for the mission.",
+    "GET PAIL. Fill it with water from the vat in the storage room later. EAST returns to the main corridor."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "PAI"
+  ],
+  "danger": false,
+  "notes": "Maintenance room with the empty plastic pail. Fill it with water from the heavy water vat (storage room 23) - needed to defuse the bomb. EAST returns to the main corridor."
+}

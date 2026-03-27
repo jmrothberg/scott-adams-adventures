@@ -1,0 +1,33 @@
+{
+  "room": 29,
+  "name": "cozy cot",
+  "description": "I'm in a cozy cot",
+  "items_start": [
+    "Note"
+  ],
+  "exits": {},
+  "hints": [
+    "You are lying in the cot. There is a note here with important information.",
+    "READ NOTE for clues about your voyage and objectives. GET NOTE to take it with you.",
+    "TAKE UP or GET UP to stand and return to the cabin. The note contains important sailing or quest instructions."
+  ],
+  "key_actions": [
+    "TAKE UP"
+  ],
+  "action_details": [
+    {
+      "command": "TAKE UP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 28"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "NOTE"
+  ],
+  "danger": false,
+  "notes": "Inside the cot in the ship's cabin. Contains a note with important quest clues. TAKE UP (get up) returns to the cabin (room 28). READ NOTE for sailing directions or quest hints."
+}

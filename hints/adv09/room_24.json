@@ -1,0 +1,19 @@
+{
+  "room": 24,
+  "name": "Telegraph office",
+  "description": "I'm in a Telegraph office",
+  "items_start": [
+    "Telegraph key",
+    "Large safe"
+  ],
+  "exits": {
+    "S": 3
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

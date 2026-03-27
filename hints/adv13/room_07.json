@@ -1,0 +1,46 @@
+{
+  "room": 7,
+  "name": "ball room",
+  "description": "I'm in a ball room",
+  "items_start": [
+    "Chandelier near ceiling",
+    "Tied end of rope"
+  ],
+  "exits": {
+    "W": 3
+  },
+  "hints": [
+    "A grand ballroom with a chandelier near the ceiling and a rope. There is a loft above that seems inaccessible.",
+    "LOOK UP or LOOK CEILING to see the inaccessible loft area above. The rope and chandelier may be the way up.",
+    "The chandelier has a star on it (room 8). You need to reach it - perhaps by climbing the rope or using a spell to fly/float up.",
+    "Use the Dizzy Dean spell or climb the rope to reach the chandelier and loft. WEST returns to the courtyard."
+  ],
+  "key_actions": [
+    "LOOK CEILI",
+    "LOOK UP"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK CEILI",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: an inaccessible loft area."
+      ]
+    },
+    {
+      "command": "LOOK UP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: an inaccessible loft area."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "The ballroom with a chandelier near the ceiling, a tied rope, and an inaccessible loft above. The chandelier (room 8) has a star and broken glass on it. The loft (room 15) has a potion. Need a way to reach them - rope, spell, or climbing. West returns to courtyard (room 3)."
+}

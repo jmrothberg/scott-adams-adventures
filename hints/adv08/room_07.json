@@ -1,0 +1,29 @@
+{
+  "room": 7,
+  "name": "sarcophagus",
+  "description": "I'm in a sarcophagus",
+  "items_start": [
+    "Stairs"
+  ],
+  "exits": {
+    "W": 6,
+    "D": 8
+  },
+  "hints": [],
+  "key_actions": [
+    "GO STA"
+  ],
+  "action_details": [
+    {
+      "command": "GO STA",
+      "needs": [],
+      "effects": [
+        "Move to room 8"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

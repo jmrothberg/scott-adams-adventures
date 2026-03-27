@@ -1,0 +1,71 @@
+{
+  "room": 1,
+  "name": "Royal palace",
+  "description": "I'm in a Royal palace",
+  "items_start": [
+    "Palace guards",
+    "Aged King"
+  ],
+  "exits": {
+    "E": 2
+  },
+  "hints": [
+    "The aged King wants something. Perhaps you can find a gift worthy of royalty on your voyage.",
+    "The King will drink from a chalice if you give him one. You need to find the gold chalice and fill it with a special liquid first.",
+    "GIVE CHALICE to the King after filling it with liquid from one of the sacred fountains. The King drinks it and rewards you.",
+    "Fill the gold chalice at a fountain, then GIVE CHALICE here. Different fountain liquids may have different effects on the King."
+  ],
+  "key_actions": [
+    "GIVE CHAL",
+    "GIVE CHAL",
+    "GIVE CHAL",
+    "GIVE CHAL"
+  ],
+  "action_details": [
+    {
+      "command": "GIVE CHAL",
+      "needs": [
+        "Gold chalice"
+      ],
+      "effects": [
+        "Message: King grabs it,",
+        "Message: drinks the liquid,"
+      ]
+    },
+    {
+      "command": "GIVE CHAL",
+      "needs": [
+        "Gold chalice"
+      ],
+      "effects": [
+        "Message: King grabs it,",
+        "Message: drinks the liquid,"
+      ]
+    },
+    {
+      "command": "GIVE CHAL",
+      "needs": [
+        "Gold chalice"
+      ],
+      "effects": [
+        "Message: King grabs it,",
+        "Message: drinks the liquid,"
+      ]
+    },
+    {
+      "command": "GIVE CHAL",
+      "needs": [
+        "Gold chalice"
+      ],
+      "effects": [
+        "Message: King grabs it,"
+      ]
+    }
+  ],
+  "items_needed": [
+    "CHAL"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "The Royal Palace where the aged King resides with his guards. Giving the King a gold chalice filled with fountain liquid is part of the endgame. East exit leads to the Persian city. This is linked to the game's objective of saving the King."
+}

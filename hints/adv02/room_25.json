@@ -1,0 +1,26 @@
+{
+  "room": 25,
+  "name": "sacked and deserted monastary",
+  "description": "I'm in a sacked and deserted monastary",
+  "items_start": [
+    "*DUBLEONS*",
+    "Deadly mamba snakes"
+  ],
+  "exits": {
+    "W": 23
+  },
+  "hints": [
+    "There is treasure here but deadly snakes guard it. You need protection.",
+    "The mongoose from the meadow kills snakes. Bring it with you.",
+    "Have the mongoose in your inventory when entering - it will kill the mamba snakes automatically.",
+    "Bring the mongoose (from room 8 meadow). It kills the snakes. Then GET DUBLEONS (treasure). Go WEST to return to the field."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Mongoose"],
+  "items_available": [
+    "DUB"
+  ],
+  "danger": true,
+  "notes": "Deserted monastery with dubleons treasure guarded by deadly mamba snakes. The mongoose (from meadow, room 8) is essential to survive - it kills the snakes. WEST returns to the barren field (room 23)."
+}

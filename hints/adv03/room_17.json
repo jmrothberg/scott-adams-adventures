@@ -1,0 +1,27 @@
+{
+  "room": 17,
+  "name": "maintenance room 2",
+  "description": "I'm in a maintenance room 2",
+  "items_start": [
+    "Old fashioned yarn mop",
+    "Wire cutters"
+  ],
+  "exits": {
+    "E": 14,
+    "U": 18
+  },
+  "hints": [
+    "There are useful tools here. Both may be needed for your mission.",
+    "GET MOP and GET CUTTERS. The wire cutters can cut alarm wires. The mop cleans things.",
+    "GET CUTTERS (to cut alarm wires in the window). GET MOP for cleaning up. UP leads to the projectionist room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "MOP",
+    "CUT"
+  ],
+  "danger": false,
+  "notes": "Maintenance room with wire cutters (cut alarm wires in the visitors room window) and a yarn mop. EAST returns to yellow corridor (room 14). UP leads to the projectionist room (room 18)."
+}

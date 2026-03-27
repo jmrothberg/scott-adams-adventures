@@ -1,0 +1,23 @@
+{
+  "room": 21,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [],
+  "exits": {
+    "N": 22,
+    "S": 11,
+    "E": 20,
+    "W": 23
+  },
+  "hints": [
+    "A major four-way intersection in the ship's tunnel system. All directions lead to important areas.",
+    "NORTH leads to a cabin, SOUTH to the exercise room, EAST to the main control room, WEST to the dormitory.",
+    "This is the central hub of the ship. Make sure to explore all four directions to find items and solve puzzles."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Main four-way intersection and central hub of the ship. North to cabin (room 22, has plastic wafer), south to exercise room (room 11), east to main control room (room 20), west to dormitory (room 23). The most connected location on the ship."
+}

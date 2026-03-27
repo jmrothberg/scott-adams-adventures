@@ -1,0 +1,27 @@
+{
+  "room": 13,
+  "name": "Alien Art Museum",
+  "description": "I'm in a Alien Art Museum",
+  "items_start": [
+    "Alien sign",
+    "* RARE ALIEN PAINTING *",
+    "* ALIEN SCULPTURE *"
+  ],
+  "exits": {},
+  "hints": [
+    "An alien art museum with TWO treasures!",
+    "Take both the painting and the sculpture - they are treasures.",
+    "Read the alien sign for possible clues.",
+    "GET PAIN and GET SCUL. Both are treasures to bring to room 22."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SIGN",
+    "PAIN",
+    "SCUL"
+  ],
+  "danger": false,
+  "notes": "Alien Art Museum containing two treasures: the Rare Alien Painting and the Alien Sculpture."
+}

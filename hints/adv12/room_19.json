@@ -1,0 +1,33 @@
+{
+  "room": 19,
+  "name": "I'm on a rocky strand",
+  "description": "I'm on a rocky strand",
+  "items_start": [
+    "Long staircase",
+    "Stone Goddess"
+  ],
+  "exits": {
+    "S": 32
+  },
+  "hints": [
+    "A rocky shore with an ancient staircase and a stone Goddess statue. Both are significant.",
+    "GO STAIRCASE to climb the long staircase toward the sacred temple above. Examine the stone Goddess.",
+    "The staircase leads up to the temple complex. Go SOUTH to reach a grassy plain where you can dig. The stone Goddess is part of the island's mythology."
+  ],
+  "key_actions": [
+    "GO STAI"
+  ],
+  "action_details": [
+    {
+      "command": "GO STAI",
+      "needs": [],
+      "effects": [
+        "Move to room 20"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Rocky strand (shore) with a long staircase leading to the temple and a stone Goddess statue. GO STAIRCASE leads to room 20 (the staircase itself). South leads to a grassy plain (room 32) where digging is productive. This island is reached by sailing to the rocky strand sea zone."
+}

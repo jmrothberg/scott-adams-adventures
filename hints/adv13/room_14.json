@@ -1,0 +1,81 @@
+{
+  "room": 14,
+  "name": "staircase",
+  "description": "I'm in a staircase",
+  "items_start": [
+    "Rabid rats"
+  ],
+  "exits": {},
+  "hints": [
+    "A condemned staircase with rabid rats blocking the way down. You need to deal with them.",
+    "The rats block WALK DOWN. WALK UP returns to the storeroom. There is a small hole in the wall you can GO HOLE to reach under the stairs.",
+    "WALK UP (to storeroom), WALK DOWN (blocked by rats until removed), GO HOLE (to under the stairs with a star). Do NOT cast AT STAIRCASE - it burns you.",
+    "Deal with the rats by using a spell or item, then WALK DOWN to reach the anteroom. GO HOLE leads to under the stairs (room 18) where another star awaits."
+  ],
+  "key_actions": [
+    "LOOK HOLE",
+    "AT STAIR",
+    "WALK UP",
+    "WALK DOWN",
+    "WALK DOWN",
+    "GO HOLE"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK HOLE",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: a small type",
+        "Message: of a hole."
+      ]
+    },
+    {
+      "command": "AT STAIR",
+      "needs": [],
+      "effects": [
+        "Message: Spell works!",
+        "Message: I burnt to a crisp.",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "WALK UP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 11"
+      ]
+    },
+    {
+      "command": "WALK DOWN",
+      "needs": [
+        "Rabid rats (need access)"
+      ],
+      "effects": [
+        "Message: Sorry,",
+        "Message: rats in the way!"
+      ]
+    },
+    {
+      "command": "WALK DOWN",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 13"
+      ]
+    },
+    {
+      "command": "GO HOLE",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 18"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Condemned staircase with rabid rats. WALK UP to storeroom (room 11). WALK DOWN blocked by rats (leads to anteroom 13 when clear). GO HOLE leads under the stairs (room 18, has a star). WARNING: AT STAIRCASE (casting fire spell at stairs) burns you to death. Must remove rats by other means."
+}

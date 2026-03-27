@@ -1,0 +1,22 @@
+{
+  "room": 19,
+  "name": "maze of caves",
+  "description": "I'm in a maze of caves",
+  "items_start": [],
+  "exits": {
+    "S": 14,
+    "E": 14,
+    "W": 13
+  },
+  "hints": [
+    "This is a dead-end area of the cave maze. Head back the way you came.",
+    "SOUTH or EAST both lead to the hill foot. WEST goes back to room 13.",
+    "Go SOUTH or EAST to exit the caves at the hill foot (room 14)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dead-end cave maze room. SOUTH and EAST both exit to the hill foot (room 14). WEST returns to room 13."
+}

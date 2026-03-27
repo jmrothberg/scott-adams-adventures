@@ -1,0 +1,24 @@
+{
+  "room": 22,
+  "name": "I'm on a ledge",
+  "description": "I'm on a ledge",
+  "items_start": [
+    "Doll"
+  ],
+  "exits": {
+    "S": 9
+  },
+  "hints": [
+    "There is a doll here on the ledge. This is the voodoo doll - a key item!",
+    "GET DOLL - the voodoo doll is one of the three items needed for the final counter-spell.",
+    "GET DOLL. It has pins in it that must be removed before the ritual. SOUTH returns inside to room 9."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "DOL"
+  ],
+  "danger": false,
+  "notes": "Ledge outside the window containing the voodoo doll - one of three essential items for the YELL CHANT ritual. The doll has pins that must be removed as part of the counter-spell. SOUTH returns to room 9."
+}

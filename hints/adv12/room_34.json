@@ -1,0 +1,47 @@
+{
+  "room": 34,
+  "name": "deep pit",
+  "description": "I'm in a deep pit",
+  "items_start": [
+    "Cyclops",
+    "Cave"
+  ],
+  "exits": {
+    "N": 33
+  },
+  "hints": [
+    "A cyclops guards a cave entrance! It will not let you pass without dealing with it first.",
+    "ATTACK CYCLOPS with the sword to defeat it. Without the sword, you cannot get past.",
+    "ATTACK CYCLOPS (while holding the sword) to defeat the monster. Then GO CAVE to enter the enormous cave beyond.",
+    "After defeating the cyclops, GO CAVE leads to a magnificent fountain. NORTH retreats to the rope area."
+  ],
+  "key_actions": [
+    "GO CAVE",
+    "GO CAVE"
+  ],
+  "action_details": [
+    {
+      "command": "GO CAVE",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Cyclops",
+        "Message: won't let me"
+      ]
+    },
+    {
+      "command": "GO CAVE",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 35"
+      ]
+    }
+  ],
+  "items_needed": [
+    "SWOR"
+  ],
+  "items_available": [],
+  "danger": true,
+  "notes": "Bottom of the pit with a cyclops guarding a cave. Must defeat the cyclops (ATTACK CYCLOPS with the sword) before entering the cave. GO CAVE blocked initially ('Cyclops won't let me'). After defeating it, GO CAVE leads to the enormous cave (room 35). North returns to the rope area (room 33)."
+}

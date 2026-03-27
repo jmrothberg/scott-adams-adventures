@@ -1,0 +1,39 @@
+{
+  "room": 2,
+  "name": "desert",
+  "description": "I'm in a desert",
+  "items_start": [],
+  "exits": {
+    "S": 3,
+    "E": 1
+  },
+  "hints": [
+    "More desert. Nothing buried here.",
+    "DIG yields nothing special in this area. S and E are your exits.",
+    "S leads to the pool area with a wooden pole. E leads back toward the pyramid."
+  ],
+  "key_actions": [
+    "DIG",
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: I see nothing special."
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: I see nothing special."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Empty desert. Nothing to dig up. S=pool area (room 3), E=desert with buried item (room 1)."
+}

@@ -1,0 +1,16 @@
+{
+  "room": 36,
+  "name": "hidden canyon",
+  "description": "I'm in a hidden canyon",
+  "items_start": [
+    "TeePee"
+  ],
+  "exits": {},
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

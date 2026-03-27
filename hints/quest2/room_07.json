@@ -1,0 +1,50 @@
+{
+  "room": 7,
+  "name": "I'm in an air Duct",
+  "description": "I'm in an air Duct",
+  "items_start": [
+    "*Gem",
+    "Large fan in my way"
+  ],
+  "exits": {
+    "D": 24
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK FAN",
+    "PUSH BUTT",
+    "AT BUTT"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK FAN",
+      "needs": [
+        "Large fan in my way (must be in room)"
+      ],
+      "effects": [
+        "Message: RPMS fan rotates:"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "Message: How?"
+      ]
+    },
+    {
+      "command": "AT BUTT",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": true,
+  "notes": ""
+}

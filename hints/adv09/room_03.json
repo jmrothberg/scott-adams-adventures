@@ -1,0 +1,20 @@
+{
+  "room": 3,
+  "name": "Ghost Town",
+  "description": "I'm in a Ghost Town",
+  "items_start": [
+    "Telegraph office",
+    "Hotel"
+  ],
+  "exits": {
+    "E": 2,
+    "W": 4
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

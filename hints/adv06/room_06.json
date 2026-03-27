@@ -1,0 +1,54 @@
+{
+  "room": 6,
+  "name": "strange hexagonal room",
+  "description": "I'm in a strange hexagonal room",
+  "items_start": [
+    "Strange flickering curtain of light",
+    "Small piece of plastic flush in the wall",
+    "Rod jutting straight out of the wall",
+    "Strange looking goggles"
+  ],
+  "exits": {},
+  "hints": [
+    "This hexagonal room is clearly alien technology.",
+    "The curtain of light is a teleporter - but it can be dangerous!",
+    "The goggles, plastic piece, and rod are all important. Take the goggles.",
+    "TOUCH the curtain gently instead of GO CURT - TOUC CURT is safe, GO CURT can kill you!"
+  ],
+  "key_actions": [
+    "GO CURT",
+    "GO CURT",
+    "HELP"
+  ],
+  "action_details": [
+    {
+      "command": "GO CURT",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Set flag 1"
+      ]
+    },
+    {
+      "command": "GO CURT",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "HELP",
+      "needs": [],
+      "effects": [
+        "Message: A gentle touch will work wonders!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "GOGG"
+  ],
+  "danger": true,
+  "notes": "Alien hexagonal room with teleporter curtain. TOUCH CURT to teleport safely; GO CURT without preparation is lethal."
+}

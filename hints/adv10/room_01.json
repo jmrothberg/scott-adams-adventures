@@ -1,0 +1,23 @@
+{
+  "room": 1,
+  "name": "Beach by ocean",
+  "description": "I'm in a Beach by ocean",
+  "items_start": [
+    "Sand",
+    "Large stone head",
+    "Edge of impenetrable jungle"
+  ],
+  "exits": {
+    "S": 7,
+    "E": 4,
+    "W": 2,
+    "D": 5
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

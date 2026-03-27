@@ -1,0 +1,20 @@
+{
+  "room": 19,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [],
+  "exits": {
+    "N": 12,
+    "S": 8
+  },
+  "hints": [
+    "A tunnel connecting two important areas. NORTH leads to the red rooms, SOUTH to hydroponics.",
+    "Go NORTH to reach the red metal room with a control console, or SOUTH to the hydroponics/display case area."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Tunnel connecting the red metal room area (room 12, north) with the hydroponics room (room 8, south)."
+}

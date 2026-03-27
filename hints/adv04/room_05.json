@@ -1,0 +1,48 @@
+{
+  "room": 5,
+  "name": "room in the castle",
+  "description": "I'm in a room in the castle",
+  "items_start": [
+    "Animal heads"
+  ],
+  "exits": {
+    "S": 3,
+    "E": 7
+  },
+  "hints": [
+    "There are animal heads on the wall. There may be a hidden safe.",
+    "LOOK or MOVE HEADS to find the hidden safe. The safe may contain useful items.",
+    "Find and open the safe behind the animal heads. SOUTH to kettle room, EAST to the pot/lab area."
+  ],
+  "key_actions": [
+    "OPE SAF",
+    "LOO SAF"
+  ],
+  "action_details": [
+    {
+      "command": "OPE SAF",
+      "needs": [
+        "Open SAfe (must be in room)"
+      ],
+      "effects": [
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "LOO SAF",
+      "needs": [
+        "Open SAfe (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: Its empty."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "HEA"
+  ],
+  "danger": false,
+  "notes": "Room with mounted animal heads hiding a safe. SOUTH returns to the kettle room (room 3). EAST goes to the cast iron pot room (room 7)."
+}

@@ -1,0 +1,37 @@
+{
+  "room": 2,
+  "name": "Magical Mirror Room",
+  "description": "I'm in a Magical Mirror Room",
+  "items_start": [
+    "Strange Mirror"
+  ],
+  "exits": {
+    "N": 30,
+    "S": 1
+  },
+  "hints": [
+    "The mirror room is the first room inside the fun house. Look around carefully.",
+    "The mirror here is 'strange' - it may be important later. N leads into a windy maze.",
+    "OPEN DOOR requires wearing shoes. S goes back to the entrance.",
+    "N leads to the windy maze. You'll need to map it carefully to navigate."
+  ],
+  "key_actions": [
+    "OPEN DOOR"
+  ],
+  "action_details": [
+    {
+      "command": "OPEN DOOR",
+      "needs": [
+        "which I'm wearing"
+      ],
+      "effects": [
+        "Message: OK",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "First room inside the fun house. The mirror is part of the puzzle. N leads to the windy maze (room 30). S returns to the entrance."
+}

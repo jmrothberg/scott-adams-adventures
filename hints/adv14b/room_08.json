@@ -1,0 +1,28 @@
+{
+  "room": 8,
+  "name": "Gas Station",
+  "description": "I'm in a Gas Station",
+  "items_start": [
+    "Gas Pumps",
+    "Cashiers Booth",
+    "Filler pipe to underground gas tank"
+  ],
+  "exits": {
+    "E": 3
+  },
+  "hints": [
+    "The gas station has pumps, a cashier's booth, and a filler pipe to the underground tank. You need gasoline for the jet fuel.",
+    "GO BOOTH to enter the cashier's area. The gas pumps dispense fuel. The filler pipe accesses the underground tank.",
+    "Use the hand pump with the filler pipe to get gasoline from the underground tank into a jug. GO BOOTH enters the cashier's booth (room 9). EAST returns to Main & Hickory.",
+    "START PUMP with the manual pump connected to the filler pipe to extract gasoline. You need a jug to collect it in."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "Manual hand pump",
+    "Jug"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Gas station with pumps, cashier's booth, and underground tank filler pipe. Use the manual hand pump on the filler pipe to extract gasoline into a jug. GO BOOTH enters cashier's booth (room 9). EAST returns to Main & Hickory (room 3)."
+}

@@ -1,0 +1,28 @@
+{
+  "room": 2,
+  "name": "dome",
+  "description": "I'm in a dome",
+  "items_start": [
+    "Mirror",
+    "Broken chair",
+    "*Gem",
+    "Metal Hand Fan",
+    "Large iron ring set in floor",
+    "Sign"
+  ],
+  "exits": {
+    "E": 3
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "MIRR",
+    "CHAI",
+    "GEM",
+    "FAN"
+  ],
+  "danger": false,
+  "notes": ""
+}

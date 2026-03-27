@@ -1,0 +1,40 @@
+{
+  "room": 9,
+  "name": "grass shack",
+  "description": "I'm in a grass shack",
+  "items_start": [
+    "Wicked looking pirate",
+    "Treasure chest",
+    "Parrot"
+  ],
+  "exits": {
+    "W": 8
+  },
+  "hints": [
+    "The pirate, chest, and parrot are all important. The pirate wants something.",
+    "Give the pirate rum to make him cooperative. The parrot gives clues if you feed it.",
+    "DROP RUM for the pirate. Feed crackers to the parrot for hints. The chest may need to be opened.",
+    "Give rum to the pirate (he will follow you and crew your ship). Feed crackers to the parrot for treasure clues. GET CHEST."
+  ],
+  "key_actions": [
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [
+        "Wicked looking pirate (must be in room)"
+      ],
+      "effects": [
+        "Message: Yoho ho and a ..."
+      ]
+    }
+  ],
+  "items_needed": ["Bottle of rum", "Sack of crackers"],
+  "items_available": [
+    "CHE",
+    "PAR"
+  ],
+  "danger": false,
+  "notes": "The pirate's shack with the pirate (needs rum to join you as crew), treasure chest, and parrot (feed crackers for clues). The HELP hint 'Yoho ho and a...' suggests rum. The pirate is needed to sail the ship."
+}

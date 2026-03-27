@@ -1,0 +1,22 @@
+{
+  "room": 8,
+  "name": "twisting blue hallway",
+  "description": "I'm in a twisting blue hallway",
+  "items_start": [],
+  "exits": {
+    "N": 11,
+    "S": 3,
+    "W": 6
+  },
+  "hints": [
+    "A blue hallway. The blue security door is to the north.",
+    "NORTH leads to the blue room with a security door (highest clearance). SOUTH returns to the main corridor.",
+    "Go NORTH to the blue door (needs security-level ID). SOUTH to main corridor, WEST to white hallway."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Blue hallway connecting the main corridor (S/room 3), blue security door (N/room 11), and white hallway (W/room 6)."
+}

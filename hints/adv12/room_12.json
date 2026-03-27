@@ -1,0 +1,57 @@
+{
+  "room": 12,
+  "name": "crow's-nest",
+  "description": "I'm in a crow's-nest",
+  "items_start": [],
+  "exits": {
+    "D": 6
+  },
+  "hints": [
+    "The crow's nest atop the mast. Use the telescope here to spot land while at sea.",
+    "EXAMINE TELESCOPE while holding it to spot land. If land is nearby, you will see 'LAND HO!' and can then go ashore.",
+    "EXAM TELESCOPE spots different islands depending on your sea zone. Go DOWN to return to the deck. Always check for land after sailing to a new area."
+  ],
+  "key_actions": [
+    "EXAM TELE",
+    "EXAM TELE",
+    "EXAM TELE"
+  ],
+  "action_details": [
+    {
+      "command": "EXAM TELE",
+      "needs": [
+        "Telescope"
+      ],
+      "effects": [
+        "Message: LAND HO!",
+        "Set flag 0"
+      ]
+    },
+    {
+      "command": "EXAM TELE",
+      "needs": [
+        "Telescope"
+      ],
+      "effects": [
+        "Message: LAND HO!",
+        "Set flag 5"
+      ]
+    },
+    {
+      "command": "EXAM TELE",
+      "needs": [
+        "Telescope"
+      ],
+      "effects": [
+        "Message: LAND HO!",
+        "Set flag 1"
+      ]
+    }
+  ],
+  "items_needed": [
+    "TELE"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Crow's nest atop the ship's mast. EXAMINE TELESCOPE here to spot land (LAND HO!). Different sea zones reveal different islands (sandy beach, rocky strand, small island). After spotting land, go DOWN to the deck, DROP ANCHOR, then GO ASHORE. Essential for navigation."
+}

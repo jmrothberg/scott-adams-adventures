@@ -1,0 +1,20 @@
+{
+  "room": 26,
+  "name": "I'm in the garage of a large house",
+  "description": "I'm in the garage of a large house",
+  "items_start": [
+    "Small toolbox"
+  ],
+  "exits": {
+    "S": 10
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "TOOL"
+  ],
+  "danger": false,
+  "notes": ""
+}

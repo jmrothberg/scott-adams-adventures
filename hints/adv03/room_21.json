@@ -1,0 +1,24 @@
+{
+  "room": 21,
+  "name": "reactor core",
+  "description": "I'm in a reactor core",
+  "items_start": [
+    "Very large time bomb",
+    "Red wire going from bomb into wall"
+  ],
+  "exits": {
+    "U": 19
+  },
+  "hints": [
+    "The bomb is here, connected by a red wire to the wall. You need to deal with it carefully.",
+    "The red wire connects the bomb to the control panel above. Cut it before moving the bomb.",
+    "CUT WIRE with the wire cutters to disconnect the bomb, then GET BOMB. Take it to the break room to defuse.",
+    "CUT WIRE (using wire cutters), then GET BOMB. Take it UP to the control room, then EAST to the break room. POUR WATER there to defuse it."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Wire cutters"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Reactor core containing the time bomb. The red wire must be CUT with wire cutters before moving the bomb. Take the bomb to the break room (room 20) and pour water on it to defuse. UP returns to the control room."
+}

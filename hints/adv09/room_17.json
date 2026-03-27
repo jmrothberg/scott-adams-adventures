@@ -1,0 +1,17 @@
+{
+  "room": 17,
+  "name": "road",
+  "description": "I'm in a road",
+  "items_start": [],
+  "exits": {
+    "E": 20,
+    "W": 1
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

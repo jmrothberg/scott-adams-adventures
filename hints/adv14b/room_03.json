@@ -1,0 +1,26 @@
+{
+  "room": 3,
+  "name": "I'm at the corner of Main & Hickory",
+  "description": "I'm at the corner of Main & Hickory",
+  "items_start": [
+    "Yoyodyne building",
+    "Gas Station"
+  ],
+  "exits": {
+    "N": 4,
+    "S": 5,
+    "E": 6,
+    "W": 7
+  },
+  "hints": [
+    "Central intersection with exits in all four directions. The Yoyodyne building and Gas Station are here.",
+    "GO YOYODYNE to enter the office. GO GAS STATION to enter the gas station. All four compass directions lead to different areas.",
+    "NORTH goes to Main & Mountain View (room 4). SOUTH to highway ramp (room 5). EAST to Hickory Ave (room 6). WEST to Hickory Ave/shed area (room 7). The gas station has pumps and fuel."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Central hub intersection. NORTH to Main & Mountain View (room 4, hardware store). SOUTH to highway ramp (room 5). EAST to Hickory Ave (room 6, toward cul-de-sac). WEST to Hickory Ave (room 7, shed with radio). Yoyodyne building entrance leads to office (room 1). Gas Station entrance leads to room 8."
+}

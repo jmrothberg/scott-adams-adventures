@@ -1,0 +1,26 @@
+{
+  "room": 23,
+  "name": "maintenance crawl way",
+  "description": "I'm in a maintenance crawl way",
+  "items_start": [
+    "Empty crystal holder",
+    "Broken pieces of Power Crystal"
+  ],
+  "exits": {
+    "U": 7
+  },
+  "hints": [
+    "The maintenance crawlway has a crystal holder and broken crystal pieces.",
+    "The broken power crystal is the key to fixing the ship.",
+    "Take the broken crystal pieces - they need to be repaired.",
+    "GET CRYS. You need to FIX CRYS to repair the ship's power system."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "CRYS"
+  ],
+  "danger": false,
+  "notes": "Maintenance crawlway with broken power crystal. FIX CRYS is essential to complete the game."
+}

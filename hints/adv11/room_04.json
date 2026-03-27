@@ -1,0 +1,36 @@
+{
+  "room": 4,
+  "name": "metal room",
+  "description": "I'm in a metal room",
+  "items_start": [
+    "Force field"
+  ],
+  "exits": {
+    "E": 5
+  },
+  "hints": [
+    "Another metal room with a force field. Be cautious - not all force fields are safe to pass through.",
+    "The force field here leads to the hydroponics area, but passing through it is deadly unless conditions are right.",
+    "DO NOT go through this force field - it causes death. Use the EAST exit instead to continue safely through the tunnels."
+  ],
+  "key_actions": [
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "Force field (must be in room)"
+      ],
+      "effects": [
+        "Move to room 8",
+        "Auto-DROP item",
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Metal room with a deadly force field. Going through the force field leads to room 8 (hydroponics) but kills you. The safe route is EAST through the tunnel system. The force field must be disabled or bypassed through another means."
+}

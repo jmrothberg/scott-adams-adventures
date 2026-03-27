@@ -1,0 +1,37 @@
+{
+  "room": 14,
+  "name": "dimly lit Elevator Shaft",
+  "description": "I'm in a dimly lit Elevator Shaft",
+  "items_start": [],
+  "exits": {
+    "W": 15,
+    "D": 11
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK NICH",
+    "LOOK SHAF"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK NICH",
+      "needs": [],
+      "effects": [
+        "Message: Found something!",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "LOOK SHAF",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: mostly empty tool niches."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

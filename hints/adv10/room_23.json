@@ -1,0 +1,17 @@
+{
+  "room": 23,
+  "name": "dimly lit rock room",
+  "description": "I'm in a dimly lit rock room",
+  "items_start": [],
+  "exits": {
+    "S": 24,
+    "W": 22
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

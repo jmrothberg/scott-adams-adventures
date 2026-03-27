@@ -1,0 +1,26 @@
+{
+  "room": 31,
+  "name": "vacant room",
+  "description": "I'm in a vacant room",
+  "items_start": [
+    "Spell of Methuselah",
+    "Unravel spell"
+  ],
+  "exits": {
+    "E": 10
+  },
+  "hints": [
+    "A vacant room with two important spells: Methuselah and Unravel.",
+    "GET METHUSELAH and GET UNRAVEL - both spells have important magical effects.",
+    "The Methuselah spell may affect age/time. The Unravel spell undoes things. EAST returns to the plain room. Take both spells."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "METHU",
+    "UNRAV"
+  ],
+  "danger": false,
+  "notes": "Vacant room with two spells: Spell of Methuselah (aging/time magic) and Unravel spell (undoes things). Accessed by PULL WEST from the plain room (10). East returns to the plain room."
+}

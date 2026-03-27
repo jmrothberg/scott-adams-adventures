@@ -1,0 +1,49 @@
+{
+  "room": 3,
+  "name": "Computer Lab",
+  "description": "I'm in a Computer Lab",
+  "items_start": [
+    "RINGMASTER",
+    "Knob"
+  ],
+  "exits": {
+    "E": 16
+  },
+  "hints": [],
+  "key_actions": [
+    "TYPE RUN",
+    "GO COMP",
+    "TYPE"
+  ],
+  "action_details": [
+    {
+      "command": "TYPE RUN",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Computer types:"
+      ]
+    },
+    {
+      "command": "GO COMP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "TYPE",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Computer types:",
+        "Message: SYNTAX ERROR."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

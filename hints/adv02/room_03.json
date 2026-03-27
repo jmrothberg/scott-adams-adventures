@@ -1,0 +1,20 @@
+{
+  "room": 3,
+  "name": "secret passageway",
+  "description": "I'm in a secret passageway",
+  "items_start": [],
+  "exits": {
+    "E": 4,
+    "W": 2
+  },
+  "hints": [
+    "This passage connects the alcove to the attic. Head EAST to explore further.",
+    "Go EAST to reach the musty attic with useful supplies. WEST returns to the alcove."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Secret passage opened by taking the book in the alcove. Connects the alcove (W/room 2) to the musty attic (E/room 4)."
+}

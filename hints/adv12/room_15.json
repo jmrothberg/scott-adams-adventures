@@ -1,0 +1,24 @@
+{
+  "room": 15,
+  "name": "grass hut",
+  "description": "I'm in a grass hut",
+  "items_start": [
+    "Old box"
+  ],
+  "exits": {
+    "E": 14
+  },
+  "hints": [
+    "A simple grass hut with an old box inside. Examine and open the box.",
+    "OPEN BOX to see what is inside. GET BOX to take it. It may contain useful items.",
+    "OPEN BOX or EXAM BOX to find contents. Go EAST to return to the island exterior."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "BOX"
+  ],
+  "danger": false,
+  "notes": "Grass hut on the small island containing an old box. Open it to find useful items. East returns to the island exterior (room 14)."
+}

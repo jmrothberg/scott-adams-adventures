@@ -1,0 +1,26 @@
+{
+  "room": 17,
+  "name": "hardware store",
+  "description": "I'm in a hardware store",
+  "items_start": [
+    "Climbers Pick",
+    "Hydrometer",
+    "Manual hand pump",
+    "Jumper Cables"
+  ],
+  "exits": {
+    "E": 4
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "PICK",
+    "HYDR",
+    "PUMP",
+    "CABL"
+  ],
+  "danger": false,
+  "notes": ""
+}

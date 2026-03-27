@@ -1,0 +1,24 @@
+{
+  "room": 20,
+  "name": "parlor",
+  "description": "I'm in a parlor",
+  "items_start": [
+    "Ju-Ju man statue"
+  ],
+  "exits": {
+    "D": 2
+  },
+  "hints": [
+    "The parlor has a Ju-Ju man statue. Examine it carefully.",
+    "The Ju-Ju man statue may contain something or have significance to the voodoo theme.",
+    "LOOK STATUE or examine it. DOWN returns to the stairwell."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "STA"
+  ],
+  "danger": false,
+  "notes": "Parlor upstairs from the stairwell with a Ju-Ju man statue. DOWN returns to the stairwell (room 2). Reached by GO STAIRS from room 2."
+}

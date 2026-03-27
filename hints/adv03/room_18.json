@@ -1,0 +1,22 @@
+{
+  "room": 18,
+  "name": "projectionist room",
+  "description": "I'm in a projectionist room",
+  "items_start": [
+    "Empty movie projector"
+  ],
+  "exits": {
+    "D": 17
+  },
+  "hints": [
+    "There is a movie projector here but it is empty. You may find film elsewhere.",
+    "The movie film cartridge is in the control room. Load it into the projector for useful information.",
+    "LOAD FILM into the projector when you have the film cartridge from the control room. DOWN returns to maintenance."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Projectionist room with an empty movie projector. The film cartridge (found in the control room, room 19) can be loaded to view important information. DOWN returns to maintenance room 2 (room 17)."
+}

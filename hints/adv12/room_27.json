@@ -1,0 +1,20 @@
+{
+  "room": 27,
+  "name": "musty hallway",
+  "description": "I'm in a musty hallway",
+  "items_start": [],
+  "exits": {
+    "N": 23,
+    "E": 30
+  },
+  "hints": [
+    "A musty hallway connecting the hidden chambers to the grotto area.",
+    "NORTH leads to the hidden chambers, EAST leads to the grotto with the deep pit."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Musty hallway connecting hidden chamber (room 23, north) to the damp grotto (room 30, east). A transit corridor in the underground temple area."
+}

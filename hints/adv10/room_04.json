@@ -1,0 +1,18 @@
+{
+  "room": 4,
+  "name": "Beach by ocean",
+  "description": "I'm in a Beach by ocean",
+  "items_start": [
+    "Palm trees"
+  ],
+  "exits": {
+    "W": 1
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

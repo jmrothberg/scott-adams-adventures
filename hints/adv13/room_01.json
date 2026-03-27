@@ -1,0 +1,39 @@
+{
+  "room": 1,
+  "name": "field",
+  "description": "I'm in a field",
+  "items_start": [
+    "Moat",
+    "Castle",
+    "Raised drawbridge"
+  ],
+  "exits": {
+    "N": 9,
+    "S": 9,
+    "W": 9
+  },
+  "hints": [
+    "You are outside Claymorgue Castle. The drawbridge is raised and a moat surrounds the castle. Most directions lead to the enchanted forest.",
+    "DIG in the field to find something useful. You need to find a way to lower the drawbridge or cross the moat.",
+    "DIG to find a buried item. The forest (N/S/W) is enchanted and loops. You need to get across the moat somehow - the permeability spell or swimming may help.",
+    "DIG to unearth an item. To enter the castle: lower the drawbridge from inside, or use magic to cross the moat. The permeability spell is found inside the courtyard."
+  ],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Got",
+        "Message: something"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Starting room outside Claymorgue Castle. The drawbridge is raised and the moat blocks entry. DIG reveals a buried item. N/S/W all lead to the enchanted forest (room 9) which loops. The player must find a way into the castle - eventually through the drawbridge (room 2) or moat (room 16)."
+}

@@ -1,0 +1,27 @@
+{
+  "room": 12,
+  "name": "I'm in the Armory",
+  "description": "I'm in the Armory",
+  "items_start": [
+    "Shield",
+    "Dull & broken sword",
+    "Knight's Suit of Armor"
+  ],
+  "exits": {
+    "W": 13
+  },
+  "hints": [
+    "The armory has weapons and armor. Some items may be useful, others are red herrings.",
+    "The shield might protect you. The sword is dull and broken - probably not useful as-is.",
+    "GET SHIELD for protection. The suit of armor may hide something. WEST returns to the torture chamber."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SHI",
+    "SWO"
+  ],
+  "danger": false,
+  "notes": "Armory with shield, broken sword, and suit of armor. The shield may be useful for protection. Some items are red herrings. WEST returns to the torture chamber (room 13)."
+}

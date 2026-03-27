@@ -1,0 +1,37 @@
+{
+  "room": 15,
+  "name": "blue anteroom",
+  "description": "I'm in a blue anteroom",
+  "items_start": [
+    "Plain metal door with sign -control room-",
+    "Blue button"
+  ],
+  "exits": {
+    "W": 23,
+    "U": 22
+  },
+  "hints": [
+    "This is the anteroom to the control room area. Multiple directions lead to important rooms.",
+    "The control room door is blocked. WEST leads to the storage room with water. UP leads to a viewing room.",
+    "PRESS BLUE to return through the blue door. Go WEST to the storage room, UP to the viewing room.",
+    "Go WEST for the storage room (anti-radiation suit, heavy water). UP to viewing room to see the control room. The control room door may be blocked."
+  ],
+  "key_actions": [
+    "PRE BLU"
+  ],
+  "action_details": [
+    {
+      "command": "PRE BLU",
+      "needs": [],
+      "effects": [
+        "Message: CLICK!",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 11"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Blue anteroom inside the highest security area. WEST to storage (room 23), UP to viewing room (room 22). PRESS BLUE returns to room 11. The control room door is partially blocked by debris."
+}

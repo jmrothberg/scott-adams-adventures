@@ -1,0 +1,45 @@
+{
+  "room": 19,
+  "name": "I'm on catwalk on outside of ship by porthole",
+  "description": "I'm on catwalk on outside of ship by porthole",
+  "items_start": [
+    "Oilskin raincoat"
+  ],
+  "exits": {},
+  "hints": [
+    "You're on a catwalk outside the ship near a porthole. There's an oilskin raincoat here.",
+    "GET the oilskin raincoat - it may protect you or your items from water. GO PORTHOLE to re-enter the cabin.",
+    "GET OILSKIN raincoat (protects items from water). GO PORTHOLE returns to the cabin (room 2). GO SEA jumps into the water but drops items.",
+    "Take the oilskin raincoat for water protection. GO PORTHOLE to re-enter the ship. Avoid GO SEA unless prepared to lose carried items."
+  ],
+  "key_actions": [
+    "GO PORT",
+    "GO SEA"
+  ],
+  "action_details": [
+    {
+      "command": "GO PORT",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 2"
+      ]
+    },
+    {
+      "command": "GO SEA",
+      "needs": [],
+      "effects": [
+        "Set flag 5",
+        "Move to room 11",
+        "Auto-DROP item",
+        "Set flag 28"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "OILS"
+  ],
+  "danger": false,
+  "notes": "Catwalk outside the ship near the porthole. Contains the oilskin raincoat (protects items from water). GO PORTHOLE returns to cabin (room 2). GO SEA enters water (room 11) and drops items. Accessed from the cabin via the porthole when it's open."
+}

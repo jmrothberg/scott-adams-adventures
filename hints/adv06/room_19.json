@@ -1,0 +1,24 @@
+{
+  "room": 19,
+  "name": "methane snow storm",
+  "description": "I'm in a methane snow storm",
+  "items_start": [],
+  "exits": {
+    "N": 10,
+    "S": 18,
+    "E": 20,
+    "W": 18
+  },
+  "hints": [
+    "Another methane snow storm area.",
+    "Try to navigate toward the strange light.",
+    "Do NOT go EAST - leads to the dead-end.",
+    "S or W return toward the light. N connects to another storm area."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["SUIT"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Methane storm area. E leads to dead-end. S and W go back toward the light."
+}

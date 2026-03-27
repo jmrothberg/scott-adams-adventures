@@ -1,0 +1,51 @@
+{
+  "room": 14,
+  "name": "Mine Shaft",
+  "description": "I'm in a Mine Shaft",
+  "items_start": [
+    "Heavy stone door"
+  ],
+  "exits": {
+    "S": 24
+  },
+  "hints": [
+    "A mine shaft with a heavy stone door and a passage south to the cavern.",
+    "The stone door leads to the cockpit area behind the mountain. PUSH, OPEN, or GO COCKPIT to pass through.",
+    "PUSH COCKPIT, OPEN COCKPIT, or GO COCKPIT all pass through the stone door to behind the mountain (room 28) - the door slams shut behind you. SOUTH leads deeper into the cavern (room 24) with the bomb.",
+    "Go SOUTH to reach the bomb cavern. Going through the cockpit door sends you behind the mountain (room 28) and the door slams shut."
+  ],
+  "key_actions": [
+    "PUSH COCK",
+    "OPEN COCK",
+    "GO COCK"
+  ],
+  "action_details": [
+    {
+      "command": "PUSH COCK",
+      "needs": [],
+      "effects": [
+        "Message: I go thru door. Slam!!!",
+        "Move to room 28"
+      ]
+    },
+    {
+      "command": "OPEN COCK",
+      "needs": [],
+      "effects": [
+        "Message: I go thru door. Slam!!!",
+        "Move to room 28"
+      ]
+    },
+    {
+      "command": "GO COCK",
+      "needs": [],
+      "effects": [
+        "Move to room 28"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Mine shaft inside the mountain. Heavy stone door leads to behind the mountain (room 28) but slams shut. SOUTH goes deeper to the cavern with the bomb (room 24). Accessed from the cavern (room 24, north)."
+}

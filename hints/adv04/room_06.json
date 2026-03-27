@@ -1,0 +1,58 @@
+{
+  "room": 6,
+  "name": "I'm in Medium Maegen's Mad Room",
+  "description": "I'm in Medium Maegen's Mad Room",
+  "items_start": [
+    "Crystal Ball"
+  ],
+  "exits": {
+    "W": 8
+  },
+  "hints": [
+    "Medium Maegen's room has a crystal ball. The medium can give you crucial advice.",
+    "YELL MEDIUM to summon her for advice. Be careful with the crystal ball - breaking it is bad.",
+    "YELL MEDIUM - she tells you to keep a good luck charm and mentions a moving bag through a tight squeeze.",
+    "YELL MEDIUM for advice: need luck charm (clover/rabbit foot) and Ju-Ju bag for the tight squeeze. Do NOT BREAK the crystal ball."
+  ],
+  "key_actions": [
+    "LOO BAL",
+    "BRE BAL",
+    "YEL MED"
+  ],
+  "action_details": [
+    {
+      "command": "LOO BAL",
+      "needs": [
+        "Crystal Ball (must be in room)"
+      ],
+      "effects": [
+        "Message: I see nothing very special.",
+        "Move to room 4",
+        "Message: Spirit vibrations drive me from room."
+      ]
+    },
+    {
+      "command": "BRE BAL",
+      "needs": [],
+      "effects": [
+        "Move item 0 to room 0",
+        "Message: A beam of light shines on grave",
+        "Message: This grAve reserved for you!",
+        "Look around"
+      ]
+    },
+    {
+      "command": "YEL MED",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Auto-DROP item",
+        "Message: Medium appears, says: `Keep a good luck charm on you & your\nfriend. I also see a -moving- bag helping you through a tight\nsqueeze!`"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Medium Maegen's room with the crystal ball. YELL MEDIUM for crucial advice about needing a luck charm and the Ju-Ju bag. LOOKING at the ball ejects you. BREAKING it is fatal. WEST leads to room 8."
+}

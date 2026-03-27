@@ -1,0 +1,21 @@
+{
+  "room": 9,
+  "name": "sloping hallway",
+  "description": "I'm in a sloping hallway",
+  "items_start": [],
+  "exits": {
+    "U": 3,
+    "D": 4
+  },
+  "hints": [
+    "A sloping hallway connecting upper and lower areas.",
+    "U leads to the small landing. D leads to the area beside the large tank.",
+    "This is a connector passage between the landing (room 3) and the tank area (room 4)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Connector hallway. U=small landing (room 3), D=beside large tank (room 4)."
+}

@@ -1,0 +1,46 @@
+{
+  "room": 16,
+  "name": "I'm on a ledge outside of a window\nhigh above the reactor core",
+  "description": "I'm on a ledge outside of a window\nhigh above the reactor core",
+  "items_start": [
+    "Yellow key",
+    "Broken glass"
+  ],
+  "exits": {},
+  "hints": [
+    "There is a key here on the ledge. Be careful - you are high above the reactor.",
+    "GET KEY - the yellow key is needed for the ID badge machine. Do NOT jump!",
+    "GET KEY (yellow) for making maintenance-level ID badges. GO WINDOW to return to the visitors room safely.",
+    "GET KEY then GO WINDOW to return inside. JUMPing down triggers the bomb and is extremely dangerous."
+  ],
+  "key_actions": [
+    "JUM",
+    "GO WIN"
+  ],
+  "action_details": [
+    {
+      "command": "JUM",
+      "needs": [],
+      "effects": [
+        "Message: Oh Boy...I think I did something...",
+        "Message: *   B O O O O O O O O O M ! * * * * * *",
+        "Look around"
+      ]
+    },
+    {
+      "command": "GO WIN",
+      "needs": [],
+      "effects": [
+        "Move to room 13",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "KEY",
+    "WIN"
+  ],
+  "danger": true,
+  "notes": "Ledge outside the visitor room window, high above the reactor core. Contains the yellow key (needed for maintenance-level ID badge). JUMPing causes an explosion. GO WINDOW returns safely to room 13."
+}

@@ -1,0 +1,35 @@
+{
+  "room": 5,
+  "name": "flower box outside An open window",
+  "description": "I'm in a flower box outside An open window",
+  "items_start": [
+    "End of sheet hAnging here",
+    "Daisies"
+  ],
+  "exits": {},
+  "hints": [
+    "A flower box on the castle wall with daisies growing and the end of a sheet hanging here.",
+    "GET DAISIES - they're useful later. GO WINDOW enters the doorless room through the dark window.",
+    "GET DAISIES (needed to make a garland/necklace of garlic). GO WINDOW enters the doorless room (room 10) which has Dracula's portrait.",
+    "GET DAISIES (combine with garlic later for protection). GO WINDOW to enter the doorless room (room 10). The sheet end allows climbing back to room 4. This is the dark window visible from outside the castle."
+  ],
+  "key_actions": [
+    "GO WIN"
+  ],
+  "action_details": [
+    {
+      "command": "GO WIN",
+      "needs": [],
+      "effects": [
+        "Move to room 10",
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "DAI"
+  ],
+  "danger": false,
+  "notes": "Flower box on the castle exterior at the level of the dark window. Contains daisies (useful for garlic necklace) and the end of the sheet for climbing. GO WINDOW enters the doorless room (room 10). This is the dark window mentioned when you LOOK UP from outside the castle or when you fatally jump from the ledge."
+}

@@ -1,0 +1,72 @@
+{
+  "room": 16,
+  "name": "sitting room",
+  "description": "I'm in a sitting room",
+  "items_start": [
+    "Ashes",
+    "Basket",
+    "Fireplace"
+  ],
+  "exits": {
+    "N": 6
+  },
+  "hints": [],
+  "key_actions": [
+    "LOO ASH",
+    "LOO BAS",
+    "PLA FLU",
+    "GO PAS",
+    "GO ASH"
+  ],
+  "action_details": [
+    {
+      "command": "LOO ASH",
+      "needs": [],
+      "effects": [
+        "Message: I see something.",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "LOO BAS",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I see something."
+      ]
+    },
+    {
+      "command": "PLA FLU",
+      "needs": [
+        "Flute"
+      ],
+      "effects": [
+        "Message: Cobra crawls out, presses a loose brick and then disappears intoa passage which appeared.",
+        "Auto-DROP item",
+        "Destroy item 43"
+      ]
+    },
+    {
+      "command": "GO PAS",
+      "needs": [
+        "Passageway behind fireplace (must be in room)"
+      ],
+      "effects": [
+        "Move to room 17"
+      ]
+    },
+    {
+      "command": "GO ASH",
+      "needs": [],
+      "effects": [
+        "Message: I see something."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "BAS"
+  ],
+  "danger": false,
+  "notes": ""
+}

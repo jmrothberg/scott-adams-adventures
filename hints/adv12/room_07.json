@@ -1,0 +1,34 @@
+{
+  "room": 7,
+  "name": "I'm on a sandy beach",
+  "description": "I'm on a sandy beach",
+  "items_start": [
+    "Man",
+    "Jungle"
+  ],
+  "exits": {},
+  "hints": [
+    "A sandy beach on a tropical island. There is a man here and a jungle to explore.",
+    "Talk to the man or examine him. GO JUNGLE to enter the dense tropical forest and explore the island.",
+    "GO JUNGLE to enter the dense jungle. The man may have useful information. DIG in the jungle with a shovel to find buried items."
+  ],
+  "key_actions": [
+    "GO JUNG"
+  ],
+  "action_details": [
+    {
+      "command": "GO JUNG",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 9"
+      ]
+    }
+  ],
+  "items_needed": [
+    "SHOV"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Sandy beach on a tropical island. A man is present (may provide clues or interaction). GO JUNGLE enters the dense jungle (room 9). Reached by going ashore from the ship when anchored near this island."
+}

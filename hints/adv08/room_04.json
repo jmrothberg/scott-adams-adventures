@@ -1,0 +1,71 @@
+{
+  "room": 4,
+  "name": "desert next to a pyramid",
+  "description": "I'm in a desert next to a pyramid",
+  "items_start": [
+    "Stone",
+    "Sign"
+  ],
+  "exits": {
+    "N": 1,
+    "W": 3
+  },
+  "hints": [
+    "You're next to the pyramid! There's a stone and a sign here. READ SIGN for clues.",
+    "GET STO to pick up the stone - it triggers machinery and reveals a door.",
+    "The stone is a Rosetta Stone fragment needed to read hieroglyphics. GO DOO to enter the pyramid.",
+    "GET STO triggers the pyramid door to open. GO DOO enters the pyramid (room 6). DIG here with shovel finds items. N=desert (1), W=pool area (3)."
+  ],
+  "key_actions": [
+    "GET STO",
+    "GO DOO",
+    "GO DOO",
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "GET STO",
+      "needs": [
+        "Stone (must be in room)"
+      ],
+      "effects": [
+        "Auto-DROP item",
+        "Message: The sound of machinery.",
+        "Auto-GET item"
+      ]
+    },
+    {
+      "command": "GO DOO",
+      "needs": [
+        "Open door (must be in room)"
+      ],
+      "effects": [
+        "Move to room 6"
+      ]
+    },
+    {
+      "command": "GO DOO",
+      "needs": [
+        "Door with large keyhole (must be in room)"
+      ],
+      "effects": [
+        "Message: The right key could help (maybe)."
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "STO"
+  ],
+  "danger": false,
+  "notes": "Pyramid entrance. GET STO triggers the door to open. The Rosetta Stone helps read hieroglyphics in room 15. DIG with shovel finds items. N=desert (1), W=pool (3)."
+}

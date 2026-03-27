@@ -1,0 +1,51 @@
+{
+  "room": 9,
+  "name": "I'm outside the castle",
+  "description": "I'm outside the castle",
+  "items_start": [
+    "Coat-of-arms",
+    "Bell pull"
+  ],
+  "exits": {
+    "E": 17,
+    "W": 11
+  },
+  "hints": [
+    "You're outside the castle. There's a coat-of-arms and a bell pull. Look around carefully, especially upward.",
+    "LOOK UP or LOOK CASTLE reveals a dark window under the bedroom window ledge - an important clue for accessing a hidden room.",
+    "GET COAT (coat-of-arms, useful later). LOOK UP reveals the dark window clue. PULL BELL may summon something. EAST leads to the graveyard (room 17), WEST back inside (room 11).",
+    "LOOK UP / LOOK CASTLE reveals the dark window (doorless room 10, accessible via sheets from bedroom ledge). GET COAT-OF-ARMS. EAST to graveyard (room 17). WEST to hall (room 11). The bell pull may attract attention."
+  ],
+  "key_actions": [
+    "LOO UP",
+    "LOO CAS"
+  ],
+  "action_details": [
+    {
+      "command": "LOO UP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see nothing special.",
+        "Message: EXCEPT",
+        "Message: I notice a DARK WINDOW UNDER the bedroom window ledge!"
+      ]
+    },
+    {
+      "command": "LOO CAS",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see nothing special.",
+        "Message: EXCEPT",
+        "Message: I notice a DARK WINDOW UNDER the bedroom window ledge!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "COA"
+  ],
+  "danger": false,
+  "notes": "Outside the castle entrance. LOOK UP or LOOK CASTLE gives the crucial clue about the dark window under the bedroom ledge (the doorless room 10, reachable by tying sheets to the flag pole and climbing down). Contains coat-of-arms and bell pull. EAST leads to the graveyard (room 17). WEST enters the castle hall (room 11)."
+}

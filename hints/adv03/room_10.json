@@ -1,0 +1,69 @@
+{
+  "room": 10,
+  "name": "yellow room",
+  "description": "I'm in a yellow room",
+  "items_start": [
+    "Yellow door with tv camera over it"
+  ],
+  "exits": {
+    "S": 7
+  },
+  "hints": [
+    "Another security door with a camera. This one requires higher clearance than visitor level.",
+    "You need maintenance or security level ID to pass this yellow door. Visitor ID is insufficient.",
+    "SHOW PICTURE with maintenance or security badge to pass through to the yellow corridor.",
+    "SHOW PICTURE with maintenance or security badge. Visitor badge is rejected. Leads to the yellow corridor (room 14)."
+  ],
+  "key_actions": [
+    "SHO PIC",
+    "SHO PIC",
+    "SHO PIC",
+    "KNO"
+  ],
+  "action_details": [
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Picture of me stamped -security-"
+      ],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `ACCEPTED`",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 14"
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Picture of me stamped -maintenance-"
+      ],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `ACCEPTED`",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 14"
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Authorization INSUFFICIENT for access`\n"
+      ]
+    },
+    {
+      "command": "KNO",
+      "needs": [],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Show authorization please`\n"
+      ]
+    }
+  ],
+  "items_needed": ["Picture of me stamped -maintenance-"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Yellow security door requiring maintenance or security clearance. Visitor badge is insufficient. Leads to the yellow corridor (room 14) and maintenance area beyond."
+}

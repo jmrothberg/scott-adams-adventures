@@ -1,0 +1,31 @@
+{
+  "room": 9,
+  "name": "long, narrow passageway",
+  "description": "I'm in a long, narrow passageway",
+  "items_start": [
+    "Bricked up doorway",
+    "Rope"
+  ],
+  "exits": {
+    "S": 8
+  },
+  "hints": [],
+  "key_actions": [
+    "GO PAS"
+  ],
+  "action_details": [
+    {
+      "command": "GO PAS",
+      "needs": [],
+      "effects": [
+        "Message: I'm there."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "ROP"
+  ],
+  "danger": false,
+  "notes": ""
+}

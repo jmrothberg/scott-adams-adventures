@@ -1,0 +1,44 @@
+{
+  "room": 5,
+  "name": "semi-dark hole by the root chamber",
+  "description": "I'm in a semi-dark hole by the root chamber",
+  "items_start": [
+    "Locked door"
+  ],
+  "exits": {
+    "U": 4
+  },
+  "hints": [
+    "There is a locked door here blocking your way. You need something to unlock it.",
+    "The skeleton keys from the treetop (room 2) will unlock this door.",
+    "UNLOCK DOOR with the skeleton keys in your inventory. Then OPEN DOOR to proceed to the long hallway beyond."
+  ],
+  "key_actions": [
+    "OPE DOO",
+    "UNL DOO"
+  ],
+  "action_details": [
+    {
+      "command": "OPE DOO",
+      "needs": [
+        "Locked door (must be in room)"
+      ],
+      "effects": [
+        "Message: I can't its locked"
+      ]
+    },
+    {
+      "command": "UNL DOO",
+      "needs": [
+        "Locked door (must be in room)"
+      ],
+      "effects": [
+        "Message: I can't its locked"
+      ]
+    }
+  ],
+  "items_needed": ["Ring of skeleton keys"],
+  "items_available": [],
+  "danger": false,
+  "notes": "A locked door blocks progress deeper underground. Requires the skeleton keys from the treetop (room 2) to unlock. Once unlocked, leads to the long hallway (room 6) and eventually the large cavern system."
+}

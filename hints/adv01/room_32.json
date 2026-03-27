@@ -1,0 +1,25 @@
+{
+  "room": 32,
+  "name": "I'm in an endless corridor",
+  "description": "I'm in an endless corridor",
+  "items_start": [],
+  "exits": {
+    "N": 32,
+    "S": 33,
+    "E": 32,
+    "W": 32,
+    "U": 32,
+    "D": 32
+  },
+  "hints": [
+    "Almost every direction loops back here. Only one exit leads somewhere different.",
+    "Go SOUTH - it is the only direction that leads out of this endless loop.",
+    "Go SOUTH to return to the Limbo room (room 33) and try to find the correct exit to live again."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Part of the death/Limbo system. An endless corridor where nearly every exit loops back. Only SOUTH leads to the Limbo room (room 33). Reached from Limbo going NORTH."
+}

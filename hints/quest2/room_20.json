@@ -1,0 +1,14 @@
+{
+  "room": 20,
+  "name": "?",
+  "description": "I'm in a ?",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

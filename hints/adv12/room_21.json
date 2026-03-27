@@ -1,0 +1,32 @@
+{
+  "room": 21,
+  "name": "sacred temple",
+  "description": "I'm in a sacred temple",
+  "items_start": [
+    "Long staircase"
+  ],
+  "exits": {
+    "W": 22
+  },
+  "hints": [
+    "A sacred temple at the top of the staircase. More temple rooms lie to the west.",
+    "GO STAIRCASE to return down to the shore. Go WEST to explore deeper into the temple where an altar awaits.",
+    "WEST leads to the altar room. The temple complex has hidden chambers with treasures and puzzles."
+  ],
+  "key_actions": [
+    "GO STAI"
+  ],
+  "action_details": [
+    {
+      "command": "GO STAI",
+      "needs": [],
+      "effects": [
+        "Move to room 20"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Entry room of the sacred temple complex. GO STAIRCASE returns to room 20 (the staircase). West leads to the altar room (room 22). Part of the temple island exploration."
+}

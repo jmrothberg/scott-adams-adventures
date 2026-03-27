@@ -1,0 +1,24 @@
+{
+  "room": 39,
+  "name": "small deserted Office",
+  "description": "I'm in a small deserted Office",
+  "items_start": [
+    "Acid(Hydrochloric)",
+    "Calcium Carbonate",
+    "Exotic chemicals"
+  ],
+  "exits": {
+    "N": 16
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "ACID",
+    "CALC",
+    "CHEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

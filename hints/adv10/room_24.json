@@ -1,0 +1,18 @@
+{
+  "room": 24,
+  "name": "rock room",
+  "description": "I'm in a rock room",
+  "items_start": [
+    "Alien machinery"
+  ],
+  "exits": {
+    "N": 23
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

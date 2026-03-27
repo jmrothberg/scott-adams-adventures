@@ -1,0 +1,38 @@
+{
+  "room": 3,
+  "name": "room in the castle",
+  "description": "I'm in a room in the castle",
+  "items_start": [
+    "Big kettle"
+  ],
+  "exits": {
+    "N": 5,
+    "W": 2
+  },
+  "hints": [
+    "There is a big kettle here. Examine it carefully - there may be something underneath.",
+    "LOOK KETTLE to discover a hole under it and some soup.",
+    "LOOK KETTLE reveals the hole. GO HOLE to descend to room 16 with the rabbit's foot.",
+    "LOOK KETTLE reveals the hole. GO HOLE to descend to room 16 for the rabbit's foot (good luck charm). NORTH goes to animal heads room."
+  ],
+  "key_actions": [
+    "LOO KET"
+  ],
+  "action_details": [
+    {
+      "command": "LOO KET",
+      "needs": [
+        "Big kettle (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: I see a hole under it!",
+        "Message: There's some soup here."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Room with the big kettle hiding a hole underneath (leads to room 16 with rabbit's foot). Also has soup. NORTH goes to room 5, WEST to the stairwell."
+}

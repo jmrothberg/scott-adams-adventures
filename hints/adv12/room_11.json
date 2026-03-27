@@ -1,0 +1,50 @@
+{
+  "room": 11,
+  "name": "damp cave",
+  "description": "I'm in a damp cave",
+  "items_start": [
+    "Strange fountain"
+  ],
+  "exits": {
+    "W": 10
+  },
+  "hints": [
+    "A cave with a strange fountain. The fountain contains a mysterious liquid that is important to the quest.",
+    "The stone tablet can be used here. Try putting it IN the fountain. The liquid may be collectible with the right container.",
+    "PUT TABLET IN FOUNTAIN or use IN FOUNTAIN with the stone tablet. FILL CHALICE at the fountain to collect the liquid for the King. Go WEST to return to the jungle."
+  ],
+  "key_actions": [
+    "IN FOUN",
+    "IN FOUN"
+  ],
+  "action_details": [
+    {
+      "command": "IN FOUN",
+      "needs": [
+        "Stone tablet"
+      ],
+      "effects": [
+        "Message: OK",
+        "Clear flag 58",
+        "Message: PLOOSH"
+      ]
+    },
+    {
+      "command": "IN FOUN",
+      "needs": [
+        "Stone tablet"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: PLOOSH"
+      ]
+    }
+  ],
+  "items_needed": [
+    "TABL",
+    "CHAL"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Damp cave with a strange fountain containing mysterious liquid. Dropping the stone tablet in the fountain (IN FOUNTAIN) activates something (PLOOSH). The chalice can be filled here with liquid for the King. West returns to the jungle (room 10)."
+}

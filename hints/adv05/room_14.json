@@ -1,0 +1,25 @@
+{
+  "room": 14,
+  "name": "pAntry",
+  "description": "I'm in a pAntry",
+  "items_start": [
+    "Sulfur mAtches",
+    "Dusty clove of garlic"
+  ],
+  "exits": {},
+  "hints": [
+    "The pantry has matches and garlic - both classic vampire-fighting supplies!",
+    "GET MATCHES (for lighting torches and cigarettes). GET GARLIC (repels vampires).",
+    "GET MATCHES and GET GARLIC. Both are essential anti-vampire items. The garlic protects you at night when the Count roams.",
+    "GET MATCHES (light torch/cigarettes), GET GARLIC (vampire protection). Exit via the dumb-waiter. These are key survival items."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "MAT",
+    "GAR"
+  ],
+  "danger": false,
+  "notes": "Pantry accessible via the dumb-waiter. Contains essential items: sulfur matches (lighting) and garlic (vampire repellent). Both are critical for surviving the night and defeating the Count."
+}

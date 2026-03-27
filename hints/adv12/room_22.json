@@ -1,0 +1,46 @@
+{
+  "room": 22,
+  "name": "sacred temple",
+  "description": "I'm in a sacred temple",
+  "items_start": [
+    "Altar"
+  ],
+  "exits": {
+    "N": 25,
+    "E": 21
+  },
+  "hints": [
+    "The altar room of the sacred temple. The altar holds secrets. Try praying and examining it.",
+    "PRAY at the altar to hear something. EXAMINE ALTAR to find hidden items. Both actions reveal useful things.",
+    "PRAY to receive a divine response. EXAM ALTAR to find a hidden item. Go NORTH for the ornate chest room, EAST to return to the staircase."
+  ],
+  "key_actions": [
+    "PRAY",
+    "EXAM ALTA"
+  ],
+  "action_details": [
+    {
+      "command": "PRAY",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I hear",
+        "Message: something!",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "EXAM ALTA",
+      "needs": [],
+      "effects": [
+        "Message: I found",
+        "Message: something!",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Altar room in the sacred temple. PRAY reveals a hidden item. EXAMINE ALTAR finds another hidden item. Both are important actions. North leads to the chest room (room 25), east back to the temple entry (room 21)."
+}

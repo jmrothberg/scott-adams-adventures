@@ -1,0 +1,21 @@
+{
+  "room": 27,
+  "name": "maze of ducts. I'm totally confused",
+  "description": "I'm in a maze of ducts. I'm totally confused",
+  "items_start": [],
+  "exits": {
+    "N": 31,
+    "S": 31,
+    "E": 26,
+    "W": 28,
+    "U": 28,
+    "D": 28
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,49 @@
+{
+  "room": 16,
+  "name": "I'm in the water of a moat",
+  "description": "I'm in the water of a moat",
+  "items_start": [
+    "Sleeping moat monster"
+  ],
+  "exits": {},
+  "hints": [
+    "You are in the enchanted moat water with a sleeping moat monster. Do not wake it!",
+    "SWIM DOWN to dive deeper. Be specific with directions. The moat is enchanted and may drag you under.",
+    "SWIM DOWN to reach the murky underwater area (room 17) where you can find a soggy towel. Do NOT just SWIM without direction - the enchanted water kills you."
+  ],
+  "key_actions": [
+    "SWIM DOWN",
+    "SWIM",
+    "SWIM"
+  ],
+  "action_details": [
+    {
+      "command": "SWIM DOWN",
+      "needs": [],
+      "effects": [
+        "Move to room 17"
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: it's enchanted",
+        "Message: Whoosh!",
+        "Message: I'm dragged under!",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: Say again & be specific."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "In the moat water with a sleeping moat monster. SWIM DOWN goes to the murky underwater area (room 17). SWIM without a direction in enchanted water drags you under and kills you. Do not wake the moat monster. Accessed by GO MOAT from the drawbridge (room 2)."
+}

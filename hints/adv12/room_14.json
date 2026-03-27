@@ -1,0 +1,71 @@
+{
+  "room": 14,
+  "name": "I'm on a small island",
+  "description": "I'm on a small island",
+  "items_start": [
+    "Grass hut",
+    "Mountain"
+  ],
+  "exits": {
+    "S": 13
+  },
+  "hints": [
+    "A grass hut and a mountain are here. Both can be explored. Look for a crevice in the ground.",
+    "GO HUT to enter the grass hut and find items. GO MOUNTAIN to climb and find a sword. The stone tablet holds a magic word for this area.",
+    "SAY SUN (from the stone tablet) to cause an earthquake that opens a crevice. GO CREVICE leads to a dark cavern below. GO MOUNTAIN to find a sword on top.",
+    "Use SAY SUN with the stone tablet to trigger an earthquake. Then GO CREVICE to enter the underground cavern. The sword from the mountain is useful against the cyclops."
+  ],
+  "key_actions": [
+    "GO HUT",
+    "GO MOUN",
+    "GO CREV",
+    "SAY SUN"
+  ],
+  "action_details": [
+    {
+      "command": "GO HUT",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 15"
+      ]
+    },
+    {
+      "command": "GO MOUN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 17"
+      ]
+    },
+    {
+      "command": "GO CREV",
+      "needs": [
+        "Crevice (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 16",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "SAY SUN",
+      "needs": [
+        "Stone tablet (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: The ground shakes violently!",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [
+    "TABL"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Island area with grass hut and mountain. SAY SUN (magic word from stone tablet) triggers an earthquake that opens a crevice. GO CREVICE leads to the dark cavern (room 16). GO HUT for items (room 15), GO MOUNTAIN for the sword (room 17). South returns to the skeleton area (room 13)."
+}

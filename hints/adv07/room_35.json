@@ -1,0 +1,19 @@
+{
+  "room": 35,
+  "name": "Lot of TROUBLE!",
+  "description": "I'm in a Lot of TROUBLE!",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You're in big trouble! Something went very wrong.",
+    "This usually means you entered the fun house without proper preparation.",
+    "You may have tried to GO FUN without buying a ticket first.",
+    "You'll need to restart. Buy a ticket before entering the fun house!"
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death/failure room. Reached by entering the fun house without a ticket or other fatal actions. No exits - must restart."
+}

@@ -1,0 +1,20 @@
+{
+  "room": 10,
+  "name": "Sorry, to explore Pirate's Isle you'll need Adventure #2",
+  "description": "Sorry, to explore Pirate's Isle you'll need Adventure #2",
+  "items_start": [],
+  "exits": {
+    "U": 7
+  },
+  "hints": [
+    "This is a joke room - a meta-reference to Scott Adams' Adventure #2 (Pirate Adventure).",
+    "There's nothing to do here. Just go UP to return to the hilltop.",
+    "UP returns to the hilltop (room 7). This room is an easter egg referencing the original Pirate Adventure game."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Joke/easter egg room referencing Scott Adams' Adventure #2 (Pirate Adventure). Accessed by going DOWN from the hilltop (room 7). UP returns to the hilltop. No items or puzzles here."
+}

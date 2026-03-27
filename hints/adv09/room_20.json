@@ -1,0 +1,31 @@
+{
+  "room": 20,
+  "name": "I'm on Boot hill",
+  "description": "I'm on Boot hill",
+  "items_start": [
+    "Rattlesnake"
+  ],
+  "exits": {
+    "W": 17
+  },
+  "hints": [],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SNAK"
+  ],
+  "danger": false,
+  "notes": ""
+}

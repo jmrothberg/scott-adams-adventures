@@ -1,0 +1,24 @@
+{
+  "room": 12,
+  "name": "kitchen",
+  "description": "I'm in a kitchen",
+  "items_start": [
+    "Oven",
+    "Dumb-waiter"
+  ],
+  "exits": {
+    "E": 11
+  },
+  "hints": [
+    "The kitchen has an oven and a dumb-waiter. Both are important mechanics.",
+    "The oven leads to the solar oven room. The dumb-waiter moves between floors - use it to access other areas.",
+    "GO OVEN to find the solar oven with a nail file. GO DUMB-WAITER to ride it to other floors.",
+    "GO OVEN leads to room 15 (solar oven, nail file). The dumb-waiter (room 20) connects to the pantry and workroom. EAST returns to hall."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Kitchen with oven (leads to solar oven room 15) and dumb-waiter (room 20, connects to pantry and workroom). EAST returns to the hall (room 11)."
+}

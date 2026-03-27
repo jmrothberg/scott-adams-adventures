@@ -1,0 +1,20 @@
+{
+  "room": 19,
+  "name": "top of a palm tree",
+  "description": "I'm in a top of a palm tree",
+  "items_start": [
+    "Coconuts"
+  ],
+  "exits": {
+    "D": 4
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "COCO"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,22 @@
+{
+  "room": 16,
+  "name": "maze of pits",
+  "description": "I'm in a maze of pits",
+  "items_start": [],
+  "exits": {
+    "S": 17,
+    "U": 14,
+    "D": 17
+  },
+  "hints": [
+    "Almost at the treasure. Go SOUTH or DOWN to find it.",
+    "SOUTH or DOWN leads to room 17 where the Persian Rug treasure is. UP returns to room 14.",
+    "Go SOUTH or DOWN to reach the Persian Rug (room 17)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Near the end of the pit maze. SOUTH or DOWN leads to room 17 (Persian Rug). UP returns to room 14."
+}

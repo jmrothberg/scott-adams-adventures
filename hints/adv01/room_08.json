@@ -1,0 +1,37 @@
+{
+  "room": 8,
+  "name": "large 8 sided room",
+  "description": "I'm in a large 8 sided room",
+  "items_start": [
+    "*ROYAL HONEY*",
+    "Large african bees"
+  ],
+  "exits": {
+    "S": 31
+  },
+  "hints": [
+    "There is a treasure here but the bees are guarding it. You need to deal with them first.",
+    "The sign in the meadow mentioned mud being useful. Think about what mud could do to bees.",
+    "Bring mud from the swamp. The bees need to be subdued before you can safely take the honey.",
+    "Use the mud on the bees or throw mud at them to calm them down, then GET HONEY."
+  ],
+  "key_actions": [
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: Read the sign in the meadow!"
+      ]
+    }
+  ],
+  "items_needed": ["Evil smelling mud"],
+  "items_available": [
+    "HON"
+  ],
+  "danger": true,
+  "notes": "Contains the Royal Honey treasure guarded by African bees. The mud from the swamp (room 1) is needed to deal with the bees. The HELP command directs you to read the sign in the meadow for a clue about mud."
+}

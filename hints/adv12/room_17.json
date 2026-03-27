@@ -1,0 +1,24 @@
+{
+  "room": 17,
+  "name": "I'm on a mountain",
+  "description": "I'm on a mountain",
+  "items_start": [
+    "Sword"
+  ],
+  "exits": {
+    "D": 14
+  },
+  "hints": [
+    "The mountain top with a sword. This weapon will be useful against enemies.",
+    "GET SWORD - you will need it to defeat the cyclops in the underground cave system.",
+    "Take the sword and go DOWN to return to the island. The sword is one of the key combat items in the game."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SWOR"
+  ],
+  "danger": false,
+  "notes": "Mountain top on the small island. Contains the sword, which is needed to defeat the cyclops guarding the cave in the pit. Down returns to the island (room 14)."
+}

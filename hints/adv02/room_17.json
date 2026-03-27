@@ -1,0 +1,29 @@
+{
+  "room": 17,
+  "name": "large cavern",
+  "description": "I'm in a large cavern",
+  "items_start": [
+    "Pile of sails",
+    "Pile of precut lumber",
+    "Tool shed",
+    "Narrow crack in the rock"
+  ],
+  "exits": {
+    "W": 16
+  },
+  "hints": [
+    "This cavern has building supplies. The sails and lumber are for building a boat!",
+    "GET SAILS and GET LUMBER - you need them to build a raft/boat on the beach. The tool shed has more supplies.",
+    "GO SHED to find tools (shovel, hammer, wings). The crack in the rock may connect to the hilltop. Take the building materials.",
+    "GET SAILS, GET LUMBER. GO SHED for tools. GO CRACK to reach the hilltop. BUILD BOAT on the beach with these materials. WEST to hallway."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SAI",
+    "LUM"
+  ],
+  "danger": false,
+  "notes": "Underground cavern with boat-building materials: sails and precut lumber. Contains the tool shed entrance (room 15) and a crack in the rock connecting to the hilltop. WEST leads to the hallway (room 16). Take materials to beach to BUILD BOAT."
+}

@@ -1,0 +1,67 @@
+{
+  "room": 13,
+  "name": "shed full of radio equipment",
+  "description": "I'm in a shed full of radio equipment",
+  "items_start": [
+    "Antenna lead"
+  ],
+  "exits": {
+    "N": 7
+  },
+  "hints": [
+    "The radio shed is critical for the endgame. There's an antenna lead and radio equipment here.",
+    "You need to connect a ham radio and battery to the antenna, then transmit the deactivation code.",
+    "CONNECT ANTENNA with the ham radio. You need a battery connected to power it. PUSH SWITCH to activate. Then TRANSMIT YOYODYNE to deactivate the bomb and win.",
+    "Full sequence: bring ham radio from lifeguard shack, CONNECT ANTENNA, attach battery, PUSH SWITCH, then TRANSMIT YOYODYNE. NORTH returns to Hickory Ave."
+  ],
+  "key_actions": [
+    "TRAN WARF",
+    "TRAN YOYO",
+    "CONN ANTE",
+    "PUSH SWIT"
+  ],
+  "action_details": [
+    {
+      "command": "TRAN WARF",
+      "needs": [],
+      "effects": []
+    },
+    {
+      "command": "TRAN YOYO",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Bomb acknowledges code",
+        "Message: The earth is safe again.",
+        "Look around"
+      ]
+    },
+    {
+      "command": "CONN ANTE",
+      "needs": [
+        "Small Ham radio (need access)"
+      ],
+      "effects": [
+        "Set flag 14",
+        "Auto-DROP item",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "PUSH SWIT",
+      "needs": [
+        "Battery attached to radio (must be in room)"
+      ],
+      "effects": [
+        "Message: To transmit say `TRANSMIT something`"
+      ]
+    }
+  ],
+  "items_needed": [
+    "Small Ham radio",
+    "Battery"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Radio equipment shed - WINNING LOCATION. Connect the ham radio to the antenna lead, power with battery, PUSH SWITCH, then TRANSMIT YOYODYNE to deactivate the bomb and save the earth. TRANSMIT WARFIN does nothing useful. NORTH returns to Hickory Ave (room 7)."
+}

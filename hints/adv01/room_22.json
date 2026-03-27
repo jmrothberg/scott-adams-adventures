@@ -1,0 +1,24 @@
+{
+  "room": 22,
+  "name": "throne room",
+  "description": "I'm in a throne room",
+  "items_start": [
+    "*GOLD CROWN*"
+  ],
+  "exits": {
+    "W": 21
+  },
+  "hints": [
+    "There is a treasure here. Take it and head back the way you came.",
+    "GET CROWN - it is one of the 13 treasures. Go WEST to return to the ledge.",
+    "GET CROWN then go WEST back to the ledge. JUMP across the chasm and retrace your steps to bring it to the stump."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "CRO"
+  ],
+  "danger": false,
+  "notes": "Contains the gold crown treasure. Only accessible after feeding the bear on the ledge (room 21). WEST returns to the ledge."
+}

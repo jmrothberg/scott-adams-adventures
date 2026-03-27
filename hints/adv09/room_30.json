@@ -1,0 +1,25 @@
+{
+  "room": 30,
+  "name": "I'm flat on my back in a manure pile",
+  "description": "I'm flat on my back in a manure pile",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "GET UP"
+  ],
+  "action_details": [
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 5"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

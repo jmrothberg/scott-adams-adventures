@@ -1,0 +1,26 @@
+{
+  "room": 12,
+  "name": "dungeon cell",
+  "description": "I'm in a dungeon cell",
+  "items_start": [
+    "*STAR",
+    "Oak door",
+    "Air shaft"
+  ],
+  "exits": {},
+  "hints": [
+    "A dungeon cell with a star, an oak door, and an air shaft. You need to escape this cell.",
+    "GET STAR. The oak door is locked. The air shaft may be an escape route. Try the permeability spell on the door.",
+    "Use the permeability spell to pass through the oak door. The air shaft connects to the fountain area. GET STAR first."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "PERME"
+  ],
+  "items_available": [
+    "STAR"
+  ],
+  "danger": false,
+  "notes": "Dungeon cell with a *STAR*, locked oak door, and air shaft. The permeability spell allows passing through the door. The air shaft connects to the fountain system. Must escape through one of these routes."
+}

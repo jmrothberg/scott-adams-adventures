@@ -1,0 +1,24 @@
+{
+  "room": 11,
+  "name": "hall inside the castle",
+  "description": "I'm in a hall inside the castle",
+  "items_start": [],
+  "exits": {
+    "N": 8,
+    "S": 2,
+    "E": 9,
+    "W": 12
+  },
+  "hints": [
+    "A central hall connecting many parts of the castle. Explore in all directions.",
+    "NORTH to the bathroom, SOUTH to the bedroom, EAST to outside the castle, WEST to the kitchen.",
+    "This is the main hub. N=bathroom (room 8, mirror/watch), S=bedroom (room 2), E=outside castle (room 9, graveyard access), W=kitchen (room 12, dumb-waiter).",
+    "Central hub room. N=bathroom (room 8: mirror, watch, toilet). S=bedroom (room 2: window to ledge). E=outside (room 9: graveyard, dark window clue). W=kitchen (room 12: dumb-waiter to other floors)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Central hall of the castle, the main hub connecting four areas: NORTH to bathroom (room 8), SOUTH to bedroom (room 2), EAST to outside the castle (room 9), and WEST to the kitchen (room 12). No items here but essential for navigation between all major areas of the castle."
+}

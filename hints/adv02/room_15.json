@@ -1,0 +1,29 @@
+{
+  "room": 15,
+  "name": "tool shed",
+  "description": "I'm in a tool shed",
+  "items_start": [
+    "Claw hammer",
+    "Shovel",
+    "Water wings"
+  ],
+  "exits": {
+    "N": 17
+  },
+  "hints": [
+    "Three useful tools here. Take what you need.",
+    "The shovel is essential for digging up buried treasure. The hammer has uses too. Water wings help in water.",
+    "GET SHOVEL (critical for treasure hunting on Treasure Island). GET HAMMER for nails/boards. GET WINGS for swimming safely.",
+    "GET SHOVEL is most important - needed to DIG on Treasure Island. The hammer and water wings have situational uses. NORTH returns to the cavern."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "HAM",
+    "SHO",
+    "WIN"
+  ],
+  "danger": false,
+  "notes": "Tool shed inside the underground cavern. Contains the essential shovel (for digging treasure), claw hammer, and water wings. NORTH returns to the large cavern (room 17)."
+}

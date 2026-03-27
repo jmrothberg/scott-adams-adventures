@@ -1,0 +1,24 @@
+{
+  "room": 11,
+  "name": "pit",
+  "description": "I'm in a pit",
+  "items_start": [
+    "Mean and hungry looking crocodiles",
+    "Locked door"
+  ],
+  "exits": {
+    "U": 7
+  },
+  "hints": [
+    "There are crocodiles and a locked door here. Both need to be dealt with.",
+    "The crocodiles are hungry - maybe feeding them would help. You need keys to unlock the door.",
+    "Feed the crackers to the crocodiles to distract them. Use keys from the duffel bag to unlock the door.",
+    "Give crackers to crocodiles, UNLOCK DOOR with keys. The door leads to the underground cavern with building materials."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Sack of crackers", "Keys"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Crocodile pit at the bottom of the cave maze. Crocodiles must be fed (crackers) to be safe. The locked door requires keys (from duffel bag in attic). Door leads to the underground passages and cavern."
+}

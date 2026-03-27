@@ -1,0 +1,17 @@
+{
+  "room": 24,
+  "name": "I think I'm in real trouble now. There's a fellow here with\na pitchfork and pointed tail. ...Oh Hell!",
+  "description": "I think I'm in real trouble now. There's a fellow here with\na pitchfork and pointed tail. ...Oh Hell!",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are dead and in Hell. This is a death room with no exits.",
+    "You should not be here. Restore a saved game or restart. Avoid falling into the bottomless pit or dying elsewhere."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death room - Hell. No exits. Reached by falling down the bottomless hole (room 30 going DOWN) or other fatal actions. Game over if you end up here without being sent to Limbo (room 33)."
+}

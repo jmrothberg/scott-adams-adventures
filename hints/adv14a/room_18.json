@@ -1,0 +1,58 @@
+{
+  "room": 18,
+  "name": "I'm in an engine room",
+  "description": "I'm in an engine room",
+  "items_start": [],
+  "exits": {
+    "U": 2
+  },
+  "hints": [
+    "The engine room below the cabin. The engine can be started and climbed on.",
+    "GO ENGINE to climb on top of it and search for hidden items. Be careful about starting or stopping the engine.",
+    "GO ENGINE climbs on top (room 17). START ENGINE needs a working battery. STOP ENGINE is FATAL! UP returns to the cabin (room 2).",
+    "Climb the engine (GO ENGINE) to search it. Never STOP ENGINE - it kills you. START ENGINE only works with a charged battery. UP goes to the cabin."
+  ],
+  "key_actions": [
+    "STAR ENGI",
+    "STAR ENGI",
+    "GO ENGI",
+    "STOP ENGI"
+  ],
+  "action_details": [
+    {
+      "command": "STAR ENGI",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I can't,",
+        "Message: I see",
+        "Message: battery's dead!"
+      ]
+    },
+    {
+      "command": "STAR ENGI",
+      "needs": [],
+      "effects": []
+    },
+    {
+      "command": "GO ENGI",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 17"
+      ]
+    },
+    {
+      "command": "STOP ENGI",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Engine room below the cabin. GO ENGINE climbs on top (room 17). START ENGINE initially fails due to dead battery - need to charge it first. STOP ENGINE is FATAL. UP returns to cabin (room 2). The battery needs to be recharged before the engine can start."
+}

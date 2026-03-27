@@ -1,0 +1,42 @@
+{
+  "room": 5,
+  "name": "I am at a Persian bay",
+  "description": "I am at a Persian bay",
+  "items_start": [
+    "Large ship",
+    "Merchant",
+    "Ocean"
+  ],
+  "exits": {
+    "E": 3
+  },
+  "hints": [
+    "The Persian bay where your ship is docked. This is your gateway to the sea voyage.",
+    "GO SHIP to board your vessel and begin sailing. Make sure you have the compass and telescope first!",
+    "Board the ship (GO SHIP), then RAISE ANCHOR and SAIL with compass directions to navigate. EAST returns to the city for more supplies."
+  ],
+  "key_actions": [
+    "GIVE BAG"
+  ],
+  "action_details": [
+    {
+      "command": "GIVE BAG",
+      "needs": [
+        "Bag of gold (need access)"
+      ],
+      "effects": [
+        "Destroy item 53",
+        "Message: Surprised merchant grabs it and runs like a thief!",
+        "Set flag 2",
+        "Clear flag 30"
+      ]
+    }
+  ],
+  "items_needed": [
+    "COMP",
+    "TELE"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "The Persian bay with your ship. GO SHIP to board (takes you to room 6, the ship deck). A merchant is here too. East returns to the city (room 3). Make sure to collect compass, telescope, and other supplies before sailing."
+}

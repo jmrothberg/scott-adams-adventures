@@ -1,0 +1,48 @@
+{
+  "room": 15,
+  "name": "large fireplace",
+  "description": "I'm in a large fireplace",
+  "items_start": [
+    "Closed Flue",
+    "Dusty Idol"
+  ],
+  "exits": {
+    "S": 10
+  },
+  "hints": [
+    "There is a dusty idol and a closed flue here. Both are important.",
+    "GET IDOL and OPEN FLUE. The idol needs to be cleaned (dusted) to make it glow. The flue opens the chimney.",
+    "DUST IDOL or CLEAN IDOL to make it glow brightly - needed for the final ritual. OPEN FLUE then GO FLUE to climb the chimney.",
+    "GET IDOL, DUST IDOL (makes it glow - needed for counter-spell). OPEN FLUE, GO FLUE to climb chimney. SOUTH returns to ballroom."
+  ],
+  "key_actions": [
+    "GO FLU",
+    "LIS"
+  ],
+  "action_details": [
+    {
+      "command": "GO FLU",
+      "needs": [
+        "Open Flue (must be in room)"
+      ],
+      "effects": [
+        "Move to room 14",
+        "Show score"
+      ]
+    },
+    {
+      "command": "LIS",
+      "needs": [],
+      "effects": [
+        "Message: I hear strange sounds, as if someone were moaning.",
+        "Message: Its very faint."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "IDO"
+  ],
+  "danger": false,
+  "notes": "Inside the fireplace with the dusty idol (dust it to make it glow - essential for the final ritual) and a closed flue (open it to access the chimney). LISTEN reveals faint moaning from above. SOUTH returns to ballroom."
+}

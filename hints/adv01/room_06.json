@@ -1,0 +1,20 @@
+{
+  "room": 6,
+  "name": "long down sloping hall",
+  "description": "I'm in a long down sloping hall",
+  "items_start": [],
+  "exits": {
+    "U": 5,
+    "D": 7
+  },
+  "hints": [
+    "This is a connector passage. Head DOWN to reach the large cavern, or UP to go back toward the surface.",
+    "Go DOWN to continue exploring the underground cavern system."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "A simple connector hallway between the semi-dark hole (room 5) above and the large cavern (room 7) below."
+}

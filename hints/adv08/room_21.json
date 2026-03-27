@@ -1,0 +1,81 @@
+{
+  "room": 21,
+  "name": "throne room",
+  "description": "I'm in a throne room",
+  "items_start": [
+    "Iron statue of Pharoah seated on throne",
+    "Chain hanging from ceiling",
+    "Chest",
+    "Wall Mural"
+  ],
+  "exits": {
+    "D": 20
+  },
+  "hints": [],
+  "key_actions": [
+    "BUR",
+    "UNL CHE",
+    "UNL CHE",
+    "REA MUR",
+    "PUL CHA",
+    "GO CHA",
+    "LOO MUR"
+  ],
+  "action_details": [
+    {
+      "command": "BUR",
+      "needs": [],
+      "effects": [
+        "Message: .",
+        "Destroy item 56"
+      ]
+    },
+    {
+      "command": "UNL CHE",
+      "needs": [],
+      "effects": []
+    },
+    {
+      "command": "UNL CHE",
+      "needs": [],
+      "effects": [
+        "Message: Iron Statue",
+        "Message: won't let me"
+      ]
+    },
+    {
+      "command": "REA MUR",
+      "needs": [],
+      "effects": [
+        "Message: Mural: Seek ye well the HEART of Iron."
+      ]
+    },
+    {
+      "command": "PUL CHA",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I see something."
+      ]
+    },
+    {
+      "command": "GO CHA",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I see something."
+      ]
+    },
+    {
+      "command": "LOO MUR",
+      "needs": [],
+      "effects": [
+        "Message: Mural: Seek ye well the HEART of Iron."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

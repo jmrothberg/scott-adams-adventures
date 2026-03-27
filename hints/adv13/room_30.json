@@ -1,0 +1,26 @@
+{
+  "room": 30,
+  "name": "wizard's workshop",
+  "description": "I'm in a wizard's workshop",
+  "items_start": [
+    "*STAR",
+    "Firefly spell"
+  ],
+  "exits": {
+    "W": 29
+  },
+  "hints": [
+    "The wizard's workshop contains a star and the Firefly spell. Both are important.",
+    "GET STAR and GET FIREFLY spell. The Firefly spell provides light in dark areas.",
+    "Take both items. The Firefly spell is essential for illuminating dark passages. WEST leads to the dragon's lair."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "STAR",
+    "FIREF"
+  ],
+  "danger": false,
+  "notes": "The wizard's workshop with a *STAR* and the Firefly spell (provides light). West leads to the dragon's lair (room 29). The Firefly spell is one of several useful spells in the castle."
+}

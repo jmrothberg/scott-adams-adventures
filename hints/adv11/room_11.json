@@ -1,0 +1,43 @@
+{
+  "room": 11,
+  "name": "metal room",
+  "description": "I'm in a metal room",
+  "items_start": [
+    "Control console",
+    "Treadmill",
+    "Large medicine ball",
+    "Freestanding punching bag"
+  ],
+  "exits": {
+    "N": 21
+  },
+  "hints": [
+    "This is an exercise room with alien fitness equipment. The treadmill, ball, and bag are all interactive.",
+    "Try using the treadmill - you can WALK or RUN on it. The medicine ball and punching bag can be taken.",
+    "GET BALL and GET BAG for useful items. GO TREADMILL or USE TREADMILL to get on it, then WALK and RUN to operate it. The treadmill sequence activates something important.",
+    "The treadmill puzzle requires specific actions: first RUN to reveal a T-shaped handle, then WALK to move it. Go NORTH to reach the main corridor."
+  ],
+  "key_actions": [
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "Force field (must be in room)"
+      ],
+      "effects": [
+        "Move to room 10",
+        "Auto-DROP item",
+        "Set flag 15"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "BALL",
+    "BAG"
+  ],
+  "danger": false,
+  "notes": "Exercise room with treadmill puzzle, medicine ball, and punching bag. The treadmill must be operated in a specific sequence (RUN then WALK) to reveal and move a T-shaped handle that activates ship systems. Going through the force field reaches room 10 but sets a flag. North exit leads to main corridor (room 21)."
+}

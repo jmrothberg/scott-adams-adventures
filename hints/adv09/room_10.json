@@ -1,0 +1,21 @@
+{
+  "room": 10,
+  "name": "ravine",
+  "description": "I'm in a ravine",
+  "items_start": [
+    "Sagebrush charcoal",
+    "Entrance to a mine"
+  ],
+  "exits": {
+    "U": 8
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "CHAR"
+  ],
+  "danger": false,
+  "notes": ""
+}

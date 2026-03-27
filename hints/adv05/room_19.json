@@ -1,0 +1,21 @@
+{
+  "room": 19,
+  "name": "Dark passage",
+  "description": "I'm in a Dark passage",
+  "items_start": [],
+  "exits": {
+    "N": 6,
+    "S": 10
+  },
+  "hints": [
+    "A dark passage connecting two important areas. You need light to navigate safely.",
+    "NORTH leads to the crypt where Dracula's coffin appears. SOUTH goes to the doorless room.",
+    "Go NORTH to reach the crypt (room 6). Go SOUTH to the doorless room (room 10). Bring a lit torch."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dark passage connecting the crypt (N/room 6) and the doorless room (S/room 10). Hidden behind Dracula's portrait. Light needed for safe navigation."
+}

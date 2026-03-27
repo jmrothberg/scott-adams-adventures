@@ -1,0 +1,18 @@
+{
+  "room": 32,
+  "name": "mountain trail",
+  "description": "I'm in a mountain trail",
+  "items_start": [
+    "Line shack"
+  ],
+  "exits": {
+    "E": 18
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

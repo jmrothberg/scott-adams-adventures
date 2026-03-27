@@ -1,0 +1,24 @@
+{
+  "room": 26,
+  "name": "damp cavern",
+  "description": "I'm in a damp cavern",
+  "items_start": [
+    "Hot lava stream"
+  ],
+  "exits": {
+    "U": 25
+  },
+  "hints": [
+    "A damp cavern with a hot lava stream. The lava can be crossed with the right protection.",
+    "The fire bricks from the courtyard may protect you from the lava. The lava stream connects to more areas.",
+    "Use fire bricks for protection and GO LAVA or cross the stream to reach the stone grotto (south) with a star and the Dizzy Dean spell."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "BRICK"
+  ],
+  "items_available": [],
+  "danger": true,
+  "notes": "Damp cavern with a hot lava stream. The lava stream (room 5) connects north to here and south to the stone grotto (room 27). Fire bricks provide protection when crossing. Up returns to the stone staircase (room 25)."
+}

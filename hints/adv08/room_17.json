@@ -1,0 +1,44 @@
+{
+  "room": 17,
+  "name": "sloping crawlway",
+  "description": "I'm in a sloping crawlway",
+  "items_start": [
+    "Starving rats"
+  ],
+  "exits": {
+    "N": 14
+  },
+  "hints": [],
+  "key_actions": [
+    "GO PAS",
+    "SHO RAT"
+  ],
+  "action_details": [
+    {
+      "command": "GO PAS",
+      "needs": [
+        "Passageway (must be in room)"
+      ],
+      "effects": [
+        "Move to room 16"
+      ]
+    },
+    {
+      "command": "SHO RAT",
+      "needs": [
+        "Starving rats (must be in room)"
+      ],
+      "effects": [
+        "Message: Missed...",
+        "Set flag 71",
+        "Message: Noise scares them off"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "RAT"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,31 @@
+{
+  "room": 27,
+  "name": "large metal room\nwith porcelain machinery",
+  "description": "I'm in a large metal room\nwith porcelain machinery",
+  "items_start": [],
+  "exits": {
+    "E": 23
+  },
+  "hints": [
+    "A room with unusual porcelain machinery. Examine it to understand what it is.",
+    "LOOK MACHINERY reveals this is a combined lavatory and mess hall - the aliens' version of a bathroom/cafeteria.",
+    "This is mainly a flavor/atmosphere room. Go EAST to return to the dormitory. The porcelain machinery is humorous - alien plumbing combined with food prep."
+  ],
+  "key_actions": [
+    "LOOK MACH"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK MACH",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: combined lavatory & mess hall! Reminds me of my\nold school's cafeteria! UGH!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Combined lavatory and mess hall with porcelain machinery. A humorous room - the narrator compares it to their old school cafeteria. East exit returns to dormitory (room 23). Mostly atmospheric, but searching carefully may reveal hidden items."
+}

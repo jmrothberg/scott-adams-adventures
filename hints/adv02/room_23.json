@@ -1,0 +1,46 @@
+{
+  "room": 23,
+  "name": "large barren field",
+  "description": "I'm in a large barren field",
+  "items_start": [
+    "Monastary"
+  ],
+  "exits": {
+    "W": 22
+  },
+  "hints": [
+    "There is a monastery here and the field itself may hide treasure. Try digging.",
+    "GO 30 to walk 30 paces as mentioned in a clue, then DIG. Also explore the monastery.",
+    "DIG with shovel to find treasure. GO MONASTERY to enter it - but beware of deadly snakes inside.",
+    "DIG here and after GO 30 for different treasure. GO MONASTERY requires the mongoose to survive the mamba snakes inside."
+  ],
+  "key_actions": [
+    "GO 30",
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "GO 30",
+      "needs": [],
+      "effects": [
+        "Set flag 7",
+        "Message: OK I walked off 30 paces."
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I found something!",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": ["Shovel", "Mongoose"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Barren field with monastery on Treasure Island. DIG for treasure. GO 30 (paces) then DIG for another treasure. GO MONASTERY enters the monastery (room 25) but deadly mamba snakes require the mongoose. WEST returns to the graveyard."
+}

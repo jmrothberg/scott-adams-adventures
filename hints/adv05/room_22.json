@@ -1,0 +1,17 @@
+{
+  "room": 22,
+  "name": "LOT OF TROUBLE! (And so Are you!)",
+  "description": "I'm in a LOT OF TROUBLE! (And so Are you!)",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are dead. This is the game-over room with no exits.",
+    "Restore a saved game or restart. Avoid jumping from the ledge and watch out for the Count at night."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death/game-over room. No exits. Reached by jumping from the ledge, getting caught by the Count at night without garlic, or other fatal actions."
+}

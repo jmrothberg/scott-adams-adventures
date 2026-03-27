@@ -1,0 +1,20 @@
+{
+  "room": 14,
+  "name": "cell",
+  "description": "I'm in a cell",
+  "items_start": [
+    "Hammer"
+  ],
+  "exits": {
+    "N": 13
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "HAMM"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,17 @@
+{
+  "room": 26,
+  "name": "Welcome to Never Never Land",
+  "description": "Welcome to Never Never Land",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are dead. This is the death/game-over room with no exits.",
+    "Restore a saved game or restart. Avoid dying next time by being more careful with the pirate ship and snakes."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death room - Never Never Land. No exits, game over. Reached by dying (jumping from ledge, snake bite without mongoose, sailing without proper setup, etc.)."
+}

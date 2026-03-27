@@ -1,0 +1,21 @@
+{
+  "room": 22,
+  "name": "Mine",
+  "description": "I'm in a Mine",
+  "items_start": [
+    "Unlit candle"
+  ],
+  "exits": {
+    "S": 23,
+    "U": 21
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "CAND"
+  ],
+  "danger": false,
+  "notes": ""
+}

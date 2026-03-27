@@ -1,0 +1,73 @@
+{
+  "room": 22,
+  "name": "I'm on top of the ride",
+  "description": "I'm on top of the ride",
+  "items_start": [],
+  "exits": {
+    "D": 7
+  },
+  "hints": [
+    "You're on top of the merry-go-round ride. There may be a rope above if conditions are right.",
+    "If there's a rope hanging from the ceiling, JUMP to grab it and reach the catwalk.",
+    "Without the rope, jumping while the ride is moving throws you off balance - dangerous!",
+    "Drop the trampoline here first (DROP TRAM), then JUMP to reach the rope and swing to the catwalk (room 33). D=back to horse (room 7)."
+  ],
+  "key_actions": [
+    "JUMP",
+    "GO ROPE",
+    "JUMP",
+    "LOOK UP",
+    "LOOK CEIL"
+  ],
+  "action_details": [
+    {
+      "command": "JUMP",
+      "needs": [
+        "Rope hanging from ceiling (must be in room)"
+      ],
+      "effects": [
+        "Message: Good thing this ropes not too long",
+        "Move to room 33"
+      ]
+    },
+    {
+      "command": "GO ROPE",
+      "needs": [
+        "Rope hanging from ceiling (must be in room)"
+      ],
+      "effects": [
+        "Message: How?",
+        "Message: Too high for me"
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: Moving ride throws me off balance",
+        "Message: I fell",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "LOOK UP",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "LOOK CEIL",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": ["TRAM"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Top of the merry-go-round. Need the trampoline and rope to safely JUMP to the catwalk (room 33). Without the rope, jumping is fatal. D=horse (room 7)."
+}

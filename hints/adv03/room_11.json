@@ -1,0 +1,56 @@
+{
+  "room": 11,
+  "name": "blue room",
+  "description": "I'm in a blue room",
+  "items_start": [
+    "Blue door with tv camera over it"
+  ],
+  "exits": {
+    "S": 8
+  },
+  "hints": [
+    "The blue door has the highest security. Only one clearance level will work.",
+    "Only security-level clearance passes this blue door. Visitor and maintenance badges are rejected.",
+    "SHOW PICTURE with the security badge. This is the highest security area leading to the control room complex.",
+    "SHOW PICTURE with security badge only. Leads to the blue anteroom (room 15) and the control room area."
+  ],
+  "key_actions": [
+    "SHO PIC",
+    "SHO PIC",
+    "KNO"
+  ],
+  "action_details": [
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Picture of me stamped -security-"
+      ],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `ACCEPTED`",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 15"
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Authorization INSUFFICIENT for access`\n"
+      ]
+    },
+    {
+      "command": "KNO",
+      "needs": [],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Show authorization please`\n"
+      ]
+    }
+  ],
+  "items_needed": ["Picture of me stamped -security-"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Blue security door - highest clearance required. Only security-level badge works. Leads to the blue anteroom (room 15) giving access to the control room, storage, and reactor core areas."
+}

@@ -1,0 +1,26 @@
+{
+  "room": 15,
+  "name": "Strange jungle",
+  "description": "I'm in a Strange jungle",
+  "items_start": [
+    "Centurion Slime Trees"
+  ],
+  "exits": {
+    "N": 15,
+    "S": 15,
+    "E": 21,
+    "W": 9
+  },
+  "hints": [
+    "You're in a strange jungle with Centurion Slime Trees.",
+    "North and South loop back here - the jungle is confusing.",
+    "The way EAST leads to the intergalactic zoo.",
+    "Go WEST to return to the grassy plain, EAST to reach the zoo."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Strange jungle with Slime Trees. N/S loop. E leads to zoo, W to grassy plain."
+}

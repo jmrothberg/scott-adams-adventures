@@ -1,0 +1,33 @@
+{
+  "room": 7,
+  "name": "I'm on Hickory Ave",
+  "description": "I'm on Hickory Ave",
+  "items_start": [
+    "Shed with antenna"
+  ],
+  "exits": {
+    "E": 3,
+    "W": 15
+  },
+  "hints": [
+    "Hickory Ave with a shed that has an antenna on it. The shed looks like it contains radio equipment.",
+    "GO SHED to enter the radio shed. The antenna is important for transmitting.",
+    "GO SHED enters the radio equipment shed (room 13) which is critical for the endgame transmission. EAST returns to Main & Hickory (room 3). WEST to the west cul-de-sac (room 15)."
+  ],
+  "key_actions": [
+    "GO SHED"
+  ],
+  "action_details": [
+    {
+      "command": "GO SHED",
+      "needs": [],
+      "effects": [
+        "Move to room 13"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hickory Ave with the antenna shed. GO SHED enters the radio equipment shed (room 13) - critical for endgame TRANSMIT YOYODYNE to deactivate the bomb. EAST to Main & Hickory (room 3). WEST to west cul-de-sac (room 15)."
+}

@@ -1,0 +1,20 @@
+{
+  "room": 19,
+  "name": "hollow tree sign says drop\nstars here",
+  "description": "I'm in a hollow tree sign says drop\nstars here",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "This is the treasure room! The sign says to drop all 13 stars here.",
+    "DROP all your *STAR* items here to score. You need all 13 stars to win.",
+    "Collect all 13 stars from throughout the castle and drop them here. SCORE to check your progress."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "STAR"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "The treasure room (room 19) - a hollow tree where all 13 stars must be dropped to win. The sign says 'drop stars here.' SCORE to check how many you have deposited. This is the goal of the entire game."
+}

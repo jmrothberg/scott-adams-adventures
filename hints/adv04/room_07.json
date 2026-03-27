@@ -1,0 +1,25 @@
+{
+  "room": 7,
+  "name": "room in the castle",
+  "description": "I'm in a room in the castle",
+  "items_start": [
+    "Cast iron pot"
+  ],
+  "exits": {
+    "E": 17,
+    "W": 5
+  },
+  "hints": [
+    "There is a cast iron pot here. It may be useful for mixing things.",
+    "GET POT - you may need it for mixing chemicals in the lab.",
+    "The pot can be used with chemicals from the lab (EAST). WEST returns to the animal heads room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "POT"
+  ],
+  "danger": false,
+  "notes": "Room with a cast iron pot useful for mixing chemicals. EAST leads to the lab (room 17). WEST returns to the animal heads room (room 5)."
+}

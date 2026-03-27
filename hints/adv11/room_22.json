@@ -1,0 +1,25 @@
+{
+  "room": 22,
+  "name": "small metal cabin",
+  "description": "I'm in a small metal cabin",
+  "items_start": [
+    "Soft platform",
+    "Small plastic wafer"
+  ],
+  "exits": {
+    "S": 21
+  },
+  "hints": [
+    "A living quarters with a bed-like platform and a plastic wafer. The wafer is an important item.",
+    "GET WAFER - this small plastic wafer is likely a key card or data storage device used elsewhere.",
+    "The wafer may be used in a console, slot, or reader elsewhere on the ship. The soft platform is a sleeping surface. Go SOUTH to return to the main corridor."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "WAFE"
+  ],
+  "danger": false,
+  "notes": "Crew cabin with a sleeping platform and a small plastic wafer. The wafer is a key item - likely a key card or data chip used in control consoles or security readers elsewhere on the ship. South exit returns to the main corridor (room 21)."
+}

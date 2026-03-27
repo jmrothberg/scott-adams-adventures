@@ -1,0 +1,20 @@
+{
+  "room": 13,
+  "name": "red metal room",
+  "description": "I'm in a red metal room",
+  "items_start": [],
+  "exits": {
+    "W": 12
+  },
+  "hints": [
+    "An empty red metal room. There may be hidden features or items that appear under certain conditions.",
+    "Search carefully - LOOK around, FEEL WALLS. Some items only appear after certain puzzles are solved.",
+    "If nothing is here, you may need to activate something elsewhere first. Return WEST to the console room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dead-end red metal room. Only exit is west to room 12. May contain items or features that appear after certain conditions are met elsewhere in the ship."
+}

@@ -1,0 +1,23 @@
+{
+  "room": 11,
+  "name": "sea",
+  "description": "I'm in a sea",
+  "items_start": [
+    "Strange current"
+  ],
+  "exits": {},
+  "hints": [
+    "You're in the open sea with a strange current. There are no obvious exits - the current controls where you go.",
+    "The current carries you around. You need to DIVE or SWIM to navigate. Having the face mask helps you see underwater.",
+    "DIVE DOWN or SWIM DOWN to go deeper. The current may carry you to different locations depending on what flags are set. You need the face mask to explore underwater safely.",
+    "With the face mask, DIVE to reach undersea areas. The strange current connects various water locations. Items get dropped when you enter the sea, so plan carefully."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "Face mask"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Open sea area reached by GO SEA from dock (3), deck (4), rocky beach (15), catwalk (19), or smuggler's hold (13). A strange current controls movement. Items are auto-dropped when entering. The face mask is essential for underwater exploration. DIVE goes deeper toward undersea areas."
+}

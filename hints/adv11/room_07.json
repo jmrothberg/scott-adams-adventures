@@ -1,0 +1,20 @@
+{
+  "room": 7,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [],
+  "exits": {
+    "N": 9,
+    "W": 6
+  },
+  "hints": [
+    "This tunnel leads NORTH toward an area with a flickering force field, or WEST back to the junction.",
+    "Go NORTH to find a weakened force field that can be passed through safely - unlike the deadly ones elsewhere."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Tunnel connecting room 6 (west, junction) to room 9 (north, flickering force field). Key route to reach the lifeboat hangar area."
+}

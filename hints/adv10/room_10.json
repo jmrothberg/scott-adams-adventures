@@ -1,0 +1,16 @@
+{
+  "room": 10,
+  "name": "I'm on top of the head, offshore I see an atoll",
+  "description": "I'm on top of the head, offshore I see an atoll",
+  "items_start": [],
+  "exits": {
+    "D": 1
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

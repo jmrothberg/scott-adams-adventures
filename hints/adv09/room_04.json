@@ -1,0 +1,19 @@
+{
+  "room": 4,
+  "name": "Ghost Town",
+  "description": "I'm in a Ghost Town",
+  "items_start": [
+    "Stable"
+  ],
+  "exits": {
+    "E": 3,
+    "W": 6
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

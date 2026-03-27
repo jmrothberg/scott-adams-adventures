@@ -1,0 +1,50 @@
+{
+  "room": 35,
+  "name": "Hall with threadbare Carpeting on the floor",
+  "description": "I'm in a Hall with threadbare Carpeting on the floor",
+  "items_start": [],
+  "exits": {
+    "N": 37,
+    "S": 2,
+    "E": 38,
+    "W": 36
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK WEST",
+    "AT GEM",
+    "AT BIO"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK WEST",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: Bio Gem!"
+      ]
+    },
+    {
+      "command": "AT GEM",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I've got",
+        "Message: it"
+      ]
+    },
+    {
+      "command": "AT BIO",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I've got",
+        "Message: it"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

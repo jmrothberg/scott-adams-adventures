@@ -1,0 +1,55 @@
+{
+  "room": 1,
+  "name": "one man scoutship",
+  "description": "I'm in a one man scoutship",
+  "items_start": [
+    "Control console",
+    "Closed door"
+  ],
+  "exits": {
+    "D": 7
+  },
+  "hints": [
+    "Look around the ship carefully. There are controls and a door.",
+    "The red button on the console does something important.",
+    "You need to open the door to leave the ship, but how? Try PUSH RED.",
+    "PUSH RED to cycle the airlock. Then go DOWN to the storage hold to gear up."
+  ],
+  "key_actions": [
+    "PUSH RED",
+    "SHOO",
+    "OPEN DOOR"
+  ],
+  "action_details": [
+    {
+      "command": "PUSH RED",
+      "needs": [],
+      "effects": [
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "SHOO",
+      "needs": [
+        "Phaser"
+      ],
+      "effects": [
+        "Message: I fire the Phaser,",
+        "Move to room 35",
+        "Message: I ruined the ship!",
+        "Look around"
+      ]
+    },
+    {
+      "command": "OPEN DOOR",
+      "needs": [],
+      "effects": [
+        "Message: HOW?"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Starting room. Your crashed scoutship. Get supplies from the hold below before venturing outside."
+}

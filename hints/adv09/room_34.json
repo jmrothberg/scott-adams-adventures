@@ -1,0 +1,20 @@
+{
+  "room": 34,
+  "name": "root cellar",
+  "description": "I'm in a root cellar",
+  "items_start": [
+    "*PELTS*"
+  ],
+  "exits": {
+    "U": 33
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "PELT"
+  ],
+  "danger": false,
+  "notes": ""
+}

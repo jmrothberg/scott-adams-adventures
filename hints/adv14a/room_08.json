@@ -1,0 +1,44 @@
+{
+  "room": 8,
+  "name": "cavern",
+  "description": "I'm in a cavern",
+  "items_start": [
+    "Toolshed"
+  ],
+  "exits": {
+    "W": 14
+  },
+  "hints": [
+    "A cavern with a toolshed and a crack leading back up. Be very careful about going back through the crack.",
+    "GO SHED to enter the toolshed for useful items. DO NOT GO CRACK - it's fatal from this side!",
+    "GO SHED enters the tool shed (room 9) which has a hammer. GO CRACK from here is DEATH - the pirate catches you. WEST goes to the hall (room 14).",
+    "Visit the toolshed for the hammer, then go WEST to explore the hall. Never try to return through the crack - it kills you."
+  ],
+  "key_actions": [
+    "GO CRAC",
+    "GO SHED"
+  ],
+  "action_details": [
+    {
+      "command": "GO CRAC",
+      "needs": [],
+      "effects": [
+        "Move to room 7",
+        "DEATH",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "GO SHED",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 9"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Cavern with a toolshed and a crack back to the hilltop. GO CRACK is FATAL (double death flag) - the sleeping pirate wakes and kills you. GO SHED enters the tool shed (room 9). WEST goes to the hall (room 14). Once in the cavern, you must find another way out."
+}

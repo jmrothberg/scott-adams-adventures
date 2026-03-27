@@ -1,0 +1,35 @@
+{
+  "room": 4,
+  "name": "field",
+  "description": "I'm in a field",
+  "items_start": [
+    "Large dome",
+    "*Gem"
+  ],
+  "exits": {
+    "N": 17,
+    "S": 17,
+    "E": 17,
+    "W": 17
+  },
+  "hints": [],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

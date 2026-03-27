@@ -1,0 +1,86 @@
+{
+  "room": 18,
+  "name": "I'm floating in the Sky",
+  "description": "I'm floating in the Sky",
+  "items_start": [],
+  "exits": {
+    "N": 19,
+    "S": 19,
+    "E": 17,
+    "W": 19
+  },
+  "hints": [],
+  "key_actions": [
+    "FEEL NORT",
+    "FEEL SOUT",
+    "FEEL WEST",
+    "FEEL EAST",
+    "FEEL UP",
+    "FEEL DOWN",
+    "FEEL AROU"
+  ],
+  "action_details": [
+    {
+      "command": "FEEL NORT",
+      "needs": [],
+      "effects": [
+        "Message: I feel",
+        "Message: a door. I enter.",
+        "Move to room 21"
+      ]
+    },
+    {
+      "command": "FEEL SOUT",
+      "needs": [],
+      "effects": [
+        "Message: I feel",
+        "Message: a door. I enter.",
+        "Move to room 23"
+      ]
+    },
+    {
+      "command": "FEEL WEST",
+      "needs": [],
+      "effects": [
+        "Message: I feel",
+        "Message: nothing special"
+      ]
+    },
+    {
+      "command": "FEEL EAST",
+      "needs": [],
+      "effects": [
+        "Message: I feel",
+        "Message: nothing special"
+      ]
+    },
+    {
+      "command": "FEEL UP",
+      "needs": [],
+      "effects": [
+        "Message: I feel",
+        "Message: nothing special"
+      ]
+    },
+    {
+      "command": "FEEL DOWN",
+      "needs": [],
+      "effects": [
+        "Message: I feel",
+        "Message: the floor in that direction."
+      ]
+    },
+    {
+      "command": "FEEL AROU",
+      "needs": [],
+      "effects": [
+        "Message: I feel",
+        "Message: the floor in that direction."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

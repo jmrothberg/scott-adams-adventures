@@ -1,0 +1,25 @@
+{
+  "room": 12,
+  "name": "maze of pits",
+  "description": "I'm in a maze of pits",
+  "items_start": [
+    "Sign here says `Opposite of LIGHT is UNLIGHT`"
+  ],
+  "exits": {
+    "N": 13,
+    "S": 15,
+    "E": 15,
+    "D": 13
+  },
+  "hints": [
+    "The sign gives a clue about a command you can use. This is a confusing maze - map it carefully.",
+    "UNLIGHT means you can turn off your lamp to conserve fuel. The maze has 6 rooms (12-17).",
+    "To navigate the maze: from here, go NORTH or DOWN to room 13, then WEST to room 14. The treasure (Persian Rug) is in room 17."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Old fashioned brass lamp"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Entrance to the pit maze (rooms 12-17). The sign hints that UNLIGHT LAMP conserves fuel. This maze must be mapped carefully as directions are confusing. Reached from the large cavern (room 7) by going DOWN."
+}

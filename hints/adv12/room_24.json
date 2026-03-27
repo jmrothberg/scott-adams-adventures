@@ -1,0 +1,22 @@
+{
+  "room": 24,
+  "name": "hidden chamber",
+  "description": "I'm in a hidden chamber",
+  "items_start": [
+    "Small stone"
+  ],
+  "exits": {
+    "E": 23
+  },
+  "hints": [
+    "The innermost hidden chamber with a small stone. This stone may be important.",
+    "GET STONE - it may serve as a key, projectile, or puzzle piece elsewhere.",
+    "Take the small stone. Go EAST to return to the other hidden chamber."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Deepest hidden chamber in the temple with a small stone. The stone may be a quest item. East returns to the other hidden chamber (room 23)."
+}

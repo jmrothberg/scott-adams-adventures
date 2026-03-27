@@ -1,0 +1,45 @@
+{
+  "room": 3,
+  "name": "Persian city",
+  "description": "I'm in a Persian city",
+  "items_start": [
+    "Merchant",
+    "Compass",
+    "Telescope",
+    "Stone tablet"
+  ],
+  "exits": {
+    "N": 2,
+    "E": 4,
+    "W": 5
+  },
+  "hints": [
+    "A merchant here has important items for sale. The compass, telescope, and stone tablet are all crucial for your voyage.",
+    "GET COMPASS - essential for navigation. GET TELESCOPE - needed for spotting land from the crow's nest. The stone tablet has mystical inscriptions.",
+    "Take all three items: GET COMPASS, GET TELESCOPE, GET TABLET. The compass is required to sail, the telescope spots islands, and the tablet reveals magic words.",
+    "READ TABLET to learn magic words. GIVE BAG (of gold) to the merchant to buy items, but he just grabs it and runs. Take items freely instead."
+  ],
+  "key_actions": [
+    "GIVE BAG"
+  ],
+  "action_details": [
+    {
+      "command": "GIVE BAG",
+      "needs": [
+        "Bag of gold (need access)"
+      ],
+      "effects": [
+        "Destroy item 53",
+        "Message: Surprised merchant grabs it and runs like a thief!",
+        "Set flag 6"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "COMP",
+    "TELE"
+  ],
+  "danger": false,
+  "notes": "Key merchant area with three essential items: compass (required for sailing), telescope (needed in crow's nest to spot land), and stone tablet (contains magic word SUN). Giving a bag of gold to the merchant causes him to grab it and run. Take items directly instead."
+}

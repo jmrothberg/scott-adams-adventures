@@ -1,0 +1,23 @@
+{
+  "room": 12,
+  "name": "red metal room",
+  "description": "I'm in a red metal room",
+  "items_start": [
+    "Control console"
+  ],
+  "exits": {
+    "S": 19,
+    "E": 13
+  },
+  "hints": [
+    "A red metal room with a control console. The red coloring distinguishes this area from the regular metal rooms.",
+    "Examine the control console carefully. It may have buttons, dials, or displays to interact with.",
+    "PUSH BUTTON or USE CONSOLE to interact with the controls. Go EAST to explore the adjacent red room, or SOUTH to return to the tunnel."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Red metal room with control console. Part of a distinct section of the ship. South leads to tunnel (room 19), east leads to another red room (room 13). The console here may control ship systems."
+}

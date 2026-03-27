@@ -1,0 +1,18 @@
+{
+  "room": 14,
+  "name": "cramped metal area",
+  "description": "I'm in a cramped metal area",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are in a cramped space with no obvious exits. Look for hidden passages or ways to escape.",
+    "This may be inside something - a vent, crawlspace, or compartment. Try LOOK, FEEL, or examine your surroundings.",
+    "You may need to CRAWL, PUSH, or find a hidden mechanism to exit this confined space."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Cramped metal area with no listed exits. The player must find a hidden way out. This may be accessed by crawling into machinery or compartments elsewhere in the ship."
+}

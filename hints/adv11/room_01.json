@@ -1,0 +1,34 @@
+{
+  "room": 1,
+  "name": "small metal room",
+  "description": "I'm in a small metal room",
+  "items_start": [
+    "Force field"
+  ],
+  "exits": {},
+  "hints": [
+    "You are in an alien complex. The force field is significant - examine your surroundings carefully.",
+    "The force field may be the only way out. You need to interact with it, but be careful.",
+    "GO FIELD to pass through the force field into the next area. This will set you on the path through the alien ship."
+  ],
+  "key_actions": [
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "Force field (must be in room)"
+      ],
+      "effects": [
+        "Move to room 2",
+        "Auto-DROP item",
+        "Set flag 2"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Small metal room in the alien complex. Going through the force field leads to room 2 (metal room with control console). This is an early room in the alien ship."
+}

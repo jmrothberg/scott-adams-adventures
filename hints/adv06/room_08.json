@@ -1,0 +1,26 @@
+{
+  "room": 8,
+  "name": "I'm on a small planetoid",
+  "description": "I'm on a small planetoid",
+  "items_start": [
+    "Cave"
+  ],
+  "exits": {
+    "N": 4,
+    "S": 5,
+    "E": 5,
+    "W": 4
+  },
+  "hints": [
+    "You're on the planetoid surface near a cave entrance.",
+    "The cave leads underground - GO CAVE to enter.",
+    "Explore the surface too - there are areas in all directions.",
+    "The cave connects to the large cavern below."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Planetoid surface with cave entrance. Central hub for surface exploration."
+}

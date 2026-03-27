@@ -1,0 +1,25 @@
+{
+  "room": 13,
+  "name": "I'm on a small island",
+  "description": "I'm on a small island",
+  "items_start": [
+    "Skeleton"
+  ],
+  "exits": {
+    "N": 14,
+    "W": 18
+  },
+  "hints": [
+    "A small island with a skeleton - the remains of a previous explorer. Examine it carefully.",
+    "GET SKELETON or EXAM SKELETON for clues. Go NORTH for a grass hut and mountain, WEST for more island to explore.",
+    "The skeleton may have items on it. NORTH leads to the mountain and hut area (room 14), WEST to another part of the island with a shovel (room 18)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SKEL"
+  ],
+  "danger": false,
+  "notes": "Southern part of a small island with a skeleton. North leads to the hut/mountain area (room 14), west to another beach area with a shovel (room 18). The skeleton can be taken as an item."
+}

@@ -1,0 +1,20 @@
+{
+  "room": 14,
+  "name": "round altar room",
+  "description": "I'm in a round altar room",
+  "items_start": [
+    "Blood-stained altar"
+  ],
+  "exits": {
+    "N": 13,
+    "S": 17,
+    "E": 15
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

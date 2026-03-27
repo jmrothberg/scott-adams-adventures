@@ -1,0 +1,225 @@
+{
+  "game": "adv01",
+  "title": "Adventureland",
+  "author": "Scott Adams",
+  "year": 1978,
+  "difficulty": "Beginner",
+  "objective": "Collect all 13 treasures and store them in the hollow stump.",
+  "num_rooms": 33,
+  "num_treasures": 13,
+  "treasure_room": 3,
+  "start_room": 11,
+  "max_carry": 6,
+  "light_time": 125,
+  "magic_words": [
+    {"word": "BUNYON", "effect": "Summon Paul Bunyon to chop trees when axe is present in meadow"},
+    {"word": "AWAY", "effect": "Activates the magic Persian Rug (flying carpet) to teleport to the meadow"},
+    {"word": "FEE FIE FOE FOO", "effect": "Used near golden eggs"},
+    {"word": "UNLIGHT", "effect": "Turns off the lamp to conserve fuel (opposite of LIGHT)"}
+  ],
+  "key_mechanics": [
+    "Treasures are marked with *asterisks* in their names",
+    "Drop all treasures in the hollow stump (room 3) and SAY SCORE to check progress",
+    "The brass lamp has limited fuel (125 turns) - UNLIGHT it when not in dark areas",
+    "You can only carry 6 items at a time",
+    "The swamp gas requires an empty container (wine bladder) to collect",
+    "The flint & steel is needed to light the lamp and ignite swamp gas",
+    "The mud from the swamp calms the bees guarding the Royal Honey",
+    "The golden net is needed to catch the golden fish at the lake",
+    "Quicksand bog (room 26) has no normal exits - must SWIM out with minimal inventory",
+    "Limbo (room 33) gives one chance to live again - go EAST to return to the forest",
+    "The Persian Rug is both a treasure and a magic carpet (SAY AWAY to fly)",
+    "Water poured on lava creates fire bricks",
+    "The bear on the ledge must be fed honey before entering the throne room"
+  ],
+  "treasures": [
+    {
+      "desc": "Glowing *FIRESTONE*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Pot of RUBIES*",
+      "start_room": 4
+    },
+    {
+      "desc": "*GOLDEN FISH*",
+      "start_room": 10
+    },
+    {
+      "desc": "Sign `Leave *TREASURES* here, then say: SCORE`",
+      "start_room": 3
+    },
+    {
+      "desc": "*GOLDEN NET*",
+      "start_room": 18
+    },
+    {
+      "desc": "*ROYAL HONEY*",
+      "start_room": 8
+    },
+    {
+      "desc": "*Thick PERSIAN RUG*",
+      "start_room": 17
+    },
+    {
+      "desc": "*GOLD CROWN*",
+      "start_room": 22
+    },
+    {
+      "desc": "*MAGIC MIRROR*",
+      "start_room": 21
+    },
+    {
+      "desc": "*DRAGON EGGS* (very rare)",
+      "start_room": 0
+    },
+    {
+      "desc": "*JEWELED FRUIT*",
+      "start_room": 25
+    },
+    {
+      "desc": "*Small statue of a BLUE OX*",
+      "start_room": 26
+    },
+    {
+      "desc": "*DIAMOND RING*",
+      "start_room": 0
+    },
+    {
+      "desc": "*DIAMOND BRACELET*",
+      "start_room": 0
+    },
+    {
+      "desc": "*FIRESTONE* (cold now)",
+      "start_room": 0
+    }
+  ],
+  "vocabulary": {
+    "verbs": [
+      "AUT", "GO", "*ENT", "*RUN", "*WAL", "*CLI", "JUM", "AT", "CHO", "*CUT",
+      "GET", "*TAK", "*PIC", "*CAT", "LIG", "*.", "*IGN", "*BUR", "DRO", "*REL",
+      "*SPI", "*LEA", "*GIV", "*POU", "THR", "*TOS", "QUI", "SWI", "RUB", "LOO",
+      "*EXA", "*DES", "STO", "SCO", "INV", "SAV", "WAK", "UNL", "REA", "ATT",
+      "*SLA", "*KIL", "DRI", "*EAT", ".", "FIN", "*LOC", "HEL", "SAY", "*SPE",
+      "*CAL", "SCR", "*YEL", "*HOL", ".", "FIL", "CRO", "DAM", "MAK", "*BUI",
+      "WAV", "*TIC", "*KIC", "*KIS", "*TOU", "*FEE", "*FUC", "*HIT", "*POK", "OPE"
+    ],
+    "nouns": [
+      "ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", "NET", "FIS", "AWA",
+      "MIR", "AXE", "*AX", "WAT", "BOT", "*CON", "HOL", "LAM", "SPI", "WIN",
+      "DOO", "MUD", "*MED", "BEE", "ROC", "GAS", "FLI", "EGG", "OIL", "*SLI",
+      "KEY", "HEL", "BUN", "INV", "LED", "THR", "CRO", "BRI", "BEA", "DRA",
+      "RUG", "RUB", "HON", "FRU", "OX", "RIN", "CHI", "*BIT", "BRA", "SIG",
+      "BLA", "WEB", "*WRI", "SWA", "LAV", "*DAM", "HAL", "TRE", "*STU", "FIR",
+      "SHO", "*BAN", "ADV", "GLA", "ARO", "GAM", "BOO", "CHA", "LAK", "YOH"
+    ]
+  },
+  "walkthrough": [
+    {"step": 1, "room": 11, "action": "GO EAST", "result": "Move to sunny meadow"},
+    {"step": 2, "room": 23, "action": "GO SOUTH", "result": "Move to dismal swamp"},
+    {"step": 3, "room": 1, "action": "CLIMB TREE", "result": "Climb to top of cypress tree"},
+    {"step": 4, "room": 2, "action": "GET KEY", "result": "Take skeleton keys"},
+    {"step": 5, "room": 2, "action": "READ WEB", "result": "Learn magic word from spider web"},
+    {"step": 6, "room": 2, "action": "GO DOWN", "result": "Return to swamp"},
+    {"step": 7, "room": 1, "action": "GET MUD", "result": "Take evil smelling mud"},
+    {"step": 8, "room": 1, "action": "GO DOWN", "result": "Enter hollow stump"},
+    {"step": 9, "room": 3, "action": "GET LAMP", "result": "Take brass lamp"},
+    {"step": 10, "room": 3, "action": "GET BOTTLE", "result": "Take water bottle"},
+    {"step": 11, "room": 3, "action": "GO UP", "result": "Return to swamp"},
+    {"step": 12, "room": 1, "action": "GO EAST", "result": "Move to bottomless hole edge"},
+    {"step": 13, "room": 29, "action": "GO HOLE", "result": "Descend to ledge"},
+    {"step": 14, "room": 30, "action": "GET FLINT", "result": "Take flint & steel"},
+    {"step": 15, "room": 30, "action": "GO UP", "result": "Return to hole edge"},
+    {"step": 16, "room": 29, "action": "GO WEST", "result": "Return to swamp"},
+    {"step": 17, "room": 1, "action": "LIGHT LAMP", "result": "Light the brass lamp"},
+    {"step": 18, "room": 1, "action": "GO DOWN", "result": "Enter hollow stump"},
+    {"step": 19, "room": 3, "action": "GO DOWN", "result": "Enter root chamber"},
+    {"step": 20, "room": 4, "action": "GET RUBIES", "result": "Take pot of rubies (treasure 1)"},
+    {"step": 21, "room": 4, "action": "GO HOLE", "result": "Enter semi-dark hole"},
+    {"step": 22, "room": 5, "action": "UNLOCK DOOR", "result": "Unlock the locked door with keys"},
+    {"step": 23, "room": 5, "action": "OPEN DOOR", "result": "Open the unlocked door"},
+    {"step": 24, "room": 5, "action": "GO DOWN", "result": "Enter long hallway"},
+    {"step": 25, "room": 6, "action": "GO DOWN", "result": "Enter large cavern"},
+    {"step": 26, "room": 7, "action": "GO NORTH", "result": "Enter tunnel with buzzing"},
+    {"step": 27, "room": 31, "action": "GO NORTH", "result": "Enter bee room"},
+    {"step": 28, "room": 8, "action": "DROP MUD", "result": "Use mud to calm the bees"},
+    {"step": 29, "room": 8, "action": "GET HONEY", "result": "Take royal honey (treasure 2)"},
+    {"step": 30, "room": 8, "action": "GO SOUTH", "result": "Return to tunnel"},
+    {"step": 31, "room": 31, "action": "GO SOUTH", "result": "Return to large cavern"},
+    {"step": 32, "room": 7, "action": "GO SOUTH", "result": "Enter royal anteroom"},
+    {"step": 33, "room": 9, "action": "GET BLADDER", "result": "Take empty wine bladder"},
+    {"step": 34, "room": 9, "action": "GO UP", "result": "Enter royal chamber"},
+    {"step": 35, "room": 20, "action": "DROP RUBIES", "result": "Temporarily drop rubies to carry more"},
+    {"step": 36, "room": 20, "action": "GO DOWN", "result": "Return to anteroom"},
+    {"step": 37, "room": 9, "action": "GO NORTH", "result": "Return to cavern"},
+    {"step": 38, "room": 7, "action": "GO UP", "result": "Return up the hallway"},
+    {"step": 39, "room": 6, "action": "GO UP", "result": "Return to semi-dark hole"},
+    {"step": 40, "room": 5, "action": "GO UP", "result": "Return to root chamber"},
+    {"step": 41, "room": 4, "action": "GO UP", "result": "Return to stump"},
+    {"step": 42, "room": 3, "action": "DROP HONEY", "result": "Store honey treasure"},
+    {"step": 43, "room": 3, "action": "GO UP", "result": "Return to swamp"},
+    {"step": 44, "room": 1, "action": "GET GAS", "result": "Collect swamp gas in bladder"},
+    {"step": 45, "room": 1, "action": "GO NORTH", "result": "Go to meadow"},
+    {"step": 46, "room": 23, "action": "GO EAST", "result": "Go to lake"},
+    {"step": 47, "room": 10, "action": "GET AXE", "result": "Take rusty axe"},
+    {"step": 48, "room": 10, "action": "GO WEST", "result": "Return to meadow"},
+    {"step": 49, "room": 23, "action": "SAY BUNYON", "result": "Paul Bunyon appears and chops tree, revealing dragon eggs"},
+    {"step": 50, "room": 23, "action": "GO SOUTH", "result": "Return to swamp, work on underground"},
+    {"step": 51, "room": 1, "action": "GO DOWN", "result": "Enter stump"},
+    {"step": 52, "room": 3, "action": "GO DOWN", "result": "Go to root chamber"},
+    {"step": 53, "room": 4, "action": "GO HOLE", "result": "Go to semi-dark hole"},
+    {"step": 54, "room": 5, "action": "GO DOWN", "result": "Long hallway"},
+    {"step": 55, "room": 6, "action": "GO DOWN", "result": "Large cavern"},
+    {"step": 56, "room": 7, "action": "GO SOUTH", "result": "Royal anteroom"},
+    {"step": 57, "room": 9, "action": "GO UP", "result": "Royal chamber"},
+    {"step": 58, "room": 20, "action": "LIGHT GAS", "result": "Ignite swamp gas to blow hole in bricked window"},
+    {"step": 59, "room": 20, "action": "GET RUBIES", "result": "Pick up rubies again"},
+    {"step": 60, "room": 20, "action": "GO LEDGE", "result": "Go through hole to narrow ledge"},
+    {"step": 61, "room": 19, "action": "JUMP", "result": "Jump across chasm to throne side"},
+    {"step": 62, "room": 21, "action": "DROP HONEY", "result": "Feed honey to the thin bear"},
+    {"step": 63, "room": 21, "action": "GET MIRROR", "result": "Take magic mirror (treasure)"},
+    {"step": 64, "room": 21, "action": "GO THRONE", "result": "Enter throne room"},
+    {"step": 65, "room": 22, "action": "GET CROWN", "result": "Take gold crown (treasure)"},
+    {"step": 66, "room": 22, "action": "GO WEST", "result": "Return to ledge"},
+    {"step": 67, "room": 21, "action": "JUMP", "result": "Jump back across chasm"},
+    {"step": 68, "room": 19, "action": "GO WEST", "result": "Return to royal chamber"},
+    {"step": 69, "room": 20, "action": "GO DOWN", "result": "Return to anteroom, ferry treasures to stump"},
+    {"step": 70, "room": 7, "action": "GO DOWN", "result": "Enter pit maze"},
+    {"step": 71, "room": 12, "action": "GO NORTH", "result": "Navigate maze"},
+    {"step": 72, "room": 13, "action": "GO WEST", "result": "Continue through maze"},
+    {"step": 73, "room": 14, "action": "GO NORTH", "result": "Reach rug room"},
+    {"step": 74, "room": 17, "action": "GET RUG", "result": "Take Persian Rug (treasure/magic carpet)"},
+    {"step": 75, "room": 17, "action": "GO DOWN", "result": "Descend to chasm bottom"},
+    {"step": 76, "room": 18, "action": "GET NET", "result": "Take golden net (treasure)"},
+    {"step": 77, "room": 18, "action": "DROP WATER", "result": "Pour water on lava, creates fire bricks"},
+    {"step": 78, "room": 18, "action": "SAY AWAY", "result": "Fly on magic rug to meadow"},
+    {"step": 79, "room": 23, "action": "GO EAST", "result": "Go to lake to catch fish"},
+    {"step": 80, "room": 10, "action": "GET FISH", "result": "Catch golden fish with net (treasure)"},
+    {"step": 81, "room": 10, "action": "GO NORTH", "result": "Enter quicksand bog for blue ox"},
+    {"step": 82, "room": 26, "action": "GET OX", "result": "Take blue ox statue (treasure)"},
+    {"step": 83, "room": 26, "action": "DROP NET", "result": "Drop heavy items to swim out"},
+    {"step": 84, "room": 26, "action": "SWIM", "result": "Escape quicksand back to lake"},
+    {"step": 85, "room": 10, "action": "GO SOUTH", "result": "Head to swamp area"},
+    {"step": 86, "room": 29, "action": "GO WEST", "result": "Go to swamp"},
+    {"step": 87, "room": 1, "action": "GO WEST", "result": "Go to hidden grove"},
+    {"step": 88, "room": 25, "action": "GET FRUIT", "result": "Take jeweled fruit (treasure)"},
+    {"step": 89, "room": 25, "action": "GO EAST", "result": "Return to swamp"},
+    {"step": 90, "room": 1, "action": "GO DOWN", "result": "Enter stump"},
+    {"step": 91, "room": 3, "action": "DROP all treasures", "result": "Store all collected treasures"},
+    {"step": 92, "room": 3, "action": "SAY SCORE", "result": "Check treasure count and win when all 13 are deposited"}
+  ],
+  "common_mistakes": [
+    "Going DOWN from the bottomless hole ledge (room 30) - leads to Hell and death",
+    "Carrying too many items into quicksand (room 26) - cannot swim out if too heavy",
+    "Jumping across the chasm with fire bricks - too heavy, you fall and die",
+    "Forgetting to bring mud to the bee room - cannot get the honey without it",
+    "Not lighting the lamp before going underground - cannot see in dark areas",
+    "Wasting lamp turns - use UNLIGHT LAMP when in lit areas to conserve the 125-turn limit",
+    "Going N/S/W in the forest (room 11) - all loop back, only EAST progresses",
+    "Not reading the spider web in room 2 - misses the AWAY magic word",
+    "Trying to swim at the lake - the sign says no swimming and you cannot",
+    "Going SOUTH, WEST, or DOWN in Limbo (room 33) - leads to Hell. Only EAST saves you",
+    "Forgetting to UNLOCK DOOR before trying to OPEN DOOR in room 5",
+    "Not collecting the flint & steel from the bottomless hole ledge - needed for lamp and gas"
+  ]
+}

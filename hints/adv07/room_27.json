@@ -1,0 +1,45 @@
+{
+  "room": 27,
+  "name": "I'm on a Trampoline",
+  "description": "I'm on a Trampoline",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You're bouncing on the trampoline! This is fun but not very productive.",
+    "JUMP to bounce. GET OFF or GET DOWN to get off the trampoline.",
+    "The trampoline is more useful as a portable item. GET OFF and take it with you.",
+    "GET DOWN to stop bouncing. You need the trampoline at the top of the ride to reach the catwalk."
+  ],
+  "key_actions": [
+    "GET OFF",
+    "GET DOWN",
+    "JUMP"
+  ],
+  "action_details": [
+    {
+      "command": "GET OFF",
+      "needs": [],
+      "effects": [
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "GET DOWN",
+      "needs": [],
+      "effects": [
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: Wheeee"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "On the trampoline. JUMP bounces, GET OFF/GET DOWN dismounts. The trampoline is better used as a portable item to reach the catwalk."
+}

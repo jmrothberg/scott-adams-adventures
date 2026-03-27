@@ -1,0 +1,47 @@
+{
+  "room": 22,
+  "name": "I'm on beam under dock",
+  "description": "I'm on beam under dock",
+  "items_start": [
+    "*Silver Dollar*"
+  ],
+  "exits": {
+    "D": 11
+  },
+  "hints": [
+    "You're on a beam under the dock. There's a silver dollar here and more may be hidden.",
+    "LOOK DOCK or LOOK UP to find hidden items attached to the dock above you.",
+    "GET the *Silver Dollar* treasure. LOOK DOCK and LOOK UP both find additional hidden items. DOWN drops into the sea (room 11).",
+    "Collect the Silver Dollar and search the dock with LOOK DOCK or LOOK UP for more items. DOWN goes to the sea."
+  ],
+  "key_actions": [
+    "LOOK DOCK",
+    "LOOK UP"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK DOCK",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: something",
+        "Message: & I got it!"
+      ]
+    },
+    {
+      "command": "LOOK UP",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: something",
+        "Message: & I got it!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "DOLL"
+  ],
+  "danger": false,
+  "notes": "Under the dock on a beam. Contains the *Silver Dollar* treasure. LOOK DOCK and LOOK UP both find additional hidden items (auto-pickup). DOWN drops to the sea (room 11). Accessed by diving/swimming from the sea area near the dock."
+}

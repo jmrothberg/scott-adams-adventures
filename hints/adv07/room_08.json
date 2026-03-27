@@ -1,0 +1,26 @@
+{
+  "room": 8,
+  "name": "small room",
+  "description": "I'm in a small room",
+  "items_start": [
+    "Small Trampoline"
+  ],
+  "exits": {
+    "S": 14,
+    "U": 10
+  },
+  "hints": [
+    "A small room with a trampoline. You can take it with you.",
+    "GET TRAM to take the trampoline. It may be useful for reaching high places.",
+    "S leads to the shooting gallery. U leads to the knob room.",
+    "The trampoline is needed later to reach high places. Don't forget it!"
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "TRAM"
+  ],
+  "danger": false,
+  "notes": "Contains the small trampoline - important item for reaching the top of the merry-go-round. S=shooting gallery (room 14), U=knob room (room 10)."
+}

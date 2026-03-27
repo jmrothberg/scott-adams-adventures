@@ -1,0 +1,18 @@
+{
+  "room": 35,
+  "name": "lot of TROUBLE!",
+  "description": "I'm in a lot of TROUBLE!",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You're in big trouble! Something went very wrong.",
+    "This usually means you destroyed the ship with the phaser.",
+    "You'll need to restart. Never fire the phaser inside the ship!"
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death/failure room. Reached by firing phaser inside the ship or other fatal actions."
+}

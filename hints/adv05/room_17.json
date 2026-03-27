@@ -1,0 +1,24 @@
+{
+  "room": 17,
+  "name": "Meandering path",
+  "description": "I'm in a Meandering path",
+  "items_start": [
+    "Castle towering above me",
+    "Fence with an open gate & a crowd beyond"
+  ],
+  "exits": {
+    "W": 9
+  },
+  "hints": [
+    "You are on a path outside the castle. There is a fence with a gate and a crowd beyond.",
+    "The gate and crowd suggest an escape route. Going through the gate may end the game.",
+    "GO GATE to escape the castle grounds. But have you destroyed the Count first?",
+    "GO GATE to escape - but only after destroying the Count. WEST returns to outside the castle. The crowd awaits your victory."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Path outside the castle with a gate leading to freedom. Going through the gate without defeating the Count first means failure. WEST returns to outside the castle (room 9). This is the escape route after destroying Dracula."
+}

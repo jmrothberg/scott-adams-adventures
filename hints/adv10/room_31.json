@@ -1,0 +1,14 @@
+{
+  "room": 31,
+  "name": "small metal room",
+  "description": "I'm in a small metal room",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

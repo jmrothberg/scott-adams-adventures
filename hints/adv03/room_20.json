@@ -1,0 +1,36 @@
+{
+  "room": 20,
+  "name": "break room",
+  "description": "I'm in a break room",
+  "items_start": [],
+  "exits": {
+    "W": 19
+  },
+  "hints": [
+    "This is the break room. The sign in the control room said to use this room for beverages.",
+    "This is the safe place to defuse the bomb. You need the bomb and water here.",
+    "Bring the bomb and the water-filled pail here. POUR WATER on the bomb to defuse it safely.",
+    "With the time bomb and water-filled pail: POUR WATER here to defuse the bomb and complete the mission!"
+  ],
+  "key_actions": [
+    "POU"
+  ],
+  "action_details": [
+    {
+      "command": "POU",
+      "needs": [
+        "Water filled plastic pail (need access)",
+        "Very large time bomb (need access)"
+      ],
+      "effects": [
+        "Message: the water spills on the bomb and",
+        "Message: defuses it! FANTASTIC, You completed an IMPOSSIBLE mission!",
+        "Look around"
+      ]
+    }
+  ],
+  "items_needed": ["Water filled plastic pail", "Very large time bomb"],
+  "items_available": [],
+  "danger": false,
+  "notes": "The break room - the SAFE place to defuse the bomb. POUR WATER here with both the bomb and water-filled pail to complete the mission. Do NOT pour water in the control room. WEST returns to the control room."
+}

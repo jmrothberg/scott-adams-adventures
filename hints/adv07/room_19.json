@@ -1,0 +1,21 @@
+{
+  "room": 19,
+  "name": "Windy hall",
+  "description": "I'm in a Windy hall",
+  "items_start": [],
+  "exits": {
+    "E": 30,
+    "W": 3
+  },
+  "hints": [
+    "A windy hallway - the wind is blowing through here.",
+    "E leads into the windy maze. W leads back to the small landing.",
+    "Be careful entering the maze from here. Drop items to map the identical-looking rooms."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Windy hallway connector. E=windy maze (room 30), W=small landing (room 3)."
+}

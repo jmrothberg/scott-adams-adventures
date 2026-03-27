@@ -1,0 +1,46 @@
+{
+  "room": 20,
+  "name": "royal chamber",
+  "description": "I'm in a royal chamber",
+  "items_start": [
+    "Bricked up window"
+  ],
+  "exits": {
+    "D": 9
+  },
+  "hints": [
+    "The bricked up window blocks access to a ledge. You need to make a hole in it.",
+    "The HELP says to blow it up. You need something explosive. Think about what you found in the swamp.",
+    "Use swamp gas (collected in the bladder) and the flint & steel to create an explosion.",
+    "LIGHT GAS (with flint & steel in inventory) to blow a hole in the bricked up window. Then GO LEDGE to reach the chasm ledge."
+  ],
+  "key_actions": [
+    "GO LED",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO LED",
+      "needs": [
+        "Bricked up window with a hole in it (must be in room)"
+      ],
+      "effects": [
+        "Move to room 19",
+        "Show score"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: Blow it up!",
+        "Message: Try the swamp"
+      ]
+    }
+  ],
+  "items_needed": ["Bladder of gas", "Flint & steel"],
+  "items_available": [],
+  "danger": false,
+  "notes": "The bricked-up window must be blown open using swamp gas (collected with the wine bladder in room 1) and flint & steel (from room 30). Once open, GO LEDGE reaches the chasm ledge (room 19). DOWN returns to the anteroom (room 9)."
+}

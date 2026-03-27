@@ -1,0 +1,44 @@
+{
+  "room": 2,
+  "name": "alcove",
+  "description": "I'm in a alcove",
+  "items_start": [
+    "Open window",
+    "Books in a bookcase"
+  ],
+  "exits": {
+    "D": 1
+  },
+  "hints": [
+    "The bookcase and window are both important. Examine them carefully.",
+    "GET BOOK to take the blood-soaked book - it contains important information. The window leads outside.",
+    "GO WINDOW to reach the ledge outside. The books trigger a secret passageway. The book you take is essential for magic transport.",
+    "GET BOOK (opens secret passage). GO WINDOW to reach the ledge where you SAY YOHO to teleport to the pirate island."
+  ],
+  "key_actions": [
+    "HEL",
+    "GET BOO"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: Reading expands the mind",
+        "Message: I may need to say a MAGIC word here!"
+      ]
+    },
+    {
+      "command": "GET BOO",
+      "needs": [],
+      "effects": [
+        "Auto-GET item",
+        "Message: There's a strange sound"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Key transition room. GET BOOK opens a secret passageway to the attic. GO WINDOW leads to the building ledge (room 5). The book is needed for the YOHO magic teleportation. DOWN returns to the flat."
+}

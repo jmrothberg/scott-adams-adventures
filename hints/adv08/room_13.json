@@ -1,0 +1,40 @@
+{
+  "room": 13,
+  "name": "hallway",
+  "description": "I'm in a hallway",
+  "items_start": [
+    "Archway",
+    "Giant Oyster",
+    "Flute"
+  ],
+  "exits": {
+    "W": 12
+  },
+  "hints": [],
+  "key_actions": [
+    "GO ARC",
+    "GO ARC"
+  ],
+  "action_details": [
+    {
+      "command": "GO ARC",
+      "needs": [],
+      "effects": [
+        "Message: Oyster won't let me"
+      ]
+    },
+    {
+      "command": "GO ARC",
+      "needs": [],
+      "effects": [
+        "Move to room 14"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "FLU"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,22 @@
+{
+  "room": 29,
+  "name": "grave",
+  "description": "I'm in a grave",
+  "items_start": [
+    "*GOLD COIN*",
+    "Purple worm"
+  ],
+  "exits": {
+    "U": 20
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "COIN",
+    "WORM"
+  ],
+  "danger": false,
+  "notes": ""
+}

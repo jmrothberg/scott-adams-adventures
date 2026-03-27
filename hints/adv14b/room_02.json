@@ -1,0 +1,90 @@
+{
+  "room": 2,
+  "name": "Basement Laboratory",
+  "description": "I'm in a Basement Laboratory",
+  "items_start": [
+    "Staircase",
+    "Mixing vat"
+  ],
+  "exits": {},
+  "hints": [
+    "The basement laboratory has a mixing vat and a staircase back up. This is where you make jet fuel.",
+    "LOOK VAT and LOOK STAIRCASE. You need a flashlight on to see properly. The vat is for mixing fuel.",
+    "MAKE FUEL requires: flashlight (on), quartz, jar of glowing fluid, and jug of gasoline - all must be accessible. LOOK STAIRCASE with flashlight on finds a hidden item. GO STAIRCASE returns to office.",
+    "Bring all fuel ingredients here: quartz, glowing fluid jar, gasoline jug, and have the flashlight on. Then MAKE FUEL. LOOK STAIRCASE with light to find something hidden under the stairs."
+  ],
+  "key_actions": [
+    "MAKE FUEL",
+    "LOOK VAT",
+    "LOOK STAI",
+    "GO STAI",
+    "MAKE FUEL",
+    "MAKE FUEL"
+  ],
+  "action_details": [
+    {
+      "command": "MAKE FUEL",
+      "needs": [
+        "Flashlight (on) (need access)",
+        "Quartz (need access)",
+        "Jar of glowing Fluid (need access)",
+        "Jug of gasoline (need access)"
+      ],
+      "effects": []
+    },
+    {
+      "command": "LOOK VAT",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: nothing",
+        "Message: special"
+      ]
+    },
+    {
+      "command": "LOOK STAI",
+      "needs": [
+        "Flashlight (on) (need access)"
+      ],
+      "effects": [
+        "Message: I see",
+        "Message: something",
+        "Message: under stairs, I get it."
+      ]
+    },
+    {
+      "command": "GO STAI",
+      "needs": [],
+      "effects": [
+        "Move to room 1"
+      ]
+    },
+    {
+      "command": "MAKE FUEL",
+      "needs": [],
+      "effects": [
+        "Message: No formula!"
+      ]
+    },
+    {
+      "command": "MAKE FUEL",
+      "needs": [
+        "Flashlight (on)"
+      ],
+      "effects": [
+        "Message: something",
+        "Message: is missing."
+      ]
+    }
+  ],
+  "items_needed": [
+    "Flashlight (on)",
+    "Quartz",
+    "Jar of glowing Fluid",
+    "Jug of gasoline"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Basement laboratory below the Yoyodyne office. Key location for making jet fuel. MAKE FUEL needs flashlight on + quartz + glowing fluid + gasoline. Without a formula it says 'No formula!' Without all ingredients it says 'something is missing.' LOOK STAIRCASE with light finds a hidden item. GO STAIRCASE returns to office (room 1)."
+}

@@ -1,0 +1,47 @@
+{
+  "room": 21,
+  "name": "kitchen",
+  "description": "I'm in a kitchen",
+  "items_start": [
+    "Large floor drain",
+    "Wooden crate"
+  ],
+  "exits": {
+    "S": 3
+  },
+  "hints": [
+    "The castle kitchen with a floor drain and wooden crate. Both are useful.",
+    "GET CRATE - it can be used in the loft. The floor drain leads to a pool of dirty water below.",
+    "GET CRATE for use in the loft. GO DRAIN to access the pool of dirty water (room 20) which connects to the fountain. SOUTH returns to the courtyard."
+  ],
+  "key_actions": [
+    "LOOK AROUN",
+    "LOOK KITCH"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK AROUN",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: the usual things."
+      ]
+    },
+    {
+      "command": "LOOK KITCH",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: the usual things."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "CRATE"
+  ],
+  "danger": false,
+  "notes": "Castle kitchen with a floor drain (leads to pool room 20/fountain) and wooden crate (useful in loft). South returns to courtyard (room 3). The drain-pool-fountain route is an important secret passage."
+}

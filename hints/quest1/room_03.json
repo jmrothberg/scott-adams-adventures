@@ -1,0 +1,31 @@
+{
+  "room": 3,
+  "name": "tunnel going outside",
+  "description": "I'm in a tunnel going outside",
+  "items_start": [
+    "Sign",
+    "Button in wall"
+  ],
+  "exits": {
+    "W": 2
+  },
+  "hints": [],
+  "key_actions": [
+    "GO DOME"
+  ],
+  "action_details": [
+    {
+      "command": "GO DOME",
+      "needs": [],
+      "effects": [
+        "Move to room 4",
+        "Set flag 3",
+        "Set flag 4"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

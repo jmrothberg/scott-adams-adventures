@@ -1,0 +1,22 @@
+{
+  "room": 16,
+  "name": "long hallway",
+  "description": "I'm in a long hallway",
+  "items_start": [
+    "Locked door"
+  ],
+  "exits": {
+    "E": 17
+  },
+  "hints": [
+    "There is a locked door here. You need keys to proceed.",
+    "The keys from the duffel bag unlock this door. EAST returns to the cavern.",
+    "UNLOCK DOOR with keys, then OPEN DOOR to proceed. EAST goes to the large cavern."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Keys"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hallway with a locked door requiring keys (from the duffel bag). EAST leads to the large cavern (room 17). The locked door connects to the pit area."
+}

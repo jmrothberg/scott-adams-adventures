@@ -1,0 +1,49 @@
+{
+  "room": 1,
+  "name": "bottom bunk",
+  "description": "I'm in a bottom bunk",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You wake up in the bottom bunk of the ship's cabin. Look around carefully before getting up.",
+    "There's something hidden under the mattress. Try MOVE MATTRESS or FEEL around.",
+    "MOVE MATTRESS finds a hidden item underneath. FEEL confirms the mattress is soft. GET UP to leave the bunk and enter the cabin.",
+    "Do MOVE MATTRESS first to find a hidden item, then GET UP to proceed to the ship's cabin (room 2)."
+  ],
+  "key_actions": [
+    "MOVE MATT",
+    "FEEL",
+    "GET UP"
+  ],
+  "action_details": [
+    {
+      "command": "MOVE MATT",
+      "needs": [],
+      "effects": [
+        "Message: I found",
+        "Message: something",
+        "Message: & I got it!"
+      ]
+    },
+    {
+      "command": "FEEL",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Mattress is soft."
+      ]
+    },
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 2"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Starting room. MOVE MATTRESS finds a hidden item before you GET UP. This is the first puzzle - always search your surroundings before moving on. GET UP takes you to the ship's cabin (room 2)."
+}

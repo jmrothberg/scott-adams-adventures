@@ -1,0 +1,25 @@
+{
+  "room": 2,
+  "name": "top of a tall cypress tree",
+  "description": "I'm in a top of a tall cypress tree",
+  "items_start": [
+    "Spider web with writing on it",
+    "Ring of skeleton keys"
+  ],
+  "exits": {
+    "D": 1
+  },
+  "hints": [
+    "There are important items up here. Examine everything carefully.",
+    "The spider web has writing on it - try READing it for a clue. The keys are essential for later.",
+    "READ WEB to learn a magic word. GET KEY to take the skeleton keys - you will need them to unlock a door underground."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "KEY"
+  ],
+  "danger": false,
+  "notes": "Reached by CLIMBing the cypress tree in the swamp (room 1). Contains the skeleton keys needed to unlock the door in room 5, and a spider web whose writing reveals the magic word AWAY (part of the flying carpet magic)."
+}

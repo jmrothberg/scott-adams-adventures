@@ -1,0 +1,22 @@
+{
+  "room": 17,
+  "name": "I'm in an open display case",
+  "description": "I'm in an open display case",
+  "items_start": [
+    "Button"
+  ],
+  "exits": {
+    "E": 8
+  },
+  "hints": [
+    "You are inside a display case. There is a button here that likely controls something important.",
+    "PUSH BUTTON to activate it. This may control force fields, doors, or other ship systems.",
+    "PUSH BUTTON to trigger its effect, then go EAST to return to the hydroponics room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Inside an open display case with a button. Accessed from the hydroponics room (room 8). The button likely controls force fields or other ship mechanisms. East exit returns to room 8."
+}

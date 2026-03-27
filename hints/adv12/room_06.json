@@ -1,0 +1,347 @@
+{
+  "room": 6,
+  "name": "I am on a large ship",
+  "description": "I am on a large ship",
+  "items_start": [
+    "Mast",
+    "Sail",
+    "Ship is anchored",
+    "Cabin"
+  ],
+  "exits": {},
+  "hints": [
+    "You are on deck of your ship. The mast, sail, anchor, and cabin are all interactive. You must RAISE ANCHOR before you can sail.",
+    "RAISE ANCHOR first, then SAIL with a compass direction (SAIL NORTH, SAIL SOUTH, SAIL EAST, SAIL WEST). You need the compass! GO MAST to climb to the crow's nest.",
+    "Navigation: RAISE ANCHOR, then SAIL [direction]. GO CABIN to rest. GO MAST then EXAM TELESCOPE from the crow's nest to spot land. DROP ANCHOR when you see land.",
+    "The sailing destinations depend on direction and which sea zone you are in. Use the telescope from the crow's nest to spot land, then DROP ANCHOR and GO ASHORE."
+  ],
+  "key_actions": [
+    "GO STRA",
+    "GO BEAC",
+    "GO ISLA",
+    "GO ASHO",
+    "GO ASHO",
+    "GO ASHO",
+    "GO ASHO",
+    "GO CITY",
+    "GO CABI",
+    "GO MAST",
+    "EXAM MAST",
+    "SAIL",
+    "SAIL WEST",
+    "SAIL EAST",
+    "SAIL SOUTH",
+    "SAIL EAST",
+    "SAIL SOUTH",
+    "SAIL NORTH",
+    "SAIL EAST",
+    "SAIL NORTH",
+    "SAIL WEST",
+    "SAIL EAST",
+    "SAIL WEST",
+    "SAIL WEST",
+    "SAIL",
+    "DROP ANCH",
+    "RAIS ANCH",
+    "SAIL"
+  ],
+  "action_details": [
+    {
+      "command": "GO STRA",
+      "needs": [
+        "Rocky strand (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 19",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO BEAC",
+      "needs": [
+        "Sandy beach (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 7",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO ISLA",
+      "needs": [
+        "Small island (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 13",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO ASHO",
+      "needs": [
+        "Rocky strand (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 19",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO ASHO",
+      "needs": [
+        "Sandy beach (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 7",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO ASHO",
+      "needs": [
+        "Small island (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 13",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO ASHO",
+      "needs": [
+        "Persian city (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 5",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO CITY",
+      "needs": [
+        "Persian city (must be in room)"
+      ],
+      "effects": [
+        "Move to room 5",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO CABI",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 28"
+      ]
+    },
+    {
+      "command": "GO MAST",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 12"
+      ]
+    },
+    {
+      "command": "EXAM MAST",
+      "needs": [],
+      "effects": [
+        "Message: High atop mast is a crow's-nest"
+      ]
+    },
+    {
+      "command": "SAIL",
+      "needs": [
+        "Ship is anchored (must be in room)"
+      ],
+      "effects": [
+        "Message: Sorry"
+      ]
+    },
+    {
+      "command": "SAIL WEST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 17"
+      ]
+    },
+    {
+      "command": "SAIL EAST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 17"
+      ]
+    },
+    {
+      "command": "SAIL SOUTH",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 17"
+      ]
+    },
+    {
+      "command": "SAIL EAST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 20"
+      ]
+    },
+    {
+      "command": "SAIL SOUTH",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 20"
+      ]
+    },
+    {
+      "command": "SAIL NORTH",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 21"
+      ]
+    },
+    {
+      "command": "SAIL EAST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 21"
+      ]
+    },
+    {
+      "command": "SAIL NORTH",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 22"
+      ]
+    },
+    {
+      "command": "SAIL WEST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 22"
+      ]
+    },
+    {
+      "command": "SAIL EAST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 27"
+      ]
+    },
+    {
+      "command": "SAIL WEST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 27"
+      ]
+    },
+    {
+      "command": "SAIL WEST",
+      "needs": [
+        "Compass (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Set flag 28"
+      ]
+    },
+    {
+      "command": "SAIL",
+      "needs": [],
+      "effects": [
+        "Message: I can't tell which way that is!"
+      ]
+    },
+    {
+      "command": "DROP ANCH",
+      "needs": [
+        "Anchor (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Set flag 67"
+      ]
+    },
+    {
+      "command": "RAIS ANCH",
+      "needs": [
+        "Ship is anchored (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "SAIL",
+      "needs": [],
+      "effects": [
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [
+    "COMP"
+  ],
+  "items_available": [],
+  "danger": true,
+  "notes": "The main ship deck - hub for all sea travel. Must RAISE ANCHOR before sailing. Requires the compass to navigate. SAIL [direction] moves between sea zones. GO MAST to climb to crow's nest (room 12). GO CABIN for the captain's quarters (room 28). When land is visible, GO ASHORE/GO BEACH/GO ISLAND/GO STRAND to disembark. The DEATH effects from sailing represent moving to a new sea zone (the game resets the ship to the new location)."
+}

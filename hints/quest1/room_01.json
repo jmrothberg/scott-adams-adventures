@@ -1,0 +1,68 @@
+{
+  "room": 1,
+  "name": "I'm Bruce Banner, tied hand & foot to a chair",
+  "description": "I'm Bruce Banner, tied hand & foot to a chair",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "BITE ROPE",
+    "HIT",
+    "BITE TONG",
+    "ROCK",
+    "BITE ME"
+  ],
+  "action_details": [
+    {
+      "command": "BITE ROPE",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I",
+        "Message: can't do that",
+        "Message: here."
+      ]
+    },
+    {
+      "command": "HIT",
+      "needs": [],
+      "effects": [
+        "Message: I",
+        "Message: can't do that",
+        "Message: now!\n"
+      ]
+    },
+    {
+      "command": "BITE TONG",
+      "needs": [],
+      "effects": [
+        "Message: Ouch! I scream!\n",
+        "Set flag 7",
+        "Set flag 8",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "ROCK",
+      "needs": [],
+      "effects": [
+        "Message: I",
+        "Message: fall & hit head!\n",
+        "Set flag 7",
+        "Set flag 8"
+      ]
+    },
+    {
+      "command": "BITE ME",
+      "needs": [],
+      "effects": [
+        "Message: Say again but tell me",
+        "Message: where?"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

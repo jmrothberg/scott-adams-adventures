@@ -1,0 +1,19 @@
+{
+  "room": 28,
+  "name": "top of an oak.\nTo the East I see a meadow, beyond that a lake.",
+  "description": "I'm in a top of an oak.\nTo the East I see a meadow, beyond that a lake.",
+  "items_start": [],
+  "exits": {
+    "D": 11
+  },
+  "hints": [
+    "This is a scenic viewpoint. You can see the meadow and lake from here.",
+    "Go DOWN to return to the forest. The view gives you a sense of the map layout: meadow is east, lake beyond that."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Oak treetop reached by CLIMB TREE in the forest (room 11). Provides a scenic overview - meadow to the east, lake beyond. No items. DOWN returns to the forest. Also used as a respawn point from Limbo."
+}

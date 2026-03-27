@@ -1,0 +1,38 @@
+{
+  "room": 6,
+  "name": "sandy beach on a tropical isle",
+  "description": "I'm in a sandy beach on a tropical isle",
+  "items_start": [
+    "Small ship's keel and mast",
+    "Sand",
+    "Lagoon",
+    "Sign in the sand says:\n`Welcome to Pirates Island, watch out for the tide!`"
+  ],
+  "exits": {
+    "E": 8
+  },
+  "hints": [
+    "You have arrived on Pirates Island! The sign warns about the tide. Explore the island.",
+    "The keel/mast and lagoon are important. Go EAST to explore the meadow. Watch the tide - it changes!",
+    "GO LAGOON when the tide is out to find treasures. GO EAST to reach the meadow with the mongoose and grass shack.",
+    "Explore EAST for the meadow. GO LAGOON for the anchor. The pirate ship arrives at the lagoon. BUILD BOAT here later with lumber and sails."
+  ],
+  "key_actions": [
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: There's multiple exits here!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SAN"
+  ],
+  "danger": false,
+  "notes": "Main beach on Pirates Island. The lagoon connects to the ocean/shore. EAST goes to the meadow (room 8). The tide cycle is important - when tide is out, the lagoon is accessible. Ship building materials can be used here."
+}

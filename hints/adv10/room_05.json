@@ -1,0 +1,28 @@
+{
+  "room": 5,
+  "name": "shallow tidepool",
+  "description": "I'm in a shallow tidepool",
+  "items_start": [
+    "Water"
+  ],
+  "exits": {
+    "S": 1
+  },
+  "hints": [],
+  "key_actions": [
+    "SWIM"
+  ],
+  "action_details": [
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

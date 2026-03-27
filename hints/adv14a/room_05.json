@@ -1,0 +1,51 @@
+{
+  "room": 5,
+  "name": "beach by a small hill",
+  "description": "I'm in a beach by a small hill",
+  "items_start": [
+    "Sign"
+  ],
+  "exits": {
+    "S": 3,
+    "E": 15
+  },
+  "hints": [
+    "A beach with a small hill nearby and a sign. READ SIGN for information. There may be something buried here.",
+    "You need a digging tool to find what's buried in the sand. The fan blade from the ship works as a shovel.",
+    "DIG with the fan blade to uncover a buried treasure. GO HILL climbs toward the hilltop. SOUTH returns to the dock, EAST goes to the rocky beach.",
+    "Get the fan blade from the ceiling fan in the cabin first, then DIG here to find treasure. GO HILL to reach the ledge (room 6)."
+  ],
+  "key_actions": [
+    "DIG",
+    "GO HILL"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Fan blade (need access)"
+      ],
+      "effects": [
+        "Message: I found",
+        "Message: something",
+        "Message: & I got it!"
+      ]
+    },
+    {
+      "command": "GO HILL",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 6"
+      ]
+    }
+  ],
+  "items_needed": [
+    "Fan blade"
+  ],
+  "items_available": [
+    "SIGN"
+  ],
+  "danger": false,
+  "notes": "Beach area with a sign and buried treasure. DIG requires the fan blade (obtained from ceiling fan in cabin). GO HILL goes to the ledge (room 6). SOUTH returns to dock (room 3), EAST goes to rocky beach (room 15)."
+}

@@ -1,0 +1,22 @@
+{
+  "room": 37,
+  "name": "teepee",
+  "description": "I'm in a teepee",
+  "items_start": [
+    "*SACRED TOM TOM*",
+    "*TURQUOISE NECKLACE*"
+  ],
+  "exits": {
+    "N": 36
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "TOM",
+    "NECK"
+  ],
+  "danger": false,
+  "notes": ""
+}

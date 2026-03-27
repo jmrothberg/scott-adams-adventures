@@ -1,0 +1,144 @@
+{
+  "room": 20,
+  "name": "I'm on a narrow ledge",
+  "description": "I'm on a narrow ledge",
+  "items_start": [
+    "* SAPPHIRE *",
+    "Hole in the ceiling",
+    "Pool of liquid (far below ledge)"
+  ],
+  "exits": {
+    "S": 19,
+    "W": 18
+  },
+  "hints": [],
+  "key_actions": [
+    "JUM",
+    "SWI",
+    "THR ROP",
+    "GO ROP",
+    "GO HOL",
+    "GO HOL",
+    "GO POO",
+    "GET WAT",
+    "GET WAT",
+    "GET WAT",
+    "THR RUB",
+    "DRI WAT"
+  ],
+  "action_details": [
+    {
+      "command": "JUM",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Liquid is acid.",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "SWI",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Liquid is acid.",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "THR ROP",
+      "needs": [
+        "Rope"
+      ],
+      "effects": [
+        "Destroy item 45",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO ROP",
+      "needs": [
+        "Rope hanging from ceiling (must be in room)"
+      ],
+      "effects": [
+        "Move to room 21"
+      ]
+    },
+    {
+      "command": "GO HOL",
+      "needs": [
+        "Rope hanging from ceiling (must be in room)"
+      ],
+      "effects": [
+        "Move to room 21"
+      ]
+    },
+    {
+      "command": "GO HOL",
+      "needs": [],
+      "effects": [
+        "Message: I can't reach it."
+      ]
+    },
+    {
+      "command": "GO POO",
+      "needs": [],
+      "effects": [
+        "Message: Liquid is acid.",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "GET WAT",
+      "needs": [
+        "Full canteen"
+      ],
+      "effects": [
+        "Message: Canteen is full."
+      ]
+    },
+    {
+      "command": "GET WAT",
+      "needs": [
+        "Empty canteen"
+      ],
+      "effects": [
+        "Message: Liquid is acid.",
+        "Message: Canteen dissolves.",
+        "Destroy item 4"
+      ]
+    },
+    {
+      "command": "GET WAT",
+      "needs": [],
+      "effects": [
+        "Message: No container."
+      ]
+    },
+    {
+      "command": "THR RUB",
+      "needs": [
+        "* RUBY *"
+      ],
+      "effects": [
+        "Destroy item 90",
+        "Destroy item 95",
+        "Destroy item 94"
+      ]
+    },
+    {
+      "command": "DRI WAT",
+      "needs": [],
+      "effects": [
+        "Message: Liquid is acid.",
+        "Move item 0 to room 0"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SAP"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,40 @@
+{
+  "room": 4,
+  "name": "Persian city",
+  "description": "I'm in a Persian city",
+  "items_start": [
+    "Merchant",
+    "Sandals"
+  ],
+  "exits": {
+    "W": 3
+  },
+  "hints": [
+    "Another merchant area. There are sandals here that may be useful for walking on hot or rough terrain.",
+    "GET SANDALS - wearing them may protect your feet in dangerous areas. GIVE BAG to the merchant if you want, but he just steals it.",
+    "WEAR SANDALS after taking them. They protect you on hot surfaces. Go WEST to return to the main merchant area."
+  ],
+  "key_actions": [
+    "GIVE BAG"
+  ],
+  "action_details": [
+    {
+      "command": "GIVE BAG",
+      "needs": [
+        "Bag of gold (need access)"
+      ],
+      "effects": [
+        "Destroy item 53",
+        "Message: Surprised merchant grabs it and runs like a thief!",
+        "Set flag 4",
+        "Clear flag 28"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SAND"
+  ],
+  "danger": false,
+  "notes": "Eastern merchant area with sandals for sale. The sandals provide foot protection and should be worn (WEAR SANDALS). Start room for the game (room 4). West leads to the main merchant area."
+}

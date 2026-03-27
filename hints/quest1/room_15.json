@@ -1,0 +1,45 @@
+{
+  "room": 15,
+  "name": "small underground room",
+  "description": "I'm in a small underground room",
+  "items_start": [
+    "Natter energy egg",
+    "*Bio gem"
+  ],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "LOOK WALL",
+    "SCRA WALL"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK WALL",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: wall has scratch marks on it."
+      ]
+    },
+    {
+      "command": "SCRA WALL",
+      "needs": [
+        "Rage"
+      ],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I see",
+        "Message: something",
+        "Message: happens."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "EGG",
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

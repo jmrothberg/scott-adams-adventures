@@ -1,0 +1,37 @@
+{
+  "room": 14,
+  "name": "Chimney",
+  "description": "I'm in a Chimney",
+  "items_start": [
+    "Soot",
+    "Wood boards nailed to chimney wall"
+  ],
+  "exits": {
+    "D": 15
+  },
+  "hints": [
+    "You are inside the chimney. There is soot and boards nailed to the wall. Listen carefully.",
+    "LISTEN - the moaning is louder up here. Someone may be stuck further up. The boards may be climbable.",
+    "GO UP or CLIMB to reach the narrow part of the chimney where a chimney sweep is stuck.",
+    "GET SOOT (useful for cleaning). Climb higher to find the stuck chimney sweep (room 18). DOWN returns to the fireplace."
+  ],
+  "key_actions": [
+    "LIS"
+  ],
+  "action_details": [
+    {
+      "command": "LIS",
+      "needs": [],
+      "effects": [
+        "Message: I hear strange sounds, as if someone were moaning.",
+        "Message: Its much louder up here."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SOO"
+  ],
+  "danger": false,
+  "notes": "Inside the chimney with soot and wooden boards. LISTEN reveals louder moaning (sweep stuck above). GO UP reaches the narrow chimney (room 18). DOWN returns to the fireplace (room 15)."
+}

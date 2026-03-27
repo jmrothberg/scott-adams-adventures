@@ -1,0 +1,25 @@
+{
+  "room": 3,
+  "name": "I'm on a small landing",
+  "description": "I'm on a small landing",
+  "items_start": [
+    "Slippery Slide. Sign on slide"
+  ],
+  "exits": {
+    "N": 9,
+    "E": 19,
+    "U": 20
+  },
+  "hints": [
+    "A landing with multiple exits. Read the sign on the slide for a clue.",
+    "The slide leads somewhere - GO SLID takes you down. N goes to the sloping hallway.",
+    "E leads to a windy hall. U leads to a rickety staircase. The slide is one-way down.",
+    "READ SIGN on the slide for important information."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hub room with multiple paths. The slide goes one-way to the water tank. N=sloping hall (room 9), E=windy hall (room 19), U=rickety staircase (room 20)."
+}

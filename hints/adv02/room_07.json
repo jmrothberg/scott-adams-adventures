@@ -1,0 +1,24 @@
+{
+  "room": 7,
+  "name": "maze of caves",
+  "description": "I'm in a maze of caves",
+  "items_start": [],
+  "exits": {
+    "S": 12,
+    "E": 13,
+    "W": 14,
+    "D": 11
+  },
+  "hints": [
+    "This is a confusing cave maze. Map carefully as you explore.",
+    "DOWN leads to a pit with crocodiles. Be careful! SOUTH, EAST, and WEST lead to other maze rooms.",
+    "Go WEST to eventually reach the hill and island surface. DOWN to the pit requires preparation for crocodiles.",
+    "Navigate: SOUTH to room 12, EAST to room 13, WEST to room 14 (exit to hill). DOWN to crocodile pit (room 11)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Cave maze junction room. DOWN leads to the crocodile pit (room 11). WEST leads toward the island surface via room 14. Map this maze carefully."
+}

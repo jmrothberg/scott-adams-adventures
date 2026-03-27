@@ -1,0 +1,43 @@
+{
+  "room": 6,
+  "name": "tunnel going out",
+  "description": "I'm in a tunnel going out",
+  "items_start": [
+    "Sign"
+  ],
+  "exits": {
+    "W": 13
+  },
+  "hints": [],
+  "key_actions": [
+    "AT BEES",
+    "GO DOME"
+  ],
+  "action_details": [
+    {
+      "command": "AT BEES",
+      "needs": [
+        "Metal Hand Fan"
+      ],
+      "effects": [
+        "Message: O.K.",
+        "Message: I send a gale at it!",
+        "DEATH",
+        "Clear flag 17"
+      ]
+    },
+    {
+      "command": "GO DOME",
+      "needs": [],
+      "effects": [
+        "Move to room 8",
+        "Set flag 3",
+        "Set flag 4"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

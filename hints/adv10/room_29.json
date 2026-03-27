@@ -1,0 +1,19 @@
+{
+  "room": 29,
+  "name": "metal room",
+  "description": "I'm in a metal room",
+  "items_start": [
+    "Force field",
+    "Control console"
+  ],
+  "exits": {
+    "E": 22
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

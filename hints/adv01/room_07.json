@@ -1,0 +1,25 @@
+{
+  "room": 7,
+  "name": "large cavern",
+  "description": "I'm in a large cavern",
+  "items_start": [],
+  "exits": {
+    "N": 31,
+    "S": 9,
+    "W": 27,
+    "U": 6,
+    "D": 12
+  },
+  "hints": [
+    "This is a major underground junction with many exits. Explore all directions.",
+    "North leads to a tunnel with buzzing (bees ahead). South leads to the royal anteroom. Down leads to the maze of pits.",
+    "Go NORTH toward the bee tunnel for the Royal Honey treasure. Go SOUTH for the wine bladder. Go DOWN to enter the pit maze where the Persian Rug awaits.",
+    "Avoid going WEST - it leads to the computer memory chip (dead end). UP returns to the surface."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Old fashioned brass lamp"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Major underground hub connecting to the bee tunnel (N/room 31), royal anteroom (S/room 9), computer memory dead end (W/room 27), surface (U/room 6), and pit maze (D/room 12). Light is needed for this area."
+}

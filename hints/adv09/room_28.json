@@ -1,0 +1,19 @@
+{
+  "room": 28,
+  "name": "lobby",
+  "description": "I'm in a lobby",
+  "items_start": [
+    "Counter"
+  ],
+  "exits": {
+    "N": 3,
+    "E": 27
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

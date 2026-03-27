@@ -1,0 +1,20 @@
+{
+  "room": 12,
+  "name": "hidden office",
+  "description": "I'm in a hidden office",
+  "items_start": [
+    "*ORIENTAL GO BOARD*"
+  ],
+  "exits": {
+    "E": 11
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "GO"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,24 @@
+{
+  "room": 20,
+  "name": "methane snow storm",
+  "description": "I'm in a methane snow storm",
+  "items_start": [],
+  "exits": {
+    "N": 20,
+    "S": 20,
+    "E": 20,
+    "W": 20
+  },
+  "hints": [
+    "You're hopelessly lost in the methane snow storm.",
+    "All directions lead back to this same room!",
+    "You need to restart or restore a saved game.",
+    "This is a dead-end loop. All exits lead back here. You went the wrong way."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["SUIT"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Dead-end storm room. All four exits loop back here. Player is permanently lost."
+}

@@ -1,0 +1,63 @@
+{
+  "room": 3,
+  "name": "I'm on A ledge outside An open window",
+  "description": "I'm on A ledge outside An open window",
+  "items_start": [
+    "Flag pole in wall"
+  ],
+  "exits": {},
+  "hints": [
+    "You're on a narrow ledge outside the window. There's a flag pole here. Do NOT jump - it's fatal!",
+    "TIE the sheets to the flag pole to create a way to climb down. Jumping leads to death but reveals a clue.",
+    "TIE SHEETS to the flag pole, then CLIMB DOWN to reach the hanging position (room 4) where you can access the dark window.",
+    "TIE SHEETS (to flag pole), then CLIMB DOWN to room 4. From there GO WINDOW reaches the flower box (room 5) and the dark window into the doorless room. DO NOT JUMP - instant death (room 22). GO WINDOW returns to bedroom (room 2)."
+  ],
+  "key_actions": [
+    "GO WIN",
+    "JUM",
+    "GO POL",
+    "GO WIN"
+  ],
+  "action_details": [
+    {
+      "command": "GO WIN",
+      "needs": [
+        "The other end of the sheet"
+      ],
+      "effects": [
+        "Move to room 2",
+        "Clear flag 6",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "JUM",
+      "needs": [],
+      "effects": [
+        "Message: I fall to my death",
+        "Message: as I fall",
+        "Message: I notice a DARK WINDOW UNDER the bedroom window ledge!",
+        "Move to room 22"
+      ]
+    },
+    {
+      "command": "GO POL",
+      "needs": [],
+      "effects": [
+        "Message: Try: `CLIMB POLE`"
+      ]
+    },
+    {
+      "command": "GO WIN",
+      "needs": [],
+      "effects": [
+        "Move to room 2",
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": ["Sheets"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Narrow ledge outside the bedroom window with a flag pole. TIE SHEETS to the flag pole to create a climbing rope. CLIMB DOWN leads to the hanging-on-sheet position (room 4). JUMP is fatal (room 22) but reveals the clue about a dark window below the ledge. GO WINDOW returns to bedroom (room 2). The dark window clue is also available from outside the castle (room 9) via LOOK UP."
+}

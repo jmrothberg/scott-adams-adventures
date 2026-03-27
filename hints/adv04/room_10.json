@@ -1,0 +1,33 @@
+{
+  "room": 10,
+  "name": "Ballroom",
+  "description": "I'm in a Ballroom",
+  "items_start": [
+    "Large fireplace"
+  ],
+  "exits": {
+    "E": 1
+  },
+  "hints": [
+    "The ballroom has a large fireplace. HELP says to check it out.",
+    "GO FIREPLACE to enter it and find hidden items.",
+    "GO FIREPLACE to enter (room 15). Inside you will find the dusty idol and access to the chimney with the stuck sweep.",
+    "Enter the fireplace to find the dusty idol (clean it to make it glow). The chimney leads to the sweep who gives you a paper."
+  ],
+  "key_actions": [
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: Check out the fireplace."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Ballroom with the fireplace (enter it to reach room 15). The fireplace contains the dusty idol and access to the chimney. EAST returns to the chapel."
+}

@@ -1,0 +1,108 @@
+{
+  "room": 10,
+  "name": "plain room",
+  "description": "I'm in a plain room",
+  "items_start": [],
+  "exits": {
+    "N": 3
+  },
+  "hints": [
+    "A seemingly plain room, but the walls and floor hide secrets. Examine everything carefully.",
+    "LOOK ROOM reveals 3 odd walls and floor. KNOCK on walls - some sound hollow. LOOK WALL shows cracks and empty icon niches.",
+    "PUSH walls in different directions: PUSH EAST opens to dusty room, PUSH SOUTH to storeroom, PULL WEST to vacant room. PUSH DOWN falls to dragon's lair!",
+    "PUSH EAST (room 24), PUSH SOUTH (room 11, storeroom with star), PULL WEST (room 31, spells). PUSH DOWN (room 29, dragon's lair with star). PUSH WEST does nothing."
+  ],
+  "key_actions": [
+    "LOOK ROOM",
+    "PULL WEST",
+    "PUSH WALL",
+    "PUSH EAST",
+    "PUSH SOUTH",
+    "PUSH WEST",
+    "LOOK WALL",
+    "PUSH DOWN",
+    "KNOCK"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK ROOM",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: 3 odd walls & floor."
+      ]
+    },
+    {
+      "command": "PULL WEST",
+      "needs": [],
+      "effects": [
+        "Message: wall",
+        "Message: moves.",
+        "Move to room 31"
+      ]
+    },
+    {
+      "command": "PUSH WALL",
+      "needs": [],
+      "effects": [
+        "Message: Say again with direction."
+      ]
+    },
+    {
+      "command": "PUSH EAST",
+      "needs": [],
+      "effects": [
+        "Message: wall",
+        "Message: moves.",
+        "Move to room 24"
+      ]
+    },
+    {
+      "command": "PUSH SOUTH",
+      "needs": [],
+      "effects": [
+        "Message: wall",
+        "Message: moves.",
+        "Move to room 11"
+      ]
+    },
+    {
+      "command": "PUSH WEST",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: nothing",
+        "Message: happens"
+      ]
+    },
+    {
+      "command": "LOOK WALL",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: small cracks around edges & empty icon niches."
+      ]
+    },
+    {
+      "command": "PUSH DOWN",
+      "needs": [],
+      "effects": [
+        "Message: I fall!",
+        "Move to room 29"
+      ]
+    },
+    {
+      "command": "KNOCK",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Sounds hollow!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "A room with secret passages in every direction. PUSH/PULL walls to reveal hidden rooms: PUSH EAST (dusty room 24), PUSH SOUTH (storeroom 11), PULL WEST (vacant room 31), PUSH DOWN (dragon's lair 29). KNOCK confirms hollow walls. LOOK WALL shows cracks and icon niches. The most important puzzle hub in the castle. NORTH returns to courtyard (room 3)."
+}

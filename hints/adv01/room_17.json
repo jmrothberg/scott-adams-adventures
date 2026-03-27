@@ -1,0 +1,54 @@
+{
+  "room": 17,
+  "name": "maze of pits",
+  "description": "I'm in a maze of pits",
+  "items_start": [
+    "*Thick PERSIAN RUG*",
+    "Arrow pointing down"
+  ],
+  "exits": {
+    "N": 17,
+    "S": 12,
+    "E": 12,
+    "W": 15,
+    "U": 14,
+    "D": 18
+  },
+  "hints": [
+    "There is a treasure here and an arrow pointing down. Both are important.",
+    "The Persian Rug is a magic carpet! There is a magic word that activates it. Check the sign at the bottom of the chasm.",
+    "SAY AWAY while holding the Persian Rug to fly out of the maze. Also, go DOWN following the arrow to reach the chasm bottom.",
+    "GET RUG then SAY AWAY to teleport to the meadow. Or go DOWN to the chasm bottom (room 18) for the golden net treasure."
+  ],
+  "key_actions": [
+    "SAY AWA",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "SAY AWA",
+      "needs": [
+        "*Thick PERSIAN RUG*"
+      ],
+      "effects": [
+        "Move to room 23",
+        "Message: Something I'm holding vibrates and...",
+        "Show score"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: You may need to say magic words here"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "RUG"
+  ],
+  "danger": false,
+  "notes": "Contains the Persian Rug treasure which doubles as a magic flying carpet. SAY AWAY while holding it teleports you to the meadow (room 23). The arrow points DOWN to the chasm bottom (room 18) where the golden net is."
+}

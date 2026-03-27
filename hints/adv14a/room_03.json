@@ -1,0 +1,36 @@
+{
+  "room": 3,
+  "name": "I'm on a dock",
+  "description": "I'm on a dock",
+  "items_start": [
+    "Sea",
+    "Boat"
+  ],
+  "exits": {
+    "N": 5
+  },
+  "hints": [
+    "You're on a dock with the sea nearby and a boat. NORTH leads to the beach.",
+    "GO SEA takes you into the water, but you'll be carried by currents. Make sure you have diving gear first.",
+    "GO SEA moves you to the sea (room 11) but auto-drops items and sets a swimming flag. NORTH goes to the beach by the hill (room 5).",
+    "Use NORTH to reach the beach. Only GO SEA if you have the face mask and are prepared to dive. Items get dropped when entering the sea."
+  ],
+  "key_actions": [
+    "GO SEA"
+  ],
+  "action_details": [
+    {
+      "command": "GO SEA",
+      "needs": [],
+      "effects": [
+        "Set flag 5",
+        "Move to room 11",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dock area connecting the ship to the island. NORTH goes to beach (room 5). GO SEA enters the water (room 11) but auto-drops items. The boat is here but you need to interact with it from the ship."
+}

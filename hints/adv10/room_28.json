@@ -1,0 +1,22 @@
+{
+  "room": 28,
+  "name": "maze of caves",
+  "description": "I'm in a maze of caves",
+  "items_start": [
+    "Opening",
+    "Pile bat guano"
+  ],
+  "exits": {
+    "N": 28,
+    "S": 26,
+    "E": 25,
+    "W": 33
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

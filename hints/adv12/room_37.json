@@ -1,0 +1,18 @@
+{
+  "room": 37,
+  "name": "LOT OF TROUBLE!",
+  "description": "I'm in a LOT OF TROUBLE!",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are in serious trouble with no obvious way out. This is a death/failure state.",
+    "You likely made a fatal mistake. Consider restoring a saved game and trying a different approach.",
+    "This room usually means game over. SAVE frequently to avoid losing progress."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death/failure state room. The player ends up here after certain fatal actions. No exits - must restore a save. Common causes: sailing without proper supplies, entering deadly areas unprepared."
+}

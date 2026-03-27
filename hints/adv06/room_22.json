@@ -1,0 +1,21 @@
+{
+  "room": 22,
+  "name": "storage hold of the mother ship",
+  "description": "I'm in a storage hold of the mother ship",
+  "items_start": [
+    "Sign: `Leave Treasures here say: SCORE`"
+  ],
+  "exits": {},
+  "hints": [
+    "This is the treasure room! Drop all treasures here and SAY SCORE.",
+    "You need to bring all 5 treasures here to win.",
+    "Treasures: Flask, Diamond, Belt, Painting, Sculpture.",
+    "DROP each treasure here then SAY SCOR to check your progress."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Mother ship storage hold. THE treasure room. Drop all 5 treasures here and SCORE."
+}

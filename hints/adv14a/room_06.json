@@ -1,0 +1,53 @@
+{
+  "room": 6,
+  "name": "I'm on ledge 8 feet below hill summit",
+  "description": "I'm on ledge 8 feet below hill summit",
+  "items_start": [],
+  "exits": {
+    "D": 5
+  },
+  "hints": [
+    "You're on a ledge just below the hilltop. You need to get up to the summit somehow.",
+    "Be very specific about where you want to jump. A bare JUMP is dangerous.",
+    "JUMP TOP or JUMP UP safely reaches the summit (room 7). Plain JUMP causes you to fall to your death! DOWN returns to the beach.",
+    "Always use JUMP TOP or JUMP UP here. Never use plain JUMP - it's fatal. DOWN goes back to the beach (room 5)."
+  ],
+  "key_actions": [
+    "JUMP TOP",
+    "JUMP UP",
+    "JUMP"
+  ],
+  "action_details": [
+    {
+      "command": "JUMP TOP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I made it.",
+        "Move to room 7"
+      ]
+    },
+    {
+      "command": "JUMP UP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I made it.",
+        "Move to room 7"
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I fall.",
+        "Move item 0 to room 0"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Ledge below the hilltop. JUMP TOP or JUMP UP safely reach the summit (room 7). Plain JUMP is FATAL - you fall to your death. DOWN goes back to beach (room 5). Classic Scott Adams trap where specificity matters."
+}

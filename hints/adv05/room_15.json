@@ -1,0 +1,26 @@
+{
+  "room": 15,
+  "name": "giant SOLAR OVEN",
+  "description": "I'm in a giant SOLAR OVEN",
+  "items_start": [
+    "Large tempered nail file",
+    "Large dark lens set in ceiling"
+  ],
+  "exits": {
+    "W": 12
+  },
+  "hints": [
+    "A solar oven with a nail file and a lens in the ceiling. The lens focuses sunlight.",
+    "GET FILE - the nail file can be sharpened into a stake or used as a weapon. The lens is important during daytime.",
+    "The nail file can be made into a stake for the vampire. The solar oven could be deadly during daytime when the sun shines through the lens.",
+    "GET FILE (sharpen into a stake to kill the vampire). The solar oven is dangerous during daytime - the lens focuses sunlight. WEST returns to kitchen."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "FIL"
+  ],
+  "danger": true,
+  "notes": "Solar oven with a nail file (can become a stake) and a dark lens that focuses sunlight. Dangerous during daytime when the sun activates the lens. WEST returns to the kitchen (room 12). The file is essential for making a stake."
+}

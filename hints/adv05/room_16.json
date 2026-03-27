@@ -1,0 +1,24 @@
+{
+  "room": 16,
+  "name": "Dungeon",
+  "description": "I'm in a Dungeon",
+  "items_start": [
+    "DARK pit",
+    "Iron rings in wAll"
+  ],
+  "exits": {
+    "U": 21
+  },
+  "hints": [
+    "A dungeon with a dark pit and iron rings in the wall. The pit leads deeper.",
+    "The pit is dark - you need a light source. The iron rings might be useful for climbing or tying things.",
+    "TIE SHEET to rings, then descend into the pit. You need a lit torch to see down there.",
+    "GO PIT (with light) to descend further. TIE SHEETS to the iron rings for a climbing route. UP returns to the workroom."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dungeon with a dark pit and iron rings. The pit leads to room 18 (deeper pit with torch). Sheets can be tied to the rings. UP returns to the workroom (room 21)."
+}

@@ -1,0 +1,18 @@
+{
+  "room": 22,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [],
+  "exits": {
+    "S": 9,
+    "E": 23,
+    "W": 29
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

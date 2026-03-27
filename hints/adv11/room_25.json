@@ -1,0 +1,20 @@
+{
+  "room": 25,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [],
+  "exits": {
+    "N": 10,
+    "S": 9
+  },
+  "hints": [
+    "A tunnel between two areas with force fields. NORTH has a dangerous one (red light), SOUTH has a safe flickering one.",
+    "Go NORTH carefully - room 10 has a deadly force field with a red warning light. SOUTH leads back to the safe flickering force field area."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Tunnel connecting room 10 (north, deadly red-light force field) and room 9 (south, safe flickering force field to lifeboat hangar)."
+}

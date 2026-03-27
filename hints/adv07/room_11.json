@@ -1,0 +1,47 @@
+{
+  "room": 11,
+  "name": "large rolling barrel room",
+  "description": "I'm in a large rolling barrel room",
+  "items_start": [
+    "Comb",
+    "Exit",
+    "Match"
+  ],
+  "exits": {},
+  "hints": [
+    "You're inside a rolling barrel! Standing up will cause you to fall.",
+    "You can't stand in a rolling barrel. Try crawling instead.",
+    "CRAW to crawl out to the ledge. GET COMB and GET MATC before leaving.",
+    "The comb and match are both useful items. CRAW exits to the ledge over the pit (room 15)."
+  ],
+  "key_actions": [
+    "CRAW",
+    "STAN"
+  ],
+  "action_details": [
+    {
+      "command": "CRAW",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 15"
+      ]
+    },
+    {
+      "command": "STAN",
+      "needs": [],
+      "effects": [
+        "Message: How?",
+        "Message: I fell",
+        "Message: flat on my face!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "COMB",
+    "MATC"
+  ],
+  "danger": false,
+  "notes": "Rolling barrel room. Must CRAW to exit (standing fails). Contains comb and match - both important items. Exits to ledge over pit (room 15)."
+}

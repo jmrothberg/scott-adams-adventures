@@ -1,0 +1,65 @@
+{
+  "room": 7,
+  "name": "I'm on top of a small hill",
+  "description": "I'm on top of a small hill",
+  "items_start": [
+    "Narrow crack in rock",
+    "Sleeping Pirate"
+  ],
+  "exits": {
+    "D": 10
+  },
+  "hints": [
+    "You're atop the hill with a sleeping pirate and a narrow crack in the rock. Don't wake the pirate carelessly.",
+    "The crack leads underground into a cavern system. The pirate is sleeping - should you wake him or sneak past?",
+    "GO CRACK enters the cavern below (room 8) but sets flags that affect later gameplay. JUMP LEDGE gets you back to the ledge safely. Plain JUMP is fatal.",
+    "GO CRACK to enter the cavern (room 8). Be warned: returning through the crack from the cavern side is FATAL. JUMP LEDGE safely returns to the ledge (room 6). DOWN leads to room 10 (a joke room)."
+  ],
+  "key_actions": [
+    "JUMP LEDG",
+    "JUMP",
+    "GO CRAC",
+    "GO HILL"
+  ],
+  "action_details": [
+    {
+      "command": "JUMP LEDG",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 6",
+        "Message: I fall."
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I fall.",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "GO CRAC",
+      "needs": [],
+      "effects": [
+        "Move to room 8",
+        "Set flag 3",
+        "Set flag 16"
+      ]
+    },
+    {
+      "command": "GO HILL",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I am."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Hilltop with a sleeping pirate and a crack in the rock. GO CRACK enters cavern (room 8) and sets flags 3 and 16. JUMP LEDGE returns to ledge (room 6) with a fall message but safely. Plain JUMP is FATAL. GO HILL says 'Sorry, I am' (already on hill). DOWN goes to room 10 (joke referencing Adventure #2). The sleeping pirate may be interacted with using WAKE."
+}

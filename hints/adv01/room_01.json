@@ -1,0 +1,62 @@
+{
+  "room": 1,
+  "name": "dismal swamp",
+  "description": "I'm in a dismal swamp",
+  "items_start": [
+    "Cypress tree",
+    "Evil smelling mud",
+    "Swamp gas",
+    "Patches of `OILY` slime",
+    "Chiggers"
+  ],
+  "exits": {
+    "N": 23,
+    "E": 29,
+    "W": 25
+  },
+  "hints": [
+    "There are several useful things here. Look around carefully at what the swamp contains.",
+    "The mud, gas, and oily slime can all be collected if you have the right containers.",
+    "You need an empty container (like the wine bladder) to GET GAS. The mud can be picked up directly.",
+    "CLIMB TREE to reach the treetop where keys and a web await. GET MUD for later use. Bring the empty bladder here to GET GAS."
+  ],
+  "key_actions": [
+    "GET GAS",
+    "GET GAS",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "GET GAS",
+      "needs": [],
+      "effects": [
+        "Message: First I need an empty container."
+      ]
+    },
+    {
+      "command": "GET GAS",
+      "needs": [
+        "Empty wine bladder"
+      ],
+      "effects": [
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: Try --> `LOOK, JUMP, SWIM, CLIMB, FIND, TAKE, SCORE, DROP`\nand any other verbs you can think of..."
+      ]
+    }
+  ],
+  "items_needed": ["Empty wine bladder"],
+  "items_available": [
+    "MUD",
+    "OIL",
+    "CHI"
+  ],
+  "danger": false,
+  "notes": "The dismal swamp is a hub area connecting the meadow (N), bottomless hole (E), and hidden grove (W). The cypress tree can be climbed to reach the treetop (room 2). Swamp gas requires an empty container to collect."
+}

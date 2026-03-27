@@ -1,0 +1,43 @@
+{
+  "room": 21,
+  "name": "large room with tall ceiling",
+  "description": "I'm in a large room with tall ceiling",
+  "items_start": [
+    "LOUD Steam Calliope",
+    "Merry-Go-Round",
+    "Blue button"
+  ],
+  "exits": {
+    "S": 23
+  },
+  "hints": [
+    "A large room with the merry-go-round, a steam calliope, and a blue button. Look up!",
+    "LOOK UP or LOOK CEIL to spot the catwalk above the ride. You need to get up there.",
+    "PRES BLUE to interact with the blue button. The calliope is very loud - it masks sounds.",
+    "To reach the catwalk: ride the merry-go-round, climb the pole on the horse, use the trampoline at the top to jump to the rope. S=fortune teller (room 23)."
+  ],
+  "key_actions": [
+    "LOOK CEIL",
+    "LOOK UP"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK CEIL",
+      "needs": [],
+      "effects": [
+        "Message: There's a catwalk above the ride"
+      ]
+    },
+    {
+      "command": "LOOK UP",
+      "needs": [],
+      "effects": [
+        "Message: There's a catwalk above the ride"
+      ]
+    }
+  ],
+  "items_needed": ["TRAM"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Main merry-go-round room with calliope and blue button. LOOK UP reveals catwalk above. The path to the catwalk is: ride horse -> climb pole -> use trampoline -> jump to rope. S=fortune teller (room 23)."
+}

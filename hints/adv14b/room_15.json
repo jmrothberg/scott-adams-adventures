@@ -1,0 +1,18 @@
+{
+  "room": 15,
+  "name": "Cul-de-sac at West end of Hickory",
+  "description": "I'm in a Cul-de-sac at West end of Hickory",
+  "items_start": [
+    "Large house"
+  ],
+  "exits": {
+    "E": 7
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

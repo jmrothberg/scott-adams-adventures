@@ -1,0 +1,57 @@
+{
+  "room": 10,
+  "name": "room with a low ceiling",
+  "description": "I'm in a room with a low ceiling",
+  "items_start": [
+    "Skeleton",
+    "Strange knobs on wall: Yellow, Green, Blue"
+  ],
+  "exits": {
+    "W": 4
+  },
+  "hints": [
+    "Three colored knobs on the wall - each does something different. The skeleton is a warning!",
+    "Try pulling each knob. They transport you to different rooms via a revolving wall.",
+    "PULL BLUE goes to room 23 (fortune telling). PULL YELL goes to room 24 (music). PULL GREE goes to room 8 (trampoline).",
+    "PULL GREE is safe and useful - takes you to the trampoline room. PULL YELL leads toward the maze. PULL BLUE leads to the fortune teller."
+  ],
+  "key_actions": [
+    "PULL BLUE",
+    "PULL YELL",
+    "PULL GREE"
+  ],
+  "action_details": [
+    {
+      "command": "PULL BLUE",
+      "needs": [],
+      "effects": [
+        "Message: Click!",
+        "Message: Wall swings me around & I'm elsewhere...",
+        "Move to room 23"
+      ]
+    },
+    {
+      "command": "PULL YELL",
+      "needs": [],
+      "effects": [
+        "Message: Click!",
+        "Message: Wall swings me around & I'm elsewhere...",
+        "Message: There's strange music playing",
+        "Move to room 24"
+      ]
+    },
+    {
+      "command": "PULL GREE",
+      "needs": [],
+      "effects": [
+        "Message: Click!",
+        "Message: Wall swings me around & I'm elsewhere...",
+        "Move to room 8"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Key puzzle room with three colored knobs. Each knob transports you to a different area. Blue=fortune teller (23), Yellow=music room (24), Green=trampoline room (8). The skeleton warns of danger. W=beside tank (room 4)."
+}

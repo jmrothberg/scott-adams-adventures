@@ -1,0 +1,23 @@
+{
+  "room": 28,
+  "name": "Sewer system",
+  "description": "I'm in a Sewer system",
+  "items_start": [
+    "Open flood door",
+    "Dark hole",
+    "Large grate welded over hole"
+  ],
+  "exits": {},
+  "hints": [
+    "The sewer system has a flood door, a dark hole, and a grate welded over it.",
+    "The grate is welded shut - you can't just open it. You need heat to cut through.",
+    "Use the match to heat and cut through the welded grate, or find another way through.",
+    "The dark hole behind the grate leads deeper. The flood door connects back to the manhole. CUT GRAT with a tool to get through."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["MATC"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Sewer system with a welded grate over a dark hole. Need to cut through the grate. The flood door and dark hole lead to different areas."
+}

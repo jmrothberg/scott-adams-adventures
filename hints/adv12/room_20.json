@@ -1,0 +1,61 @@
+{
+  "room": 20,
+  "name": "I'm on a long staircase",
+  "description": "I'm on a long staircase",
+  "items_start": [
+    "Flint & steel"
+  ],
+  "exits": {},
+  "hints": [
+    "On the staircase between the rocky strand and the temple. Flint and steel are here for making fire.",
+    "GET FLINT - useful for lighting torches or fires. STEP UP to continue toward the temple, STEP DOWN to return to the shore.",
+    "STEP UP to reach the sacred temple. STEP DOWN to return to the rocky strand. If an animated statue blocks your way, PUSH STATUE to topple it down the stairs."
+  ],
+  "key_actions": [
+    "PUSH STAT",
+    "STEP UP",
+    "STEP DOWN",
+    "GO STAI"
+  ],
+  "action_details": [
+    {
+      "command": "PUSH STAT",
+      "needs": [
+        "Animated statue (must be in room)"
+      ],
+      "effects": [
+        "Clear flag 62",
+        "Message: Statue topples down the stairs"
+      ]
+    },
+    {
+      "command": "STEP UP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 21"
+      ]
+    },
+    {
+      "command": "STEP DOWN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 19"
+      ]
+    },
+    {
+      "command": "GO STAI",
+      "needs": [],
+      "effects": [
+        "Message: Please be more specific"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "FLIN"
+  ],
+  "danger": false,
+  "notes": "The long staircase between the rocky strand (room 19) and the sacred temple (room 21). Contains flint and steel for fire-making. Use STEP UP/STEP DOWN (not GO STAIRCASE). An animated statue may appear here as an obstacle - PUSH STATUE to topple it down the stairs."
+}

@@ -1,0 +1,29 @@
+{
+  "room": 9,
+  "name": "large field",
+  "description": "I'm in a large field",
+  "items_start": [],
+  "exits": {
+    "S": 7
+  },
+  "hints": [],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Auto-DROP item",
+        "Message: I found",
+        "Message: something"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

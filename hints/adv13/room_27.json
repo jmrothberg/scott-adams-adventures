@@ -1,0 +1,26 @@
+{
+  "room": 27,
+  "name": "stone grotto",
+  "description": "I'm in a stone grotto",
+  "items_start": [
+    "*STAR",
+    "Dizzy Dean spell"
+  ],
+  "exits": {
+    "N": 5
+  },
+  "hints": [
+    "A stone grotto with a star and the Dizzy Dean spell. Both are valuable!",
+    "GET STAR and GET DIZZY (the Dizzy Dean spell). The spell may disorient enemies or have magical effects.",
+    "Take both items. The Dizzy Dean spell is one of several spells needed to solve the castle's puzzles. NORTH leads back through the lava stream."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "STAR",
+    "DIZZY"
+  ],
+  "danger": false,
+  "notes": "Stone grotto with a *STAR* and the Dizzy Dean spell. North leads back through the lava stream (room 5). Both items are important - the star is a treasure, the spell is useful against enemies or for puzzle solving."
+}

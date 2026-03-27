@@ -1,0 +1,22 @@
+{
+  "room": 12,
+  "name": "maze of caves",
+  "description": "I'm in a maze of caves",
+  "items_start": [],
+  "exits": {
+    "N": 7,
+    "E": 14,
+    "W": 13
+  },
+  "hints": [
+    "Part of the cave maze. Map your route carefully.",
+    "NORTH returns to the main maze junction. EAST leads to the hill foot. WEST goes deeper in the maze.",
+    "Go EAST to exit the caves at the hill foot (room 14), or NORTH to return to the junction."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Cave maze room connecting to the main junction (N/room 7), hill foot (E/room 14), and deeper caves (W/room 13)."
+}

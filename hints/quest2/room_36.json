@@ -1,0 +1,21 @@
+{
+  "room": 36,
+  "name": "small deserted Office",
+  "description": "I'm in a small deserted Office",
+  "items_start": [
+    "*Bio Gem",
+    "Natter energy egg"
+  ],
+  "exits": {
+    "E": 35
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,88 @@
+{
+  "room": 17,
+  "name": "I'm underwater in\nthick murky fluid",
+  "description": "I'm underwater in\nthick murky fluid",
+  "items_start": [
+    "Soggy towel"
+  ],
+  "exits": {},
+  "hints": [
+    "Underwater in thick murky fluid. A soggy towel is here. You cannot breathe indefinitely - act fast.",
+    "GET TOWEL. SWIM with specific directions. Do NOT try to SAY anything underwater - you drown. SWIM UP to surface.",
+    "GET TOWEL, then SWIM UP to return to the moat surface. The towel can be squeezed or dried for use later. Do NOT SAY anything - instant drowning.",
+    "SWIM DOWN reaches the bottom. SWIM EAST may lead somewhere. SWIM WEST is blocked by a wall. SWIM UP to escape before you drown."
+  ],
+  "key_actions": [
+    "SWIM WEST",
+    "SWIM EAST",
+    "SWIM DOWN",
+    "SWIM UP",
+    "SWIM UP",
+    "SWIM",
+    "SAY"
+  ],
+  "action_details": [
+    {
+      "command": "SWIM WEST",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I can't,",
+        "Message: wall",
+        "Message: in the way"
+      ]
+    },
+    {
+      "command": "SWIM EAST",
+      "needs": [],
+      "effects": []
+    },
+    {
+      "command": "SWIM DOWN",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "SWIM UP",
+      "needs": [
+        "Moat bottom (must be in room)"
+      ],
+      "effects": [
+        "Clear flag 39"
+      ]
+    },
+    {
+      "command": "SWIM UP",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I can't,",
+        "Message: it's enchanted"
+      ]
+    },
+    {
+      "command": "SAY",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Blub!",
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "TOWEL"
+  ],
+  "danger": true,
+  "notes": "Underwater in the enchanted moat. Contains a soggy towel (useful when dried/squeezed). SWIM UP to surface. SAY anything underwater causes death (drowning - 'Blub!'). The water is enchanted - undirected swimming fails. Wall blocks west. The moat bottom may be reachable by swimming down."
+}

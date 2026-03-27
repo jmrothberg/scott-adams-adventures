@@ -1,0 +1,39 @@
+{
+  "room": 21,
+  "name": "workroom",
+  "description": "I'm in a workroom",
+  "items_start": [
+    "Locked door",
+    "Rubber mallet",
+    "Vent",
+    "Memo tacked to the door"
+  ],
+  "exits": {
+    "D": 16
+  },
+  "hints": [
+    "The workroom has a mallet, locked door, vent, and a memo. Read the memo for clues.",
+    "GET MALLET - it can be used to hammer stakes. READ MEMO for important information. The door is locked.",
+    "GET MALLET (for hammering the stake into the vampire). The locked door and closet are accessible. DOWN leads to the dungeon.",
+    "GET MALLET (essential for staking the vampire). READ MEMO. The closet (room 7) has a vial. DOWN to dungeon (room 16). The door connects elsewhere."
+  ],
+  "key_actions": [
+    "LOO DOO"
+  ],
+  "action_details": [
+    {
+      "command": "LOO DOO",
+      "needs": [],
+      "effects": [
+        "Message: There's something there, maybe I should",
+        "Message: go there?"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "MAL"
+  ],
+  "danger": false,
+  "notes": "Workroom with the rubber mallet (for staking the vampire), locked door, vent, and a memo with clues. The closet (room 7) is accessible from here. DOWN leads to the dungeon (room 16). Accessible via dumb-waiter."
+}

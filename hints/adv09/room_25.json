@@ -1,0 +1,67 @@
+{
+  "room": 25,
+  "name": "I'm on back of 'Ole Paint",
+  "description": "I'm on back of 'Ole Paint",
+  "items_start": [
+    "*SILVER SPURS*"
+  ],
+  "exits": {
+    "D": 19
+  },
+  "hints": [],
+  "key_actions": [
+    "SAY GIDD",
+    "SAY GIDD",
+    "SPUR",
+    "GO PAIN",
+    "GO HORS"
+  ],
+  "action_details": [
+    {
+      "command": "SAY GIDD",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: He won't budge"
+      ]
+    },
+    {
+      "command": "SAY GIDD",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: after a long ride"
+      ]
+    },
+    {
+      "command": "SPUR",
+      "needs": [
+        "*SILVER SPURS*"
+      ],
+      "effects": [
+        "Message: He bucks, I'm thrown",
+        "Move to room 30"
+      ]
+    },
+    {
+      "command": "GO PAIN",
+      "needs": [],
+      "effects": [
+        "Message: may need to say a magic word here"
+      ]
+    },
+    {
+      "command": "GO HORS",
+      "needs": [],
+      "effects": [
+        "Message: may need to say a magic word here"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SPUR"
+  ],
+  "danger": false,
+  "notes": ""
+}

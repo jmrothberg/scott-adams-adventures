@@ -1,0 +1,47 @@
+{
+  "room": 24,
+  "name": "hollow ice mound",
+  "description": "I'm in a hollow ice mound",
+  "items_start": [
+    "* RIGILIAN ICE DIAMOND *"
+  ],
+  "exits": {},
+  "hints": [
+    "Inside a hollow ice mound with a treasure!",
+    "The Rigilian Ice Diamond is here - a treasure!",
+    "You can't dig through ice with a shovel.",
+    "Use SHOO MOUN with the phaser to blast your way out. The Ice Hound burrows away."
+  ],
+  "key_actions": [
+    "DIG",
+    "SHOO MOUN"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: I can't do that",
+        "Message: Ice is very smooth & hard!"
+      ]
+    },
+    {
+      "command": "SHOO MOUN",
+      "needs": [
+        "Phaser"
+      ],
+      "effects": [
+        "Move to room 18",
+        "Set flag 4",
+        "Message: I destroyed it!",
+        "Message: The Ice Hound burrows off..."
+      ]
+    }
+  ],
+  "items_needed": ["PHAS"],
+  "items_available": [
+    "DIAM"
+  ],
+  "danger": false,
+  "notes": "Hollow ice mound containing the Rigilian Ice Diamond treasure. Need phaser to escape."
+}

@@ -1,0 +1,24 @@
+{
+  "room": 13,
+  "name": "anteroom",
+  "description": "I'm in a anteroom",
+  "items_start": [
+    "Oak door"
+  ],
+  "exits": {
+    "U": 14
+  },
+  "hints": [
+    "An anteroom outside the dungeon cell with an oak door. The stairs go up.",
+    "The oak door leads to the dungeon cell (room 12) but may be locked. Use the permeability spell to pass through it.",
+    "GO UP returns to the staircase. Use PERMEABILITY spell to pass through the oak door to reach the dungeon cell with a star."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "PERME"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Anteroom at the bottom of the stairs with an oak door to the dungeon cell (room 12). Up returns to the staircase (room 14). The permeability spell is needed to pass through the locked door."
+}

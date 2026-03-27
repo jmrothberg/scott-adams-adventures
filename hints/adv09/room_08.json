@@ -1,0 +1,66 @@
+{
+  "room": 8,
+  "name": "I'm on a ridge above a narrow ravine I see\nmountains in the distance",
+  "description": "I'm on a ridge above a narrow ravine I see\nmountains in the distance",
+  "items_start": [],
+  "exits": {
+    "N": 7
+  },
+  "hints": [],
+  "key_actions": [
+    "GO RAVI",
+    "GO RAVI",
+    "BURN",
+    "JUMP RAVI",
+    "CROS"
+  ],
+  "action_details": [
+    {
+      "command": "GO RAVI",
+      "needs": [],
+      "effects": [
+        "Message: Sorry I can't",
+        "Message: its full of sage brush, tumbleweed & is impassable"
+      ]
+    },
+    {
+      "command": "GO RAVI",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 10"
+      ]
+    },
+    {
+      "command": "BURN",
+      "needs": [
+        "Matches (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: The dry wash is burnt clear",
+        "Set flag 10",
+        "Set flag 18"
+      ]
+    },
+    {
+      "command": "JUMP RAVI",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 18"
+      ]
+    },
+    {
+      "command": "CROS",
+      "needs": [],
+      "effects": [
+        "Message: How?"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

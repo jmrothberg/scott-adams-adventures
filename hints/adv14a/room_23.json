@@ -1,0 +1,27 @@
+{
+  "room": 23,
+  "name": "sunken ship",
+  "description": "I'm in a sunken ship",
+  "items_start": [
+    "*Jeweled chest*"
+  ],
+  "exits": {
+    "U": 12
+  },
+  "hints": [
+    "A sunken ship on the ocean floor with a jeweled chest treasure.",
+    "GET CHEST - it's one of the 13 treasures. UP returns to the undersea area.",
+    "GET the *Jeweled chest* treasure. UP returns to the undersea area (room 12). You need the face mask to survive down here.",
+    "Collect the jeweled chest and go UP. Make sure you have the face mask or you'll drown."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "Face mask"
+  ],
+  "items_available": [
+    "CHES"
+  ],
+  "danger": false,
+  "notes": "Sunken ship at the bottom of the sea. Contains the *Jeweled chest* treasure. UP returns to the undersea area (room 12). Requires the face mask for underwater breathing. Accessed by diving down from the undersea area."
+}

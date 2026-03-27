@@ -1,0 +1,23 @@
+{
+  "room": 13,
+  "name": "maze of caves",
+  "description": "I'm in a maze of caves",
+  "items_start": [],
+  "exits": {
+    "N": 7,
+    "S": 14,
+    "E": 12,
+    "W": 19
+  },
+  "hints": [
+    "Another cave maze junction. Multiple paths lead in different directions.",
+    "SOUTH and NORTH both lead to familiar areas. WEST goes to a dead-end area of the maze.",
+    "Go SOUTH to reach the hill foot (room 14) or NORTH to the main junction. EAST to room 12."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Cave maze room with four exits. NORTH to main junction (room 7), SOUTH to hill foot (room 14), EAST to room 12, WEST to dead-end maze room (room 19)."
+}

@@ -1,0 +1,22 @@
+{
+  "room": 35,
+  "name": "I'm behind the counter",
+  "description": "I'm behind the counter",
+  "items_start": [
+    "Sign-`Ring for ROOM service`",
+    "*CASHBOX*"
+  ],
+  "exits": {
+    "N": 28
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SIGN",
+    "BOX"
+  ],
+  "danger": false,
+  "notes": ""
+}

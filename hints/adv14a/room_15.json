@@ -1,0 +1,41 @@
+{
+  "room": 15,
+  "name": "I'm on a rocky beach by sea",
+  "description": "I'm on a rocky beach by sea",
+  "items_start": [],
+  "exits": {
+    "W": 5
+  },
+  "hints": [
+    "A rocky beach on the eastern shore. There are rocks here and the sea is accessible.",
+    "GET ROCK to pick up a rock - it might be useful. GO SEA enters the water.",
+    "GET ROCK picks up a rock (useful as a tool or weapon). GO SEA enters the water (room 11) but drops items. WEST returns to the sandy beach (room 5).",
+    "Pick up a rock here. WEST goes back to the main beach. Only GO SEA if you're prepared to swim."
+  ],
+  "key_actions": [
+    "GO SEA",
+    "GET ROCK"
+  ],
+  "action_details": [
+    {
+      "command": "GO SEA",
+      "needs": [],
+      "effects": [
+        "Set flag 5",
+        "Move to room 11",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GET ROCK",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Rocky beach east of the main beach. GET ROCK picks up a useful rock. GO SEA enters water (room 11) and drops items. WEST returns to the sandy beach (room 5)."
+}

@@ -1,0 +1,39 @@
+{
+  "room": 9,
+  "name": "dense jungle",
+  "description": "I'm in a dense jungle",
+  "items_start": [],
+  "exits": {
+    "N": 10,
+    "S": 9,
+    "E": 9,
+    "W": 7
+  },
+  "hints": [
+    "A dense jungle where most directions loop back on themselves. Only NORTH and WEST lead somewhere new.",
+    "Go NORTH to find a cave deeper in the jungle. Go WEST to return to the beach. DIG here with the shovel to find buried treasure.",
+    "DIG with the shovel to unearth buried items. NORTH leads to another jungle area with a cave entrance."
+  ],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Message: I found",
+        "Message: something!",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [
+    "SHOV"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dense jungle - south and east loop back to this room. West returns to beach (room 7), north leads deeper into jungle (room 10) where a cave is located. Digging with the shovel reveals buried treasure."
+}

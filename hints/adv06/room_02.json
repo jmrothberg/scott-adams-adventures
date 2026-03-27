@@ -1,0 +1,38 @@
+{
+  "room": 2,
+  "name": "small airlock",
+  "description": "I'm in a small airlock",
+  "items_start": [
+    "Red button by door",
+    "Closed outer door",
+    "Open inner door"
+  ],
+  "exits": {},
+  "hints": [
+    "This is the airlock between inside and outside the ship.",
+    "The red button controls the doors.",
+    "PUSH RED to open the outer door so you can go outside.",
+    "Do NOT fire the phaser inside the ship!"
+  ],
+  "key_actions": [
+    "SHOO"
+  ],
+  "action_details": [
+    {
+      "command": "SHOO",
+      "needs": [
+        "Phaser"
+      ],
+      "effects": [
+        "Message: I fire the Phaser,",
+        "Move to room 35",
+        "Message: I ruined the ship!",
+        "Look around"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Airlock chamber. Use the red button to cycle between inner and outer doors."
+}

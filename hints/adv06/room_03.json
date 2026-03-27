@@ -1,0 +1,23 @@
+{
+  "room": 3,
+  "name": "large cavern",
+  "description": "I'm in a large cavern",
+  "items_start": [
+    "Large boulder"
+  ],
+  "exits": {
+    "U": 8
+  },
+  "hints": [
+    "There's a large boulder here blocking something.",
+    "Try MOVEing or LOOKing at things.",
+    "The way up leads to the planetoid surface.",
+    "MOVE BOUL to find what is underneath."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["SHOV"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Underground cavern accessible from the planetoid surface."
+}

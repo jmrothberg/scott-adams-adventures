@@ -1,0 +1,26 @@
+{
+  "room": 4,
+  "name": "I'm at the corner of Main & Mountain View",
+  "description": "I'm at the corner of Main & Mountain View",
+  "items_start": [
+    "Hardware store"
+  ],
+  "exits": {
+    "N": 18,
+    "S": 3,
+    "E": 28,
+    "W": 28
+  },
+  "hints": [
+    "Corner with a hardware store. The mountain is visible to the north beyond the parking lot.",
+    "GO HARDWARE or GO STORE to enter the hardware store for essential tools. EAST and WEST both go behind the mountain.",
+    "NORTH leads to the parking lot (room 18). SOUTH returns to Main & Hickory (room 3). EAST and WEST both go behind the mountain on Mountain View (room 28). The hardware store has critical items.",
+    "Visit the hardware store for the climber's pick, hydrometer, pump, and jumper cables. NORTH leads toward the parking lot and eventually the mountain."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Corner of Main & Mountain View with the hardware store entrance. NORTH to parking lot east end (room 18). SOUTH to Main & Hickory (room 3). EAST and WEST both lead behind the mountain (room 28). Hardware store (room 17) is entered via GO STORE."
+}

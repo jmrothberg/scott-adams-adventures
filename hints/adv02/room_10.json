@@ -1,0 +1,28 @@
+{
+  "room": 10,
+  "name": "I'm in the ocean",
+  "description": "I'm in the ocean",
+  "items_start": [
+    "Fish",
+    "Salt water"
+  ],
+  "exits": {
+    "N": 10,
+    "S": 24,
+    "E": 10,
+    "W": 10
+  },
+  "hints": [
+    "You are in the ocean! Most directions loop. You need to get back to shore.",
+    "Go SOUTH to return to the lagoon. North, East, and West all loop back here.",
+    "Go SOUTH to reach the shallow lagoon (room 24). Swimming without proper items is dangerous."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "FIS"
+  ],
+  "danger": true,
+  "notes": "Open ocean - most exits loop. Only SOUTH leads to the lagoon (room 24). Fish are here but dangerous to linger. Get back to shore quickly."
+}

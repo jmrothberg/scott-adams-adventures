@@ -1,0 +1,30 @@
+{
+  "room": 23,
+  "name": "Mine",
+  "description": "I'm in a Mine",
+  "items_start": [],
+  "exits": {
+    "N": 22
+  },
+  "hints": [],
+  "key_actions": [
+    "DIG ROOF"
+  ],
+  "action_details": [
+    {
+      "command": "DIG ROOF",
+      "needs": [
+        "Shovel (need access)"
+      ],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I found",
+        "Message: something"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

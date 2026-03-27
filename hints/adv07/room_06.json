@@ -1,0 +1,26 @@
+{
+  "room": 6,
+  "name": "hidden laboratory",
+  "description": "I'm in a hidden laboratory",
+  "items_start": [
+    "Locked door",
+    "Missing top secret plans"
+  ],
+  "exits": {
+    "N": 25
+  },
+  "hints": [
+    "This is the hidden laboratory! The top secret plans are supposed to be here.",
+    "The plans are 'missing' - you need to find them elsewhere in the fun house.",
+    "The locked door needs a key. N leads back to the large room.",
+    "This is the goal room. The top secret plans were stolen and hidden elsewhere. You need to find them and bring them back."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["PLAN", "KEY"],
+  "items_available": [
+    "PLAN"
+  ],
+  "danger": false,
+  "notes": "The hidden laboratory - final goal room. The top secret plans are described as 'missing' and must be found. The locked door requires the rusty key. N=large room (room 25)."
+}

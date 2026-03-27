@@ -1,0 +1,18 @@
+{
+  "room": 18,
+  "name": "I'm at the east end of a parking lot",
+  "description": "I'm at the east end of a parking lot",
+  "items_start": [],
+  "exits": {
+    "N": 22,
+    "S": 4,
+    "W": 19
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

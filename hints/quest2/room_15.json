@@ -1,0 +1,37 @@
+{
+  "room": 15,
+  "name": "luxury Penthouse",
+  "description": "I'm in a luxury Penthouse",
+  "items_start": [
+    "Open shaft",
+    "Thermostat",
+    "Desk",
+    "Couch",
+    "Painting",
+    "Clock"
+  ],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "GO SHAF"
+  ],
+  "action_details": [
+    {
+      "command": "GO SHAF",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 14"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "DESK",
+    "COUC",
+    "PAIN",
+    "CLOC"
+  ],
+  "danger": false,
+  "notes": ""
+}

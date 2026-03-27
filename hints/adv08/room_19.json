@@ -1,0 +1,21 @@
+{
+  "room": 19,
+  "name": "prison cell",
+  "description": "I'm in a prison cell",
+  "items_start": [
+    "Dead explorer chained to wall",
+    "Pile of Rubbish",
+    "Closed portal"
+  ],
+  "exits": {
+    "S": 20,
+    "W": 18
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

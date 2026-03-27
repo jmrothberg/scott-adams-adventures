@@ -1,0 +1,47 @@
+{
+  "room": 22,
+  "name": "treasure room",
+  "description": "I'm in a treasure room",
+  "items_start": [
+    "Treasure coffer",
+    "Barred window"
+  ],
+  "exits": {
+    "D": 21
+  },
+  "hints": [],
+  "key_actions": [
+    "GO BAR",
+    "SAW BAR",
+    "UNL BAR"
+  ],
+  "action_details": [
+    {
+      "command": "GO BAR",
+      "needs": [
+        "Open window (must be in room)"
+      ],
+      "effects": [
+        "Move to room 23"
+      ]
+    },
+    {
+      "command": "SAW BAR",
+      "needs": [
+        "Saw"
+      ],
+      "effects": []
+    },
+    {
+      "command": "UNL BAR",
+      "needs": [
+        "Saw"
+      ],
+      "effects": []
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

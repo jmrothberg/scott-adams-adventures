@@ -1,0 +1,25 @@
+{
+  "room": 8,
+  "name": "I'm on a large chandelier",
+  "description": "I'm on a large chandelier",
+  "items_start": [
+    "*STAR",
+    "Broken glass",
+    "Ballroom"
+  ],
+  "exits": {},
+  "hints": [
+    "You are on the chandelier high above the ballroom. A star and broken glass are here.",
+    "GET STAR and GET GLASS. The broken glass may be useful as a cutting tool elsewhere.",
+    "Take the star and glass. Be careful getting down - jumping without the right spell is fatal."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "STAR",
+    "GLASS"
+  ],
+  "danger": false,
+  "notes": "On the chandelier above the ballroom. Contains a *STAR* and broken glass (useful as a cutting tool). Getting down requires care - the ballroom is far below. The broken glass can cut ropes and other items."
+}

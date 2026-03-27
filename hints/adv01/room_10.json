@@ -1,0 +1,31 @@
+{
+  "room": 10,
+  "name": "I'm on the shore of a lake",
+  "description": "I'm on the shore of a lake",
+  "items_start": [
+    "Water",
+    "*GOLDEN FISH*",
+    "Rusty axe (Magic word `BUNYON` on it)",
+    "Sign says `No swimming allowed here`"
+  ],
+  "exits": {
+    "N": 26,
+    "S": 29,
+    "W": 23
+  },
+  "hints": [
+    "There are two important items here. The axe has a magic word on it - remember it for later.",
+    "The golden fish is a treasure but you need something to catch it. The net from the chasm bottom would work.",
+    "You need the golden net to catch the fish. The axe and its magic word BUNYON are critical for another puzzle.",
+    "GET AXE. To catch the fish, bring the golden net here and use it. Be careful going NORTH - quicksand bog is dangerous!"
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["*GOLDEN NET*"],
+  "items_available": [
+    "FIS",
+    "AXE"
+  ],
+  "danger": false,
+  "notes": "Lakeside area with two key items: the rusty axe (magic word BUNYON for Paul Bunyon) and the golden fish treasure (needs the golden net to catch). North leads to dangerous quicksand. The sign warns against swimming."
+}

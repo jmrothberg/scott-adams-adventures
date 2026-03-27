@@ -1,0 +1,59 @@
+{
+  "room": 16,
+  "name": "dark cavern",
+  "description": "I'm in a dark cavern",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "A dark underground cavern. There may be a fountain here and a crevice leading back up. Be careful - the crevice exit may be deadly.",
+    "The stone tablet can be used in the fountain here (IN FOUNTAIN). Going through the crevice back up is dangerous.",
+    "IN FOUNTAIN with the stone tablet to interact with it. WARNING: GO CREVICE causes death. Find another way out.",
+    "Use the fountain carefully. The crevice exit is a trap - it kills you. You may need a light source or rope to escape safely."
+  ],
+  "key_actions": [
+    "IN FOUN",
+    "GO CREV",
+    "IN FOUN"
+  ],
+  "action_details": [
+    {
+      "command": "IN FOUN",
+      "needs": [
+        "Stone tablet"
+      ],
+      "effects": [
+        "Message: OK",
+        "Clear flag 68",
+        "Message: PLOOSH"
+      ]
+    },
+    {
+      "command": "GO CREV",
+      "needs": [
+        "Crevice (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 14",
+        "Auto-DROP item",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "IN FOUN",
+      "needs": [
+        "Stone tablet"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: PLOOSH"
+      ]
+    }
+  ],
+  "items_needed": [
+    "TABL"
+  ],
+  "items_available": [],
+  "danger": true,
+  "notes": "Dark cavern beneath the island, accessed via the crevice. Has a fountain where the stone tablet can be dropped (PLOOSH). WARNING: GO CREVICE to exit causes death. Must find an alternative escape route. The fountain interaction is important for the quest."
+}

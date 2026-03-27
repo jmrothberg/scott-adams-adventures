@@ -1,0 +1,21 @@
+{
+  "room": 13,
+  "name": "Jail",
+  "description": "I'm in a Jail",
+  "items_start": [
+    "*GOLDEN DERRINGER*",
+    "Locked door"
+  ],
+  "exits": {
+    "N": 1
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "DERR"
+  ],
+  "danger": false,
+  "notes": ""
+}

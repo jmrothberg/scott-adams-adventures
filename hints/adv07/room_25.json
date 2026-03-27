@@ -1,0 +1,24 @@
+{
+  "room": 25,
+  "name": "large room",
+  "description": "I'm in a large room",
+  "items_start": [
+    "Clay pigeons"
+  ],
+  "exits": {
+    "S": 6,
+    "D": 34
+  },
+  "hints": [
+    "A large room with clay pigeons. There are exits south and down.",
+    "The clay pigeons are targets for the shooting gallery. S leads to the hidden laboratory!",
+    "D leads to a long tunnel. S leads to the laboratory where the plans should be.",
+    "SHOO PIGE with the gun from the gallery to hit the clay pigeons. S=laboratory (room 6), D=tunnel (room 34)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Large room with clay pigeons (shooting gallery targets). S=hidden laboratory (room 6 - the goal!), D=long tunnel (room 34)."
+}

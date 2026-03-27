@@ -1,0 +1,91 @@
+{
+  "room": 19,
+  "name": "room with the Chief Examiner working\nbehind a desk, he doesn't notice me",
+  "description": "I'm in a room with the Chief Examiner working\nbehind a desk, he doesn't notice me",
+  "items_start": [
+    "Door"
+  ],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "LOOK DESK",
+    "HIT CHIE",
+    "OPEN DOOR",
+    "LOOK PROG",
+    "GO DOOR",
+    "SAY",
+    "LOOK CHIE",
+    "GET PROG"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK DESK",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I see",
+        "Message: something"
+      ]
+    },
+    {
+      "command": "HIT CHIE",
+      "needs": [],
+      "effects": [
+        "Message: Chief Examiner notices me & says:\n`How did you get out of the Computer? I'm not ready for you\nyet! No matter...  BEGONE!`\n",
+        "Move to room 16"
+      ]
+    },
+    {
+      "command": "OPEN DOOR",
+      "needs": [],
+      "effects": [
+        "Message: Chief Examiner notices me & says:\n`How did you get out of the Computer? I'm not ready for you\nyet! No matter...  BEGONE!`\n",
+        "Move to room 16"
+      ]
+    },
+    {
+      "command": "LOOK PROG",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: it's the next Scott Adams Marvel Adventure!"
+      ]
+    },
+    {
+      "command": "GO DOOR",
+      "needs": [],
+      "effects": [
+        "Message: Chief Examiner notices me & says:\n`How did you get out of the Computer? I'm not ready for you\nyet! No matter...  BEGONE!`\n",
+        "Move to room 16"
+      ]
+    },
+    {
+      "command": "SAY",
+      "needs": [],
+      "effects": [
+        "Message: Chief Examiner notices me & says:\n`How did you get out of the Computer? I'm not ready for you\nyet! No matter...  BEGONE!`\n",
+        "Move to room 16"
+      ]
+    },
+    {
+      "command": "LOOK CHIE",
+      "needs": [],
+      "effects": [
+        "Message: He's writing a computer program!",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GET PROG",
+      "needs": [],
+      "effects": [
+        "Message: Chief Examiner notices me & says:\n`How did you get out of the Computer? I'm not ready for you\nyet! No matter...  BEGONE!`\n",
+        "Move to room 16"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

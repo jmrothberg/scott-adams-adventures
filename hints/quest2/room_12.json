@@ -1,0 +1,29 @@
+{
+  "room": 12,
+  "name": "waiting room",
+  "description": "I'm in a waiting room",
+  "items_start": [
+    "Open shaft"
+  ],
+  "exits": {
+    "W": 16
+  },
+  "hints": [],
+  "key_actions": [
+    "GO SHAF"
+  ],
+  "action_details": [
+    {
+      "command": "GO SHAF",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 11"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,22 @@
+{
+  "room": 11,
+  "name": "small derelict spacecraft",
+  "description": "I'm in a small derelict spacecraft",
+  "items_start": [
+    "Alien machine",
+    "Viewport"
+  ],
+  "exits": {},
+  "hints": [
+    "A derelict alien spacecraft with mysterious technology.",
+    "The alien machine might be useful if you can figure it out.",
+    "Look through the viewport for clues about where you are.",
+    "The machine may need a power source or specific item to activate."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Abandoned alien ship with a machine and viewport. Part of the alien complex."
+}

@@ -1,0 +1,38 @@
+{
+  "room": 8,
+  "name": "room in the castle",
+  "description": "I'm in a room in the castle",
+  "items_start": [
+    "Plaque",
+    "Slippery chute leading up",
+    "Crack in the wall",
+    "Hole in the wall"
+  ],
+  "exits": {},
+  "hints": [
+    "This room has a plaque, a chute, a crack, and a hole. Read the plaque for clues.",
+    "READ PLAQUE for instructions. The crack leads somewhere. The chute is too slippery.",
+    "WAVE BAG (Ju-Ju bag) here - the Medium mentioned it helps through a tight squeeze.",
+    "WAVE BAG at the crack to get through to the hidden voodoo room (N/room 23). READ PLAQUE for the chant words."
+  ],
+  "key_actions": [
+    "WAV BAG"
+  ],
+  "action_details": [
+    {
+      "command": "WAV BAG",
+      "needs": [
+        "Ju-Ju bag (need access)"
+      ],
+      "effects": [
+        "Message: There's a CLAP OF THUNDER!"
+      ]
+    }
+  ],
+  "items_needed": ["Ju-Ju bag"],
+  "items_available": [
+    "WRI"
+  ],
+  "danger": false,
+  "notes": "Key puzzle room with a crack leading to the hidden voodoo room. WAVE the Ju-Ju BAG to pass through the crack (as Medium Maegen advised). The plaque contains chant words for the finale."
+}

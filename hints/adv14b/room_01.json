@@ -1,0 +1,35 @@
+{
+  "room": 1,
+  "name": "Yoyodyne office",
+  "description": "I'm in a Yoyodyne office",
+  "items_start": [
+    "Staircase going down",
+    "Table"
+  ],
+  "exits": {
+    "W": 3
+  },
+  "hints": [
+    "You're in the Yoyodyne office - headquarters of the Red Lectroids. There's a table and a staircase going down.",
+    "LOOK TABLE and LOOK DOWN to investigate. The staircase leads to the basement laboratory but it's dark down there.",
+    "LOOK DOWN shows darkness - you need a light source before going downstairs. The table may have useful items. WEST exits to the street corner.",
+    "Get a flashlight before going down the staircase. WEST goes to Main & Hickory (room 3). Search the table for items."
+  ],
+  "key_actions": [
+    "LOOK DOWN"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK DOWN",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: darkness"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Starting room. Yoyodyne Propulsion Systems office (the Red Lectroid front company from the movie). Staircase leads down to the basement laboratory (room 2) but requires light. Table may have items. WEST exits to Main & Hickory corner (room 3)."
+}

@@ -1,0 +1,19 @@
+{
+  "room": 24,
+  "name": "room in the castle",
+  "description": "I'm in a room in the castle",
+  "items_start": [],
+  "exits": {
+    "N": 2
+  },
+  "hints": [
+    "An empty room south of the stairwell. Not much to see here.",
+    "Go NORTH to return to the stairwell and continue exploring elsewhere."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Empty room south of the stairwell (room 2). NORTH returns to the stairwell. A connector room with no items."
+}

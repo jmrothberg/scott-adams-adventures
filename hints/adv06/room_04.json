@@ -1,0 +1,23 @@
+{
+  "room": 4,
+  "name": "I'm on a small planetoid",
+  "description": "I'm on a small planetoid",
+  "items_start": [],
+  "exits": {
+    "N": 5,
+    "S": 8,
+    "E": 5,
+    "W": 8
+  },
+  "hints": [
+    "You're on the surface of a small planetoid. Explore all directions.",
+    "The gravity is very weak here - you can jump safely.",
+    "Multiple paths lead to different areas of the planetoid surface."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Planetoid surface. Multiple exits lead to other surface areas and a cave."
+}

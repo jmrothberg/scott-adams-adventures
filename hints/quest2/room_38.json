@@ -1,0 +1,21 @@
+{
+  "room": 38,
+  "name": "small deserted Office",
+  "description": "I'm in a small deserted Office",
+  "items_start": [
+    "HYDROMAN",
+    "Aquarium"
+  ],
+  "exits": {
+    "W": 35
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "AQUA"
+  ],
+  "danger": false,
+  "notes": ""
+}

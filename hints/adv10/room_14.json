@@ -1,0 +1,25 @@
+{
+  "room": 14,
+  "name": "I'm on a raft",
+  "description": "I'm on a raft",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "PADD"
+  ],
+  "action_details": [
+    {
+      "command": "PADD",
+      "needs": [],
+      "effects": [
+        "Message: Hard to steer this thing!",
+        "Set flag 10"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

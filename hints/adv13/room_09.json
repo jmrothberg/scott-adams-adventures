@@ -1,0 +1,52 @@
+{
+  "room": 9,
+  "name": "forest of enchantment",
+  "description": "I'm in a forest of enchantment",
+  "items_start": [],
+  "exits": {
+    "N": 9,
+    "S": 9,
+    "E": 1,
+    "W": 9
+  },
+  "hints": [
+    "The enchanted forest surrounds the castle. Most directions loop back here. Only EAST leads back to the field.",
+    "The forest is enchanted - N, S, and W all loop. EAST is the only way out, back to the field by the castle.",
+    "You cannot chop or climb the trees normally. A spell might work on them. AT TREE casts a destructive spell but be warned - it can be fatal."
+  ],
+  "key_actions": [
+    "CHOP TREE",
+    "GO TREE",
+    "AT TREE"
+  ],
+  "action_details": [
+    {
+      "command": "CHOP TREE",
+      "needs": [],
+      "effects": [
+        "Message: It won't let me."
+      ]
+    },
+    {
+      "command": "GO TREE",
+      "needs": [],
+      "effects": [
+        "Message: It won't let me."
+      ]
+    },
+    {
+      "command": "AT TREE",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "DEATH",
+        "Auto-DROP item",
+        "Message: Spell works!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "The enchanted forest surrounding Claymorgue Castle. N/S/W all loop back here. Only EAST returns to the field (room 1). The trees are magical and resist chopping or climbing. Casting a spell AT TREE works but causes death - use with extreme caution."
+}

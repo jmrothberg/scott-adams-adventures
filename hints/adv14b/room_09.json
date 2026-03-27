@@ -1,0 +1,24 @@
+{
+  "room": 9,
+  "name": "Cashiers Booth",
+  "description": "I'm in a Cashiers Booth",
+  "items_start": [
+    "Control Console",
+    "Trash Pile"
+  ],
+  "exits": {
+    "N": 8
+  },
+  "hints": [
+    "The cashier's booth has a control console and a trash pile. Search everything carefully.",
+    "LOOK TRASH or LOOK PILE to search through the garbage. The console may control the gas pumps.",
+    "Search the trash pile for useful items. The control console operates the gas station equipment. NORTH returns to the gas station (room 8).",
+    "LOOK PILE/TRASH may reveal items others discarded. Check the console for switches or controls."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Cashier's booth in the gas station. Has a control console and trash pile to search. NORTH returns to the gas station (room 8). The trash pile may contain discarded but useful items."
+}

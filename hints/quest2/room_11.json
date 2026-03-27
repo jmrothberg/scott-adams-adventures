@@ -1,0 +1,68 @@
+{
+  "room": 11,
+  "name": "dimly lit Elevator Shaft",
+  "description": "I'm in a dimly lit Elevator Shaft",
+  "items_start": [],
+  "exits": {
+    "W": 12,
+    "U": 14,
+    "D": 9
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK SHAF",
+    "LOOK NICH",
+    "LOOK UP",
+    "PUSH UP",
+    "PUSH SHAF"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK SHAF",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: mostly empty tool niches."
+      ]
+    },
+    {
+      "command": "LOOK NICH",
+      "needs": [],
+      "effects": [
+        "Message: Found something!",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "LOOK UP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: elevator bottom."
+      ]
+    },
+    {
+      "command": "PUSH UP",
+      "needs": [],
+      "effects": [
+        "Set flag 3",
+        "Message: O.K.",
+        "Message: I exert my Spider strength!"
+      ]
+    },
+    {
+      "command": "PUSH SHAF",
+      "needs": [],
+      "effects": [
+        "Set flag 3",
+        "Message: O.K.",
+        "Message: I exert my Spider strength!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

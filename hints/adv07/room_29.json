@@ -1,0 +1,24 @@
+{
+  "room": 29,
+  "name": "windy maze",
+  "description": "I'm in a windy maze",
+  "items_start": [],
+  "exits": {
+    "N": 31,
+    "S": 30,
+    "E": 32,
+    "W": 24
+  },
+  "hints": [
+    "You're in the windy maze. All rooms look the same - drop items to map your path.",
+    "This maze room has exits in all four directions. W leads back toward room 24.",
+    "N=room 31, S=room 30, E=room 32, W=room 24. Map carefully!",
+    "Drop an item here to distinguish this room from other maze rooms."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Windy maze room. N=31, S=30, E=32, W=24. All maze rooms look identical - drop items to map."
+}

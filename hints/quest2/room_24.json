@@ -1,0 +1,19 @@
+{
+  "room": 24,
+  "name": "I'm on an Office Ceiling",
+  "description": "I'm on an Office Ceiling",
+  "items_start": [
+    "Air intake mesh",
+    "Strange mist below"
+  ],
+  "exits": {
+    "D": 18
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

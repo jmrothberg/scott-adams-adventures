@@ -1,0 +1,43 @@
+{
+  "room": 26,
+  "name": "large metal room",
+  "description": "I'm in a large metal room",
+  "items_start": [
+    "Machinery",
+    "Control console"
+  ],
+  "exits": {},
+  "hints": [
+    "The engine room! Examine the machinery carefully - it controls the ship's vital systems.",
+    "LOOK MACHINERY to see the ship's engines and life support. There is a device here that can be taken.",
+    "GET DEVICE to acquire a useful tool. The console may have additional controls. LOOK MACHINE reveals this contains the ship's engines and life support systems.",
+    "The device found here is essential for puzzles elsewhere. Study the machinery to understand the ship's power systems."
+  ],
+  "key_actions": [
+    "GET DEVI",
+    "LOOK MACH"
+  ],
+  "action_details": [
+    {
+      "command": "GET DEVI",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Auto-GET item"
+      ]
+    },
+    {
+      "command": "LOOK MACH",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see",
+        "Message: ship's engines, life support"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Engine room with machinery (ship's engines and life support) and a control console. A device can be obtained here (GET DEVICE). The device is a key inventory item needed elsewhere. No listed exits - must find the way back or use the device to create an exit."
+}

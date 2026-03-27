@@ -1,0 +1,19 @@
+{
+  "room": 19,
+  "name": "I'm at the west end of a parking lot",
+  "description": "I'm at the west end of a parking lot",
+  "items_start": [
+    "Jet Car"
+  ],
+  "exits": {
+    "N": 20,
+    "E": 18
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

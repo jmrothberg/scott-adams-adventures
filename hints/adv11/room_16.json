@@ -1,0 +1,90 @@
+{
+  "room": 16,
+  "name": "I'm on a treadmill",
+  "description": "I'm on a treadmill",
+  "items_start": [
+    "Railing"
+  ],
+  "exits": {},
+  "hints": [
+    "You are on the treadmill. The railing is for support. You need to operate this machine.",
+    "Try WALK and RUN commands. The sequence matters - the treadmill responds differently depending on what you do.",
+    "First RUN to get the treadmill moving fast - this reveals a T-shaped handle that moves briefly. Then WALK at a slower pace to keep it moving.",
+    "The correct sequence: RUN (reveals handle, moves briefly), then WALK or RUN again (moves the handle). WALK to step off and return to the exercise room."
+  ],
+  "key_actions": [
+    "WALK",
+    "RUN",
+    "WALK",
+    "RUN",
+    "RUN",
+    "WALK",
+    "RUN"
+  ],
+  "action_details": [
+    {
+      "command": "WALK",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 11"
+      ]
+    },
+    {
+      "command": "RUN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 11"
+      ]
+    },
+    {
+      "command": "WALK",
+      "needs": [],
+      "effects": [
+        "Message: sorry",
+        "Message: won't budge"
+      ]
+    },
+    {
+      "command": "RUN",
+      "needs": [],
+      "effects": [
+        "Set flag 21",
+        "Message: Large T shaped handle.",
+        "Message: moves",
+        "Message: briefly"
+      ]
+    },
+    {
+      "command": "RUN",
+      "needs": [],
+      "effects": [
+        "Message: sorry",
+        "Message: won't budge"
+      ]
+    },
+    {
+      "command": "WALK",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: it",
+        "Message: moves"
+      ]
+    },
+    {
+      "command": "RUN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: it",
+        "Message: moves"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "On the treadmill in the exercise room. A multi-step puzzle: running at the right time reveals a T-shaped handle that controls ship systems. The sequence involves alternating WALK and RUN to get the handle to move. Successfully operating the treadmill sets flag 21, which may enable access to other parts of the ship."
+}

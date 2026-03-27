@@ -1,0 +1,26 @@
+{
+  "room": 3,
+  "name": "long sloping grey corridor",
+  "description": "I'm in a long sloping grey corridor",
+  "items_start": [],
+  "exits": {
+    "N": 8,
+    "S": 4,
+    "E": 2,
+    "W": 12,
+    "U": 6,
+    "D": 7
+  },
+  "hints": [
+    "This is the main hub of the base with six exits. Explore all directions.",
+    "Color-coded hallways branch from here: white (UP), blue (N), yellow (DOWN). Each leads to secured areas.",
+    "UP leads to the white hallway, DOWN to the yellow hallway, NORTH to the blue hallway. SOUTH has the chair room. WEST has maintenance.",
+    "Explore all branches: UP/white for visitor area, N/blue for security area, DOWN/yellow for maintenance area. SOUTH for the ID chair. WEST for supplies."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Central hub corridor connecting all areas of the base. Six exits: N to blue hallway (room 8), S to grey/chair room (room 4), E to briefing (room 2), W to maintenance (room 12), U to white hallway (room 6), D to yellow hallway (room 7)."
+}

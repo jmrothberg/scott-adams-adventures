@@ -1,0 +1,24 @@
+{
+  "room": 12,
+  "name": "I'm undersea",
+  "description": "I'm undersea",
+  "items_start": [
+    "Silt",
+    "Strange current"
+  ],
+  "exits": {},
+  "hints": [
+    "You're undersea with silt on the bottom and a strange current. Look around carefully.",
+    "The silt may be hiding something. Try DIGging in it. The current connects to other underwater locations.",
+    "DIG in the silt to find hidden items. DIVE DOWN may lead deeper to a sunken ship. The current can carry you to different areas.",
+    "DIG in the silt for treasures. Go DOWN or DIVE to reach the sunken ship (room 23) below. The face mask lets you see and breathe here."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "Face mask"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Undersea area with silt and a strange current. Silt may hide items when dug. Going deeper leads to the sunken ship (room 23). The face mask is required for underwater survival. Connected to the sea (room 11) above."
+}

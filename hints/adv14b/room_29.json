@@ -1,0 +1,199 @@
+{
+  "room": 29,
+  "name": "cockpit of the jet car",
+  "description": "I'm in a cockpit of the jet car",
+  "items_start": [
+    "Dashboard"
+  ],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "LOOK GLOV",
+    "CLOS COCK",
+    "LOOK DASH",
+    "OPEN GLOV",
+    "PUSH BUTT",
+    "PUSH BUTT",
+    "PUSH BUTT",
+    "PUSH BUTT",
+    "PUSH BUTT",
+    "PUSH BUTT",
+    "PUSH BUTT",
+    "OPEN COCK",
+    "GET UP",
+    "GET UP",
+    "GET UP",
+    "OPEN GLOV",
+    "GET OUT",
+    "GET OUT",
+    "GET OUT"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK GLOV",
+      "needs": [],
+      "effects": [
+        "Message: I got",
+        "Message: something"
+      ]
+    },
+    {
+      "command": "CLOS COCK",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Set flag 22"
+      ]
+    },
+    {
+      "command": "LOOK DASH",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: starter button & glove compartment.",
+        "Message: The cockpit is"
+      ]
+    },
+    {
+      "command": "OPEN GLOV",
+      "needs": [],
+      "effects": [
+        "Message: I got",
+        "Message: something"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "Message: Car catches fire and blows up.",
+        "Message: I'm fried Banzai.",
+        "Look around"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "Message: nothing",
+        "Message: special",
+        "Message: happens"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "Message: Car catches fire and blows up.",
+        "Message: I'm fried Banzai.",
+        "Look around"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "Message: Car catches fire and blows up.",
+        "Message: I'm fried Banzai.",
+        "Look around"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: Engine is idling.",
+        "Set flag 11"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "DEATH",
+        "Set flag 4",
+        "Message: I drive to Main St for attempt to mountain"
+      ]
+    },
+    {
+      "command": "PUSH BUTT",
+      "needs": [],
+      "effects": [
+        "DEATH",
+        "Set flag 5",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "OPEN COCK",
+      "needs": [],
+      "effects": [
+        "DEATH",
+        "DEATH",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Move to room 19",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Move to room 3",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Move to room 24",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "OPEN GLOV",
+      "needs": [],
+      "effects": [
+        "Message: nothing",
+        "Message: special",
+        "Message: happens"
+      ]
+    },
+    {
+      "command": "GET OUT",
+      "needs": [],
+      "effects": [
+        "Move to room 19",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "GET OUT",
+      "needs": [],
+      "effects": [
+        "Move to room 3",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "GET OUT",
+      "needs": [],
+      "effects": [
+        "Move to room 24",
+        "Message: O.K."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

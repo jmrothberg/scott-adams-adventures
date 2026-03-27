@@ -1,0 +1,25 @@
+{
+  "room": 0,
+  "name": ".",
+  "description": "I'm in a .",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "This is a placeholder room used for items not yet in play.",
+    "Items stored here will appear elsewhere during gameplay."
+  ],
+  "key_actions": [
+    "FIX CRYS"
+  ],
+  "action_details": [
+    {
+      "command": "FIX CRYS",
+      "needs": [],
+      "effects": []
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Internal storage room for items not yet placed in the game world."
+}

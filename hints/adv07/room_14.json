@@ -1,0 +1,26 @@
+{
+  "room": 14,
+  "name": "shooting gallery",
+  "description": "I'm in a shooting gallery",
+  "items_start": [
+    "Strange spectacles",
+    "Window. Gun pointing into & mounted by window"
+  ],
+  "exits": {
+    "N": 8
+  },
+  "hints": [
+    "A shooting gallery with spectacles and a mounted gun. The gun points through a window.",
+    "GET SPEC - the strange spectacles are important. The gun is mounted and can't be taken.",
+    "WEAR SPEC to put on the spectacles. They let you see things hidden from normal view.",
+    "The spectacles reveal hidden items when worn. SHOO GUN to fire at the clay pigeons visible through the window. N=trampoline room (room 8)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SPEC"
+  ],
+  "danger": false,
+  "notes": "Shooting gallery with strange spectacles (reveal hidden things when worn) and a mounted gun. N=small room with trampoline (room 8)."
+}

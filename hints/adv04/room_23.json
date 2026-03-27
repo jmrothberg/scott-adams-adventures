@@ -1,0 +1,24 @@
+{
+  "room": 23,
+  "name": "hidden VOODOO room",
+  "description": "I'm in a hidden VOODOO room",
+  "items_start": [
+    "Page torn from a book"
+  ],
+  "exits": {
+    "S": 8
+  },
+  "hints": [
+    "A hidden voodoo room with a torn page. READ the page for important clues.",
+    "READ PAGE for information about the counter-spell or voodoo ritual.",
+    "GET PAGE and READ PAGE - it contains instructions needed for breaking the curse. SOUTH returns to room 8."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "PAG"
+  ],
+  "danger": false,
+  "notes": "Hidden voodoo room accessed through the crack in room 8 using the Ju-Ju bag. Contains a torn page with important ritual instructions. SOUTH returns to room 8."
+}

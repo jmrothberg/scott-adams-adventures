@@ -1,0 +1,63 @@
+{
+  "room": 18,
+  "name": "I'm at the bottom of a very deep chasm. High above me is\na pair of ledges. One has a bricked up window across its face\nthe other faces a Throne-room",
+  "description": "I'm at the bottom of a very deep chasm. High above me is\na pair of ledges. One has a bricked up window across its face\nthe other faces a Throne-room",
+  "items_start": [
+    "*GOLDEN NET*",
+    "Sign: `magic word's AWAY! Look la...`\n(Rest of sign is missing!)",
+    "Stream of lava"
+  ],
+  "exits": {
+    "U": 17
+  },
+  "hints": [
+    "The golden net is a treasure - take it. The sign confirms the magic word AWAY. The lava blocks passage.",
+    "The lava is too hot to cross directly. You need to cool it somehow. What do you have that could put out lava?",
+    "DROP WATER (from the bottle) on the lava to cool it. This creates fire bricks you can use.",
+    "GET NET. DROP WATER on the lava to solidify it into fire bricks. Then take the bricks to brick up the window in the royal chamber."
+  ],
+  "key_actions": [
+    "CRO LAV",
+    "GO LAV",
+    "GO LED",
+    "DRO WAT"
+  ],
+  "action_details": [
+    {
+      "command": "CRO LAV",
+      "needs": [],
+      "effects": [
+        "Message: No, its too hot."
+      ]
+    },
+    {
+      "command": "GO LAV",
+      "needs": [],
+      "effects": [
+        "Message: No, its too hot."
+      ]
+    },
+    {
+      "command": "GO LED",
+      "needs": [],
+      "effects": [
+        "Message: Not here."
+      ]
+    },
+    {
+      "command": "DRO WAT",
+      "needs": [
+        "Water in bottle"
+      ],
+      "effects": [
+        "Message: Sizzle..."
+      ]
+    }
+  ],
+  "items_needed": ["Water in bottle"],
+  "items_available": [
+    "NET"
+  ],
+  "danger": false,
+  "notes": "Bottom of the chasm with the golden net treasure and a lava stream. Dropping water on lava creates fire bricks. The sign confirms the AWAY magic word. The ledges above connect to the royal chamber and throne room areas."
+}

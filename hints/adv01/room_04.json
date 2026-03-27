@@ -1,0 +1,36 @@
+{
+  "room": 4,
+  "name": "root chamber under the stump",
+  "description": "I'm in a root chamber under the stump",
+  "items_start": [
+    "Dark hole",
+    "*Pot of RUBIES*"
+  ],
+  "exits": {
+    "U": 3
+  },
+  "hints": [
+    "There is a treasure here and a way to go deeper. Look around carefully.",
+    "The pot of rubies is a treasure - take it back to the stump (room 3). The dark hole leads further underground.",
+    "GET RUBIES then GO HOLE to continue deeper into the underground. Make sure you have a light source before going further."
+  ],
+  "key_actions": [
+    "GO HOL"
+  ],
+  "action_details": [
+    {
+      "command": "GO HOL",
+      "needs": [],
+      "effects": [
+        "Move to room 5",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": ["Old fashioned brass lamp"],
+  "items_available": [
+    "RUB"
+  ],
+  "danger": false,
+  "notes": "Contains the first treasure (pot of rubies) and a dark hole leading deeper underground to room 5. Located directly below the treasure stump (room 3)."
+}

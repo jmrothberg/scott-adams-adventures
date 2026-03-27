@@ -1,0 +1,19 @@
+{
+  "room": 5,
+  "name": "stable",
+  "description": "I'm in a stable",
+  "items_start": [
+    "Stall",
+    "Manure pile"
+  ],
+  "exits": {
+    "S": 4
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

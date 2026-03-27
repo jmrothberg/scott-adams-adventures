@@ -1,0 +1,45 @@
+{
+  "room": 1,
+  "name": "desert",
+  "description": "I'm in a desert",
+  "items_start": [],
+  "exits": {
+    "S": 4,
+    "W": 2
+  },
+  "hints": [
+    "A desert area. Try digging if you have a shovel.",
+    "DIG with the shovel to uncover something buried in the sand.",
+    "DIG reveals a hidden item. S leads to the pyramid entrance, W leads to more desert.",
+    "DIG here with the shovel to find a buried item. S=pyramid area (room 4), W=desert (room 2)."
+  ],
+  "key_actions": [
+    "DIG",
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Message: I see something.",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Message: I see nothing special."
+      ]
+    }
+  ],
+  "items_needed": ["SHO"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Desert area. DIG with shovel reveals a buried item (first dig only). S=pyramid entrance (room 4), W=desert (room 2)."
+}

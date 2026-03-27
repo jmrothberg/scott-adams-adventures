@@ -1,0 +1,49 @@
+{
+  "room": 2,
+  "name": "metal room",
+  "description": "I'm in a metal room",
+  "items_start": [
+    "Control console",
+    "Large plastic block",
+    "Large radiant glowing neon sign"
+  ],
+  "exits": {
+    "E": 3
+  },
+  "hints": [
+    "This room has several important items. Examine everything - the console, block, and sign all matter.",
+    "READ the sign for important information. The plastic block can be taken. The console may have controls to operate.",
+    "GET BLOCK - you will need the plastic block later. READ SIGN for clues. Be very careful with the force field here - going through it is DEADLY.",
+    "The force fields lead to death. Use the normal exit EAST to continue through the tunnel system."
+  ],
+  "key_actions": [
+    "GO FIEL",
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [],
+      "effects": [
+        "Move to room 18",
+        "Auto-DROP item",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "GO FIEL",
+      "needs": [],
+      "effects": [
+        "Move to room 1",
+        "Auto-DROP item",
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "BLOC"
+  ],
+  "danger": true,
+  "notes": "Metal room with control console and important items. The large plastic block is a key inventory item. The neon sign provides clues. WARNING: going through the force field in either direction causes death. Use the east exit to the tunnel instead."
+}

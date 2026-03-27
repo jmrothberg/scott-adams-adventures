@@ -1,0 +1,20 @@
+{
+  "room": 31,
+  "name": "storeroom",
+  "description": "I'm in a storeroom",
+  "items_start": [
+    "Keg of nails"
+  ],
+  "exits": {
+    "N": 19
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "KEG"
+  ],
+  "danger": false,
+  "notes": ""
+}

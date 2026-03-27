@@ -1,0 +1,44 @@
+{
+  "room": 1,
+  "name": "I'm lying in a large brass bed",
+  "description": "I'm lying in a large brass bed",
+  "items_start": [
+    "Sheets",
+    "Pillow"
+  ],
+  "exits": {},
+  "hints": [
+    "You wake up in Dracula's castle. You need to get out of bed first before you can do anything.",
+    "Take everything you can before getting up. The sheets and pillow are both useful later.",
+    "GET SHEETS and GET PILLOW, then GET UP to stand in the bedroom. The sheets are essential for climbing.",
+    "GET SHEETS (needed to climb down from the ledge to reach the dark window). GET PILLOW (hides garlic inside). GET UP to move to the bedroom (room 2)."
+  ],
+  "key_actions": [
+    "GET UP",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Move to room 2",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: GET UP you sleepy head!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SHE",
+    "PIL"
+  ],
+  "danger": false,
+  "notes": "Starting room of the game. You wake up in a brass bed in Dracula's castle. GET SHEETS (essential for climbing down to the dark window later) and GET PILLOW (contains garlic cloves when opened) before GET UP to move to the bedroom (room 2). The game operates on a day/night cycle - you have limited time before nightfall when Dracula becomes active."
+}

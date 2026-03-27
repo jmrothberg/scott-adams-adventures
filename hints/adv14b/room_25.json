@@ -1,0 +1,20 @@
+{
+  "room": 25,
+  "name": "lifeguard shack",
+  "description": "I'm in a lifeguard shack",
+  "items_start": [
+    "Small Ham radio"
+  ],
+  "exits": {
+    "E": 20
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "RADI"
+  ],
+  "danger": false,
+  "notes": ""
+}

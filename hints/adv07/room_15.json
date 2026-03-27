@@ -1,0 +1,25 @@
+{
+  "room": 15,
+  "name": "I'm on a ledge over a deep pit",
+  "description": "I'm on a ledge over a deep pit",
+  "items_start": [
+    "Ladder going down",
+    "Sign on ladder"
+  ],
+  "exits": {
+    "S": 20,
+    "E": 11
+  },
+  "hints": [
+    "A ledge over a deep pit with a ladder going down. Read the sign first!",
+    "READ SIGN on the ladder for a warning. The ladder leads down to the pit.",
+    "D or GO LADD to descend to the pit (room 16). S=rickety staircase. E=barrel room.",
+    "The pit below has a locked door and a valve on a warm pipe. You'll need the valve handle."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Ledge over the pit. Ladder descends to pit (room 16). S=rickety staircase (room 20), E=barrel room (room 11). READ SIGN for clues."
+}

@@ -1,0 +1,20 @@
+{
+  "room": 23,
+  "name": "I'm on top of a pyramid",
+  "description": "I'm on top of a pyramid",
+  "items_start": [
+    "* PLATINUM BAR *"
+  ],
+  "exits": {
+    "W": 22
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "BAR"
+  ],
+  "danger": false,
+  "notes": ""
+}

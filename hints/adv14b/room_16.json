@@ -1,0 +1,16 @@
+{
+  "room": 16,
+  "name": "living room of a large house",
+  "description": "I'm in a living room of a large house",
+  "items_start": [],
+  "exits": {
+    "E": 15
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

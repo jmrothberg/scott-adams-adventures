@@ -1,0 +1,18 @@
+{
+  "room": 18,
+  "name": "Revolving cavern",
+  "description": "I'm in a Revolving cavern",
+  "items_start": [],
+  "exits": {
+    "N": 19,
+    "S": 20,
+    "D": 11
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

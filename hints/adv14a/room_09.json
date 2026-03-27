@@ -1,0 +1,24 @@
+{
+  "room": 9,
+  "name": "tool shed",
+  "description": "I'm in a tool shed",
+  "items_start": [
+    "Hammer"
+  ],
+  "exits": {
+    "N": 8
+  },
+  "hints": [
+    "A simple tool shed with a hammer. Take it - you'll need it.",
+    "GET HAMMER - it's useful for breaking and building things later in the game.",
+    "GET HAMMER and go NORTH to return to the cavern (room 8)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "HAMM"
+  ],
+  "danger": false,
+  "notes": "Tool shed inside the cavern containing a hammer. NORTH returns to the cavern (room 8). The hammer is needed for various puzzles throughout the game."
+}

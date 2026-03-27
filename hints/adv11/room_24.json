@@ -1,0 +1,63 @@
+{
+  "room": 24,
+  "name": "metal lifeboat hangar open to\nouter space",
+  "description": "I'm in a metal lifeboat hangar open to\nouter space",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "The lifeboat hangar is open to space! Going outside would be instantly fatal. You need a lifeboat.",
+    "There may be a lifeboat here but you need to prepare it or find the controls to launch it. DO NOT go into outer space directly.",
+    "GO LIFEBOAT to try to enter a lifeboat for escape. GO OUTER SPACE means instant death by freezing. GO FIELD returns through the flickering force field to the tunnel.",
+    "If the lifeboat is not accessible, you may need to complete other puzzles first - check the engine room and control rooms for clues."
+  ],
+  "key_actions": [
+    "GO OUTE",
+    "GO FIEL",
+    "GO FIEL",
+    "GO LIFE"
+  ],
+  "action_details": [
+    {
+      "command": "GO OUTE",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I quickly freeze to death!",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "which is weakly flickering (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 9",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO FIEL",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 9",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO LIFE",
+      "needs": [],
+      "effects": [
+        "Message: sorry",
+        "Message: I can't"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Lifeboat hangar open to outer space - the potential escape route from the ship. Going into outer space causes death by freezing. The lifeboat cannot be entered initially (sorry, I can't). Going through the force field returns to room 9. The player must solve other puzzles to make the lifeboat accessible. This is near the endgame area."
+}

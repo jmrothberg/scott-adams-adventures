@@ -1,0 +1,21 @@
+{
+  "room": 17,
+  "name": "BLACK EMPTINESS",
+  "description": "I'm in a BLACK EMPTINESS",
+  "items_start": [
+    "Black Hole"
+  ],
+  "exits": {},
+  "hints": [
+    "You're in BLACK EMPTINESS near a Black Hole!",
+    "This is extremely dangerous - do not linger.",
+    "You need to escape immediately or be pulled in.",
+    "Find a way out quickly or you'll be destroyed by the black hole."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Black emptiness with a black hole. Extremely dangerous area."
+}

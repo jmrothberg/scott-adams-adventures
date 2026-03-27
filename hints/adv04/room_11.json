@@ -1,0 +1,36 @@
+{
+  "room": 11,
+  "name": "dungeon",
+  "description": "I'm in a dungeon",
+  "items_start": [
+    "Pocket Shovel",
+    "Open jail cell"
+  ],
+  "exits": {
+    "S": 13,
+    "E": 2
+  },
+  "hints": [
+    "There is a shovel and a jail cell here. Take the shovel - it may be useful for digging.",
+    "GET SHOVEL. LOOK CELL to check the jail cell. The cell may have a way to trap something.",
+    "GET SHOVEL for digging. The cell can be used to imprison dangerous creatures. SOUTH to torture chamber, EAST to stairwell."
+  ],
+  "key_actions": [
+    "LOO CEL"
+  ],
+  "action_details": [
+    {
+      "command": "LOO CEL",
+      "needs": [],
+      "effects": [
+        "Message: I see nothing very special."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SHO"
+  ],
+  "danger": false,
+  "notes": "Dungeon with a pocket shovel and open jail cell. The shovel is useful for digging. SOUTH leads to the torture chamber (room 13). EAST to the stairwell (room 2)."
+}

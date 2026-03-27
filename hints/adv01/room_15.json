@@ -1,0 +1,34 @@
+{
+  "room": 15,
+  "name": "maze of pits",
+  "description": "I'm in a maze of pits",
+  "items_start": [],
+  "exits": {
+    "N": 12,
+    "E": 13,
+    "W": 12,
+    "U": 13
+  },
+  "hints": [
+    "This is a dead-end area of the maze. Head back the way you came.",
+    "NORTH or WEST goes to room 12. EAST or UP goes to room 13. Work your way toward room 14.",
+    "Go NORTH to return to the maze entrance area (room 12)."
+  ],
+  "key_actions": [
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: You may need to say magic words here"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dead-end area of the pit maze. All exits lead back toward rooms 12 and 13. No items or puzzles here."
+}

@@ -1,0 +1,28 @@
+{
+  "room": 2,
+  "name": "Dingy Looking Stairwell",
+  "description": "I'm in a Dingy Looking Stairwell",
+  "items_start": [
+    "Broken glass",
+    "Stairs"
+  ],
+  "exits": {
+    "N": 1,
+    "S": 24,
+    "E": 3,
+    "W": 11
+  },
+  "hints": [
+    "A central stairwell with broken glass and multiple exits. The stairs lead up.",
+    "GO STAIRS to reach the parlor upstairs. Explore all directions.",
+    "NORTH to chapel, EAST to kettle room, WEST to dungeon, SOUTH to another room. GO STAIRS to parlor."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "GLA"
+  ],
+  "danger": false,
+  "notes": "Central stairwell hub. GO STAIRS reaches the parlor (room 20). Connects to chapel (N), kettle room (E), dungeon (W), and room 24 (S)."
+}

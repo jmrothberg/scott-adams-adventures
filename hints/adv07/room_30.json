@@ -1,0 +1,24 @@
+{
+  "room": 30,
+  "name": "windy maze",
+  "description": "I'm in a windy maze",
+  "items_start": [],
+  "exits": {
+    "N": 32,
+    "S": 31,
+    "E": 2,
+    "W": 31
+  },
+  "hints": [
+    "Another windy maze room. Drop something to tell it apart from the others.",
+    "E leads to the mirror room (room 2) - that's the way out of the maze!",
+    "N=room 32, S=room 31, E=mirror room (room 2, EXIT!), W=room 31.",
+    "If you're lost, go E to escape the maze back to the mirror room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Windy maze room. E=mirror room (room 2, maze exit!). N=32, S=31, W=31. Important: E is the way out."
+}

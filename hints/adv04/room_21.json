@@ -1,0 +1,23 @@
+{
+  "room": 21,
+  "name": "Jail Cell",
+  "description": "I'm in a Jail Cell",
+  "items_start": [
+    "Closed cell door",
+    "Advertising leaflet"
+  ],
+  "exits": {},
+  "hints": [
+    "You are trapped in a jail cell! The door is closed. Look for a way out.",
+    "OPEN DOOR to try to escape. The advertising leaflet is just flavor text.",
+    "OPEN DOOR or try to break free. READ LEAFLET for a Scott Adams advertisement."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "LEA"
+  ],
+  "danger": true,
+  "notes": "Jail cell that can trap you. The door must be opened to escape. The leaflet is a Scott Adams game advertisement. Getting locked in here may require a restart if you cannot open the door."
+}

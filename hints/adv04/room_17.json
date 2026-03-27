@@ -1,0 +1,29 @@
+{
+  "room": 17,
+  "name": "Lab",
+  "description": "I'm in a Lab",
+  "items_start": [
+    "Ju-Ju bag",
+    "Chem tubes",
+    "Labeled chemicals"
+  ],
+  "exits": {
+    "W": 7
+  },
+  "hints": [
+    "The lab has a Ju-Ju bag, chemistry tubes, and chemicals. All may be important.",
+    "GET BAG - the Ju-Ju bag is essential (Medium Maegen's advice about the tight squeeze). The chemicals can be mixed.",
+    "GET BAG (for the crack puzzle), GET TUBES and GET CHEMICALS for mixing potions. MIX CHEMICALS with the pot.",
+    "GET BAG (essential for passage through crack in room 8). MIX chemicals in the pot to create a potion. WEST returns to the pot room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "BAG",
+    "TUB",
+    "CHE"
+  ],
+  "danger": false,
+  "notes": "Chemistry lab with the Ju-Ju bag (essential for crack puzzle in room 8), chem tubes, and labeled chemicals. MIX chemicals to create potions. WEST returns to room 7 (cast iron pot room)."
+}

@@ -1,0 +1,129 @@
+{
+  "room": 20,
+  "name": "dumb-waiter by a room",
+  "description": "I'm in a dumb-waiter by a room",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are in the dumb-waiter. It can be raised or lowered to reach different floors.",
+    "RAISE/OPEN DUMB to go up, LOWER/PUT DUMB to go down. GO ROOM to enter the adjacent room.",
+    "The dumb-waiter connects to the kitchen, workroom, and pantry. Use RAISE/LOWER to change floors, GO ROOM to exit.",
+    "RAISE (OPEN DUM) or LOWER (PUT DUM) to change floors. GO ROOM to exit at current floor: kitchen (room 12), workroom (room 21), or pantry (room 14)."
+  ],
+  "key_actions": [
+    "LOO ROO",
+    "GO ROO",
+    "GO ROO",
+    "GO ROO",
+    "OUT",
+    "HEL",
+    "PUT DUM",
+    "PUT DUM",
+    "PUT DUM",
+    "OPE DUM",
+    "OPE DUM",
+    "OPE DUM"
+  ],
+  "action_details": [
+    {
+      "command": "LOO ROO",
+      "needs": [],
+      "effects": [
+        "Message: There's something there, maybe I should",
+        "Message: go there?"
+      ]
+    },
+    {
+      "command": "GO ROO",
+      "needs": [],
+      "effects": [
+        "Move to room 12",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "GO ROO",
+      "needs": [],
+      "effects": [
+        "Move to room 21",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "GO ROO",
+      "needs": [],
+      "effects": [
+        "Move to room 14",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "OUT",
+      "needs": [],
+      "effects": [
+        "Message: Try: `GO ROOM`"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: I know how to RAISE and LOWER this thing!"
+      ]
+    },
+    {
+      "command": "PUT DUM",
+      "needs": [],
+      "effects": [
+        "Message: Sorry I can't do that",
+        "Message: It won't go any",
+        "Message: lower"
+      ]
+    },
+    {
+      "command": "PUT DUM",
+      "needs": [],
+      "effects": [
+        "DEATH",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "PUT DUM",
+      "needs": [],
+      "effects": [
+        "Set flag 7",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "OPE DUM",
+      "needs": [],
+      "effects": [
+        "Message: Sorry I can't do that",
+        "Message: It won't go any",
+        "Message: higher"
+      ]
+    },
+    {
+      "command": "OPE DUM",
+      "needs": [],
+      "effects": [
+        "DEATH",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "OPE DUM",
+      "needs": [],
+      "effects": [
+        "Set flag 8",
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Dumb-waiter elevator connecting three floors: kitchen (room 12), workroom (room 21), and pantry (room 14). RAISE (OPEN DUM) to go up, LOWER (PUT DUM) to go down. GO ROOM to exit at current floor. Raising/lowering past limits can be fatal."
+}

@@ -1,0 +1,49 @@
+{
+  "room": 9,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [
+    "Force field",
+    "which is weakly flickering"
+  ],
+  "exits": {
+    "N": 25,
+    "S": 7
+  },
+  "hints": [
+    "This tunnel has a special force field - it is weakly flickering, unlike the solid deadly ones elsewhere.",
+    "A flickering force field is weak enough to pass through safely. This is your route to the lifeboat hangar.",
+    "GO FIELD to pass through the flickering force field to reach the lifeboat hangar (room 24). You can also go NORTH toward the engine rooms or SOUTH back to the junction."
+  ],
+  "key_actions": [
+    "GO FIEL",
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "which is weakly flickering (must be in room)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Move to room 24",
+        "Auto-DROP item",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO FIEL",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 24",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Tunnel with a weakly flickering force field - the only safe force field to pass through. Leads to the lifeboat hangar (room 24). North goes to room 25 (toward engine room), south to room 7 (toward junction). Critical passage for reaching the escape route."
+}

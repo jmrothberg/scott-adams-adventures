@@ -1,0 +1,19 @@
+{
+  "room": 27,
+  "name": "maze of caves",
+  "description": "I'm in a maze of caves",
+  "items_start": [],
+  "exits": {
+    "N": 28,
+    "S": 26,
+    "E": 27,
+    "W": 25
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

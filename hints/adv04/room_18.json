@@ -1,0 +1,36 @@
+{
+  "room": 18,
+  "name": "narrow part of the chimney",
+  "description": "I'm in a narrow part of the chimney",
+  "items_start": [
+    "Stuck Chimney Sweep"
+  ],
+  "exits": {
+    "D": 14
+  },
+  "hints": [
+    "A chimney sweep is stuck here. You need to help free him.",
+    "PUSH SWEEP or PRESS SWEEP to free the chimney sweep. He will reward you.",
+    "PRESS SWEEP to free him - he pops out, thanks you, and gives you a piece of paper with important information.",
+    "PRESS SWEEP to free him. He gives you a paper with clues. DOWN returns to the main chimney area."
+  ],
+  "key_actions": [
+    "PRE SWE"
+  ],
+  "action_details": [
+    {
+      "command": "PRE SWE",
+      "needs": [
+        "Stuck Chimney Sweep (must be in room)"
+      ],
+      "effects": [
+        "Message: Sweep pops out, thanks me, hands me a piece of paper then\nvanishes!",
+        "Destroy item 35"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Narrow chimney with a stuck chimney sweep. PRESS SWEEP frees him and he gives you a paper with important clues. DOWN returns to the main chimney (room 14)."
+}

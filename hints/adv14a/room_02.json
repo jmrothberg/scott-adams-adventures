@@ -1,0 +1,140 @@
+{
+  "room": 2,
+  "name": "ship's cabin",
+  "description": "I'm in a ship's cabin",
+  "items_start": [
+    "Glasses",
+    "Painting",
+    "Bunk bed",
+    "Porthole",
+    "Helm",
+    "Ceiling fan"
+  ],
+  "exits": {
+    "U": 4,
+    "D": 18
+  },
+  "hints": [
+    "The ship's cabin is a hub room with many interactive objects. Examine everything carefully.",
+    "LOOK at items, FEEL around, and try GO BUNK to return to the bunk. The porthole shows the floodlights outside. LOOK CEILING reveals something hidden.",
+    "GET GLASSES and GET PAINTING. GO BUNK returns to the bottom bunk. GO LADDER or GO TOP reaches the top bunk. LOOK CEILING drops what you're holding but reveals a hidden item. SAIL SHIP is fatal the second time!",
+    "Collect glasses and painting. UP goes to deck, DOWN goes to engine room. GO LADDER/GO TOP reaches the top bunk (room 16). Never SAIL SHIP twice - the second attempt kills you."
+  ],
+  "key_actions": [
+    "LOOK IT",
+    "FEEL",
+    "GO BUNK",
+    "LOOK PORT",
+    "LOOK PORT",
+    "GO LADD",
+    "GO TOP",
+    "SAIL SHIP",
+    "GO HELM",
+    "LOOK CEIL",
+    "SAIL SHIP"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK IT",
+      "needs": [
+        "Glasses (need access)"
+      ],
+      "effects": [
+        "Message: O.K.",
+        "Message: I found",
+        "Message: glasses"
+      ]
+    },
+    {
+      "command": "FEEL",
+      "needs": [
+        "Glasses (must be in room)"
+      ],
+      "effects": [
+        "Message: I found",
+        "Message: something",
+        "Message: & I got it!"
+      ]
+    },
+    {
+      "command": "GO BUNK",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 1"
+      ]
+    },
+    {
+      "command": "LOOK PORT",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: floodlights lit",
+        "Message: dimly."
+      ]
+    },
+    {
+      "command": "LOOK PORT",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: floodlights lit",
+        "Message: brightly."
+      ]
+    },
+    {
+      "command": "GO LADD",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 16"
+      ]
+    },
+    {
+      "command": "GO TOP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 16"
+      ]
+    },
+    {
+      "command": "SAIL SHIP",
+      "needs": [],
+      "effects": [
+        "Set flag 32"
+      ]
+    },
+    {
+      "command": "GO HELM",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I'm no sailor!"
+      ]
+    },
+    {
+      "command": "LOOK CEIL",
+      "needs": [],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I see",
+        "Message: something"
+      ]
+    },
+    {
+      "command": "SAIL SHIP",
+      "needs": [],
+      "effects": [
+        "DEATH"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "GLAS",
+    "PAIN"
+  ],
+  "danger": true,
+  "notes": "Central hub of the ship. Contains glasses and painting as collectibles. GO BUNK returns to room 1, GO LADDER/GO TOP goes to top bunk (room 16). UP goes to deck (room 4), DOWN goes to engine room (room 18). LOOK CEILING drops held item but reveals something. LOOK PORTHOLE shows floodlight status. SAIL SHIP first time sets a flag, second time is FATAL. GO HELM doesn't work - you're no sailor."
+}

@@ -1,0 +1,20 @@
+{
+  "room": 2,
+  "name": "Ghost Town",
+  "description": "I'm in a Ghost Town",
+  "items_start": [
+    "Saloon",
+    "Dry-Goods store"
+  ],
+  "exits": {
+    "E": 1,
+    "W": 3
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

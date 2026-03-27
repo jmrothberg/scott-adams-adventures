@@ -1,0 +1,17 @@
+{
+  "room": 28,
+  "name": "I'm behind the mountain on Mountain View",
+  "description": "I'm behind the mountain on Mountain View",
+  "items_start": [],
+  "exits": {
+    "E": 4,
+    "W": 4
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

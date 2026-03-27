@@ -1,0 +1,51 @@
+{
+  "room": 1,
+  "name": "Flat in london",
+  "description": "I'm in a Flat in london",
+  "items_start": [
+    "Flight of stairs",
+    "Sign says: `Bring *TREASURES* here, say: SCORE`",
+    "Bottle of rum",
+    "Rug",
+    "Safety sneakers",
+    "Sack of crackers"
+  ],
+  "exits": {},
+  "hints": [
+    "This is your home base and treasure room. Take stock of what is here before leaving.",
+    "The rum, sneakers, and crackers may all be useful later. The stairs lead upward.",
+    "GET RUM, GET SNEAKERS, GET CRACKERS. The rug hides something - MOVE RUG or LOOK under it.",
+    "GO STAIRS to go up to the alcove. Bring treasures back here and SAY SCORE to check progress."
+  ],
+  "key_actions": [
+    "GO STA",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO STA",
+      "needs": [
+        "Flight of stairs (must be in room)"
+      ],
+      "effects": [
+        "Move to room 2",
+        "Show score"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: Climb stairs..."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "BOT",
+    "SNE",
+    "CRA"
+  ],
+  "danger": false,
+  "notes": "Starting room and treasure repository for Pirate Adventure. Contains useful starting items: rum (give to pirate), sneakers (safe movement), crackers (feed to parrot). GO STAIRS to begin exploring."
+}

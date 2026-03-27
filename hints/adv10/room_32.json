@@ -1,0 +1,58 @@
+{
+  "room": 32,
+  "name": "I'm on the edge of a sandy cliff outside\nthe volcano",
+  "description": "I'm on the edge of a sandy cliff outside\nthe volcano",
+  "items_start": [],
+  "exits": {
+    "E": 18
+  },
+  "hints": [],
+  "key_actions": [
+    "WITH HAND",
+    "JUMP",
+    "LOOK CLIF",
+    "LOOK DOWN"
+  ],
+  "action_details": [
+    {
+      "command": "WITH HAND",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "DEATH",
+        "Message: nothing",
+        "Message: special"
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 2"
+      ]
+    },
+    {
+      "command": "LOOK CLIF",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see",
+        "Message: beach 3 meters below"
+      ]
+    },
+    {
+      "command": "LOOK DOWN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see",
+        "Message: beach 3 meters below"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

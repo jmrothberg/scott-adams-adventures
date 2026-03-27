@@ -1,0 +1,24 @@
+{
+  "room": 16,
+  "name": "room in the castle",
+  "description": "I'm in a room in the castle",
+  "items_start": [
+    "Rabbit's foot"
+  ],
+  "exits": {
+    "U": 3
+  },
+  "hints": [
+    "There is a rabbit's foot here - a good luck charm.",
+    "GET FOOT - Medium Maegen said to keep a good luck charm. The rabbit's foot is one option.",
+    "GET FOOT (rabbit's foot = luck charm). UP returns to the kettle room above."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "FOO"
+  ],
+  "danger": false,
+  "notes": "Hidden room below the kettle (room 3) containing the rabbit's foot - one of the luck charms the Medium mentioned. UP returns to the kettle room."
+}

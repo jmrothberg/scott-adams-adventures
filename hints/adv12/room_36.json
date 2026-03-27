@@ -1,0 +1,47 @@
+{
+  "room": 36,
+  "name": "I'm in an enormous cave",
+  "description": "I'm in an enormous cave",
+  "items_start": [
+    "Magnificent fountain",
+    "Stone tablet"
+  ],
+  "exits": {
+    "E": 35
+  },
+  "hints": [
+    "An enormous cave with a magnificent fountain and a stone tablet. The fountain is holy - do not enter it!",
+    "EXAMINE FOUNTAIN to see the strange liquid inside. The tablet has inscriptions. Do NOT go in the fountain - it is holy and you will be struck down.",
+    "FILL CHALICE at the fountain to collect the sacred liquid for the King. DO NOT GO FOUNTAIN - you will be killed by a thunderbolt for desecrating it.",
+    "Fill the gold chalice here, then bring it back to the King in the palace. EAST returns to the cave. WARNING: entering the fountain directly means instant death."
+  ],
+  "key_actions": [
+    "GO FOUN",
+    "EXAM FOUN"
+  ],
+  "action_details": [
+    {
+      "command": "GO FOUN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I've desecrated the holy fountain.\nI'm struck down by a THUNDERBOLT!",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "EXAM FOUN",
+      "needs": [],
+      "effects": [
+        "Message: It's full of",
+        "Message: a strange liquid"
+      ]
+    }
+  ],
+  "items_needed": [
+    "CHAL"
+  ],
+  "items_available": [],
+  "danger": true,
+  "notes": "Deepest cave with the magnificent fountain full of strange liquid and a stone tablet. FILL CHALICE here to collect the liquid for the King. WARNING: GO FOUNTAIN causes instant death by thunderbolt (desecrating a holy place). Use FILL CHALICE instead. East returns to the cave (room 35)."
+}

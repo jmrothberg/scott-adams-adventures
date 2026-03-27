@@ -1,0 +1,35 @@
+{
+  "room": 10,
+  "name": "DOORLESS room",
+  "description": "I'm in a DOORLESS room",
+  "items_start": [
+    "Full size portrait of DRACULA",
+    "Window"
+  ],
+  "exits": {},
+  "hints": [
+    "A doorless room with only a window and a full-size portrait of Dracula. There must be a hidden way out besides the window.",
+    "The portrait of Dracula is suspicious. Try looking behind it or moving it. The window leads back to the flower box.",
+    "LOOK PORTRAIT or MOVE PORTRAIT to reveal a hidden passage behind Dracula's picture. GO WINDOW returns to the flower box (room 5).",
+    "LOOK/MOVE PORTRAIT reveals a hidden passage to the dark passage (room 19) leading to the crypt. GET PORTRAIT if possible. GO WINDOW returns to flower box (room 5). This room is only accessible via the dark window from outside."
+  ],
+  "key_actions": [
+    "GO WIN"
+  ],
+  "action_details": [
+    {
+      "command": "GO WIN",
+      "needs": [],
+      "effects": [
+        "Move to room 5",
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "POR"
+  ],
+  "danger": false,
+  "notes": "The doorless room accessed only via the dark window (through the flower box, room 5). Contains Dracula's full-size portrait which hides a secret passage to the dark passage (room 19) leading to the crypt (room 6). GO WINDOW returns to the flower box (room 5). This room is the key to reaching the crypt where the COUGHIN/COFFIN puzzle takes place."
+}

@@ -1,0 +1,23 @@
+{
+  "room": 34,
+  "name": "dimly lit Basement",
+  "description": "I'm in a dimly lit Basement",
+  "items_start": [
+    "DOCTOR OCTOPUS",
+    "ELECTRO",
+    "Printing presses"
+  ],
+  "exits": {
+    "W": 22,
+    "U": 33
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "ELEC"
+  ],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,20 @@
+{
+  "room": 3,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [],
+  "exits": {
+    "S": 6,
+    "W": 2
+  },
+  "hints": [
+    "A connector tunnel in the alien ship. Exits lead in two directions.",
+    "Go SOUTH to reach the central tunnel junction, or WEST to return to the room with the console and block."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Metal tunnel connecting room 2 (west, console/block room) to room 6 (south, tunnel junction). Part of the ship's corridor network."
+}

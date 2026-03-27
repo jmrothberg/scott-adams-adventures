@@ -1,0 +1,27 @@
+{
+  "room": 23,
+  "name": "small room",
+  "description": "I'm in a small room",
+  "items_start": [
+    "Fortune telling machine",
+    "Sign"
+  ],
+  "exits": {
+    "E": 21,
+    "D": 10
+  },
+  "hints": [
+    "A room with a fortune telling machine and a sign. The machine may give useful advice.",
+    "READ SIGN for information. The fortune machine needs a coin to operate.",
+    "Use a coin in the fortune machine for a cryptic hint about the game.",
+    "E goes to the merry-go-round room. D goes to the knob room. GET SIGN if you need it."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SIGN"
+  ],
+  "danger": false,
+  "notes": "Fortune telling room reached via PULL BLUE in room 10. Fortune machine gives hints with a coin. E=merry-go-round room (21), D=knob room (10)."
+}

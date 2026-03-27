@@ -1,0 +1,34 @@
+{
+  "room": 14,
+  "name": "yellow corridor",
+  "description": "I'm in a yellow corridor",
+  "items_start": [
+    "Yellow button"
+  ],
+  "exits": {
+    "W": 17
+  },
+  "hints": [
+    "A yellow corridor with a button to return and a path continuing west.",
+    "PRESS YELLOW to return through the security door. Go WEST to reach maintenance room 2.",
+    "Go WEST to maintenance room 2 (room 17) for tools. PRESS YELLOW to go back through the yellow door to room 10."
+  ],
+  "key_actions": [
+    "PRE YEL"
+  ],
+  "action_details": [
+    {
+      "command": "PRE YEL",
+      "needs": [],
+      "effects": [
+        "Message: CLICK!",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 10"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Yellow corridor inside the maintenance-secured area. WEST leads to maintenance room 2 (room 17) with mop and wire cutters. PRESS YELLOW returns through the door to room 10."
+}

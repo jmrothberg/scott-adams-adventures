@@ -1,0 +1,25 @@
+{
+  "room": 29,
+  "name": "dragon's lair",
+  "description": "I'm in a dragon's lair",
+  "items_start": [
+    "*STAR",
+    "Old dragon"
+  ],
+  "exits": {
+    "U": 10
+  },
+  "hints": [
+    "The dragon's lair! An old dragon guards a star. Be very careful.",
+    "The dragon is old but still dangerous. You may need a spell to pacify or defeat it before taking the star.",
+    "Use the Dizzy Dean spell or other magic on the dragon. GET STAR after dealing with the dragon. UP returns to the plain room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "STAR"
+  ],
+  "danger": true,
+  "notes": "Dragon's lair with an old dragon and a *STAR*. Accessed by PUSH DOWN from the plain room (10). The dragon must be dealt with (spells, etc.) before safely taking the star. Up returns to the plain room."
+}

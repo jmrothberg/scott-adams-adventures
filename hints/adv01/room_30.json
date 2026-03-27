@@ -1,0 +1,26 @@
+{
+  "room": 30,
+  "name": "I'm on a ledge just below the rim of the BOTTOMLESS hole. I\ndon't think I want to go down",
+  "description": "I'm on a ledge just below the rim of the BOTTOMLESS hole. I\ndon't think I want to go down",
+  "items_start": [
+    "Flint & steel"
+  ],
+  "exits": {
+    "U": 29,
+    "D": 24
+  },
+  "hints": [
+    "There is a critical item here. The game warns you not to go down - listen to it!",
+    "GET FLINT - the flint & steel is needed to light the lamp and to ignite swamp gas.",
+    "GET FLINT then go UP to safety. Going DOWN leads to Hell (death room 24) - instant game over!",
+    "GET FLINT and go UP immediately. The flint & steel lights the lamp (LIGHT LAMP) and ignites swamp gas to blow open the bricked window."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "FLI"
+  ],
+  "danger": true,
+  "notes": "Ledge inside the bottomless hole with the essential flint & steel. Going DOWN leads to Hell (death, room 24). The flint is needed to light the brass lamp and to ignite swamp gas for the window puzzle. Always go UP to leave safely."
+}

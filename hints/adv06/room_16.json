@@ -1,0 +1,16 @@
+{
+  "room": 16,
+  "name": ".",
+  "description": "I'm in a .",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "This is an unused room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Empty/unused room."
+}

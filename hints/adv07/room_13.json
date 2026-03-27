@@ -1,0 +1,21 @@
+{
+  "room": 13,
+  "name": "Manhole",
+  "description": "I'm in a Manhole",
+  "items_start": [],
+  "exits": {
+    "E": 28,
+    "U": 26
+  },
+  "hints": [
+    "You're in a manhole underground. There are exits east and up.",
+    "E leads to the sewer system. U goes back up to the parking lot.",
+    "The manhole connects the surface (parking lot) to the underground sewer system."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Underground manhole connecting parking lot (room 26 via U) to sewer system (room 28 via E)."
+}

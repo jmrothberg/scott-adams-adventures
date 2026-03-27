@@ -1,0 +1,21 @@
+{
+  "room": 12,
+  "name": "cavern",
+  "description": "I'm in a cavern",
+  "items_start": [
+    "Crack in rock",
+    "*Gem",
+    "ULTRON",
+    "Small cage"
+  ],
+  "exits": {},
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

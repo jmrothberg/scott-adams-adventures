@@ -1,0 +1,19 @@
+{
+  "room": 16,
+  "name": "Hall with threadbare Carpeting on the floor",
+  "description": "I'm in a Hall with threadbare Carpeting on the floor",
+  "items_start": [],
+  "exits": {
+    "N": 13,
+    "S": 39,
+    "E": 12,
+    "W": 3
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

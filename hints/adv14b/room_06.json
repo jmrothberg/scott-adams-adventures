@@ -1,0 +1,21 @@
+{
+  "room": 6,
+  "name": "I'm on Hickory Ave",
+  "description": "I'm on Hickory Ave",
+  "items_start": [],
+  "exits": {
+    "E": 10,
+    "W": 3
+  },
+  "hints": [
+    "Hickory Avenue stretching east-west through the town.",
+    "EAST leads to the cul-de-sac. WEST returns to the main intersection.",
+    "EAST to the cul-de-sac at east end of Hickory (room 10, large house). WEST back to Main & Hickory (room 3)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hickory Ave connector. EAST to cul-de-sac (room 10) with the large house. WEST to Main & Hickory (room 3)."
+}

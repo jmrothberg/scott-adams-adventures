@@ -1,0 +1,18 @@
+{
+  "room": 7,
+  "name": "large plain",
+  "description": "I'm in a large plain",
+  "items_start": [
+    "Extinct volcano"
+  ],
+  "exits": {
+    "N": 1
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

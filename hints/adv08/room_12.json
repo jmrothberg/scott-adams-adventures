@@ -1,0 +1,21 @@
+{
+  "room": 12,
+  "name": "dining hall",
+  "description": "I'm in a dining hall",
+  "items_start": [
+    "Table"
+  ],
+  "exits": {
+    "S": 6,
+    "E": 13
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "TAB"
+  ],
+  "danger": false,
+  "notes": ""
+}

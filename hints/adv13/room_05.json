@@ -1,0 +1,23 @@
+{
+  "room": 5,
+  "name": "stream of lava",
+  "description": "I'm in a stream of lava",
+  "items_start": [],
+  "exits": {
+    "N": 26,
+    "S": 27
+  },
+  "hints": [
+    "You are in a stream of lava! Fire bricks or magical protection may be needed here.",
+    "The lava connects the damp cavern (NORTH) to the stone grotto (SOUTH). Use fire bricks to protect yourself.",
+    "NORTH leads to the damp cavern (room 26), SOUTH to the stone grotto (room 27) which has a star and the Dizzy Dean spell."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "BRICK"
+  ],
+  "items_available": [],
+  "danger": true,
+  "notes": "A stream of hot lava connecting the damp cavern (room 26, north) to the stone grotto (room 27, south). Fire bricks from the courtyard may provide protection. Both directions lead to important areas."
+}

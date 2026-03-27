@@ -1,0 +1,26 @@
+{
+  "room": 25,
+  "name": "hidden grove",
+  "description": "I'm in a hidden grove",
+  "items_start": [
+    "*JEWELED FRUIT*",
+    "Sign says `Paul's place`"
+  ],
+  "exits": {
+    "N": 11,
+    "E": 1
+  },
+  "hints": [
+    "There is a treasure here. The sign identifies this as Paul's place - Paul Bunyon.",
+    "GET FRUIT - it is one of the 13 treasures. The Paul reference connects to the magic word BUNYON on the axe.",
+    "GET FRUIT and bring it to the stump (room 3). Go EAST to the swamp or NORTH to the forest."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "FRU"
+  ],
+  "danger": false,
+  "notes": "Hidden grove containing the jeweled fruit treasure. Paul's place refers to Paul Bunyon (connects to the axe magic word). NORTH goes to the forest (room 11), EAST to the swamp (room 1)."
+}

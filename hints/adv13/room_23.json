@@ -1,0 +1,22 @@
+{
+  "room": 23,
+  "name": "box",
+  "description": "I'm in a box",
+  "items_start": [
+    "Piece of metal"
+  ],
+  "exits": {},
+  "hints": [
+    "You are inside a box with a piece of metal.",
+    "GET METAL - the metal piece may be useful as a tool or key component.",
+    "Take the piece of metal. Find a way out of the box - try OPEN BOX, GET OUT, or GO OUT."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "METAL"
+  ],
+  "danger": false,
+  "notes": "Inside a box/crate containing a piece of metal. The metal piece is useful as a tool or for puzzles. Must find a way out of the box."
+}

@@ -1,0 +1,14 @@
+{
+  "room": 15,
+  "name": "I'm on a small atoll",
+  "description": "I'm on a small atoll",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

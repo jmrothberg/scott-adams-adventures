@@ -1,0 +1,42 @@
+{
+  "room": 11,
+  "name": "tall room",
+  "description": "I'm in a tall room",
+  "items_start": [
+    "Metal bar protruding from ceiling",
+    "Decapitated skeleton",
+    "Saw"
+  ],
+  "exits": {
+    "N": 8
+  },
+  "hints": [],
+  "key_actions": [
+    "SAW BAR",
+    "GET BAR"
+  ],
+  "action_details": [
+    {
+      "command": "SAW BAR",
+      "needs": [
+        "Saw"
+      ],
+      "effects": [
+        "Message: I can't reach it."
+      ]
+    },
+    {
+      "command": "GET BAR",
+      "needs": [],
+      "effects": [
+        "Message: I can't reach it."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SAW"
+  ],
+  "danger": false,
+  "notes": ""
+}

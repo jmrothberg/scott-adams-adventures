@@ -1,0 +1,18 @@
+{
+  "room": 24,
+  "name": "Never Never Land",
+  "description": "I'm in a Never Never Land",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You're in Never Never Land - this is a death/failure state.",
+    "There are no exits. You must restore a saved game.",
+    "This is a game-over room. You died or got permanently stuck. SAVE frequently and restore from your last save."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Death/failure state room (Never Never Land). No exits - the game is effectively over. Player must restore a saved game. Reached by fatal actions like drowning, falling, or the pirate killing you."
+}

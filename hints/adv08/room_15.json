@@ -1,0 +1,61 @@
+{
+  "room": 15,
+  "name": "hieroglyphics room",
+  "description": "I'm in a hieroglyphics room",
+  "items_start": [
+    "Dried Camel Jerky"
+  ],
+  "exits": {
+    "W": 14
+  },
+  "hints": [],
+  "key_actions": [
+    "LOO HIE",
+    "REA HIE",
+    "REA HIE",
+    "REA STO"
+  ],
+  "action_details": [
+    {
+      "command": "LOO HIE",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Strange markings are present."
+      ]
+    },
+    {
+      "command": "REA HIE",
+      "needs": [],
+      "effects": [
+        "Message: Confusing. Part appears missing."
+      ]
+    },
+    {
+      "command": "REA HIE",
+      "needs": [
+        "Stone (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: It says: `LEAVE *TREASURES* HERE!`"
+      ]
+    },
+    {
+      "command": "REA STO",
+      "needs": [
+        "Stone (need access)"
+      ],
+      "effects": [
+        "Message: OK",
+        "Message: It says: `LEAVE *TREASURES* HERE!`"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "JER"
+  ],
+  "danger": false,
+  "notes": ""
+}

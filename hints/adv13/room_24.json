@@ -1,0 +1,32 @@
+{
+  "room": 24,
+  "name": "dusty room",
+  "description": "I'm in a dusty room",
+  "items_start": [
+    "Stone door"
+  ],
+  "exits": {
+    "W": 10
+  },
+  "hints": [
+    "A dusty room with a stone door. The dust itself is collectible and the door may lead somewhere.",
+    "GET DUST - magical dust may be useful. The stone door may require a spell or key to open. A stone staircase leads down.",
+    "GET DUST for use with spells. The stone door connects to deeper areas. WEST returns to the plain room. The staircase leads DOWN to the cavern areas."
+  ],
+  "key_actions": [
+    "GET DUST"
+  ],
+  "action_details": [
+    {
+      "command": "GET DUST",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Dusty room accessed by PUSH EAST from the plain room (10). Has a stone door and collectible dust. West returns to room 10. Connected to the stone staircase (room 25) and deeper cavern areas."
+}

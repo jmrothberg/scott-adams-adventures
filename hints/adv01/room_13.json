@@ -1,0 +1,32 @@
+{
+  "room": 13,
+  "name": "maze of pits",
+  "description": "I'm in a maze of pits",
+  "items_start": [],
+  "exits": {
+    "W": 14,
+    "U": 12
+  },
+  "hints": [
+    "The HELP here mentions magic words. Keep exploring the maze for clues.",
+    "Go WEST to continue through the maze toward the Persian Rug. UP returns to room 12.",
+    "Go WEST to reach room 14 (with the Aladin scratching). The magic words are used elsewhere in the maze."
+  ],
+  "key_actions": [
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: You may need to say magic words here"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Part of the pit maze. WEST goes to room 14, UP returns to room 12. The HELP hint about magic words refers to SAY AWAY which teleports you out of the maze when holding the Persian Rug."
+}

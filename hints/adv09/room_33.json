@@ -1,0 +1,30 @@
+{
+  "room": 33,
+  "name": "line shack",
+  "description": "I'm in a line shack",
+  "items_start": [
+    "Telegraph key"
+  ],
+  "exits": {
+    "S": 32
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK FLOO"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK FLOO",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see",
+        "Message: Loose plank here"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

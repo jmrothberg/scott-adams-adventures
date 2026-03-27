@@ -1,0 +1,18 @@
+{
+  "room": 30,
+  "name": "lot of trouble",
+  "description": "I'm in a lot of trouble",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "This is the starting room - you have arrived from Part 1. Something must happen automatically.",
+    "You need to have completed Savage Island Part 1 and carried over the correct game state.",
+    "If you are stuck here with no exits, make sure you completed Part 1 correctly and saved/restored properly."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Starting room for Savage Island Part 2. The player continues from Part 1's ending. The 'lot of trouble' description reflects the dire situation carried over from the volcanic eruption sequence. The game state from Part 1 determines what happens next."
+}

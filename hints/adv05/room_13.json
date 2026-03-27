@@ -1,0 +1,24 @@
+{
+  "room": 13,
+  "name": "large COFFIN",
+  "description": "I'm in a large COFFIN",
+  "items_start": [
+    "Coffin lid is open",
+    "Lockable slide bolt"
+  ],
+  "exits": {
+    "U": 6
+  },
+  "hints": [
+    "You are inside Dracula's coffin! The lid is open and there is a lockable slide bolt.",
+    "CLOSE LID and LOCK BOLT to trap Dracula inside when he returns during the day. This is key to winning.",
+    "During daytime, Dracula sleeps here. NAIL the coffin shut and STAKE him to win. The bolt locks from inside.",
+    "Wait for Dracula to sleep here during daytime. CLOSE LID, LOCK BOLT to trap him. Then stake him through the heart. UP returns to the crypt."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Inside Dracula's coffin with a lockable slide bolt. During daytime, Dracula sleeps here. The coffin must be nailed shut and the vampire staked to win. The bolt can lock from inside. UP returns to the crypt (room 6)."
+}

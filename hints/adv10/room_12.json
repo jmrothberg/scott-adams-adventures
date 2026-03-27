@@ -1,0 +1,100 @@
+{
+  "room": 12,
+  "name": "lake. There's shore to North,\nSouth & East",
+  "description": "I'm in a lake. There's shore to North,\nSouth & East",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "GO LEDG",
+    "SWIM WEST",
+    "SWIM DOWN",
+    "SWIM DOWN",
+    "LOOK WEST",
+    "SWIM",
+    "TREA WATE",
+    "SWIM",
+    "GET WATE"
+  ],
+  "action_details": [
+    {
+      "command": "GO LEDG",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 18"
+      ]
+    },
+    {
+      "command": "SWIM WEST",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 18"
+      ]
+    },
+    {
+      "command": "SWIM DOWN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 13"
+      ]
+    },
+    {
+      "command": "SWIM DOWN",
+      "needs": [],
+      "effects": [
+        "Message: ?",
+        "Message: Sorry"
+      ]
+    },
+    {
+      "command": "LOOK WEST",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: I see",
+        "Message: ledge in the wall of the volcano"
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: something",
+        "Message: too heavy or awkward",
+        "Message: I drown"
+      ]
+    },
+    {
+      "command": "TREA WATE",
+      "needs": [],
+      "effects": [
+        "DEATH",
+        "Message: OK"
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 8"
+      ]
+    },
+    {
+      "command": "GET WATE",
+      "needs": [
+        "Empty bottle (need access)"
+      ],
+      "effects": [
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

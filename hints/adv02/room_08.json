@@ -1,0 +1,27 @@
+{
+  "room": 8,
+  "name": "meadow",
+  "description": "I'm in a meadow",
+  "items_start": [
+    "Mongoose",
+    "Grass shack"
+  ],
+  "exits": {
+    "E": 14,
+    "W": 6
+  },
+  "hints": [
+    "There is a mongoose and a grass shack here. Both are important.",
+    "GET MONGOOSE - it will be useful against snakes later. GO SHACK to enter the grass shack.",
+    "The mongoose kills deadly snakes. GO SHACK to find the pirate, treasure chest, and parrot.",
+    "GET MONGOOSE for snake protection. GO SHACK to enter (room 9). EAST goes to the hill foot, WEST returns to the beach."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "MON"
+  ],
+  "danger": false,
+  "notes": "Island meadow with the mongoose (kills snakes in the monastery) and the grass shack entrance. EAST goes to the hill foot (room 14), WEST to the beach (room 6). The shack contains the pirate and key items."
+}

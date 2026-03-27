@@ -1,0 +1,24 @@
+{
+  "room": 25,
+  "name": "sacred temple",
+  "description": "I'm in a sacred temple",
+  "items_start": [
+    "Ornate chest"
+  ],
+  "exits": {
+    "S": 22
+  },
+  "hints": [
+    "A temple room with an ornate chest. This is likely a treasure or contains important items.",
+    "GET CHEST or OPEN CHEST to access its contents. The chest itself may be a treasure.",
+    "Take the ornate chest. Go SOUTH to return to the altar room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "CHES"
+  ],
+  "danger": false,
+  "notes": "Temple room with an ornate chest - likely a treasure item. South returns to the altar room (room 22). The chest may contain items when opened."
+}

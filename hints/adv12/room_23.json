@@ -1,0 +1,23 @@
+{
+  "room": 23,
+  "name": "hidden chamber",
+  "description": "I'm in a hidden chamber",
+  "items_start": [
+    "Stone block"
+  ],
+  "exits": {
+    "N": 22,
+    "W": 24
+  },
+  "hints": [
+    "A hidden chamber with a stone block. The block may be movable or contain something.",
+    "EXAM BLOCK or PUSH BLOCK. Go WEST for another hidden chamber, NORTH to return to the altar room.",
+    "The stone block may need to be moved to reveal something underneath. Check WEST for more hidden items."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hidden chamber in the temple with a stone block. North leads to altar room (room 22), west to another hidden chamber (room 24). The stone block may be part of a puzzle."
+}

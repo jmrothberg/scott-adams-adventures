@@ -1,0 +1,59 @@
+{
+  "room": 5,
+  "name": "I'M outside an open window\non the ledge of a very tall building",
+  "description": "I'M outside an open window\non the ledge of a very tall building",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are on a high ledge. There must be a magic word to get off safely. Do NOT jump!",
+    "The HELP says you need a magic word. Think about pirate sayings. You need a specific item too.",
+    "SAY YOHO while holding the blood-soaked book to teleport to the pirate island.",
+    "SAY YOHO with the book in your inventory to teleport to the beach. GO WINDOW to go back inside. Do NOT JUMP - you die!"
+  ],
+  "key_actions": [
+    "HEL",
+    "SAY YOH",
+    "JUM",
+    "GO WIN"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: I may need to say a MAGIC word here!"
+      ]
+    },
+    {
+      "command": "SAY YOH",
+      "needs": [
+        "Large blood soaked book"
+      ],
+      "effects": [
+        "Message: Everything spins around and suddenly I'm elsewhere...",
+        "Move to room 6",
+        "Show score"
+      ]
+    },
+    {
+      "command": "JUM",
+      "needs": [],
+      "effects": [
+        "Message: That's not very smart",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "GO WIN",
+      "needs": [],
+      "effects": [
+        "Move to room 2",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": ["Large blood soaked book"],
+  "items_available": [],
+  "danger": true,
+  "notes": "The magic teleport point. SAY YOHO with the book teleports to the pirate island beach (room 6). JUMPing is fatal. GO WINDOW returns to the alcove (room 2). The book is found in the alcove bookcase."
+}

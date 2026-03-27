@@ -1,0 +1,49 @@
+{
+  "room": 14,
+  "name": "I'm at the foot of a cave ridden hill, a pathway\nleads on up to the top",
+  "description": "I'm at the foot of a cave ridden hill, a pathway\nleads on up to the top",
+  "items_start": [],
+  "exits": {
+    "W": 8
+  },
+  "hints": [
+    "There are multiple exits here even though only WEST is obvious. Look for caves and a path.",
+    "GO CAVE to enter the cave maze. GO PATH to climb the hill for a view of the islands.",
+    "GO CAVE leads into the cave maze (room 7). GO PATH climbs to the hilltop (room 18). WEST returns to the meadow.",
+    "GO PATH to reach the hilltop and find the crack in the wall. GO CAVE to explore underground. WEST to meadow."
+  ],
+  "key_actions": [
+    "GO CAV",
+    "GO PAT",
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO CAV",
+      "needs": [],
+      "effects": [
+        "Move to room 7",
+        "Show score"
+      ]
+    },
+    {
+      "command": "GO PAT",
+      "needs": [],
+      "effects": [
+        "Move to room 18",
+        "Show score"
+      ]
+    },
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: There's multiple exits here!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Major junction at the hill foot. GO CAVE enters the maze (room 7). GO PATH climbs to the hilltop (room 18). WEST returns to the meadow (room 8). Hub for cave exploration and hilltop access."
+}

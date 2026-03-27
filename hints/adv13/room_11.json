@@ -1,0 +1,26 @@
+{
+  "room": 11,
+  "name": "storeroom",
+  "description": "I'm in a storeroom",
+  "items_start": [
+    "*STAR",
+    "Sign: STAIRWAY CONDEMED"
+  ],
+  "exits": {
+    "N": 10,
+    "D": 14
+  },
+  "hints": [
+    "A storeroom with a star and a warning sign about condemned stairs below.",
+    "GET STAR. The sign warns the stairway is condemned but you can still go DOWN. Be prepared for rabid rats.",
+    "Take the star. Going DOWN leads to the staircase (room 14) with rabid rats. NORTH returns to the plain room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "STAR"
+  ],
+  "danger": false,
+  "notes": "Storeroom with a *STAR* and a sign warning of condemned stairs. Down leads to the staircase (room 14) with rabid rats. North returns to the plain room (room 10). Accessed by PUSH SOUTH from room 10."
+}

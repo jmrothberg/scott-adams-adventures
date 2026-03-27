@@ -1,0 +1,25 @@
+{
+  "room": 14,
+  "name": "deserted Jovian mining colony",
+  "description": "I'm in a deserted Jovian mining colony",
+  "items_start": [
+    "* ANCIENT FLASK SAURIAN BRANDY *",
+    "Short twisted piece of metal"
+  ],
+  "exits": {},
+  "hints": [
+    "A deserted mining colony with a treasure and a useful item.",
+    "The flask of Saurian Brandy is a treasure - take it!",
+    "The twisted metal piece might be useful as a tool.",
+    "GET FLAS (treasure) and GET META (may be useful for puzzles)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "FLAS",
+    "META"
+  ],
+  "danger": false,
+  "notes": "Deserted Jovian mining colony. Contains the Ancient Flask of Saurian Brandy treasure and a metal piece."
+}

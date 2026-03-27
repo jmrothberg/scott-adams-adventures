@@ -1,0 +1,57 @@
+{
+  "room": 15,
+  "name": "loft above ballroom",
+  "description": "I'm in a loft above ballroom",
+  "items_start": [
+    "Potion"
+  ],
+  "exits": {},
+  "hints": [
+    "The loft above the ballroom has an important potion. But getting down safely is a problem.",
+    "GET POTION - it may grant a useful ability. JUMP without the right spell is fatal - you fall and die.",
+    "DRINK POTION for its magical effect. To safely descend: use a levitation or feather-fall spell before jumping. THROW CRATE down first if you have it.",
+    "The potion and specific spells are needed to navigate safely. Jumping with the right spell active (like a slow-fall) returns you safely to the ballroom (room 7)."
+  ],
+  "key_actions": [
+    "JUMP",
+    "JUMP",
+    "THROW CRATE"
+  ],
+  "action_details": [
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I fall!",
+        "Message: I hit hard!",
+        "Move item 0 to room 0"
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: I fall!",
+        "Message: Spell works!",
+        "Move to room 7"
+      ]
+    },
+    {
+      "command": "THROW CRATE",
+      "needs": [
+        "Wooden crate (need access)"
+      ],
+      "effects": [
+        "Message: O.K.",
+        "Set flag 19"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "POTIO"
+  ],
+  "danger": true,
+  "notes": "Loft above the ballroom containing a potion. JUMP without the right spell active is fatal. With the correct spell, JUMP safely returns to the ballroom (room 7). THROW CRATE down if carrying one. The potion is an important magical item."
+}

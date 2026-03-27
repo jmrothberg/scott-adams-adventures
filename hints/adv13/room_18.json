@@ -1,0 +1,32 @@
+{
+  "room": 18,
+  "name": "I'm under the stairs",
+  "description": "I'm under the stairs",
+  "items_start": [
+    "*STAR"
+  ],
+  "exits": {},
+  "hints": [
+    "A hidden area under the stairs with a star. GO HOLE to return to the staircase.",
+    "GET STAR, then GO HOLE to return to the staircase (room 14)."
+  ],
+  "key_actions": [
+    "GO HOLE"
+  ],
+  "action_details": [
+    {
+      "command": "GO HOLE",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 14"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "STAR"
+  ],
+  "danger": false,
+  "notes": "Hidden space under the staircase containing a *STAR*. Accessed via GO HOLE from the staircase (room 14). GO HOLE returns to the staircase."
+}

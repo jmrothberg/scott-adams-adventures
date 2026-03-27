@@ -1,0 +1,33 @@
+{
+  "room": 13,
+  "name": "torture chamber",
+  "description": "I'm in a torture chamber",
+  "items_start": [
+    "Tiny open door"
+  ],
+  "exits": {
+    "N": 11,
+    "E": 12
+  },
+  "hints": [
+    "A torture chamber with a tiny door. The door leads somewhere unusual.",
+    "GO DOOR to go through the tiny door. EAST leads to the armory. NORTH to the dungeon.",
+    "The tiny door connects to the graveyard area. NORTH to dungeon, EAST to armory."
+  ],
+  "key_actions": [
+    "OPE DOO"
+  ],
+  "action_details": [
+    {
+      "command": "OPE DOO",
+      "needs": [],
+      "effects": [
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Torture chamber with a tiny door (connects to graveyard area/room 19). NORTH to dungeon (room 11), EAST to armory (room 12)."
+}

@@ -1,0 +1,110 @@
+{
+  "room": 20,
+  "name": "I'm aboard Pirate ship anchored off shore",
+  "description": "I'm aboard Pirate ship anchored off shore",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are aboard the pirate ship. You can sail to Treasure Island or go ashore.",
+    "To SET SAIL, you need the pirate as crew and a map. The pirate will not sail with the accursed book aboard.",
+    "Remove the blood-soaked book from the ship before setting sail. You need the pirate crew and the map.",
+    "Drop the book on shore first. With pirate and map: SET SAIL to reach Treasure Island. GO SHORE to disembark."
+  ],
+  "key_actions": [
+    "SET SAI",
+    "SET SAI",
+    "GO SHO",
+    "GO SHO",
+    "SET SAI",
+    "SET SAI",
+    "SET SAI",
+    "SET SAI",
+    "GO SHO"
+  ],
+  "action_details": [
+    {
+      "command": "SET SAI",
+      "needs": [
+        "Wicked looking pirate (must be in room)",
+        "Large blood soaked book (need access)",
+        "Map (need access)"
+      ],
+      "effects": [
+        "Message: Sorry I can't",
+        "Message: Pirate says:\n`First Yee be getting that ACCURSED thing off me ship!`\n"
+      ]
+    },
+    {
+      "command": "SET SAI",
+      "needs": [
+        "Wicked looking pirate (must be in room)"
+      ],
+      "effects": [
+        "Message: Pirate says: `Aye me Buckeroo, we be waiting for the tide to\n come in!`"
+      ]
+    },
+    {
+      "command": "GO SHO",
+      "needs": [
+        "Wicked looking pirate (must be in room)"
+      ],
+      "effects": [
+        "Move to room 21",
+        "Auto-DROP item",
+        "Message: Pirate follows me ashore as if expecting something"
+      ]
+    },
+    {
+      "command": "GO SHO",
+      "needs": [],
+      "effects": [
+        "Move to room 6",
+        "Show score"
+      ]
+    },
+    {
+      "command": "SET SAI",
+      "needs": [],
+      "effects": [
+        "Message: Sorry I can't",
+        "Message: I've no crew"
+      ]
+    },
+    {
+      "command": "SET SAI",
+      "needs": [],
+      "effects": [
+        "Message: Sorry I can't",
+        "Message: Pirate says: `Aye matey we be needing a map first`."
+      ]
+    },
+    {
+      "command": "SET SAI",
+      "needs": [],
+      "effects": [
+        "Message: After a day at sea we set anchor off of a sandy beach.\n All Ashore who's going Ashore...",
+        "Set flag 4"
+      ]
+    },
+    {
+      "command": "SET SAI",
+      "needs": [],
+      "effects": [
+        "Message: After a day at sea we set anchor off of a sandy beach.\n All Ashore who's going Ashore...",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "GO SHO",
+      "needs": [],
+      "effects": [
+        "Move to room 21",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": ["Map", "Wicked looking pirate"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Pirate ship - the means of reaching Treasure Island. Requires: pirate crew (give rum in shack), map (from duffel bag), and the blood-soaked book must NOT be aboard. SET SAIL with proper conditions reaches Treasure Island. Repeated sailing without proper setup can be fatal."
+}

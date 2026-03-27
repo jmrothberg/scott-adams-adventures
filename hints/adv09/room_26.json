@@ -1,0 +1,25 @@
+{
+  "room": 26,
+  "name": "warm bed",
+  "description": "I'm in a warm bed",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [
+    "GET UP"
+  ],
+  "action_details": [
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 27"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

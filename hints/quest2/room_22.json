@@ -1,0 +1,23 @@
+{
+  "room": 22,
+  "name": "paper room",
+  "description": "I'm in a paper room",
+  "items_start": [
+    "*Gem",
+    "Blank paper",
+    "Dial",
+    "Whole floor is weight scale"
+  ],
+  "exits": {
+    "E": 34
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

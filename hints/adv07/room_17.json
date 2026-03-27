@@ -1,0 +1,27 @@
+{
+  "room": 17,
+  "name": "Observation chamber",
+  "description": "I'm in a Observation chamber",
+  "items_start": [
+    "Valve handle with no valve",
+    "1 way mirror",
+    "Locked door"
+  ],
+  "exits": {
+    "E": 2
+  },
+  "hints": [
+    "An observation chamber with a one-way mirror, a valve handle, and a locked door.",
+    "GET HAND to take the valve handle. It fits the valve in the pit (room 16).",
+    "The one-way mirror lets you observe without being seen. The locked door needs a key.",
+    "The valve handle is critical - bring it to the pit (room 16) to drain the water tank. E=mirror room (room 2)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "HAND"
+  ],
+  "danger": false,
+  "notes": "Observation chamber with the valve handle (needed in pit room 16 to drain the tank). One-way mirror and locked door also here. E=mirror room (room 2)."
+}

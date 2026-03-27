@@ -1,0 +1,64 @@
+{
+  "room": 10,
+  "name": "dense jungle",
+  "description": "I'm in a dense jungle",
+  "items_start": [
+    "Cave"
+  ],
+  "exits": {
+    "N": 10,
+    "S": 9,
+    "E": 10,
+    "W": 10
+  },
+  "hints": [
+    "Deeper in the jungle with a cave entrance visible. Most directions loop, but SOUTH returns to the previous jungle area.",
+    "GO CAVE to enter a damp cave with a strange fountain. DIG here with the shovel for more buried items.",
+    "GO CAVE leads to a fountain with strange liquid (room 11). DIG to find buried treasure. Only SOUTH exits the loop."
+  ],
+  "key_actions": [
+    "DIG",
+    "DIG",
+    "GO CAVE"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Message: I found",
+        "Message: something!",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Message: I found",
+        "Message: something!",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "GO CAVE",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 11",
+        "Set flag 8",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [
+    "SHOV"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Deeper jungle area with cave entrance. Most directions loop. GO CAVE enters the damp cave with fountain (room 11). Multiple DIG results possible with the shovel. South returns to the first jungle area (room 9)."
+}

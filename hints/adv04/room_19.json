@@ -1,0 +1,37 @@
+{
+  "room": 19,
+  "name": "Graveyard",
+  "description": "I'm in a Graveyard",
+  "items_start": [
+    "GrAves",
+    "Rusting SAW"
+  ],
+  "exits": {
+    "E": 13
+  },
+  "hints": [
+    "A graveyard with graves and a saw. The saw may be useful. Try digging in the graves.",
+    "GET SAW and GET CLOVER (four-leaf clover hidden in the graves). DIG in the graveyard.",
+    "GET SAW. DIG here to find the four-leaf clover (good luck charm needed for the final ritual). GET CLOVER.",
+    "GET SAW, DIG to find the four-leaf clover. The clover is one of the three items needed for YELL CHANT. EAST to torture chamber."
+  ],
+  "key_actions": [
+    "GET CLO"
+  ],
+  "action_details": [
+    {
+      "command": "GET CLO",
+      "needs": [],
+      "effects": [
+        "Auto-GET item",
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": ["Pocket Shovel"],
+  "items_available": [
+    "SAW"
+  ],
+  "danger": false,
+  "notes": "Graveyard with a rusting saw and hidden four-leaf clover (found by digging). The clover is one of the three essential items for the final YELL CHANT ritual. EAST leads to the torture chamber (room 13)."
+}

@@ -1,0 +1,29 @@
+{
+  "room": 24,
+  "name": "shallow lagoon.\nto the north is the ocean",
+  "description": "I'm in a shallow lagoon.\nto the north is the ocean",
+  "items_start": [
+    "Rusty anchor",
+    "The tide is out"
+  ],
+  "exits": {
+    "N": 10,
+    "S": 6,
+    "E": 6,
+    "W": 6
+  },
+  "hints": [
+    "The lagoon has a rusty anchor. The tide status affects what you can do here.",
+    "GET ANCHOR when available. The tide goes in and out - when in, the pirate ship arrives.",
+    "Take the anchor. When the tide comes in, the pirate ship will be accessible from here. SOUTH/EAST/WEST return to beach.",
+    "GET ANCHOR (treasure). The pirate ship anchors here when tide is in. Go SOUTH to return to the beach. Do not go NORTH into the open ocean."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "ANC"
+  ],
+  "danger": false,
+  "notes": "Shallow lagoon accessible from the beach when tide is out. Contains the rusty anchor. The pirate ship anchors here when tide comes in. NORTH leads to open ocean (room 10, dangerous). S/E/W all return to beach (room 6)."
+}

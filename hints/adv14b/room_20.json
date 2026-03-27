@@ -1,0 +1,44 @@
+{
+  "room": 20,
+  "name": "I'm on a beach",
+  "description": "I'm on a beach",
+  "items_start": [
+    "Lifeguard shack",
+    "Sand"
+  ],
+  "exits": {
+    "N": 21,
+    "S": 19
+  },
+  "hints": [],
+  "key_actions": [
+    "GO SHAC",
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "GO SHAC",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 25"
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: nothing",
+        "Message: special",
+        "Message: happens"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "SAND"
+  ],
+  "danger": false,
+  "notes": ""
+}

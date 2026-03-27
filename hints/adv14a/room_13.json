@@ -1,0 +1,35 @@
+{
+  "room": 13,
+  "name": "smugglers hold inside ship",
+  "description": "I'm in a smugglers hold inside ship",
+  "items_start": [
+    "Pool of water",
+    "Very narrow crawlway"
+  ],
+  "exits": {},
+  "hints": [
+    "The smuggler's hold is the treasure room! This is where you store treasures for points. There's a pool of water and a narrow crawlway.",
+    "DROP treasures here to score points. The crawlway leads further into the ship. GO SEA enters the water through the pool.",
+    "This is the treasure storage room (room 13). DROP all *treasures* here and SCORE to check progress. GO CRAWLWAY leads to the narrow crawlway (room 20). GO SEA exits through the pool to the sea (room 11).",
+    "Store all 13 treasures here for maximum score. GO CRAWLWAY to access the ship's hold. GO SEA goes to the water but drops your items."
+  ],
+  "key_actions": [
+    "GO SEA"
+  ],
+  "action_details": [
+    {
+      "command": "GO SEA",
+      "needs": [],
+      "effects": [
+        "Set flag 5",
+        "Move to room 11",
+        "Auto-DROP item",
+        "Set flag 29"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "TREASURE ROOM. Drop all 13 treasures here and SCORE. Contains a pool of water (GO SEA exits to room 11 but drops items) and a narrow crawlway (GO CRAWLWAY leads to room 20). This is the target destination for all collected treasures."
+}

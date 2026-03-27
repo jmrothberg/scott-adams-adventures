@@ -1,0 +1,22 @@
+{
+  "room": 16,
+  "name": "Pit",
+  "description": "I'm in a Pit",
+  "items_start": [
+    "Locked door",
+    "Valve on a large warm pipe"
+  ],
+  "exits": {},
+  "hints": [
+    "You're in the pit. There's a valve on a warm pipe and a locked door.",
+    "The valve needs a handle to turn it. The handle is in the observation chamber.",
+    "Bring the valve handle (HAND from room 17) and FIX VALV or TURN VALV to connect and turn it.",
+    "Turning the valve drains the water tank and activates the steam calliope. The locked door needs the rusty key."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["HAND", "KEY"],
+  "items_available": [],
+  "danger": false,
+  "notes": "The pit has a valve on a warm pipe (needs handle from room 17) and a locked door (needs rusty key from room 5). Turning the valve drains the water tank."
+}

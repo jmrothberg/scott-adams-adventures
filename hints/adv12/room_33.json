@@ -1,0 +1,24 @@
+{
+  "room": 33,
+  "name": "deep pit",
+  "description": "I'm in a deep pit",
+  "items_start": [
+    "Rope leading out of the pit"
+  ],
+  "exits": {
+    "S": 34
+  },
+  "hints": [
+    "You are at the bottom of the deep pit with a rope leading back up. Go SOUTH to explore further.",
+    "The rope is your lifeline back up. Go SOUTH to find the cyclops and cave entrance.",
+    "SOUTH leads to the cyclops area. The rope lets you climb back out to the grotto above."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [
+    "SWOR"
+  ],
+  "items_available": [],
+  "danger": false,
+  "notes": "Bottom of the deep pit with rope leading up to the grotto (room 30). South leads to the cyclops area (room 34). Bring the sword to deal with the cyclops."
+}

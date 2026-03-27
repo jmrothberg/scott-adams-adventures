@@ -1,0 +1,35 @@
+{
+  "room": 22,
+  "name": "spooky old graveyard filled with piles\nof empty and broken rum bottles",
+  "description": "I'm in a spooky old graveyard filled with piles\nof empty and broken rum bottles",
+  "items_start": [],
+  "exits": {
+    "N": 21,
+    "E": 23
+  },
+  "hints": [
+    "A spooky graveyard - there may be treasure buried among the rum bottles.",
+    "DIG here with the shovel to find buried treasure beneath the graveyard.",
+    "DIG to uncover treasure. Go NORTH to the beach, EAST to the barren field with the monastery."
+  ],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Message: I found something!",
+        "Auto-DROP item",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": ["Shovel"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Graveyard on Treasure Island. DIG with shovel to find buried treasure. NORTH returns to the beach (room 21). EAST leads to the barren field (room 23). The rum bottles are thematic decoration."
+}

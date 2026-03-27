@@ -1,0 +1,20 @@
+{
+  "room": 25,
+  "name": "stone staircase",
+  "description": "I'm in a stone staircase",
+  "items_start": [],
+  "exits": {
+    "U": 24,
+    "D": 26
+  },
+  "hints": [
+    "A stone staircase connecting the dusty room above to the damp cavern below.",
+    "Go UP to return to the dusty room, or DOWN to reach the damp cavern with a lava stream."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Stone staircase connecting the dusty room (room 24, up) to the damp cavern (room 26, down). Transit area."
+}

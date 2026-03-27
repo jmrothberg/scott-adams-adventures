@@ -1,0 +1,48 @@
+{
+  "room": 12,
+  "name": "I'm outside the airlock on a ledge.\nThe ground is 90 meters below",
+  "description": "I'm outside the airlock on a ledge.\nThe ground is 90 meters below",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You're on a ledge outside the airlock, 90 meters up!",
+    "Don't panic about the height - the gravity is very weak.",
+    "JUMP is safe because of the low gravity on this planetoid.",
+    "JUMP to safely float down, or GO SHIP to re-enter the airlock."
+  ],
+  "key_actions": [
+    "JUMP",
+    "GO GROU",
+    "GO SHIP"
+  ],
+  "action_details": [
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: The gravity here is very",
+        "Message: weak."
+      ]
+    },
+    {
+      "command": "GO GROU",
+      "needs": [],
+      "effects": [
+        "Message: HOW?"
+      ]
+    },
+    {
+      "command": "GO SHIP",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 2"
+      ]
+    }
+  ],
+  "items_needed": ["SUIT"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Ledge outside the ship's airlock. Low gravity makes jumping safe. Wear space suit before exiting."
+}

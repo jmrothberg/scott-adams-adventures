@@ -1,0 +1,42 @@
+{
+  "room": 4,
+  "name": "grey room",
+  "description": "I'm in a grey room",
+  "items_start": [
+    "Box with apparatus pointing at chair",
+    "Chair bolted to floor"
+  ],
+  "exits": {
+    "N": 3
+  },
+  "hints": [
+    "The chair and apparatus look important. This might be an ID processing station.",
+    "SIT in the CHAIR - the apparatus may create an ID badge or picture for you.",
+    "GO CHAIR or SIT CHAIR to sit down. The apparatus creates ID photos - you need these to pass security doors.",
+    "SIT in the chair, then interact with the colored buttons to get different security-level ID badges. You need the right badge for each colored door."
+  ],
+  "key_actions": [
+    "GO CHA",
+    "LOO CHA"
+  ],
+  "action_details": [
+    {
+      "command": "GO CHA",
+      "needs": [],
+      "effects": [
+        "Message: It seems safe. Shall I sit down?"
+      ]
+    },
+    {
+      "command": "LOO CHA",
+      "needs": [],
+      "effects": [
+        "Message: It seems safe. Shall I sit down?"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "ID photo station. Sit in the chair to move to room 5 where you can use colored buttons/keys to create different security-level ID badges needed for the colored security doors throughout the base."
+}

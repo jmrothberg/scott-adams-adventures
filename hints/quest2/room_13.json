@@ -1,0 +1,98 @@
+{
+  "room": 13,
+  "name": "Chemical Laboratory",
+  "description": "I'm in a Chemical Laboratory",
+  "items_start": [],
+  "exits": {
+    "S": 16
+  },
+  "hints": [],
+  "key_actions": [
+    "MIX WEB",
+    "MIX",
+    "MIX WEB",
+    "MIX WEB",
+    "MIX WEB",
+    "MIX",
+    "MIX"
+  ],
+  "action_details": [
+    {
+      "command": "MIX WEB",
+      "needs": [
+        "Formula"
+      ],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I've got",
+        "Message: baby",
+        "Message: formula!"
+      ]
+    },
+    {
+      "command": "MIX",
+      "needs": [
+        "Acid(Hydrochloric) (need access)",
+        "Calcium Carbonate (need access)",
+        "Exotic chemicals (need access)"
+      ],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I've got",
+        "Message: too many ingredients."
+      ]
+    },
+    {
+      "command": "MIX WEB",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I've got",
+        "Message: no formula."
+      ]
+    },
+    {
+      "command": "MIX WEB",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: I've got",
+        "Message: no chems!"
+      ]
+    },
+    {
+      "command": "MIX WEB",
+      "needs": [
+        "Torn paper (need access)",
+        "Exotic chemicals (need access)"
+      ],
+      "effects": [
+        "Message: Partial success only!",
+        "Clear flag 42"
+      ]
+    },
+    {
+      "command": "MIX",
+      "needs": [
+        "Acid(Hydrochloric) (need access)",
+        "Calcium Carbonate (need access)"
+      ],
+      "effects": [
+        "Clear flag 39",
+        "Clear flag 40"
+      ]
+    },
+    {
+      "command": "MIX",
+      "needs": [],
+      "effects": [
+        "Message: Sorry,",
+        "Message: Be more specific."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,32 @@
+{
+  "room": 22,
+  "name": "small viewing room",
+  "description": "I'm in a small viewing room",
+  "items_start": [
+    "6 inch window"
+  ],
+  "exits": {
+    "D": 15
+  },
+  "hints": [
+    "There is a small window here. Look through it to survey the control room.",
+    "LOOK WINDOW to see into the control room and notice the debris blocking the door.",
+    "LOOK WINDOW reveals the control room below with the door blocked by debris. DOWN returns to the blue anteroom."
+  ],
+  "key_actions": [
+    "LOO WIN"
+  ],
+  "action_details": [
+    {
+      "command": "LOO WIN",
+      "needs": [],
+      "effects": [
+        "Message: I'm looking into the control room. I notice that the door is\n blocked by some debris."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Small viewing room with a window into the control room. Reveals that the control room door is blocked by debris (the tape recorder remains). DOWN returns to the blue anteroom (room 15)."
+}

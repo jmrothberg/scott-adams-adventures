@@ -1,0 +1,26 @@
+{
+  "room": 10,
+  "name": "hole",
+  "description": "I'm in a hole",
+  "items_start": [],
+  "exits": {
+    "U": 7
+  },
+  "hints": [],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

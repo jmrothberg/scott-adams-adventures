@@ -1,0 +1,23 @@
+{
+  "room": 18,
+  "name": "I'm on a Merry-Go-Round",
+  "description": "I'm on a Merry-Go-Round",
+  "items_start": [
+    "Wooden horse"
+  ],
+  "exits": {
+    "D": 21
+  },
+  "hints": [
+    "You're on the merry-go-round floor. There's a wooden horse you can ride.",
+    "GO HORS or RIDE HORS to mount the wooden horse and ride up.",
+    "Riding the horse takes you to room 7, where you can climb the pole to reach the top.",
+    "D goes to the large room with the calliope (room 21). The horse is your way to reach the catwalk above."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Merry-go-round floor. GO HORS to mount and ride to room 7 (on the horse). D=large room with calliope (room 21)."
+}

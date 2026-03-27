@@ -1,0 +1,24 @@
+{
+  "room": 20,
+  "name": "main control room",
+  "description": "I'm in a main control room",
+  "items_start": [
+    "Control console",
+    "Viewscreen"
+  ],
+  "exits": {
+    "W": 21
+  },
+  "hints": [
+    "The main control room of the alien ship! The viewscreen and console are critical to understanding what is happening.",
+    "LOOK VIEWSCREEN or LOOK VIEW to see what is displayed. Examine the console for controls - buttons, dials, levers.",
+    "USE CONSOLE, PUSH BUTTON, or interact with specific controls. The viewscreen shows the ship's status or exterior view. This room is key to controlling the ship.",
+    "Try entering codes on the console - numbers like 123 or 474 from clues found elsewhere. The viewscreen reveals crucial plot information."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "The main control room - the most important room on the alien ship. Contains the primary control console and viewscreen. The console may accept numeric codes (123, 474) found as clues elsewhere. West exit leads to the main corridor (room 21). This is where the player controls the ship's systems."
+}

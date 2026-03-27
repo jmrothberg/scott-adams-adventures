@@ -1,0 +1,38 @@
+{
+  "room": 0,
+  "name": "Storeroom, can't get here",
+  "description": "I'm in a Storeroom, can't get here",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "This is an internal storeroom used by the game engine. You cannot reach it during normal play.",
+    "Items and actions defined here affect global game state (pump, find, transmit).",
+    "Not a playable room. The game engine uses this for global action processing."
+  ],
+  "key_actions": [
+    "STAR PUMP",
+    "FIND",
+    "TRAN"
+  ],
+  "action_details": [
+    {
+      "command": "STAR PUMP",
+      "needs": [],
+      "effects": []
+    },
+    {
+      "command": "FIND",
+      "needs": [],
+      "effects": []
+    },
+    {
+      "command": "TRAN",
+      "needs": [],
+      "effects": []
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Internal game engine storeroom (room 0). Not reachable by the player. Houses global action handlers for START PUMP, FIND, and TRANSMIT commands."
+}

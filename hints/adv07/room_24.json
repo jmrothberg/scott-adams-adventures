@@ -1,0 +1,32 @@
+{
+  "room": 24,
+  "name": "small room",
+  "description": "I'm in a small room",
+  "items_start": [],
+  "exits": {
+    "N": 32,
+    "W": 10
+  },
+  "hints": [
+    "A small room with strange music playing. There are exits north and west.",
+    "LIST to listen to the music - it sounds like a space opera.",
+    "N leads into the windy maze. W leads back to the knob room.",
+    "This is a connector between the knob room (W) and the windy maze (N)."
+  ],
+  "key_actions": [
+    "LIST"
+  ],
+  "action_details": [
+    {
+      "command": "LIST",
+      "needs": [],
+      "effects": [
+        "Message: Sounds like a space opera"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Small room with music, reached via PULL YELL in room 10. N=windy maze (32), W=knob room (10). LIST plays music (Easter egg reference)."
+}

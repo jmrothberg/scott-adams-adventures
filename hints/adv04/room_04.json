@@ -1,0 +1,26 @@
+{
+  "room": 4,
+  "name": "Tunnel",
+  "description": "I'm in a Tunnel",
+  "items_start": [
+    "Bloody Knife",
+    "Massive stone door with a SAPPHIRE set into it"
+  ],
+  "exits": {
+    "W": 1
+  },
+  "hints": [
+    "There is a knife and a massive door with a sapphire. The door may be openable.",
+    "GET KNIFE. The sapphire in the door is important - you may need to remove it somehow.",
+    "The sapphire can be pried from the door. The knife and door are both important for the puzzle.",
+    "GET KNIFE. Work on removing the sapphire from the door. WEST returns to the chapel."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "KNI"
+  ],
+  "danger": false,
+  "notes": "Tunnel east of the chapel with a bloody knife and a massive stone door containing a sapphire. The sapphire needs to be retrieved. WEST returns to the chapel."
+}

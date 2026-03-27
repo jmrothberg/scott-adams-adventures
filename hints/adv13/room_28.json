@@ -1,0 +1,23 @@
+{
+  "room": 28,
+  "name": "I'm in an entryway",
+  "description": "I'm in an entryway",
+  "items_start": [
+    "Raised drawbridge",
+    "Old lever in wall"
+  ],
+  "exits": {
+    "E": 3
+  },
+  "hints": [
+    "The castle entryway with the drawbridge mechanism and an old lever.",
+    "PULL LEVER or PUSH LEVER to lower the drawbridge, creating a permanent path in and out of the castle.",
+    "Use the lever to lower the drawbridge. EAST enters the courtyard. Once lowered, the drawbridge provides easy access between the field and castle."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Castle entryway with the drawbridge lever. PULL/PUSH LEVER to lower the drawbridge for permanent access. East leads to the courtyard (room 3). West leads to the drawbridge (room 2) when lowered."
+}

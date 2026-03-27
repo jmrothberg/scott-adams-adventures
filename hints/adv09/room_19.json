@@ -1,0 +1,21 @@
+{
+  "room": 19,
+  "name": "stall",
+  "description": "I'm in a stall",
+  "items_start": [
+    "'ole Paint",
+    "Horseshoe"
+  ],
+  "exits": {
+    "S": 5
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "HORS"
+  ],
+  "danger": false,
+  "notes": ""
+}

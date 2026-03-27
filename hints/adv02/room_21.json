@@ -1,0 +1,35 @@
+{
+  "room": 21,
+  "name": "I'm on the beach at *Treasure* Island",
+  "description": "I'm on the beach at *Treasure* Island",
+  "items_start": [],
+  "exits": {
+    "S": 22
+  },
+  "hints": [
+    "You have reached Treasure Island! There may be buried treasure here.",
+    "If you have a shovel, try DIGging here to uncover buried treasure.",
+    "DIG with the shovel to find buried treasure. Go SOUTH to explore the graveyard for more.",
+    "DIG here with shovel. Go SOUTH to the graveyard and EAST to the barren field. DIG in each location to find all treasures."
+  ],
+  "key_actions": [
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel"
+      ],
+      "effects": [
+        "Auto-DROP item",
+        "Message: I found something!",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": ["Shovel"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Beach on Treasure Island. DIG with shovel to uncover buried treasure. SOUTH leads to the graveyard (room 22). Multiple dig locations across the island contain different treasures."
+}

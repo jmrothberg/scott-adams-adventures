@@ -1,0 +1,70 @@
+{
+  "room": 1,
+  "name": "I'm in front of the FUN HOUSE",
+  "description": "I'm in front of the FUN HOUSE",
+  "items_start": [
+    "Sign",
+    "Ticket Counter"
+  ],
+  "exits": {
+    "E": 26
+  },
+  "hints": [
+    "Read the sign for important rules. You need a ticket to enter safely.",
+    "Go to the counter and SAY TICK to ask for a ticket. You need money first.",
+    "You need the $5 bill from the parking lot (E). GO COUN, then SAY TICK, then DROP BILL to pay.",
+    "DO NOT just GO FUN without a ticket - it's fatal! Get the bill from room 26 first."
+  ],
+  "key_actions": [
+    "GO COUN",
+    "READ SIGN",
+    "SAY TICK",
+    "GO FUN",
+    "KISS LADY"
+  ],
+  "action_details": [
+    {
+      "command": "GO COUN",
+      "needs": [],
+      "effects": [
+        "Message: Ticket lady asks me what I want"
+      ]
+    },
+    {
+      "command": "READ SIGN",
+      "needs": [],
+      "effects": [
+        "Message: Park closes at midnight. Shoes required at all times.\nManagement NOT responsible for accidents!!\nCAUTION this park is DANGERous!\n"
+      ]
+    },
+    {
+      "command": "SAY TICK",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: She says: `That'll be a dollar`"
+      ]
+    },
+    {
+      "command": "GO FUN",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 2",
+        "DEATH"
+      ]
+    },
+    {
+      "command": "KISS LADY",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Message: Wheeee"
+      ]
+    }
+  ],
+  "items_needed": ["BILL"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Starting room. Read the sign for rules (shoes required!). You must buy a ticket before entering the fun house. GO FUN without a ticket is fatal. Get the $5 bill from the parking lot (E) first."
+}

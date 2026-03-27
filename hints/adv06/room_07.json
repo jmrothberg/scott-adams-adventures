@@ -1,0 +1,46 @@
+{
+  "room": 7,
+  "name": "storage hold",
+  "description": "I'm in a storage hold",
+  "items_start": [
+    "Maintenance access hatch",
+    "Space suit",
+    "Phaser",
+    "Shovel"
+  ],
+  "exits": {
+    "U": 1
+  },
+  "hints": [
+    "The storage hold has essential supplies for your mission.",
+    "Take the space suit, phaser, and shovel - you'll need them all.",
+    "The maintenance hatch leads down to the crawlway where the power crystal is.",
+    "GO HATC or go DOWN to reach the maintenance crawlway."
+  ],
+  "key_actions": [
+    "SHOO"
+  ],
+  "action_details": [
+    {
+      "command": "SHOO",
+      "needs": [
+        "Phaser"
+      ],
+      "effects": [
+        "Message: I fire the Phaser,",
+        "Move to room 35",
+        "Message: I ruined the ship!",
+        "Look around"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "HATC",
+    "SUIT",
+    "PHAS",
+    "SHOV"
+  ],
+  "danger": false,
+  "notes": "Ship's storage hold. Contains space suit, phaser, and shovel. Maintenance hatch leads to crawlway."
+}

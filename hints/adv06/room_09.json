@@ -1,0 +1,42 @@
+{
+  "room": 9,
+  "name": "Large grassy plain at edge of a jungle",
+  "description": "I'm in a Large grassy plain at edge of a jungle",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "A grassy plain with a jungle at the edge. Look around carefully.",
+    "Try DIG here if you have a shovel - there may be something buried.",
+    "The jungle to the south leads to the Centurion Slime Trees.",
+    "DIG with the shovel to find a buried item. GO JUNG to enter the jungle."
+  ],
+  "key_actions": [
+    "DIG",
+    "GO JUNG"
+  ],
+  "action_details": [
+    {
+      "command": "DIG",
+      "needs": [
+        "Shovel (need access)"
+      ],
+      "effects": [
+        "Auto-DROP item",
+        "Message: OK",
+        "Message: I found something."
+      ]
+    },
+    {
+      "command": "GO JUNG",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 15"
+      ]
+    }
+  ],
+  "items_needed": ["SHOV"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Grassy plain where digging reveals a buried item. Jungle leads to the zoo area."
+}

@@ -1,0 +1,93 @@
+{
+  "room": 13,
+  "name": "large white visitors room",
+  "description": "I'm in a large white visitors room",
+  "items_start": [
+    "Plate glass window with embeded red wires",
+    "Panel of buttons -white green-",
+    "Tv camera mounted over window"
+  ],
+  "exits": {},
+  "hints": [
+    "The window overlooks the control room below. There are buttons and a camera to deal with.",
+    "LOOK WINDOW to see what is below. The TV camera is monitoring the window area. You need to disable it.",
+    "You need to disable the TV camera before breaking the window. Show the saboteur's badge to deactivate it.",
+    "Disable the camera, then BREAK WINDOW to reach the ledge. PRESS WHITE to return through the white door. The window leads to a ledge (room 16) with a key."
+  ],
+  "key_actions": [
+    "SHO PIC",
+    "PRE WHI",
+    "LOO WIN",
+    "SHO PIC",
+    "SHO PIC",
+    "LOO CAM",
+    "LOO CAM"
+  ],
+  "action_details": [
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Picture of saboteur stamped -window maintance- (need access)"
+      ],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Authorization INSUFFICIENT for access`\n",
+        "Message: `Owner of badge is not present!`"
+      ]
+    },
+    {
+      "command": "PRE WHI",
+      "needs": [],
+      "effects": [
+        "Message: CLICK!",
+        "Move to room 9",
+        "Message: The door opens just long enough for me to scurry through."
+      ]
+    },
+    {
+      "command": "LOO WIN",
+      "needs": [],
+      "effects": [
+        "Message: I'm on the 2nd floor. Below I see the control room surronding\nthe reactor core. There's a wide ledge just under the window."
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Dead saboteur (need access)",
+        "Picture of saboteur stamped -window maintance- (need access)"
+      ],
+      "effects": [
+        "DEATH",
+        "Message: Metallic voice says:",
+        "Message: `TV deactivated`\n"
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Authorization INSUFFICIENT for access`\n"
+      ]
+    },
+    {
+      "command": "LOO CAM",
+      "needs": [],
+      "effects": [
+        "Message: TV camera is slow scanning the window area."
+      ]
+    },
+    {
+      "command": "LOO CAM",
+      "needs": [],
+      "effects": [
+        "Message: TV camera is powered down.\n"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Visitor room with a plate glass window overlooking the control room. The TV camera must be disabled before breaking the window. Breaking the window (with wire cutters to cut the alarm wires) gives access to the ledge (room 16). PRESS WHITE button returns to room 9."
+}

@@ -1,0 +1,27 @@
+{
+  "room": 7,
+  "name": "closet",
+  "description": "I'm in a closet",
+  "items_start": [
+    "Small Vial",
+    "Century worth of dust"
+  ],
+  "exits": {
+    "W": 21
+  },
+  "hints": [
+    "A dusty closet with a small vial. Both items here might be useful.",
+    "GET VIAL - it contains something important. The dust has been here for centuries.",
+    "GET VIAL (contains blood or holy water). GET DUST if needed. WEST returns to the workroom (room 21).",
+    "GET VIAL (essential item - may contain holy water for vampire defense). GET DUST. WEST to workroom (room 21). The closet is accessed from the workroom."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "VIA",
+    "DUS"
+  ],
+  "danger": false,
+  "notes": "Small closet off the workroom containing a small vial (essential item, may contain holy water) and centuries of accumulated dust. WEST returns to the workroom (room 21). Both items can be collected."
+}

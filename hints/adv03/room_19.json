@@ -1,0 +1,45 @@
+{
+  "room": 19,
+  "name": "Control room surronding\nthe reactor core",
+  "description": "I'm in a Control room surronding\nthe reactor core",
+  "items_start": [
+    "Movie film cartridge",
+    "Sign `No beverages, Please use Break Room.`",
+    "Metal door jammed partially open by remains of a tape recorder",
+    "Steps leading down into the reactor core",
+    "Exposed dials and gauges everywhere"
+  ],
+  "exits": {
+    "E": 20,
+    "D": 21
+  },
+  "hints": [
+    "This is the control room! There is a film cartridge and the reactor core is below. The sign mentions a break room.",
+    "GET FILM cartridge. The break room (EAST) is important - the sign says use it for beverages. Steps lead DOWN to the reactor core.",
+    "The sign hints: take water to the BREAK ROOM, not here. Pouring water on the control panel will trigger the bomb. Go DOWN to the reactor core.",
+    "GET FILM. Do NOT pour water here (shorts the control panel and triggers the bomb). Go EAST to the break room to safely defuse the bomb. Go DOWN to see the bomb."
+  ],
+  "key_actions": [
+    "POU"
+  ],
+  "action_details": [
+    {
+      "command": "POU",
+      "needs": [
+        "Water filled plastic pail (need access)",
+        "Very large time bomb (need access)"
+      ],
+      "effects": [
+        "Message: the water spills on the bomb and",
+        "Message: the control panel which immediately shorts out triggering\nthe bomb",
+        "Look around"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "FIL"
+  ],
+  "danger": true,
+  "notes": "Central control room around the reactor core. Contains the film cartridge. CRITICAL: Do NOT pour water here - it shorts the control panel and triggers the bomb. Pour water in the BREAK ROOM (east, room 20) instead. DOWN leads to the reactor core with the bomb."
+}

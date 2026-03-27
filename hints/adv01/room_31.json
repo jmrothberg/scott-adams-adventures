@@ -1,0 +1,21 @@
+{
+  "room": 31,
+  "name": "long tunnel. I hear buzzing ahead",
+  "description": "I'm in a long tunnel. I hear buzzing ahead",
+  "items_start": [],
+  "exits": {
+    "N": 8,
+    "S": 7
+  },
+  "hints": [
+    "The buzzing ahead warns of bees in the next room. Make sure you are prepared before going north.",
+    "Bring mud from the swamp before heading NORTH to deal with the bees guarding the Royal Honey.",
+    "Go NORTH to reach the bee room (room 8) with mud in hand. Go SOUTH to return to the large cavern."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Evil smelling mud"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Tunnel connecting the large cavern (S/room 7) to the bee room (N/room 8). The buzzing is a warning about the African bees ahead. Bring mud before proceeding north."
+}

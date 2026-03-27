@@ -1,0 +1,36 @@
+{
+  "room": 18,
+  "name": "Pit",
+  "description": "I'm in a Pit",
+  "items_start": [
+    "Unlit torch"
+  ],
+  "exits": {},
+  "hints": [
+    "You are in a deep pit with an unlit torch. You need to get back up.",
+    "GET TORCH - essential for light in dark areas. CLIMB using the sheet to get back up.",
+    "GET TORCH. Light it with matches later. CLIMB the sheet (if tied above) to return to the dungeon.",
+    "GET TORCH (light source, essential). CLIMB out using the sheet tied to the iron rings above. Light the torch with matches."
+  ],
+  "key_actions": [
+    "CLI"
+  ],
+  "action_details": [
+    {
+      "command": "CLI",
+      "needs": [
+        "The other end of the sheet (must be in room)"
+      ],
+      "effects": [
+        "Move to room 16",
+        "Message: OK"
+      ]
+    }
+  ],
+  "items_needed": ["Sheets"],
+  "items_available": [
+    "TOR"
+  ],
+  "danger": false,
+  "notes": "Deep pit containing the unlit torch (essential light source). Must CLIMB out using sheets tied to the iron rings in the dungeon above (room 16). Light the torch with sulfur matches from the pantry."
+}

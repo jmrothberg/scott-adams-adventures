@@ -1,0 +1,78 @@
+{
+  "room": 23,
+  "name": "I'm on a small mountain ledge",
+  "description": "I'm on a small mountain ledge",
+  "items_start": [
+    "Quartz"
+  ],
+  "exits": {
+    "D": 22
+  },
+  "hints": [],
+  "key_actions": [
+    "GET QUAR",
+    "GET QUAR",
+    "GET LINE",
+    "PUSH LINE",
+    "GET LINE",
+    "PUSH LINE"
+  ],
+  "action_details": [
+    {
+      "command": "GET QUAR",
+      "needs": [
+        "Quartz (must be in room)"
+      ],
+      "effects": [
+        "Message: I can't,",
+        "Message: It's imbedded in rock"
+      ]
+    },
+    {
+      "command": "GET QUAR",
+      "needs": [
+        "Climbers Pick",
+        "Quartz (must be in room)"
+      ],
+      "effects": [
+        "Message: O.K.",
+        "Clear flag 4",
+        "Auto-GET item"
+      ]
+    },
+    {
+      "command": "GET LINE",
+      "needs": [],
+      "effects": [
+        "Auto-GET item",
+        "Clear flag 36"
+      ]
+    },
+    {
+      "command": "PUSH LINE",
+      "needs": [],
+      "effects": [
+        "Auto-GET item",
+        "Clear flag 36"
+      ]
+    },
+    {
+      "command": "GET LINE",
+      "needs": [],
+      "effects": [
+        "Destroy item 37"
+      ]
+    },
+    {
+      "command": "PUSH LINE",
+      "needs": [],
+      "effects": [
+        "Destroy item 37"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,82 @@
+{
+  "room": 9,
+  "name": "white room",
+  "description": "I'm in a white room",
+  "items_start": [
+    "Closed white door with tv camera mounted over it"
+  ],
+  "exits": {
+    "S": 6
+  },
+  "hints": [
+    "There is a security door with a TV camera. You need authorization to pass.",
+    "KNOCK on the door or SHOW PICTURE to the camera. You need at least a visitor-level badge.",
+    "SHOW PICTURE with a visitor, maintenance, or security ID badge to be allowed through. The camera checks your authorization.",
+    "SHOW PICTURE with visitor/maintenance/security badge to pass through to the visitors room (room 13). SOUTH returns to white hallway."
+  ],
+  "key_actions": [
+    "SHO PIC",
+    "SHO PIC",
+    "SHO PIC",
+    "SHO PIC",
+    "KNO"
+  ],
+  "action_details": [
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Picture of me stamped: -visitor-"
+      ],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `ACCEPTED`",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 13"
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Picture of me stamped -maintenance-"
+      ],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `ACCEPTED`",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 13"
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [
+        "Picture of me stamped -security-"
+      ],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `ACCEPTED`",
+        "Message: The door opens just long enough for me to scurry through.",
+        "Move to room 13"
+      ]
+    },
+    {
+      "command": "SHO PIC",
+      "needs": [],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Authorization INSUFFICIENT for access`\n"
+      ]
+    },
+    {
+      "command": "KNO",
+      "needs": [],
+      "effects": [
+        "Message: Metallic voice says:",
+        "Message: `Show authorization please`\n"
+      ]
+    }
+  ],
+  "items_needed": ["Picture of me stamped: -visitor-"],
+  "items_available": [],
+  "danger": false,
+  "notes": "White security door accepting visitor, maintenance, or security badges. SHOW PICTURE to the camera to pass through to the visitors room (room 13). Any of the three badge levels works here (lowest security)."
+}

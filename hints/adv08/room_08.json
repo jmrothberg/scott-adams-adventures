@@ -1,0 +1,24 @@
+{
+  "room": 8,
+  "name": "burial room",
+  "description": "I'm in a burial room",
+  "items_start": [
+    "Fearsome mummy",
+    "* ANTIQUE TAPESTRY *",
+    "Burning tanna leaves"
+  ],
+  "exits": {
+    "N": 9,
+    "S": 11,
+    "U": 7
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "TAP"
+  ],
+  "danger": false,
+  "notes": ""
+}

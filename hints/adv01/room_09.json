@@ -1,0 +1,25 @@
+{
+  "room": 9,
+  "name": "royal anteroom",
+  "description": "I'm in a royal anteroom",
+  "items_start": [
+    "Empty wine bladder"
+  ],
+  "exits": {
+    "N": 7,
+    "U": 20
+  },
+  "hints": [
+    "There is a useful container here. Take it - you will need it later.",
+    "The empty wine bladder can be used to collect swamp gas from the swamp (room 1).",
+    "GET BLADDER. Go UP to reach the royal chamber, or NORTH to return to the large cavern."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "BLA"
+  ],
+  "danger": false,
+  "notes": "Contains the empty wine bladder needed to collect swamp gas. Connects to the large cavern (N/room 7) and the royal chamber (U/room 20)."
+}

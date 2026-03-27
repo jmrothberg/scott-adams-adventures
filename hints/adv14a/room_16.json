@@ -1,0 +1,39 @@
+{
+  "room": 16,
+  "name": "top bunk",
+  "description": "I'm in a top bunk",
+  "items_start": [
+    "Face mask",
+    "*Diamond watch*"
+  ],
+  "exits": {
+    "D": 2
+  },
+  "hints": [
+    "The top bunk has important items - a face mask and a diamond watch treasure.",
+    "GET MASK and GET WATCH. The face mask is essential for underwater exploration. The diamond watch is a treasure.",
+    "GET MASK (needed for diving/underwater areas) and GET WATCH (treasure - store in room 13). FEEL confirms there's no mattress here. DOWN returns to the cabin.",
+    "The face mask is critical for exploring underwater areas. The *Diamond watch* is one of 13 treasures. DOWN returns to the cabin (room 2)."
+  ],
+  "key_actions": [
+    "FEEL"
+  ],
+  "action_details": [
+    {
+      "command": "FEEL",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: there's no mattress here."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "MASK",
+    "WATC"
+  ],
+  "danger": false,
+  "notes": "Top bunk accessed via GO LADDER or GO TOP from the cabin (room 2). Contains the face mask (essential for underwater exploration) and *Diamond watch* treasure. FEEL reveals no mattress (unlike bottom bunk). DOWN returns to cabin (room 2)."
+}

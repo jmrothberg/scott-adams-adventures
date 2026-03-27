@@ -1,0 +1,22 @@
+{
+  "room": 6,
+  "name": "metal lined tunnel",
+  "description": "I'm in a metal lined tunnel",
+  "items_start": [],
+  "exits": {
+    "N": 3,
+    "E": 7,
+    "W": 5
+  },
+  "hints": [
+    "A three-way junction in the tunnel system. This is a central hub of the alien ship.",
+    "NORTH leads toward the console room area, EAST continues deeper into the ship, WEST goes toward a force field room.",
+    "Explore all directions to map out the ship. EAST is the most productive path forward."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Central three-way tunnel junction. North connects to room 3 (toward console), east to room 7 (deeper into ship), west to room 5 (toward force field room). Key navigation hub."
+}

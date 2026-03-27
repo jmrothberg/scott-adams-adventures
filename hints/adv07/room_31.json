@@ -1,0 +1,24 @@
+{
+  "room": 31,
+  "name": "windy maze",
+  "description": "I'm in a windy maze",
+  "items_start": [],
+  "exits": {
+    "N": 32,
+    "S": 31,
+    "E": 29,
+    "W": 29
+  },
+  "hints": [
+    "Another maze room. S loops back to this same room!",
+    "Drop something to mark this room. S is a dead-end loop.",
+    "N=room 32, S=room 31 (loop!), E=room 29, W=room 29.",
+    "Avoid going S here - it just loops. Go N, E, or W instead."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Windy maze room. S loops to itself! N=32, E=29, W=29. Beware the S loop."
+}

@@ -1,0 +1,27 @@
+{
+  "room": 14,
+  "name": "maze of pits",
+  "description": "I'm in a maze of pits",
+  "items_start": [
+    "Strange scratchings on rock says: `ALADIN was here`"
+  ],
+  "exits": {
+    "N": 17,
+    "S": 12,
+    "E": 13,
+    "W": 16,
+    "U": 16,
+    "D": 17
+  },
+  "hints": [
+    "The Aladin scratching is a clue - think about what magic words Aladin might use.",
+    "Go NORTH or DOWN to reach room 17 where the Persian Rug treasure is located.",
+    "NORTH or DOWN leads to the Persian Rug (room 17). The Aladin reference hints at the magic carpet (rug) and the word AWAY."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Central maze junction with many exits. The Aladin scratching hints at the flying carpet concept - the Persian Rug in room 17 can be used with SAY AWAY to teleport out. NORTH or DOWN leads to the rug."
+}

@@ -1,0 +1,21 @@
+{
+  "room": 7,
+  "name": "twisting yellow hallway",
+  "description": "I'm in a twisting yellow hallway",
+  "items_start": [],
+  "exits": {
+    "N": 10,
+    "U": 3
+  },
+  "hints": [
+    "A yellow hallway. The yellow security door is to the north.",
+    "NORTH leads to the yellow room with a security door. UP returns to the main corridor.",
+    "Go NORTH to reach the yellow security door (needs maintenance or security-level ID). UP returns to the main corridor."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Yellow hallway connecting the main corridor (U/room 3) and the yellow security door (N/room 10)."
+}

@@ -1,0 +1,55 @@
+{
+  "room": 8,
+  "name": "field",
+  "description": "I'm in a field",
+  "items_start": [
+    "Large dome",
+    "*Gem"
+  ],
+  "exits": {
+    "N": 17,
+    "S": 17,
+    "E": 17,
+    "W": 17
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK MESH",
+    "LOOK DOME",
+    "DIG"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK MESH",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: inside the dome."
+      ]
+    },
+    {
+      "command": "LOOK DOME",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Message: I see",
+        "Message: wire mesh in the side."
+      ]
+    },
+    {
+      "command": "DIG",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Auto-DROP item"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "GEM"
+  ],
+  "danger": false,
+  "notes": ""
+}

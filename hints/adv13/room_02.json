@@ -1,0 +1,61 @@
+{
+  "room": 2,
+  "name": "I'm on a Drawbridge",
+  "description": "I'm on a Drawbridge",
+  "items_start": [
+    "Moat"
+  ],
+  "exits": {
+    "E": 28,
+    "W": 1
+  },
+  "hints": [
+    "You are on the drawbridge between the field and the castle entryway. The moat is below.",
+    "LOOK UP or LOOK BATTLEMENTS to see what is on the castle walls above. There is a tin can up there.",
+    "GO MOAT to jump into the moat water (leads to room 16). EAST enters the castle entryway, WEST returns to the field."
+  ],
+  "key_actions": [
+    "LOOK BATTL",
+    "LOOK UP",
+    "LOOK CASTL",
+    "GO MOAT"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK BATTL",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: a tin can up there."
+      ]
+    },
+    {
+      "command": "LOOK UP",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: battlements above."
+      ]
+    },
+    {
+      "command": "LOOK CASTL",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: battlements above."
+      ]
+    },
+    {
+      "command": "GO MOAT",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 16"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "The drawbridge over the moat. LOOK BATTLEMENTS reveals a tin can on the castle walls. GO MOAT jumps into the moat water (room 16). East enters the castle entryway (room 28), west returns to the field (room 1)."
+}

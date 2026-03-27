@@ -1,0 +1,66 @@
+{
+  "room": 17,
+  "name": "I'm on the side of the Skyscraper",
+  "description": "I'm on the side of the Skyscraper",
+  "items_start": [],
+  "exits": {
+    "E": 10,
+    "U": 20,
+    "D": 20
+  },
+  "hints": [],
+  "key_actions": [
+    "LOOK SKY",
+    "JUMP",
+    "GO SKY",
+    "GO FORE",
+    "LOOK DOWN"
+  ],
+  "action_details": [
+    {
+      "command": "LOOK SKY",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: something!",
+        "Auto-DROP item"
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 18"
+      ]
+    },
+    {
+      "command": "GO SKY",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 18"
+      ]
+    },
+    {
+      "command": "GO FORE",
+      "needs": [],
+      "effects": [
+        "Message: O.K.",
+        "Move to room 18"
+      ]
+    },
+    {
+      "command": "LOOK DOWN",
+      "needs": [],
+      "effects": [
+        "Message: I see",
+        "Message: I'm on the TOP floor!"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,24 @@
+{
+  "room": 34,
+  "name": "long tunnel",
+  "description": "I'm in a long tunnel",
+  "items_start": [
+    "Handle is on valve"
+  ],
+  "exits": {
+    "U": 25,
+    "D": 28
+  },
+  "hints": [
+    "A long tunnel with a valve that has a handle attached. Exits go up and down.",
+    "The valve handle here is already attached. TURN VALV to turn it.",
+    "U leads to the large room with clay pigeons. D leads to the sewer system.",
+    "Turning this valve may affect water flow in the sewer. U=large room (25), D=sewer (28)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Long tunnel connecting large room (25 via U) to sewer system (28 via D). The valve here has its handle attached."
+}

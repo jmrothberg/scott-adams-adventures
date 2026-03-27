@@ -1,0 +1,16 @@
+{
+  "room": 2,
+  "name": "Beach by ocean, a cliff towers over\nwest end",
+  "description": "I'm in a Beach by ocean, a cliff towers over\nwest end",
+  "items_start": [],
+  "exits": {
+    "E": 1
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

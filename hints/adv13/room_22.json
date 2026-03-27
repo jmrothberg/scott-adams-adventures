@@ -1,0 +1,44 @@
+{
+  "room": 22,
+  "name": "I'm on a box",
+  "description": "I'm on a box",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "You are standing on a box. You can look inside it or get down.",
+    "GET OFF, GET DOWN, or JUMP to get off the box. LOOK DOWN or LOOK BOX to see inside.",
+    "Use GET OFF to step down from the box. You may need to be on the box to reach something high up."
+  ],
+  "key_actions": [
+    "GET OFF",
+    "GET DOWN",
+    "JUMP"
+  ],
+  "action_details": [
+    {
+      "command": "GET OFF",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "GET DOWN",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "JUMP",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Standing on top of a box/crate. GET OFF, GET DOWN, or JUMP to step down. Being on the box may help reach items on high shelves or ledges."
+}

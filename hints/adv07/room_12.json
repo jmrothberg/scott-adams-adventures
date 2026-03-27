@@ -1,0 +1,27 @@
+{
+  "room": 12,
+  "name": "store room",
+  "description": "I'm in a store room",
+  "items_start": [
+    "Locked door",
+    "Red knob in wall",
+    "Wrench"
+  ],
+  "exits": {
+    "W": 33
+  },
+  "hints": [
+    "A store room with a locked door, a red knob, and a wrench.",
+    "GET WREN - the wrench is needed for loosening bolts. The red knob may do something.",
+    "PULL RED or PRES RED to interact with the knob. The locked door needs a key.",
+    "The wrench is essential for removing bolts elsewhere. W leads to the catwalk (room 33)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["KEY"],
+  "items_available": [
+    "WREN"
+  ],
+  "danger": false,
+  "notes": "Store room with wrench (important tool) and a locked door. The red knob activates something. W=catwalk (room 33)."
+}

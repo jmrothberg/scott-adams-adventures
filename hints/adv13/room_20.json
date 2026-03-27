@@ -1,0 +1,38 @@
+{
+  "room": 20,
+  "name": "pool of dirty water",
+  "description": "I'm in a pool of dirty water",
+  "items_start": [],
+  "exits": {
+    "U": 21
+  },
+  "hints": [
+    "A pool of dirty water connected to the kitchen drain. You can swim deeper or go up.",
+    "SWIM DOWN to dive through the water outlet to the fountain area. UP returns to the kitchen.",
+    "SWIM DOWN leads to the top of the fountain (room 6). UP goes to the kitchen (room 21). This pool connects the kitchen drain to the fountain system."
+  ],
+  "key_actions": [
+    "SWIM DOWN",
+    "SWIM"
+  ],
+  "action_details": [
+    {
+      "command": "SWIM DOWN",
+      "needs": [],
+      "effects": [
+        "Move to room 6"
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: Say again & be specific."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Pool of dirty water connected to the kitchen drain (room 21, up) and the top of the fountain (room 6, swim down). An important secret passage connecting the kitchen area to the fountain system."
+}

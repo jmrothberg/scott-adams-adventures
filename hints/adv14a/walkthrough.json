@@ -1,0 +1,177 @@
+{
+  "game": "adv14a",
+  "title": "Return to Pirate's Isle",
+  "author": "Scott Adams",
+  "year": 1984,
+  "difficulty": "Intermediate",
+  "objective": "Return to the pirate island and find new treasures.",
+  "num_rooms": 24,
+  "num_treasures": 13,
+  "treasure_room": 13,
+  "start_room": 1,
+  "max_carry": 10,
+  "light_time": 1,
+  "magic_words": [
+    "YOHO"
+  ],
+  "key_mechanics": [
+    "MOVE MATTRESS in the starting bunk to find a hidden item before getting up",
+    "SAIL SHIP is fatal the second time - only use it once from the cabin",
+    "JUMP TOP or JUMP UP on the ledge is safe, but plain JUMP is fatal",
+    "GO CRACK from the cavern back to hilltop is fatal - the pirate kills you",
+    "STOP ENGINE in the engine room is instantly fatal",
+    "Face mask from top bunk is required for all underwater exploration",
+    "GO SEA from any location auto-drops all carried items",
+    "Oilskin raincoat protects items from water damage",
+    "Fan blade from ceiling fan is needed to DIG on the beach",
+    "Alarm clock from ship's hold wakes the sleeping pirate",
+    "LOOK CEILING in the cabin drops your held item but reveals a hidden one",
+    "Treasure room is the smuggler's hold (room 13) - DROP all 13 treasures there",
+    "LOOK DOCK or LOOK UP under the dock finds hidden items"
+  ],
+  "treasures": [
+    {
+      "desc": "*Rare Stamps*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Doubloons*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Piece of Amber*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Diamond watch*",
+      "start_room": 16
+    },
+    {
+      "desc": "*Rembrandt Painting*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Gold Earring*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Rare Book*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Diamond Brooch*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Jeweled chest*",
+      "start_room": 23
+    },
+    {
+      "desc": "*Silver Dollar*",
+      "start_room": 22
+    },
+    {
+      "desc": "*Pearl*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Diamond Pin*",
+      "start_room": 0
+    },
+    {
+      "desc": "*Diamond Ring*",
+      "start_room": 0
+    }
+  ],
+  "vocabulary": {
+    "verbs": [
+      "AUTO", "GO", "*WALK", "*FOLL", "*ENTE", "*CLIM", "*CRAW",
+      "DRIN", "FOLD", "QUIT", "GET", "*TAKE", "*GRAB", "*PICK", "*HOLD", "*STAN",
+      "LIST", "*HEAR", "DROP", "*LEAV", "*PUT", "*RELE", "*GIVE", "*THRO",
+      "FEEL", "*TOUC", "*PROB", "LOOK", "*EXAM", "*L", "*DESC", ".",
+      "GLUE", "FIND", "REMO", "*UNSC", "WEAR", "*DON", "*PUTO",
+      "JUMP", "*LEAP", "INVE", "*I", "DIG", "WAKE", "BREA", "RUB",
+      "HYPE", "SWIM", "SAY", "MAKE", "*MIX", "DIVE", "TO", "*IN",
+      "SAVE", "WAKE", "OPEN", "*UNLO", "USE", "*WITH", "CLEA", "*WASH", "*RINS",
+      "MOVE", "*PUSH", "*PULL", "*LIFT", "*PRES", "SLEE", "*EAT", "SCOR", "HELP",
+      "SAIL", "*DRIV", "STOP", "*SHUT", "EMPT", "SPIT", "YAWN", "SQUI",
+      "ROLL", "*WRAP", "UNRO", "*UNWR", "READ", "STAR", "*CRAN", "WAIT", "*PAUS",
+      "CHAR", "*RECH", "*KILL", "*LIGH", "*BURN", "*TEAR", "*RIP", "*STAB",
+      "*SHOR", "*FIX", "*REPA", "."
+    ],
+    "nouns": [
+      "ANY", "NORT", "SOUT", "EAST", "WEST", "UP", "DOWN",
+      "GLAS", "LENS", "LEDG", "HILL", "SHIP", "*BOAT", "CRAC", "*CREV",
+      "PIRA", "CRAW", "FRAM", "AROU", "DOUB", "STAM", "BOX", "SHED", "*TOOL",
+      "PAIN", "*PICT", "*REMB", "*BLAC", "BUNK", "*BED", "BREA", "SIGN",
+      "MASK", "*FACE", "HAMM", "DECK", "GLUE", "AMBE", "BOOK", "SEA", "*OCEA",
+      "*WATE", "*POOL", "PORT", "OPEN", "DOCK", "*BEAM", "DEEP", "CABI", "BEAC",
+      "ALGA", "INVE", "CURR", "GAME", "DOOR", "SHOV", "RUM", "CLOC", "*ALAR",
+      "TORC", "ROCK", "EYES", "SILT", "LADD", "ENGI", "WATC", "TOP", "*TOPB",
+      "*SUMM", "HELM", "PILI", "IT", "*OBJE", "*HAND", "YOHO", "SCRE", "MAP",
+      "BACK", "EARR", "OILS", "*RAIN", "FAN", "BROO", "MATT", "BLAD", "BUTT",
+      "CEIL", "*CIEL", "LIGH", "*FLOO", "BATT", "DOLL", "ISLE", "OYST", "PEAR",
+      "SNAI", "FLOT", "*JETS", "PIN", "RING", "CHES", "GAS", "*FUEL", "WIRE", "*RIM"
+    ]
+  },
+  "walkthrough": [
+    {"step": 1, "room": 1, "action": "MOVE MATTRESS", "result": "Find hidden item under the mattress"},
+    {"step": 2, "room": 1, "action": "GET UP", "result": "Enter the ship's cabin"},
+    {"step": 3, "room": 2, "action": "GET GLASSES", "result": "Pick up the glasses"},
+    {"step": 4, "room": 2, "action": "GET PAINTING", "result": "Pick up the painting (treasure)"},
+    {"step": 5, "room": 2, "action": "LOOK CEILING", "result": "Find hidden item in ceiling fan (drops held item)"},
+    {"step": 6, "room": 2, "action": "GET FAN BLADE", "result": "Get the fan blade for digging"},
+    {"step": 7, "room": 2, "action": "GO LADDER", "result": "Climb to the top bunk"},
+    {"step": 8, "room": 16, "action": "GET MASK", "result": "Get the face mask for diving"},
+    {"step": 9, "room": 16, "action": "GET WATCH", "result": "Get the *Diamond watch* treasure"},
+    {"step": 10, "room": 16, "action": "DOWN", "result": "Return to cabin"},
+    {"step": 11, "room": 2, "action": "DOWN", "result": "Go to engine room"},
+    {"step": 12, "room": 18, "action": "GO ENGINE", "result": "Climb on the engine"},
+    {"step": 13, "room": 17, "action": "LOOK ENGINE", "result": "Find hidden item on the engine"},
+    {"step": 14, "room": 17, "action": "DOWN", "result": "Return to engine room"},
+    {"step": 15, "room": 18, "action": "UP", "result": "Return to cabin"},
+    {"step": 16, "room": 2, "action": "UP", "result": "Go to deck"},
+    {"step": 17, "room": 4, "action": "DOWN", "result": "Return to cabin"},
+    {"step": 18, "room": 2, "action": "SAIL SHIP", "result": "Sail the ship (first time only - sets flag)"},
+    {"step": 19, "room": 2, "action": "UP", "result": "Go to deck after ship docks"},
+    {"step": 20, "room": 4, "action": "GO DOCK", "result": "Go to the dock"},
+    {"step": 21, "room": 3, "action": "NORTH", "result": "Go to the beach"},
+    {"step": 22, "room": 5, "action": "DIG", "result": "Dig with fan blade to find buried treasure"},
+    {"step": 23, "room": 5, "action": "READ SIGN", "result": "Read the sign for clues"},
+    {"step": 24, "room": 5, "action": "GO HILL", "result": "Climb toward the hilltop"},
+    {"step": 25, "room": 6, "action": "JUMP TOP", "result": "Safely reach the summit"},
+    {"step": 26, "room": 7, "action": "GO CRACK", "result": "Enter the cavern through the crack"},
+    {"step": 27, "room": 8, "action": "GO SHED", "result": "Enter the tool shed"},
+    {"step": 28, "room": 9, "action": "GET HAMMER", "result": "Pick up the hammer"},
+    {"step": 29, "room": 9, "action": "NORTH", "result": "Return to cavern"},
+    {"step": 30, "room": 8, "action": "WEST", "result": "Go to the hall"},
+    {"step": 31, "room": 14, "action": "EAST", "result": "Return to cavern and explore further"},
+    {"step": 32, "room": 5, "action": "EAST", "result": "Go to rocky beach"},
+    {"step": 33, "room": 15, "action": "GET ROCK", "result": "Pick up a rock"},
+    {"step": 34, "room": 15, "action": "WEST", "result": "Return to beach"},
+    {"step": 35, "room": 5, "action": "SOUTH", "result": "Return to dock"},
+    {"step": 36, "room": 3, "action": "WEAR MASK", "result": "Put on the face mask for diving"},
+    {"step": 37, "room": 3, "action": "GO SEA", "result": "Enter the sea (drops non-worn items)"},
+    {"step": 38, "room": 11, "action": "DIVE", "result": "Dive underwater"},
+    {"step": 39, "room": 12, "action": "DOWN", "result": "Go deeper to the sunken ship"},
+    {"step": 40, "room": 23, "action": "GET CHEST", "result": "Get the *Jeweled chest* treasure"},
+    {"step": 41, "room": 23, "action": "UP", "result": "Return to undersea"},
+    {"step": 42, "room": 12, "action": "UP", "result": "Return to the sea surface"},
+    {"step": 43, "room": 13, "action": "DROP treasures", "result": "Store all treasures in the smuggler's hold"},
+    {"step": 44, "room": 13, "action": "SCORE", "result": "Check your treasure score"}
+  ],
+  "common_mistakes": [
+    "Forgetting to MOVE MATTRESS before GET UP in the starting bunk - miss a hidden item",
+    "Using SAIL SHIP twice from the cabin - the second attempt is fatal",
+    "Using plain JUMP on the ledge instead of JUMP TOP or JUMP UP - fatal fall",
+    "Trying to GO CRACK from the cavern back to hilltop - the pirate kills you",
+    "Using STOP ENGINE in the engine room - instantly fatal",
+    "Going into the sea without the face mask - can't breathe underwater",
+    "Not realizing GO SEA auto-drops all carried items - wear the oilskin raincoat",
+    "Missing the fan blade from LOOK CEILING - needed to DIG on the beach",
+    "Not visiting the top bunk (GO LADDER from cabin) - miss the face mask and diamond watch",
+    "Forgetting the alarm clock in the ship's hold - needed to wake the sleeping pirate",
+    "Trying to GO HELM in the cabin - you're no sailor, use SAIL SHIP instead",
+    "Not exploring the engine room - miss the hidden item on top of the engine"
+  ]
+}

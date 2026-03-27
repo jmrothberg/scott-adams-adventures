@@ -1,0 +1,32 @@
+{
+  "room": 2,
+  "name": "Persian city",
+  "description": "I'm in a Persian city",
+  "items_start": [
+    "Palace"
+  ],
+  "exits": {
+    "S": 3
+  },
+  "hints": [
+    "A Persian city near the palace. You can enter the palace or go south to the merchant district.",
+    "GO PALACE to visit the King. Go SOUTH to find merchants selling useful items for your voyage."
+  ],
+  "key_actions": [
+    "GO PALA"
+  ],
+  "action_details": [
+    {
+      "command": "GO PALA",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 1"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Persian city street near the palace. GO PALACE enters the royal palace (room 1). South leads to the merchant area (room 3) where you can buy items."
+}

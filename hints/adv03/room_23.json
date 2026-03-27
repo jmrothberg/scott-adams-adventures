@@ -1,0 +1,26 @@
+{
+  "room": 23,
+  "name": "storage room",
+  "description": "I'm in a storage room",
+  "items_start": [
+    "Vat of heavy water",
+    "Anti-radiation suit"
+  ],
+  "exits": {
+    "E": 15
+  },
+  "hints": [
+    "There is a vat of water and a radiation suit here. Both may be important.",
+    "Fill your pail from the water vat. The anti-radiation suit protects you near the reactor.",
+    "FILL PAIL (with water from the vat) and WEAR SUIT for radiation protection before entering the reactor core.",
+    "FILL PAIL with water, WEAR SUIT. The water-filled pail is needed to defuse the bomb. The suit protects in the reactor area. EAST returns to anteroom."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["Empty plastic pail"],
+  "items_available": [
+    "SUI"
+  ],
+  "danger": false,
+  "notes": "Storage room with the heavy water vat (fill pail here) and anti-radiation suit (wear before entering reactor core). EAST returns to the blue anteroom (room 15). The water-filled pail is essential for defusing the bomb."
+}

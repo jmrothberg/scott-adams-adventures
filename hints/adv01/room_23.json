@@ -1,0 +1,37 @@
+{
+  "room": 23,
+  "name": "sunny meadow",
+  "description": "I'm in a sunny meadow",
+  "items_start": [
+    "Large sleeping dragon",
+    "Sign here says `In many cases mud is good. In others...`"
+  ],
+  "exits": {
+    "S": 1,
+    "E": 10,
+    "W": 11
+  },
+  "hints": [
+    "There is a sleeping dragon here. The sign mentions mud. Read it carefully.",
+    "The dragon can be woken and dealt with in different ways. There are 3 ways to wake it.",
+    "You can CHOP DRAGON with the axe, or SAY BUNYON near the axe to summon Paul Bunyon who chops a tree revealing eggs.",
+    "To get dragon eggs: wake the dragon, then deal with it using the axe. SAY BUNYON with the axe here to summon Paul Bunyon. The mud hint relates to the bees (use mud on bees for honey)."
+  ],
+  "key_actions": [
+    "HEL"
+  ],
+  "action_details": [
+    {
+      "command": "HEL",
+      "needs": [],
+      "effects": [
+        "Message: A voice BOOOOMS out:",
+        "Message: There are only 3 ways to wake the Dragon!"
+      ]
+    }
+  ],
+  "items_needed": ["Rusty axe (Magic word `BUNYON` on it)"],
+  "items_available": [],
+  "danger": true,
+  "notes": "Major puzzle room with the sleeping dragon. The meadow sign hints that mud helps with bees. SAY BUNYON with the axe triggers Paul Bunyon. Three ways to wake the dragon. Hub connecting forest (W), swamp (S), and lake (E). Magic carpet (SAY AWAY) destination."
+}

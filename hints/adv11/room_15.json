@@ -1,0 +1,25 @@
+{
+  "room": 15,
+  "name": "metal storage hold",
+  "description": "I'm in a metal storage hold",
+  "items_start": [
+    "Pirate",
+    "which is motionless",
+    "Display cases",
+    "Giant boxes & crates",
+    "Pulsating red force field"
+  ],
+  "exits": {},
+  "hints": [
+    "A storage hold with fascinating contents - a motionless pirate, display cases, crates, and a pulsating red force field. Examine everything.",
+    "The pirate is motionless - they may be in stasis or dead. The display cases and crates may contain useful items. The red force field blocks an exit.",
+    "LOOK PIRATE, LOOK CASES, LOOK BOXES to examine the contents. The pulsating red force field must be disabled to exit. You may need to find controls elsewhere.",
+    "OPEN BOXES or LOOK CRATES to find items. The pirate may become active under certain conditions. Do NOT touch the pulsating red force field."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Storage hold containing a motionless pirate (possibly in alien stasis), display cases, giant crates with supplies, and a pulsating red force field. No listed exits - must find a way through the force field or find hidden passages. The pirate is a key element from the Savage Island storyline."
+}

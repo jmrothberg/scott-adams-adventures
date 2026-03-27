@@ -1,0 +1,16 @@
+{
+  "room": 16,
+  "name": "beach by ocean",
+  "description": "I'm in a beach by ocean",
+  "items_start": [
+    "Cave in cliff"
+  ],
+  "exits": {},
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

@@ -1,0 +1,26 @@
+{
+  "room": 15,
+  "name": "Dry Goods store",
+  "description": "I'm in a Dry Goods store",
+  "items_start": [
+    "Shovel",
+    "Matches",
+    "Compass",
+    "Sign"
+  ],
+  "exits": {
+    "N": 2
+  },
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "SHOV",
+    "MATC",
+    "COMP",
+    "SIGN"
+  ],
+  "danger": false,
+  "notes": ""
+}

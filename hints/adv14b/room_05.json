@@ -1,0 +1,22 @@
+{
+  "room": 5,
+  "name": "I'm at a highway access ramp",
+  "description": "I'm at a highway access ramp",
+  "items_start": [],
+  "exits": {
+    "N": 3,
+    "S": 12,
+    "E": 11
+  },
+  "hints": [
+    "A highway access ramp connecting the town to the freeway and a field.",
+    "NORTH returns to town. SOUTH goes to the freeway. EAST leads to a field of tall grass.",
+    "NORTH to Main & Hickory (room 3). SOUTH to the freeway (room 12, a loop). EAST to the field of tall grass (room 11) where you can DIG."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Highway access ramp. NORTH returns to Main & Hickory (room 3). SOUTH goes to the freeway (room 12, which loops back to itself). EAST to field of tall grass (room 11)."
+}

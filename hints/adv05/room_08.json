@@ -1,0 +1,28 @@
+{
+  "room": 8,
+  "name": "Bathroom",
+  "description": "I'm in a Bathroom",
+  "items_start": [
+    "Mirror",
+    "Pocket watch",
+    "Toilet"
+  ],
+  "exits": {
+    "S": 11
+  },
+  "hints": [
+    "A bathroom with a mirror, pocket watch, and toilet. Examine everything carefully.",
+    "GET WATCH - it helps you track time (critical in this day/night cycle game). The mirror and toilet may also be useful.",
+    "GET WATCH (tracks the day/night cycle). GET MIRROR (vampires have no reflection - useful for detection). LOOK TOILET for hidden items.",
+    "GET WATCH (essential for tracking time before nightfall). GET MIRROR (use to detect Dracula - vampires cast no reflection). SOUTH returns to the hall (room 11)."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "MIR",
+    "WAT"
+  ],
+  "danger": false,
+  "notes": "Bathroom containing three useful items: the pocket watch (tracks the day/night cycle which is critical since Dracula becomes active at night), the mirror (vampires cast no reflection - useful for Dracula detection), and a toilet (may contain hidden items). SOUTH leads to the hall (room 11)."
+}

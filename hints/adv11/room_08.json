@@ -1,0 +1,37 @@
+{
+  "room": 8,
+  "name": "metal room",
+  "description": "I'm in a metal room",
+  "items_start": [
+    "Hydroponics",
+    "Display case"
+  ],
+  "exits": {
+    "N": 19
+  },
+  "hints": [
+    "This room has hydroponics (alien plant growing) and a display case. Examine both carefully.",
+    "The display case may contain something useful. Try to OPEN or LOOK at it. The hydroponics suggest this is a food production area.",
+    "LOOK DISPLAY to examine the case. You can GO into the open display case. Go NORTH to continue to the tunnel leading to the red metal rooms."
+  ],
+  "key_actions": [
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "Force field (must be in room)"
+      ],
+      "effects": [
+        "Move to room 4",
+        "Auto-DROP item",
+        "Set flag 6"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Hydroponics and display case room. The display case can be entered (leads to room 17 with a button). Going through the force field leads back to room 4. North exit leads to tunnel (room 19) toward the red rooms."
+}

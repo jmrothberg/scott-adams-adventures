@@ -1,0 +1,22 @@
+{
+  "room": 12,
+  "name": "I'm on a freeway",
+  "description": "I'm on a freeway",
+  "items_start": [],
+  "exits": {
+    "E": 12,
+    "W": 12
+  },
+  "hints": [
+    "You're on the freeway. Going east or west just loops you back here endlessly.",
+    "The freeway is a trap - both exits lead back to itself. You need to find another way off.",
+    "EAST and WEST both loop back to this room. The jet car drives through here during the mountain run. You need to get back to the access ramp somehow.",
+    "This is essentially a dead end unless you arrived in the jet car. Walking here from the ramp means you need to restore a save."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": "Freeway that loops to itself (E and W both go to room 12). Effectively a trap if you walk here from the access ramp (room 5, south). The jet car passes through here during the mountain penetration sequence. Walking here without the car may strand you."
+}

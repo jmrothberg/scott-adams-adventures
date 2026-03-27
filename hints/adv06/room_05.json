@@ -1,0 +1,23 @@
+{
+  "room": 5,
+  "name": "I'm on a small planetoid",
+  "description": "I'm on a small planetoid",
+  "items_start": [],
+  "exits": {
+    "N": 8,
+    "S": 5,
+    "E": 8,
+    "W": 4
+  },
+  "hints": [
+    "More planetoid surface. Keep exploring.",
+    "Look for interesting features - a cave entrance might be nearby.",
+    "Try going in different directions to find points of interest."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Planetoid surface area. Connects to other surface locations."
+}

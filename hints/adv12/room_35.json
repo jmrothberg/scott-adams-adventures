@@ -1,0 +1,20 @@
+{
+  "room": 35,
+  "name": "I'm in an enormous cave",
+  "description": "I'm in an enormous cave",
+  "items_start": [],
+  "exits": {
+    "N": 34,
+    "W": 36
+  },
+  "hints": [
+    "A vast underground cave. More cave lies to the west, and the pit is to the north.",
+    "Go WEST to find the magnificent fountain - a key location for the quest. NORTH returns to the cyclops pit."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Enormous cave connecting the cyclops pit (room 34, north) to the fountain cave (room 36, west). Transit area in the underground cave system."
+}

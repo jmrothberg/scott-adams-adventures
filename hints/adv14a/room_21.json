@@ -1,0 +1,27 @@
+{
+  "room": 21,
+  "name": "ship's hold",
+  "description": "I'm in a ship's hold",
+  "items_start": [
+    "Alarm clock",
+    "Sign"
+  ],
+  "exits": {
+    "W": 20
+  },
+  "hints": [
+    "The ship's hold has an alarm clock and a sign. Both may be useful.",
+    "GET CLOCK and READ SIGN. The alarm clock can wake things up. The sign has important information.",
+    "GET ALARM CLOCK (useful for waking the sleeping pirate) and READ SIGN for clues. WEST goes through the crawlway (room 20) back to the smuggler's hold.",
+    "Take the alarm clock to wake the sleeping pirate on the hilltop. WEST through the crawlway leads back to the treasure room."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "CLOC",
+    "SIGN"
+  ],
+  "danger": false,
+  "notes": "Ship's hold containing an alarm clock and a sign. The alarm clock is key for waking the sleeping pirate on the hilltop (room 7). WEST goes through the narrow crawlway (room 20) to the smuggler's hold/treasure room (room 13)."
+}

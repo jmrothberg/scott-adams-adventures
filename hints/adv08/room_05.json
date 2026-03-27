@@ -1,0 +1,64 @@
+{
+  "room": 5,
+  "name": "hole",
+  "description": "I'm in a hole",
+  "items_start": [
+    "Tiny locked door"
+  ],
+  "exits": {
+    "U": 4
+  },
+  "hints": [],
+  "key_actions": [
+    "UNL DOO",
+    "UNL DOO",
+    "GO DOO",
+    "GO ENT",
+    "GO DOO"
+  ],
+  "action_details": [
+    {
+      "command": "UNL DOO",
+      "needs": [
+        "Tiny key"
+      ],
+      "effects": [
+        "Message: I hear strange noises!",
+        "Message: The sound of machinery.",
+        "Set flag 6"
+      ]
+    },
+    {
+      "command": "UNL DOO",
+      "needs": [],
+      "effects": [
+        "Message: The right key could help (maybe)."
+      ]
+    },
+    {
+      "command": "GO DOO",
+      "needs": [],
+      "effects": [
+        "Message: Something won't fit."
+      ]
+    },
+    {
+      "command": "GO ENT",
+      "needs": [],
+      "effects": [
+        "Message: I can't."
+      ]
+    },
+    {
+      "command": "GO DOO",
+      "needs": [],
+      "effects": [
+        "Message: I can't."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

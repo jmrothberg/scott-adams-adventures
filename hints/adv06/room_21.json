@@ -1,0 +1,25 @@
+{
+  "room": 21,
+  "name": "I'm in the ruins of an intergalatic ZOO",
+  "description": "I'm in the ruins of an intergalatic ZOO",
+  "items_start": [
+    "Rigilian Dia-Ice Hound"
+  ],
+  "exits": {
+    "S": 15
+  },
+  "hints": [
+    "The ruins of an intergalactic zoo. There's a creature here.",
+    "The Rigilian Dia-Ice Hound is here. It may be useful.",
+    "The hound can help you with the ice mound puzzle later.",
+    "Take the HOUND with you. It can burrow through ice. Go S to return to jungle."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [
+    "HOUN"
+  ],
+  "danger": false,
+  "notes": "Ruined intergalactic zoo. The Ice Hound can help with the ice mound puzzle."
+}

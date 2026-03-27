@@ -1,0 +1,36 @@
+{
+  "room": 18,
+  "name": "I'm on a ridge above a ravine",
+  "description": "I'm on a ridge above a ravine",
+  "items_start": [],
+  "exits": {
+    "W": 32
+  },
+  "hints": [],
+  "key_actions": [
+    "GO RAVI",
+    "JUMP RAVI"
+  ],
+  "action_details": [
+    {
+      "command": "GO RAVI",
+      "needs": [],
+      "effects": [
+        "Message: Sorry I can't",
+        "Message: Too steep!"
+      ]
+    },
+    {
+      "command": "JUMP RAVI",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 8"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

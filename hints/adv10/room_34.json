@@ -1,0 +1,14 @@
+{
+  "room": 34,
+  "name": "lot of trouble",
+  "description": "I'm in a lot of trouble",
+  "items_start": [],
+  "exits": {},
+  "hints": [],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": ""
+}

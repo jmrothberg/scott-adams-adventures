@@ -1,0 +1,25 @@
+{
+  "room": 33,
+  "name": "catwalk",
+  "description": "I'm in a catwalk",
+  "items_start": [
+    "Locked door",
+    "Rope hanging down"
+  ],
+  "exits": {
+    "E": 12,
+    "D": 22
+  },
+  "hints": [
+    "You made it to the catwalk! There's a locked door and a rope hanging down.",
+    "The locked door needs a key. E leads to the store room.",
+    "The rope hangs down to the ride below. D returns to the top of the ride.",
+    "E=store room (room 12) with the wrench. The locked door opens with the rusty key from the tank. This is a critical junction."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": ["KEY"],
+  "items_available": [],
+  "danger": false,
+  "notes": "Catwalk above the merry-go-round. Reached by jumping from top of ride with rope present. E=store room (12), D=top of ride (22). Locked door needs rusty key."
+}

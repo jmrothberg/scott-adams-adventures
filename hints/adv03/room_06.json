@@ -1,0 +1,22 @@
+{
+  "room": 6,
+  "name": "twisting white hallway",
+  "description": "I'm in a twisting white hallway",
+  "items_start": [],
+  "exits": {
+    "N": 9,
+    "E": 8,
+    "D": 3
+  },
+  "hints": [
+    "A white hallway connecting several areas. The white door is to the north.",
+    "NORTH leads to the white room with a security door. EAST connects to the blue hallway. DOWN returns to the main corridor.",
+    "Go NORTH to reach the white visitor door (needs visitor-level ID or higher). EAST to blue hallway, DOWN to main corridor."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "White hallway connecting the main corridor (D/room 3), white security door (N/room 9), and blue hallway (E/room 8)."
+}

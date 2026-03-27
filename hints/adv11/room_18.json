@@ -1,0 +1,32 @@
+{
+  "room": 18,
+  "name": "small metal room",
+  "description": "I'm in a small metal room",
+  "items_start": [],
+  "exits": {},
+  "hints": [
+    "A small metal room with no obvious exits. The force field is the way back.",
+    "If a force field is present, you can GO FIELD to return to room 2.",
+    "GO FIELD to pass through and reach the control console room. This room may serve as an airlock or transition chamber."
+  ],
+  "key_actions": [
+    "GO FIEL"
+  ],
+  "action_details": [
+    {
+      "command": "GO FIEL",
+      "needs": [
+        "Force field (must be in room)"
+      ],
+      "effects": [
+        "Move to room 2",
+        "Auto-DROP item",
+        "Set flag 2"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Small metal room accessible through the force field from room 2. Going through the force field here returns to room 2 safely (unlike the deadly passage from room 2 to here). Functions as a transition chamber."
+}

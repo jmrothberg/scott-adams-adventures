@@ -1,0 +1,23 @@
+{
+  "room": 23,
+  "name": "metal dormitory",
+  "description": "I'm in a metal dormitory",
+  "items_start": [
+    "Rows of soft platforms"
+  ],
+  "exits": {
+    "E": 21,
+    "W": 27
+  },
+  "hints": [
+    "A dormitory with rows of sleeping platforms. This was crew quarters for multiple beings.",
+    "Search the platforms carefully - LOOK PLATFORMS or FEEL PLATFORMS. Something may be hidden among them.",
+    "EAST returns to the main corridor, WEST leads to the lavatory/mess hall area. Check under or behind the platforms."
+  ],
+  "key_actions": [],
+  "action_details": [],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Crew dormitory with multiple sleeping platforms. East leads to main corridor (room 21), west to the lavatory/mess hall (room 27). The platforms may hide items if searched carefully."
+}

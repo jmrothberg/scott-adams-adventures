@@ -1,0 +1,49 @@
+{
+  "room": 21,
+  "name": "cold shallow lake",
+  "description": "I'm in a cold shallow lake",
+  "items_start": [],
+  "exits": {
+    "S": 20,
+    "E": 22
+  },
+  "hints": [],
+  "key_actions": [
+    "FUEL BATT",
+    "WASH HOSE",
+    "SWIM"
+  ],
+  "action_details": [
+    {
+      "command": "FUEL BATT",
+      "needs": [
+        "Old car battery (need access)"
+      ],
+      "effects": [
+        "Set flag 31",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "WASH HOSE",
+      "needs": [
+        "Fuel hose"
+      ],
+      "effects": [
+        "DEATH",
+        "Message: O.K."
+      ]
+    },
+    {
+      "command": "SWIM",
+      "needs": [],
+      "effects": [
+        "Message: O.K."
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": true,
+  "notes": ""
+}

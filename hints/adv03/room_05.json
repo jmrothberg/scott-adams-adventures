@@ -1,0 +1,42 @@
+{
+  "room": 5,
+  "name": "I'm sitting in a grey chair\nthere's a box pointing at me",
+  "description": "I'm sitting in a grey chair\nthere's a box pointing at me",
+  "items_start": [
+    "Row of 4 buttons -red white blue yellow-",
+    "Keyholes under buttons"
+  ],
+  "exits": {},
+  "hints": [
+    "The colored buttons and keyholes create different security badges. You need colored keys.",
+    "Each button creates an ID with a different clearance level. You need the matching colored key to activate each button.",
+    "Insert the correct colored key, then press the matching button to get that security level badge. Higher clearance opens more doors.",
+    "Use colored keys in keyholes then PRESS the matching button. White=visitor, Yellow=maintenance, Blue=security. GET UP to leave the chair."
+  ],
+  "key_actions": [
+    "ACT UP",
+    "GET UP"
+  ],
+  "action_details": [
+    {
+      "command": "ACT UP",
+      "needs": [],
+      "effects": [
+        "Move to room 4",
+        "Show score"
+      ]
+    },
+    {
+      "command": "GET UP",
+      "needs": [],
+      "effects": [
+        "Move to room 4",
+        "Show score"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Inside the ID creation chair. Four colored buttons (red/white/blue/yellow) with keyholes beneath. Insert a colored key and press the matching button to create an ID badge with that clearance level. GET UP or ACT UP to stand and return to room 4."
+}

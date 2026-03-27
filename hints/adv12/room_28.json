@@ -1,0 +1,33 @@
+{
+  "room": 28,
+  "name": "small cabin",
+  "description": "I'm in a small cabin",
+  "items_start": [
+    "Cot"
+  ],
+  "exits": {
+    "U": 6
+  },
+  "hints": [
+    "The ship's cabin below deck. There is a cot to sleep in.",
+    "GO COT to lie down and sleep. You may find useful items or have important events while resting.",
+    "GO COT to rest and find a note. Go UP to return to the ship deck."
+  ],
+  "key_actions": [
+    "GO COT"
+  ],
+  "action_details": [
+    {
+      "command": "GO COT",
+      "needs": [],
+      "effects": [
+        "Message: OK",
+        "Move to room 29"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Ship's cabin below deck with a cot. GO COT leads to room 29 (cozy cot) where a note can be found. Up returns to the ship deck (room 6)."
+}

@@ -1,0 +1,37 @@
+{
+  "room": 29,
+  "name": "I'm at the edge of a BOTTOMLESS hole",
+  "description": "I'm at the edge of a BOTTOMLESS hole",
+  "items_start": [
+    "Large outdoor Advertisement",
+    "Hole"
+  ],
+  "exits": {
+    "N": 10,
+    "W": 1
+  },
+  "hints": [
+    "There is a hole here and an advertisement. The hole might not be truly bottomless.",
+    "GO HOLE to descend to a ledge just below the rim. There is something useful down there.",
+    "GO HOLE to reach a ledge (room 30) where the flint & steel are. Do NOT go further down from there or you die!",
+    "GO HOLE then GET FLINT on the ledge. Do NOT go DOWN from the ledge - that leads to Hell (death). Go NORTH for the lake, WEST for the swamp."
+  ],
+  "key_actions": [
+    "GO HOL"
+  ],
+  "action_details": [
+    {
+      "command": "GO HOL",
+      "needs": [],
+      "effects": [
+        "Move to room 30"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [
+    "ADV"
+  ],
+  "danger": false,
+  "notes": "Edge of the bottomless hole. GO HOLE leads to a ledge (room 30) with the flint & steel. The advertisement is a Scott Adams meta-reference. NORTH goes to the lake (room 10), WEST to the swamp (room 1)."
+}

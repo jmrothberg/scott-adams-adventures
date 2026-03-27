@@ -1,0 +1,42 @@
+{
+  "room": 9,
+  "name": "room in the castle",
+  "description": "I'm in a room in the castle",
+  "items_start": [
+    "Open Window"
+  ],
+  "exits": {
+    "S": 1
+  },
+  "hints": [
+    "There is an open window here. Go outside to find the ledge.",
+    "GO WINDOW or GO LEDGE to reach the ledge where the voodoo doll is.",
+    "Access the ledge outside the window to find the voodoo doll (room 22). SOUTH returns to chapel."
+  ],
+  "key_actions": [
+    "GO LED",
+    "LIS CRY"
+  ],
+  "action_details": [
+    {
+      "command": "GO LED",
+      "needs": [
+        "Ledge (must be in room)"
+      ],
+      "effects": [
+        "Message: Bird says: `ask for ADVENTURE 5, -THE COUNT- at your\n favorite computer dealer. It will be LOVE AT FIRST BYTE!`\n"
+      ]
+    },
+    {
+      "command": "LIS CRY",
+      "needs": [],
+      "effects": [
+        "Message: Bird says: `ask for ADVENTURE 5, -THE COUNT- at your\n favorite computer dealer. It will be LOVE AT FIRST BYTE!`\n"
+      ]
+    }
+  ],
+  "items_needed": [],
+  "items_available": [],
+  "danger": false,
+  "notes": "Room north of the chapel with a window. GO LEDGE leads to room 22 where the voodoo doll is. The bird is an advertisement for Adventure 5. SOUTH returns to chapel."
+}
