@@ -654,8 +654,14 @@ async function handleCmdEnhanced() {
       return;
     }
 
-    // Feature A: Translate natural language → VERB NOUN
-    const translated = await translateInput(cmd, roomData);
+    // Skip LLM translation for commands the engine already handles via expand() — single-letter shortcuts, score phrases, etc.
+    const engineShortcut = /^[NSEWUDIL]$/i.test(upper) || /^(INVENTORY|LOOK|SCORE|SAVE|LOAD|HELP|QUIT)$/i.test(upper)
+      || /^GO\s+(NORTH|SOUTH|EAST|WEST|UP|DOWN)$/i.test(upper)
+      || /^WHAT'?S\s+(MY\s+SCORE|THE\s+SCORE)$/i.test(upper)
+      || /^WHAT\s+(AM\s+I\s+CARRYING|DO\s+I\s+HAVE)$/i.test(upper);
+
+    // Feature A: Translate natural language → VERB NOUN (skip for engine shortcuts)
+    const translated = engineShortcut ? upper : await translateInput(cmd, roomData);
 
     // Show translation if it differs from what the player typed
     if (translated !== upper && translated !== cmd.toUpperCase()) {
