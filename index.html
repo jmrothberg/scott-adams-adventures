@@ -306,7 +306,7 @@ class Engine {
       case 65: { // score — count treasures in treasure room
         let sc = 0;
         for (let i = 0; i < this.g.items.length; i++)
-          if (this.g.items[i].desc.includes('*') && this.iLoc[i] === this.h.treasureRoom) sc++;
+          if (this.g.items[i].desc.startsWith('*') && this.iLoc[i] === this.h.treasureRoom) sc++;
         this.out("I've stored " + sc + " treasures. On a scale of 0 to 100, that rates " +
           Math.floor(sc * 100 / this.h.numTreasures) + ".\n");
         if (sc === this.h.numTreasures) {
