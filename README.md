@@ -1,6 +1,6 @@
 # Scott Adams Adventures - Browser Edition
 
-Play all 17 classic Scott Adams text adventures (1978-84) right in your browser. Created by Jonathan Rothberg using the original Scott Adams game data files. The originals ran as Level II BASIC programs on the TRS-80, reading from separate data files. This project replaces the BASIC interpreter with HTML and JavaScript, and adds AI-generated room images to bring the classic text descriptions to life.
+Play the classic Scott Adams text adventures (1978-84) right in your browser — all 17 original games plus a mini-sampler. Created by Jonathan Rothberg using the original Scott Adams game data files. The originals ran as Level II BASIC programs on the TRS-80, reading from separate data files. This project replaces the BASIC interpreter with HTML and JavaScript, and adds AI-generated room images to bring the classic text descriptions to life.
 
 ## Play Now
 
@@ -78,7 +78,7 @@ Use this on a **second computer** so **LLM Enhanced** works **without** relying 
    - `webllm-assets/Qwen3-1.7B-q4f16_1-MLC/resolve/main/mlc-chat-config.json` exists (same for `Qwen3-0.6B-q4f16_1-MLC` if needed) — or the flat file exists **and** `ensure-webllm-layout` was run.
 5. **Serve over HTTP** (required; `file://` breaks loading). Prefer **`npm run serve-game`** (same as `python3 scripts/serve-threaded.py 8090`) so images, map, and model shards do not block each other. Plain `python3 -m http.server` is OK for Classic-only.  
    Open **http://localhost:8090** in **Chrome or Edge** (WebGPU).
-6. In the game, click **Classic** / **LLM Enhanced** to enable LLM mode; first load may take a while while the model initializes.
+6. In the game, click **LLM Enhanced!** to enable LLM mode; click **Classic!** to return. First load may take a while while the model initializes.
 
 **If LLM mode fails on the new machine:** re-check step 3–4, confirm WebGPU (Chrome), and that nothing blocked `webllm-assets/` (wrong folder name or missing `wasm/`).
 
@@ -113,7 +113,7 @@ Use this on a **second computer** so **LLM Enhanced** works **without** relying 
 - **Examine everything** — items often have clues
 - **Read signs** — they contain important hints
 - Treasures are marked with `*asterisks*` — collect them and drop them in the treasure room
-- Type `SCORE` in the treasure room to see how many you have stored and your percentage
+- Type `SCORE` anywhere to see how many treasures you have stored and your percentage
 - If you die, you may end up in Limbo — look for an exit to continue
 - The game tells you **why** you died when you try your next command
 
@@ -214,4 +214,4 @@ After generating, commit and push to see them on GitHub Pages.
 - Data files in ScottFree format, converted by Paul David Doherty
 - Room images generated with SDXL Turbo using prompts derived from the original game data
 
-These games are shareware. See `0readme.txt` for the original shareware notice.
+The original games are (c) Scott Adams / Adventure International. Data files are distributed in ScottFree format; see the credits above.
