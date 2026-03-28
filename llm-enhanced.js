@@ -608,7 +608,9 @@ async function handleCmdEnhanced() {
   }
   if (upper === 'QUIT' || upper === 'Q') {
     window.appendOut('Thanks for playing!\n');
+    eng.deathReason = 'You quit (QUIT).';
     eng.dead = true;
+    window.appendOut('Why you ended: You quit (QUIT).\n');
     return;
   }
   if (upper === 'LOAD' || upper === 'RESTORE') {
