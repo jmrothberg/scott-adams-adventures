@@ -88,30 +88,34 @@ Use this on a **second computer** so **LLM Enhanced** works **without** relying 
 
 - **Select a game** from the dropdown menu and click **New Game**
 - **Type commands** in the input field and press Enter
-- Commands are **two words**: a verb and a noun (e.g., `GET AXE`, `GO NORTH`, `OPEN DOOR`)
-- Words can be abbreviated to 3 letters (e.g., `GET AXE` = `GET AXE`)
+- Commands are **VERB NOUN** (e.g., `GET AXE`, `GO NORTH`, `OPEN DOOR`)
+- Only the first 3–5 letters matter (depends on the game), so `INV` = `INVENTORY`, `GET AXE` = `GET AXEMAN`
+- In **LLM Enhanced** mode you can type natural language ("pick up the axe") and the model translates it
 
 ### Shortcuts
 
 | Key | Action |
 |-----|--------|
 | `N` `S` `E` `W` `U` `D` | Move North/South/East/West/Up/Down |
-| `I` | Show inventory |
-| `L` | Look around |
-| `SCORE` | Check your score |
-| `HELP` | Get a hint (when available) |
-| `SAVE` | Save game (to browser storage) |
+| `INVENTORY` (or `I`) | List what you are carrying |
+| `SCORE` | Show how many treasures you have stored (out of 100) |
+| `L` | Look around (redisplay room) |
+| `MAP` | Show an auto-generated map of rooms you have visited |
+| `HINT` | Get a progressive hint for the current room (uses hint JSON files) |
+| `HELP` | In-game help (when the game data provides one) |
+| `SAVE` | Save game (to browser localStorage) |
 | `LOAD` | Restore saved game |
 | `QUIT` | End game |
 
 ### Tips
 
-- **Draw a map** on paper as you explore - you will get lost without one
-- **Examine everything** - items often have clues
-- **Read signs** - they contain important hints
-- Treasures are marked with `*asterisks*` - collect them and store them at the treasure room
-- Type `SCORE` to see how many treasures you've stored
-- If you die, you end up in Limbo - look for an exit to continue
+- Use **MAP** to see rooms you have visited — the map updates as you explore
+- **Examine everything** — items often have clues
+- **Read signs** — they contain important hints
+- Treasures are marked with `*asterisks*` — collect them and drop them in the treasure room
+- Type `SCORE` in the treasure room to see how many you have stored and your percentage
+- If you die, you may end up in Limbo — look for an exit to continue
+- The game tells you **why** you died when you try your next command
 
 ## The Games
 

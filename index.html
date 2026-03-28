@@ -76,7 +76,7 @@ button:hover{background:#1a4a8a}
   </div>
 </div>
 <div id="help-bar">
-  N/S/E/W/U/D=move | I=inventory | L=look | GET/DROP item | SAVE/LOAD/QUIT | MAP=show map | HINT=get help | Classic/LLM toggle for natural language
+  N/S/E/W/U/D=move | INVENTORY=items | L=look | SCORE=treasures | GET/DROP item | SAVE/LOAD/QUIT | MAP | HINT
 </div>
 
 <!-- Map is now rendered inline in the output area -->
@@ -247,9 +247,10 @@ class Engine {
     }
   }
 
+  // Opcode numbers match ScottFree 1.14b (Alan Cox) / Definition.txt exactly.
   exec(cmd, par, pi) {
     switch(cmd) {
-      case 52: { // auto GET
+      case 52: { // get — auto GET by lastNoun
         const nw = this.lastNoun.substring(0, this.h.wordLen).toUpperCase();
         let f = -1;
         for (let i = 0; i < this.g.items.length; i++) {
@@ -261,7 +262,7 @@ class Engine {
         else { this.iLoc[f] = -1; this.out("OK\n"); }
         return pi;
       }
-      case 53: { // auto DROP
+      case 53: { // drop — auto DROP by lastNoun
         const nw = this.lastNoun.substring(0, this.h.wordLen).toUpperCase();
         let f = -1;
         for (let i = 0; i < this.g.items.length; i++) {
@@ -272,21 +273,22 @@ class Engine {
         else { this.iLoc[f] = this.loc; this.out("OK\n"); }
         return pi;
       }
-      case 54: this.loc = par[pi++]; this.redraw = true; return pi;
-      case 55: this.iLoc[par[pi++]] = 0; return pi;
-      case 56: this.flags[15] = true; return pi;
-      case 57: this.flags[15] = false; return pi;
-      case 58: this.flags[par[pi++]] = true; return pi;
-      case 59: this.flags[par[pi++]] = false; return pi;
-      case 60: // die
+      case 54: this.loc = par[pi++]; this.redraw = true; return pi; // moveto
+      case 55: this.iLoc[par[pi++]] = 0; return pi; // destroy
+      case 56: this.flags[15] = true; return pi; // set_dark
+      case 57: this.flags[15] = false; return pi; // clear_dark
+      case 58: this.flags[par[pi++]] = true; return pi; // set_flag
+      case 59: this.iLoc[par[pi++]] = 0; return pi; // destroy2 (same as 55)
+      case 60: this.flags[par[pi++]] = false; return pi; // clear_flag
+      case 61: // die — print death, clear dark, move to limbo
         this.out("I'm dead...\n");
         this._lastFatalityContext = (this._lastFatalityContext ? this._lastFatalityContext + ' — ' : '') + "I'm dead...";
         this.loc = this.g.rooms.length - 1;
         this.flags[15] = false;
         this.redraw = true;
         return pi;
-      case 61: { const it = par[pi++], rm = par[pi++]; this.iLoc[it] = rm; return pi; }
-      case 62: { // game over flag (often chained after a message or case 60 in the same action)
+      case 62: { const it = par[pi++], rm = par[pi++]; this.iLoc[it] = rm; return pi; } // put item in room
+      case 63: { // game_over
         this.dead = true;
         if (this._lastFatalityContext)
           this.deathReason = this._lastFatalityContext;
@@ -300,8 +302,8 @@ class Engine {
         this._lastFatalityContext = '';
         return pi;
       }
-      case 63: this.look(); return pi;
-      case 64: { // score
+      case 64: this.look(); return pi; // look
+      case 65: { // score — count treasures in treasure room
         let sc = 0;
         for (let i = 0; i < this.g.items.length; i++)
           if (this.g.items[i].desc.includes('*') && this.iLoc[i] === this.h.treasureRoom) sc++;
@@ -314,34 +316,34 @@ class Engine {
         }
         return pi;
       }
-      case 65: { // inventory
+      case 66: { // inventory — list carried items
         const c = [];
         for (let i = 0; i < this.iLoc.length; i++)
           if (this.iLoc[i] === -1) c.push(this.g.items[i].desc.replace(/\/[^\/]*\/\s*$/, '').trim());
         this.out("I'm carrying: " + (c.length ? c.join(", ") : "Nothing!") + '\n');
         return pi;
       }
-      case 66: this.flags[0] = true; return pi;
-      case 67: this.flags[0] = false; return pi;
-      case 68: this.lightTime = this.h.lightTime; return pi;
-      case 69: return pi;
-      case 70: this.doSave(); return pi;
-      case 71: { const a = par[pi++], b = par[pi++]; const t = this.iLoc[a]; this.iLoc[a] = this.iLoc[b]; this.iLoc[b] = t; return pi; }
-      case 72: return pi; // continue handled in loop
-      case 73: this.iLoc[par[pi++]] = -1; return pi;
-      case 74: { const a = par[pi++], b = par[pi++]; this.iLoc[a] = this.iLoc[b]; return pi; }
-      case 75: this.look(); return pi;
-      case 76: this.counters[this.curCtr]--; return pi;
-      case 77: this.out(String(this.counters[this.curCtr])); return pi;
-      case 78: this.counters[this.curCtr] = par[pi++]; return pi;
-      case 79: { const t = this.loc; this.loc = this.savedRooms[this.curCtr]; this.savedRooms[this.curCtr] = t; this.redraw = true; return pi; }
-      case 80: this.curCtr = par[pi++]; return pi;
-      case 81: this.counters[this.curCtr] += par[pi++]; return pi;
-      case 82: this.counters[this.curCtr] -= par[pi++]; return pi;
-      case 83: this.out(this.lastNoun); return pi;
-      case 84: this.out(this.lastNoun + '\n'); return pi;
-      case 85: this.out('\n'); return pi;
-      case 86: { const sl = par[pi++]; const t = this.loc; this.loc = this.savedRooms[sl]; this.savedRooms[sl] = t; this.redraw = true; return pi; }
+      case 67: this.flags[0] = true; return pi; // set_0
+      case 68: this.flags[0] = false; return pi; // clear_0
+      case 69: this.lightTime = this.h.lightTime; return pi; // refill_lamp
+      case 70: return pi; // clear_screen (no-op in browser)
+      case 71: this.doSave(); return pi; // save_game
+      case 72: { const a = par[pi++], b = par[pi++]; const t = this.iLoc[a]; this.iLoc[a] = this.iLoc[b]; this.iLoc[b] = t; return pi; } // swap items
+      case 73: return pi; // continue — handled in runActions loop
+      case 74: this.iLoc[par[pi++]] = -1; return pi; // superget (ignore carry limit)
+      case 75: { const a = par[pi++], b = par[pi++]; this.iLoc[a] = this.iLoc[b]; return pi; } // put_with
+      case 76: this.look(); return pi; // look2
+      case 77: this.counters[this.curCtr]--; return pi; // dec_counter
+      case 78: this.out(String(this.counters[this.curCtr])); return pi; // print_counter
+      case 79: this.counters[this.curCtr] = par[pi++]; return pi; // set_counter
+      case 80: { const t = this.loc; this.loc = this.savedRooms[this.curCtr]; this.savedRooms[this.curCtr] = t; this.redraw = true; return pi; } // swap_loc_default
+      case 81: this.curCtr = par[pi++]; return pi; // select_counter
+      case 82: this.counters[this.curCtr] += par[pi++]; return pi; // add_counter
+      case 83: this.counters[this.curCtr] -= par[pi++]; return pi; // sub_counter
+      case 84: this.out(this.lastNoun); return pi; // print_noun
+      case 85: this.out(this.lastNoun + '\n'); return pi; // print_noun_nl
+      case 86: this.out('\n'); return pi; // newline
+      case 87: { const sl = par[pi++]; const t = this.loc; this.loc = this.savedRooms[sl]; this.savedRooms[sl] = t; this.redraw = true; return pi; } // swap_specific_loc
       default: return pi;
     }
   }
@@ -387,7 +389,7 @@ class Engine {
           this._lastFatalityContext = line.trim();
           this.out(line);
         }
-        else if (s === 72) hasCont = true;
+        else if (s === 73) hasCont = true;
         else pi = this.exec(s, par, pi);
       }
       if (hasCont) cont = true;
@@ -541,10 +543,6 @@ class Engine {
       else if (verb === 10) this.doGet(nounW);
       else if (verb === 18) this.doDrop(nounW);
       else this.out("I don't understand what you want me to do.\n");
-    } else if (noun === 0 && !nounW) {
-      // Some Scott Adams .dat files (e.g. Adventureland) encode INVENTORY with an opcode this engine maps to a no-op (case 66 = flag only). SCORE still uses the opcode that prints carrying here, so leave SCORE / expand() as-is; only ensure INVENTORY actually lists items.
-      const invV = this.findWord('INVENTORY', this.g.verbs);
-      if (invV >= 0 && verb === invV && !this.buf.includes("I'm carrying:")) this.exec(65, [], 0);
     }
 
     if (this.redraw) { this.look(); this.redraw = false; }
