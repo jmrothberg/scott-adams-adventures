@@ -6,6 +6,11 @@ Play the classic Scott Adams text adventures (1978-84) right in your browser —
 
 **https://jmrothberg.github.io/scott-adams-adventures/**
 
+**Loading a game (pick one path):**
+
+- **From GitHub Pages, or any copy served over HTTP with `Game_Data/` next to `index.html`:** choose an adventure in the **dropdown**, then click **New Game**. The page loads the matching `.dat` from the site automatically.
+- **Otherwise** (for example you opened `index.html` directly as a **local file** (`file://`), or you do not have the `Game_Data` folder beside the page): browsers block loading those files in the background. **Serve this folder over HTTP** (see **Run locally** below) or use **Play Now** on GitHub Pages so **New Game** can load `Game_Data/`.
+
 ### Run locally (recommended)
 
 From the repo root, after **`npm install`**:
@@ -86,7 +91,8 @@ Use this on a **second computer** so **LLM Enhanced** works **without** relying 
 
 ## How to Play
 
-- **Select a game** from the dropdown menu and click **New Game**
+- **Normal use (GitHub or local server):** pick a game in the **dropdown**, then **New Game**
+- **Local `file://` or no `Game_Data`:** you will see an error with setup instructions — **serve the repo over HTTP** (or use the live site) so the dropdown + **New Game** can load `Game_Data/`
 - **Type commands** in the input field and press Enter
 - Commands are **VERB NOUN** (e.g., `GET AXE`, `GO NORTH`, `OPEN DOOR`)
 - Only the first 3–5 letters matter (depends on the game), so `INV` = `INVENTORY`, `GET AXE` = `GET AXEMAN`

@@ -56,8 +56,6 @@ button:hover{background:#1a4a8a}
     <option value="quest1.dat">Q1 - The Hulk</option>
     <option value="quest2.dat">Q2 - Spiderman</option>
   </select>
-  <input type="file" id="game-dat-input" accept=".dat" style="display:none">
-  <button type="button" onclick="pickGameDatFile()">Open .dat…</button>
   <button onclick="newGame()">New Game</button>
   <button onclick="saveGame()">Save</button>
   <button onclick="loadGame()">Load</button>
@@ -820,46 +818,9 @@ function buildMapSvg() {
   return svg;
 }
 
-/** Start engine from raw .dat text. gameIdForAssets matches images/ folder name (e.g. adv01). */
-function startGameFromDatText(text, gameIdForAssets) {
-  if (!text || text.length < 10) throw new Error('Empty or missing file');
-  currentGameId = gameIdForAssets;
-  var game = parseGameData(text);
-  engine = new Engine(game);
-  clearMapState();
-  clearOut();
-  var out = engine.turn('');
-  appendOut(out);
-  showRoomImg(engine.roomNum);
-  recordMapState();
-  cmdEl.focus();
-}
-
-function pickGameDatFile() {
-  document.getElementById('game-dat-input').click();
-}
-
-// Same pattern as web_TRS_80 tape load: user picks file — allowed on file://; fetch(Game_Data/...) is not.
-function onGameDatFileChosen(ev) {
-  var file = ev.target.files[0];
-  if (!file) return;
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    try {
-      var base = file.name.replace(/\.dat$/i, '');
-      if (!base) base = 'adv01';
-      startGameFromDatText(e.target.result, base);
-    } catch (err) {
-      clearOut();
-      appendOut('Error loading game: ' + err.message + '\n');
-    }
-  };
-  reader.readAsText(file);
-  ev.target.value = '';
-}
-
 async function newGame() {
   const file = document.getElementById('game-select').value;
+  currentGameId = file.replace('.dat', '');
   try {
     var text;
     try {
@@ -867,7 +828,7 @@ async function newGame() {
       if (!resp.ok) throw new Error('fetch failed');
       text = await resp.text();
     } catch(fetchErr) {
-      // Fallback: XHR — still blocked on file:// in Chromium; needs http(s) or Open .dat…
+      // Fallback: XHR works on file:// in Safari and some browsers
       text = await new Promise(function(resolve, reject) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'Game_Data/' + file);
@@ -876,13 +837,23 @@ async function newGame() {
         xhr.send();
       });
     }
-    startGameFromDatText(text, file.replace('.dat', ''));
+    if (!text || text.length < 10) throw new Error('Empty or missing file');
+    var game = parseGameData(text);
+    engine = new Engine(game);
+    clearMapState();
+    clearOut();
+    var out = engine.turn('');
+    appendOut(out);
+    showRoomImg(engine.roomNum);
+    recordMapState();
+    cmdEl.focus();
   } catch(e) {
     clearOut();
     appendOut('Error loading game: ' + e.message + '\nMake sure game .dat files are in the Game_Data folder.\n\n' +
-      'If you opened this page as a local file (file://), the browser blocks loading Game_Data/ automatically — use Open .dat… and pick the file (same idea as Load Tape in the TRS-80 simulator).\n\n' +
-      'Or run a local server:\n' +
-      '  python3 scripts/serve-threaded.py 8090   (threaded; use with LLM)\n' +
+      'If opened from a local file, try (from the repo folder; npm install once):\n' +
+      '  npm run serve-game\n' +
+      '  then open http://localhost:8090\n\n' +
+      '  Or: python3 scripts/serve-threaded.py 8090   (same server; threaded for LLM)\n' +
       '  or: python3 -m http.server 8090\n' +
       '  then open http://localhost:8090\n\n' +
       'Or play online:\n' +
@@ -944,8 +915,6 @@ function loadGame() {
   showRoomImg(engine.roomNum);
 }
 
-document.getElementById('game-dat-input').addEventListener('change', onGameDatFileChosen);
-
 cmdEl.addEventListener('keydown', e => { if (e.key === 'Enter') handleCmd(); });
 
 // Command history
@@ -974,13 +943,8 @@ if (location.protocol === 'file:') {
   if (llmModel) llmModel.style.display = 'none';
 }
 
-// file:// cannot fetch sibling folders; avoid a noisy failed fetch — user uses Open .dat… or a server
-if (location.protocol === 'file:') {
-  clearOut();
-  appendOut('Opened as a local file: use Open .dat… to choose a game file, or run a local server and use New Game.\n');
-} else {
-  newGame();
-}
+// Always try to start — error handler will show help if fetch fails
+newGame();
 </script>
 <script type="module" src="llm-enhanced.js"></script>
 </body>
