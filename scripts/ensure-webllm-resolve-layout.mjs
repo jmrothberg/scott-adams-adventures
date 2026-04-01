@@ -18,6 +18,7 @@ const MODEL_IDS = [
   'Qwen3-1.7B-q4f16_1-MLC',
   'Qwen3-0.6B-q4f16_1-MLC',
   'Qwen3-8B-q4f16_1-MLC',
+  'Qwen3.5-0.8B-q4f16_1-MLC',
 ];
 
 function main() {

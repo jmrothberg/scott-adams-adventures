@@ -208,6 +208,17 @@
      */
     import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.82/lib/index.js";
 
+    /**
+     * LLM: Relative `webllm-assets/` from this page resolves under /TEST_webLLM/ (wrong). Assets sit at site/repo root.
+     */
+    function siteRootBaseUrl() {
+      const path = window.location.pathname;
+      const marker = "/TEST_webLLM/";
+      const i = path.indexOf(marker);
+      const dir = i >= 0 ? path.slice(0, i) + "/" : path.replace(/[^/]*$/, "");
+      return new URL(dir || "/", window.location.origin);
+    }
+
     const prebuiltBase = webllm.prebuiltAppConfig;
     const pristineList = prebuiltBase.model_list.map((r) => ({ ...r }));
     let workingList = pristineList.map((r) => ({ ...r }));
@@ -222,18 +233,6 @@
       } catch (e) {
         return null;
       }
-    }
-
-    /**
-     * LLM: Relative `webllm-assets/` from this page resolves under /TEST_webLLM/ (wrong). Assets sit at site/repo root
-     * (same as index.html). Strip /TEST_webLLM/... from the path; on GitHub Pages the prefix before TEST_webLLM is kept.
-     */
-    function siteRootBaseUrl() {
-      const path = window.location.pathname;
-      const marker = "/TEST_webLLM/";
-      const i = path.indexOf(marker);
-      const dir = i >= 0 ? path.slice(0, i) + "/" : path.replace(/[^/]*$/, "");
-      return new URL(dir || "/", window.location.origin);
     }
 
     function modelsDirUrl() {
@@ -404,11 +403,17 @@
         fillModelSelect("model-a", local, remote, DEFAULT_MODEL_A);
         fillModelSelect("model-b", local, remote, DEFAULT_MODEL_B);
         if (note) {
+          const nBundled = prebuiltBase.model_list.length;
+          const nExtra = pristineList.length - nBundled;
           note.textContent =
             ids.length +
-            " models — " +
+            " models (" +
+            nBundled +
+            " bundled in WebLLM 0.2.82" +
+            (nExtra > 0 ? " + " + nExtra + " extra (repo weights ahead of npm)" : "") +
+            ") — " +
             local.length +
-            " on disk (bold in menu). “Catalog” uses Hugging Face until cached.";
+            " on disk (bold). Newer MLC repos may need the matching .wasm in webllm-assets/wasm/.";
         }
       } catch (err) {
         console.error(err);
@@ -450,6 +455,12 @@
       }
       if (m.includes("abort")) {
         return "Load aborted. Details: " + full;
+      }
+      if (m.includes("magic word") || m.includes("expected magic") || (m.includes("webassembly") && m.includes("instantiate"))) {
+        return (
+          "WASM file is not a real binary (often an HTML 404 page, not .wasm). Check model_lib / webllm-assets/wasm/. Details: " +
+          full
+        );
       }
       return "Load failed: " + full;
     }
@@ -572,6 +583,24 @@
       }
     }
 
+    function scrollOutToEnd(outEl) {
+      outEl.scrollTop = outEl.scrollHeight;
+    }
+
+    function formatGenMeta(usage, genMs) {
+      const tps =
+        usage &&
+        typeof usage.completion_tokens === "number" &&
+        usage.completion_tokens > 0 &&
+        genMs > 0
+          ? (usage.completion_tokens / (genMs / 1000)).toFixed(1)
+          : null;
+      let u =
+        " time " + genMs + " ms | tokens prompt " + (usage ? (usage.prompt_tokens ?? "?") : "?") + " / completion " + (usage ? (usage.completion_tokens ?? "?") : "?");
+      if (tps != null) u += " | " + tps + " tok/s";
+      return u;
+    }
+
     async function runOne(side, modelId) {
       const outEl = document.getElementById("out-" + side);
       outEl.textContent = "";
@@ -590,6 +619,7 @@
       if (!engine) return;
 
       try {
+        const tGenStart = performance.now();
         if (stream) {
           const chunks = await engine.chat.completions.create({
             messages,
@@ -603,28 +633,28 @@
           for await (const ch of chunks) {
             text += ch.choices[0]?.delta?.content ?? "";
             outEl.textContent = text;
+            scrollOutToEnd(outEl);
             if (ch.usage) usage = ch.usage;
           }
-          const ms = Math.round(performance.now() - t0);
-          const u = usage
-            ? " time " + ms + " ms | tokens prompt " + (usage.prompt_tokens ?? "?") + " / completion " + (usage.completion_tokens ?? "?")
-            : " time " + ms + " ms";
+          const genMs = Math.round(performance.now() - tGenStart);
+          const u = formatGenMeta(usage, genMs);
           const srcTag = resolutionMemo.get(modelId) === "local" ? "local webllm-assets" : "network";
-          setMeta(side, "Weights: " + srcTag + " |" + u);
+          const wall = Math.round(performance.now() - t0);
+          setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
         } else {
           const reply = await engine.chat.completions.create({
             messages,
             temperature: 0.2,
             max_tokens: maxTokens,
           });
-          const ms = Math.round(performance.now() - t0);
+          const genMs = Math.round(performance.now() - tGenStart);
           const c = reply.choices[0].message.content;
           outEl.textContent = c ?? "";
-          const u = reply.usage
-            ? " time " + ms + " ms | tokens prompt " + reply.usage.prompt_tokens + " / completion " + reply.usage.completion_tokens
-            : " time " + ms + " ms";
+          scrollOutToEnd(outEl);
+          const u = formatGenMeta(reply.usage, genMs);
           const srcTag = resolutionMemo.get(modelId) === "local" ? "local webllm-assets" : "network";
-          setMeta(side, "Weights: " + srcTag + " |" + u);
+          const wall = Math.round(performance.now() - t0);
+          setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
         }
       } catch (e) {
         console.error(e);
