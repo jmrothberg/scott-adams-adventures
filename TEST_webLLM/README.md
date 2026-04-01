@@ -2,18 +2,20 @@
 
 This folder holds a **standalone experiment**: running [WebLLM](https://webllm.mlc.ai/) (`@mlc-ai/web-llm`) in the browser with **WebGPU** so you can compare two small Qwen-family models side by side. It is **not** connected to the Scott Adams adventure interpreter (`index.html` in the repo root).
 
-## Live URL (GitHub Pages)
+## Run on GitHub Pages (click to test)
 
-After you push to GitHub and Pages is enabled for this repository, open:
+Use a recent **Chrome** or **Edge** (modules + WebGPU / WASM). Enable **GitHub Pages** for this repo (Settings → Pages → source `main`, folder `/ (root)`), wait a minute after each push, then open:
 
-**`https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html`**
+| What | Link |
+|------|------|
+| **Transformers.js** — two-model ONNX compare ([`transformersjs-qwen-compare-test.html`](transformersjs-qwen-compare-test.html)) | [**Open the Transformers.js compare page →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-qwen-compare-test.html) |
+| **WebLLM** — MLC / WebGPU compare ([`webllm-qwen-compare-test.html`](webllm-qwen-compare-test.html)) | [**Open the WebLLM compare page →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html) |
+| **Adventure game** (repo root, not this folder) | [**Open the game →**](https://jmrothberg.github.io/scott-adams-adventures/) |
 
-**Transformers.js + ONNX Runtime Web** (same UI idea, Hub ONNX models):  
-**`https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-qwen-compare-test.html`**
+**Direct URL** (copy/paste):  
+`https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-qwen-compare-test.html`
 
-- The **game** is still served at the site root:  
-  **`https://jmrothberg.github.io/scott-adams-adventures/`**  
-  That page loads the root **`index.html`** (the adventure game). This WebLLM test lives **only** under `TEST_webLLM/` so visiting the URL above does **not** swap in or replace the game.
+These tests live only under `TEST_webLLM/`; they do not replace or redirect the game at the site root.
 
 ## Open the test locally (double-click / paste path)
 

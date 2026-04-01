@@ -21,11 +21,14 @@ npm run serve-game
 
 Then open **http://localhost:8090** in your browser. This starts **`scripts/serve-threaded.py`** — a **threaded** static server so **room images**, **map thumbnails**, **Game_Data**, and **offline WebLLM** shards can load **in parallel**. In practice it works **much** better than `python3 -m http.server` for this project (the built-in server is single-threaded and can stall images while big model files download). Requires **Python 3** on your PATH as `python3`.
 
-### WebLLM browser test (separate page)
+### Browser LLM tests (`TEST_webLLM/`, not the game)
 
-In-browser LLM experiment (WebGPU), **not** the adventure game:  
-**https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html**  
-Details: [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
+| Page | GitHub Pages |
+|------|----------------|
+| **Transformers.js** — ONNX / Hub two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-qwen-compare-test.html) |
+| **WebLLM** — MLC / WebGPU two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html) |
+
+More detail: [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
 
 ### Offline LLM Enhanced (Qwen3, no internet)
 
