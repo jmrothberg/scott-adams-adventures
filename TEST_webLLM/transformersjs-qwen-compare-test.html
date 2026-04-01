@@ -606,7 +606,16 @@
       const wrapProgress = (report) => {
         let line = "";
         if (report && typeof report === "object") {
-          line = (report.status || "") + (report.file ? " " + report.file : "");
+          const s = report.status || "";
+          const f = report.file ? " " + report.file : "";
+          if (s === "progress" && typeof report.progress === "number") {
+            const pct = report.progress.toFixed(1);
+            const loaded = report.loaded ? (report.loaded / 1e6).toFixed(1) + " MB" : "";
+            const total = report.total ? " / " + (report.total / 1e6).toFixed(1) + " MB" : "";
+            line = "downloading" + f + "  " + pct + "%" + (loaded ? "  (" + loaded + total + ")" : "");
+          } else {
+            line = s + f;
+          }
         } else {
           line = String(report);
         }
