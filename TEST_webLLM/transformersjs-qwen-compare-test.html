@@ -329,6 +329,47 @@
       };
     }
 
+    /** LLM: align post-run meta line with webllm-qwen-compare-test (Weights | backend | incl. load | time | tokens | tok/s). */
+    function transformersBackendSuffix(backendLabel) {
+      return " | backend " + backendLabel;
+    }
+
+    function encodeTokenLen(enc) {
+      if (enc == null) return "?";
+      if (Array.isArray(enc)) return enc.length;
+      if (typeof enc.length === "number") return enc.length;
+      if (enc.data && typeof enc.data.length === "number") return enc.data.length;
+      return "?";
+    }
+
+    /**
+     * LLM: best-effort prompt/completion token counts (Transformers.js has no OpenAI-style usage object).
+     * Completion should be assistant-only text (stream path); matches WebLLM-style reporting.
+     */
+    async function countPromptCompletionTokens(gen, messages, completionText) {
+      const tok = gen && gen.tokenizer;
+      if (!tok || typeof tok.encode !== "function") {
+        return { prompt_tokens: "?", completion_tokens: "?" };
+      }
+      try {
+        let promptStr;
+        if (typeof tok.apply_chat_template === "function") {
+          promptStr = await tok.apply_chat_template(messages, { tokenize: false, add_generation_prompt: true });
+        } else {
+          promptStr = messages.map((m) => m.role + ": " + m.content).join("\n\n");
+        }
+        const pEnc = await tok.encode(promptStr);
+        const cEnc = await tok.encode(completionText);
+        return {
+          prompt_tokens: encodeTokenLen(pEnc),
+          completion_tokens: encodeTokenLen(cEnc),
+        };
+      } catch (e) {
+        console.warn("[countPromptCompletionTokens]", e);
+        return { prompt_tokens: "?", completion_tokens: "?" };
+      }
+    }
+
     function setWeightsSourceHint(side, kind, modelId) {
       const el = document.getElementById("weights-source-" + side);
       if (!el) return;
@@ -664,9 +705,18 @@
       outEl.scrollTop = outEl.scrollHeight;
     }
 
-    function formatGenMeta(genMs, device, streamedLen) {
-      let u = " time " + genMs + " ms | backend " + device;
-      if (streamedLen != null) u += " | output chars " + streamedLen;
+    /** LLM: same shape as webllm-qwen-compare-test formatGenMeta(usage, genMs). */
+    function formatGenMeta(usage, genMs) {
+      const pt = usage && usage.prompt_tokens != null ? usage.prompt_tokens : "?";
+      const ct = usage && usage.completion_tokens != null ? usage.completion_tokens : "?";
+      const tps =
+        typeof ct === "number" &&
+        ct > 0 &&
+        genMs > 0
+          ? (ct / (genMs / 1000)).toFixed(1)
+          : null;
+      let u = " time " + genMs + " ms | tokens prompt " + pt + " / completion " + ct;
+      if (tps != null) u += " | " + tps + " tok/s";
       return u;
     }
 
@@ -708,10 +758,14 @@
             streamer,
           });
           const genMs = Math.round(performance.now() - tGenStart);
-          const u = formatGenMeta(genMs, backendLabel, text.length);
-          const srcTag = resolutionMemo.get(modelId) === "local" ? "local transformersjs-assets" : "Hub";
+          const usage = await countPromptCompletionTokens(gen, messages, text);
+          const u = formatGenMeta(usage, genMs);
+          const srcTag = resolutionMemo.get(modelId) === "local" ? "local transformersjs-assets" : "network";
           const wall = Math.round(performance.now() - t0);
-          setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
+          setMeta(
+            side,
+            "Weights: " + srcTag + transformersBackendSuffix(backendLabel) + " | incl. load " + wall + " ms wall |" + u
+          );
         } else {
           const result = await gen(messages, {
             max_new_tokens: maxTokens,
@@ -722,10 +776,14 @@
           const c = result && result[0] ? result[0].generated_text : "";
           outEl.textContent = c ?? "";
           scrollOutToEnd(outEl);
-          const u = formatGenMeta(genMs, backendLabel, (c || "").length);
-          const srcTag = resolutionMemo.get(modelId) === "local" ? "local transformersjs-assets" : "Hub";
+          const usage = await countPromptCompletionTokens(gen, messages, c || "");
+          const u = formatGenMeta(usage, genMs);
+          const srcTag = resolutionMemo.get(modelId) === "local" ? "local transformersjs-assets" : "network";
           const wall = Math.round(performance.now() - t0);
-          setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
+          setMeta(
+            side,
+            "Weights: " + srcTag + transformersBackendSuffix(backendLabel) + " | incl. load " + wall + " ms wall |" + u
+          );
         }
       } catch (e) {
         console.error(e);

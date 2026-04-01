@@ -139,6 +139,8 @@
       On each load the page checks for <code>webllm-assets/&lt;model_id&gt;/resolve/main/mlc-chat-config.json</code> on
       <strong>this origin</strong> (fast when you serve the repo locally). If missing — e.g. on <strong>GitHub Pages</strong> —
       weights come from the <strong>network</strong>. Status lines and each panel show which path was used.
+      <strong>Weights + wasm</strong> names where files load from plus the MLC runtime bundle; a separate
+      <strong>backend WebGPU (MLC/TVM)</strong> tag shows compute device (same idea as “backend webgpu” on the Transformers.js page).
     </p>
   </header>
   <main>
@@ -313,13 +315,18 @@
       };
     }
 
+    /** LLM: where .wasm/.bin load from is separate from compute; MLC runs inference on WebGPU when the engine loads. */
+    function webllmBackendSuffix() {
+      return navigator.gpu ? " | backend WebGPU (MLC/TVM)" : " | backend unavailable (no WebGPU API)";
+    }
+
     function setWeightsSourceHint(side, kind, modelId) {
       const el = document.getElementById("weights-source-" + side);
       if (!el) return;
       el.classList.remove("local", "remote");
       el.classList.add(kind === "local" ? "local" : "remote");
       const { panel } = sourceLabels(kind);
-      el.textContent = panel + " — model_id " + modelId;
+      el.textContent = panel + " — model_id " + modelId + webllmBackendSuffix();
     }
 
     function clearWeightsSourceHint(side) {
@@ -564,7 +571,7 @@
       setWeightsSourceHint(side, kind, modelId);
 
       if (existing && loadedId === modelId) {
-        setStatus(side, "Ready: " + modelId + " — " + labels.status, "");
+        setStatus(side, "Ready: " + modelId + " — " + labels.status + webllmBackendSuffix(), "");
         return existing;
       }
 
@@ -580,7 +587,7 @@
           await existing.reload(modelId);
           if (side === "a") loadedIdA = modelId;
           else loadedIdB = modelId;
-          setStatus(side, "Ready: " + modelId + " — " + labels.status, "");
+          setStatus(side, "Ready: " + modelId + " — " + labels.status + webllmBackendSuffix(), "");
           return existing;
         }
         const engine = await webllm.CreateMLCEngine(modelId, {
@@ -595,7 +602,7 @@
           engineB = engine;
           loadedIdB = modelId;
         }
-        setStatus(side, "Ready: " + modelId + " — " + labels.status, "");
+        setStatus(side, "Ready: " + modelId + " — " + labels.status + webllmBackendSuffix(), "");
         return engine;
       } catch (e) {
         console.error(e);
@@ -662,7 +669,10 @@
           const u = formatGenMeta(usage, genMs);
           const srcTag = resolutionMemo.get(modelId) === "local" ? "local webllm-assets" : "network";
           const wall = Math.round(performance.now() - t0);
-          setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
+          setMeta(
+            side,
+            "Weights: " + srcTag + webllmBackendSuffix() + " | incl. load " + wall + " ms wall |" + u
+          );
         } else {
           const reply = await engine.chat.completions.create({
             messages,
@@ -676,7 +686,10 @@
           const u = formatGenMeta(reply.usage, genMs);
           const srcTag = resolutionMemo.get(modelId) === "local" ? "local webllm-assets" : "network";
           const wall = Math.round(performance.now() - t0);
-          setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
+          setMeta(
+            side,
+            "Weights: " + srcTag + webllmBackendSuffix() + " | incl. load " + wall + " ms wall |" + u
+          );
         }
       } catch (e) {
         console.error(e);
