@@ -593,7 +593,8 @@
       if (kind === "local") {
         env.localModelPath = modelsDirUrl().href;
       } else {
-        env.localModelPath = undefined;
+        // LLM: Hub loader always pathJoin(env.localModelPath, requestURL) for HF ids; undefined → pathJoin throws (.replace on undefined).
+        env.localModelPath = "/models/";
       }
     }
 
