@@ -1,6 +1,9 @@
 .DS_Store
 .claude/
 node_modules/
+__pycache__/
 # MLC model weights + wasm (~1GB+) — too large for normal git/GitHub; copy USB or run npm run setup-offline-llm
 webllm-assets/
+# Local Transformers.js ONNX mirrors (often: ln -s ~/ONNX_Models ONNX_Models from repo root)
+ONNX_Models
 # vendor/mlc-ai-web-llm is small (~13MB); commit it so clones get offline WebLLM JS without npm

@@ -8,6 +8,9 @@ After you push to GitHub and Pages is enabled for this repository, open:
 
 **`https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html`**
 
+**Transformers.js + ONNX Runtime Web** (same UI idea, Hub ONNX models):  
+**`https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-qwen-compare-test.html`**
+
 - The **game** is still served at the site root:  
   **`https://jmrothberg.github.io/scott-adams-adventures/`**  
   That page loads the root **`index.html`** (the adventure game). This WebLLM test lives **only** under `TEST_webLLM/` so visiting the URL above does **not** swap in or replace the game.
@@ -29,7 +32,32 @@ cd /path/to/scott-adams-adventures
 python3 -m http.server 8765
 ```
 
-Then open: `http://localhost:8765/TEST_webLLM/webllm-qwen-compare-test.html`
+Then open: `http://localhost:8765/TEST_webLLM/webllm-qwen-compare-test.html`  
+or: `http://localhost:8765/TEST_webLLM/transformersjs-qwen-compare-test.html`
+
+## Local ONNX models (`ONNX_Models` → your download folder)
+
+The Transformers.js compare page loads **local** weights from **`ONNX_Models/`** at the **repository root** (URL path), not from a bare `file://` path. Browsers only see what your HTTP server exposes.
+
+1. Keep downloads in a single folder on disk, e.g. **`/Users/<you>/ONNX_Models`**, with the same layout as on the Hub: `onnx-community/Qwen2.5-0.5B-Instruct/config.json`, tokenizer files, `onnx/`, etc.
+2. From the **repo root**, point `ONNX_Models` at that folder (one-time):
+
+   ```bash
+   cd /path/to/scott-adams-adventures
+   ln -s /Users/<you>/ONNX_Models ONNX_Models
+   ```
+
+   Example: `ln -s /Users/jonathanrothberg_1/ONNX_Models ONNX_Models`
+
+3. (Optional) Regenerate the dropdown list after new downloads:
+
+   ```bash
+   node scripts/refresh-onnx-transformers-catalog.mjs
+   ```
+
+   This writes **`_catalog.json`** into that directory. The HTML page fetches `ONNX_Models/_catalog.json` and merges **`model_ids`** with its built-in list.
+
+`ONNX_Models/` is listed in **`.gitignore`** so large weights are not committed.
 
 ## Requirements
 
@@ -55,4 +83,6 @@ Then open: `http://localhost:8765/TEST_webLLM/webllm-qwen-compare-test.html`
 | File | Purpose |
 |------|--------|
 | `webllm-qwen-compare-test.html` | Standalone test UI (single HTML file + module script). |
+| `transformersjs-qwen-compare-test.html` | Same compare UI using **Transformers.js** (`@huggingface/transformers`) and ONNX Runtime Web; includes an **`importmap`** so the browser can load `onnxruntime-web/webgpu` (not a path/folder issue). Local weights under repo-root **`ONNX_Models/`**. |
+| `../scripts/refresh-onnx-transformers-catalog.mjs` | Writes `ONNX_Models/_catalog.json` so every downloaded `org/name` folder appears in the compare page dropdown. |
 | `README.md` | This file. |

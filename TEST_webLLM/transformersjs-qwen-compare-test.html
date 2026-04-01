@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebLLM Qwen compare (test harness)</title>
+  <title>Transformers.js Qwen compare (test harness)</title>
+  <!--
+    LLM: @huggingface/transformers 4.x imports bare names (onnxruntime-web/webgpu, onnxruntime-common).
+    Browsers require an import map; this is NOT fixed by renaming ONNX_Models or adding "./".
+    Versions match transformers@4.0.0 package.json dependency pins.
+  -->
+  <script type="importmap">
+  {
+    "imports": {
+      "onnxruntime-web/webgpu": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.25.0-dev.20260327-722743c0e2/dist/ort.webgpu.bundle.min.mjs",
+      "onnxruntime-common": "https://cdn.jsdelivr.net/npm/onnxruntime-common@1.24.0-dev.20251116-b39e144322/dist/esm/index.js"
+    }
+  }
+  </script>
   <style>
     :root {
       --bg: #12121a;
@@ -128,17 +141,32 @@
 <body>
   <div id="gpu-banner"></div>
   <header>
-    <h1>WebLLM browser test — two-model compare. v 1.1 Jonathan Rothberg 2026</h1>
+    <h1>Transformers.js browser test — two-model compare. v 1.0 Jonathan Rothberg 2026</h1>
     <p>
-      Standalone harness for <strong>@mlc-ai/web-llm</strong> (WebGPU). Defaults use the closest
-      <strong>official prebuilt</strong> Qwen3 q4-style weights in the current catalog:
-      <code>Qwen3-0.6B-q4f16_1-MLC</code> vs <code>Qwen3-1.7B-q4f16_1-MLC</code>
-      (nearest sizes to “~0.8B q4” and “~2B” until Qwen3.5 prebuilts appear).       Each field is a <strong>dropdown</strong> of all prebuilt <code>model_id</code>s: <strong>local disk</strong> entries (in
-      <code>webllm-assets/</code>) appear first and <strong>bold</strong>; the rest use the network on first load.
-      Large models may fail to load on limited GPU RAM — errors are caught and shown without crashing the page.
-      On each load the page checks for <code>webllm-assets/&lt;model_id&gt;/resolve/main/mlc-chat-config.json</code> on
-      <strong>this origin</strong> (fast when you serve the repo locally). If missing — e.g. on <strong>GitHub Pages</strong> —
-      weights come from the <strong>network</strong>. Status lines and each panel show which path was used.
+      Standalone harness for <strong>@huggingface/transformers</strong> (Transformers.js) with
+      <strong>ONNX Runtime Web</strong>. For model freshness and easier onboarding of new ONNX models
+      (versus MLC’s compile pipeline), this stack usually fits browser-only use well: it runs fully
+      in the browser, can use <strong>WebGPU</strong>, and loads models from the Hub like ordinary
+      Transformers ONNX exports. Hugging Face documents that Transformers.js runs models in the
+      browser with no server and uses ONNX Runtime underneath; ONNX Runtime Web documents browser
+      deployment with JavaScript APIs.       Defaults use small Qwen2.5-family ONNX repos closest to the
+      WebLLM page’s two sizes: <code>onnx-community/Qwen2.5-0.5B-Instruct</code> vs
+      <code>onnx-community/Qwen2.5-1.5B-Instruct</code>.
+      <strong>Note:</strong> very new exports (e.g. <code>Qwen3.5</code> / multimodal tokenizers) may list locally but
+      still fail at generation until Transformers.js adds support — use the built-in Qwen2.5 ids to confirm the page works.
+      Each field is a <strong>dropdown</strong> of curated Hub <code>model_id</code>s:
+      <strong>local disk</strong> entries live under <code>ONNX_Models/</code> at the <strong>site
+      root</strong> (same folder layout as the Hugging Face repo id, e.g.
+      <code>onnx-community/Qwen2.5-0.5B-Instruct/</code>). On your machine, symlink
+      <code>ONNX_Models</code> in the repo to your download directory (e.g.
+      <code>/Users/you/ONNX_Models</code>) so the static server can serve files; the browser cannot read
+      arbitrary OS paths. Optional <code>ONNX_Models/_catalog.json</code> (see
+      <code>scripts/refresh-onnx-transformers-catalog.mjs</code>) merges every downloaded model into
+      the dropdown. Large models may fail on limited GPU/RAM — errors are caught and shown. On load
+      the page checks <code>ONNX_Models/&lt;model_id&gt;/config.json</code> on <strong>this
+      origin</strong>.
+      If missing (e.g. GitHub Pages), weights come from the <strong>Hub</strong>. Status lines show
+      which path was used.
     </p>
   </header>
   <main>
@@ -203,15 +231,31 @@
 
   <script type="module">
     /**
-     * WebLLM standalone compare page — not integrated with index.html / game.
-     * Uses official prebuilt model_id strings by default (see MLC web-llm config).
+     * Transformers.js standalone compare page — not integrated with index.html / game.
+     * Uses ONNX models from the Hub (ONNX Runtime Web + optional WebGPU).
      */
-    import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.82/lib/index.js";
+    import { pipeline, TextStreamer, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0/dist/transformers.web.js";
+
+    /** Curated ONNX text-generation models (expand as needed). */
+    const MODEL_CATALOG = [
+      "onnx-community/Qwen2.5-0.5B-Instruct",
+      "onnx-community/Qwen2.5-Coder-0.5B-Instruct",
+      "onnx-community/Qwen2.5-1.5B-Instruct",
+      "onnx-community/Qwen2.5-Coder-1.5B-Instruct",
+      "onnx-community/Llama-3.2-1B-Instruct",
+    ];
 
     /**
-     * LLM: Relative `webllm-assets/` from this page resolves under /TEST_webLLM/ (wrong). Assets sit at site/repo root.
+     * LLM: ONNX models are served from site/repo root `ONNX_Models/` (often a symlink to ~/ONNX_Models).
+     * Relative path from this page under /TEST_webLLM/ is wrong for asset URLs — use siteRootBaseUrl().
      */
-    /** Works for http(s) and file:// (origin is "null" on file pages — do not use location.origin as URL base). */
+    /** @type {string} Must match the directory you symlink to your ONNX download folder. */
+    const LOCAL_ONNX_DIR = "ONNX_Models/";
+
+    /**
+     * Site root as a real URL (works for http(s) and file://). Do not use new URL(path, origin) on
+     * file: pages — location.origin is the string "null" and throws, so the model list never fills.
+     */
     function siteRootBaseUrl() {
       const u = new URL(window.location.href);
       let path = u.pathname;
@@ -228,88 +272,84 @@
       return u;
     }
 
-    const prebuiltBase = webllm.prebuiltAppConfig;
-    const pristineList = prebuiltBase.model_list.map((r) => ({ ...r }));
-    let workingList = pristineList.map((r) => ({ ...r }));
+    function modelsDirUrl() {
+      return new URL(LOCAL_ONNX_DIR, siteRootBaseUrl());
+    }
+
+    /** Built-in defaults plus any ids from ONNX_Models/_catalog.json (regenerate with repo script). */
+    let pristineIds = [];
     /** @type {Map<string, 'local'|'remote'>} */
     const resolutionMemo = new Map();
 
-    function wasmBasenameFromPrebuiltRecord(rec) {
-      if (!rec || typeof rec.model_lib !== "string") return null;
-      try {
-        const base = new URL(rec.model_lib).pathname.split("/").pop();
-        return base && base.endsWith(".wasm") ? base : null;
-      } catch (e) {
-        return null;
+    /** Merge MODEL_CATALOG with ONNX_Models/_catalog.json so every downloaded repo id appears in the UI. */
+    async function loadExtendedCatalog() {
+      const seen = new Set();
+      const out = [];
+      for (const id of MODEL_CATALOG) {
+        if (id && !seen.has(id)) {
+          seen.add(id);
+          out.push(id);
+        }
       }
+      try {
+        const u = new URL("_catalog.json", modelsDirUrl()).href;
+        const r = await fetch(u, { cache: "no-cache" });
+        if (r.ok) {
+          const j = await r.json();
+          const extra = Array.isArray(j.model_ids)
+            ? j.model_ids
+            : Array.isArray(j.models)
+              ? j.models
+              : [];
+          for (const id of extra) {
+            // LLM: Allow single-segment ids from flat folders (e.g. Qwen3.5-0.8B-ONNX); Hub load may not work.
+            if (typeof id === "string" && id.trim().length > 0 && !seen.has(id)) {
+              seen.add(id);
+              out.push(id);
+            }
+          }
+        }
+      } catch (err) {
+        console.warn("[Transformers.js compare] Optional _catalog.json not loaded", err);
+      }
+      if (out.length === 0) {
+        return [...MODEL_CATALOG].sort();
+      }
+      return out.sort();
     }
 
-    function modelsDirUrl() {
-      return new URL("webllm-assets/", siteRootBaseUrl());
-    }
-    function wasmDirUrl() {
-      return new URL("webllm-assets/wasm/", siteRootBaseUrl());
-    }
-
-    /** One fetch per model_id per page load: if config exists on this origin, point catalog entry at webllm-assets + wasm; else Hugging Face (prebuilt) URLs. */
+    /** One fetch per model_id per page load: if config exists under ONNX_Models/ on this origin, mark local; else Hub. */
     async function resolveModelEntry(modelId) {
       if (resolutionMemo.has(modelId)) {
         return resolutionMemo.get(modelId);
       }
-      const idx = workingList.findIndex((m) => m.model_id === modelId);
-      if (idx < 0) {
-        resolutionMemo.set(modelId, "remote");
-        return "remote";
-      }
-      const pristine = pristineList[idx];
-      const wasmName = wasmBasenameFromPrebuiltRecord(pristine);
-      if (!wasmName) {
-        workingList[idx] = { ...pristine };
-        resolutionMemo.set(modelId, "remote");
-        return "remote";
-      }
       try {
-        const cfgUrl = new URL(modelId + "/resolve/main/mlc-chat-config.json", modelsDirUrl()).href;
+        const cfgUrl = new URL(modelId + "/config.json", modelsDirUrl()).href;
         const r = await fetch(cfgUrl, { cache: "no-cache" });
         if (r.ok) {
-          workingList[idx] = {
-            ...pristine,
-            model: new URL(modelId + "/resolve/main/", modelsDirUrl()).href,
-            model_lib: new URL(wasmName, wasmDirUrl()).href,
-          };
           resolutionMemo.set(modelId, "local");
-          console.log("[WebLLM compare] Local webllm-assets for", modelId);
+          console.log("[Transformers.js compare] Local ONNX_Models for", modelId);
           return "local";
         }
       } catch (err) {
-        console.warn("[WebLLM compare] Local check failed for", modelId, err);
+        console.warn("[Transformers.js compare] Local check failed for", modelId, err);
       }
-      workingList[idx] = { ...pristine };
       resolutionMemo.set(modelId, "remote");
       return "remote";
-    }
-
-    function buildAppConfig() {
-      const anyLocal = Array.from(resolutionMemo.values()).some((v) => v === "local");
-      return {
-        ...prebuiltBase,
-        model_list: workingList,
-        useIndexedDBCache: anyLocal ? true : prebuiltBase.useIndexedDBCache,
-      };
     }
 
     function sourceLabels(kind) {
       if (kind === "local") {
         return {
           short: "LOCAL",
-          status: "local webllm-assets (this origin — same folder as the game)",
-          panel: "Weights + wasm: LOCAL — webllm-assets/ on this server",
+          status: "local ONNX_Models/ (this origin — same path segments as the Hub repo id)",
+          panel: "Weights: LOCAL — ONNX_Models/ on this server (ONNX files)",
         };
       }
       return {
         short: "NET",
-        status: "network — Hugging Face / CDN (no folder on this site)",
-        panel: "Weights + wasm: NETWORK — Hugging Face / CDN (typical on GitHub Pages)",
+        status: "network — Hugging Face Hub (no folder on this site)",
+        panel: "Weights: NETWORK — Hugging Face Hub (typical on GitHub Pages)",
       };
     }
 
@@ -329,15 +369,14 @@
       el.classList.remove("local", "remote");
     }
 
-    const DEFAULT_MODEL_A = "Qwen3-0.6B-q4f16_1-MLC";
-    const DEFAULT_MODEL_B = "Qwen3-1.7B-q4f16_1-MLC";
+    const DEFAULT_MODEL_A = "onnx-community/Qwen2.5-0.5B-Instruct";
+    const DEFAULT_MODEL_B = "onnx-community/Qwen2.5-1.5B-Instruct";
 
-    /** LLM: one probe per catalog model at startup — fills resolutionMemo + workingList; splits UI into local (bold) vs network. */
+    /** LLM: one probe per catalog model at startup — fills resolutionMemo; splits UI into local vs network. */
     async function scanAllModelsForLocal() {
-      const ids = pristineList.map((r) => r.model_id).filter(Boolean);
-      const batch = 16;
-      for (let i = 0; i < ids.length; i += batch) {
-        const chunk = ids.slice(i, i + batch);
+      const batch = 8;
+      for (let i = 0; i < pristineIds.length; i += batch) {
+        const chunk = pristineIds.slice(i, i + batch);
         await Promise.all(chunk.map((id) => resolveModelEntry(id)));
       }
     }
@@ -348,7 +387,7 @@
       sel.innerHTML = "";
 
       const ogLoc = document.createElement("optgroup");
-      ogLoc.label = "Local (fast) — webllm-assets";
+      ogLoc.label = "Local (fast) — ONNX_Models";
       if (localIdsSorted.length === 0) {
         const o = document.createElement("option");
         o.disabled = true;
@@ -397,32 +436,22 @@
       };
       lockLoads(true);
       try {
-        if (!prebuiltBase.model_list || !Array.isArray(prebuiltBase.model_list)) {
-          if (note) note.textContent = "Prebuilt model list unavailable (unexpected WebLLM build).";
-          return;
-        }
-        if (note) note.textContent = "Checking webllm-assets/ for each catalog model (one moment)…";
+        pristineIds = await loadExtendedCatalog();
+        resolutionMemo.clear();
+        if (note) note.textContent = "Checking ONNX_Models/ for each catalog entry (one moment)…";
         await scanAllModelsForLocal();
-        const ids = pristineList
-          .map((r) => r.model_id)
-          .filter(Boolean)
-          .sort();
+        const ids = [...pristineIds].sort();
         const local = ids.filter((id) => resolutionMemo.get(id) === "local");
         const remote = ids.filter((id) => resolutionMemo.get(id) !== "local");
         fillModelSelect("model-a", local, remote, DEFAULT_MODEL_A);
         fillModelSelect("model-b", local, remote, DEFAULT_MODEL_B);
         if (note) {
-          const nBundled = prebuiltBase.model_list.length;
-          const nExtra = pristineList.length - nBundled;
           note.textContent =
             ids.length +
-            " models (" +
-            nBundled +
-            " bundled in WebLLM 0.2.82" +
-            (nExtra > 0 ? " + " + nExtra + " extra (repo weights ahead of npm)" : "") +
-            ") — " +
+            " models (curated ONNX list for Transformers.js " +
+            "4.0.0) — " +
             local.length +
-            " on disk (bold). Newer MLC repos may need the matching .wasm in webllm-assets/wasm/.";
+            " on disk (bold). Put each Hub repo under ONNX_Models/org/name/ or symlink ONNX_Models to your download folder.";
         }
       } catch (err) {
         console.error(err);
@@ -430,16 +459,12 @@
           note.textContent =
             "Model list setup failed: " +
             (err && err.message ? err.message : String(err)) +
-            " — open DevTools console; use http://localhost… if file:// breaks modules.";
+            " — showing built-in catalog only.";
         }
-        const fb = pristineList
-          .map((r) => r.model_id)
-          .filter(Boolean)
-          .sort();
-        if (fb.length) {
-          fillModelSelect("model-a", [], fb, DEFAULT_MODEL_A);
-          fillModelSelect("model-b", [], fb, DEFAULT_MODEL_B);
-        }
+        // LLM: Never leave <select>s empty; a throw (e.g. bad file:// base URL) skipped fillModelSelect.
+        const fb = [...MODEL_CATALOG].sort();
+        fillModelSelect("model-a", [], fb, DEFAULT_MODEL_A);
+        fillModelSelect("model-b", [], fb, DEFAULT_MODEL_B);
       } finally {
         lockLoads(false);
       }
@@ -473,16 +498,10 @@
         );
       }
       if (m.includes("device lost") || m.includes("devicelost") || m.includes("webgpu") || m.includes("gpu")) {
-        return "WebGPU/GPU error while loading. Try a smaller model or refresh the tab. Details: " + full;
+        return "WebGPU/GPU error while loading. Try WASM (no WebGPU), a smaller model, or refresh. Details: " + full;
       }
       if (m.includes("abort")) {
         return "Load aborted. Details: " + full;
-      }
-      if (m.includes("magic word") || m.includes("expected magic") || (m.includes("webassembly") && m.includes("instantiate"))) {
-        return (
-          "WASM file is not a real binary (often an HTML 404 page, not .wasm). Check model_lib / webllm-assets/wasm/. Details: " +
-          full
-        );
       }
       return "Load failed: " + full;
     }
@@ -498,26 +517,45 @@
 
     const banner = document.getElementById("gpu-banner");
     if (!navigator.gpu) {
-      banner.textContent = "WebGPU not available in this context. Use a Chromium-based browser with WebGPU enabled, and serve this file over http(s) (not file://) if modules fail to load.";
+      banner.textContent =
+        "WebGPU not available. Transformers.js will use ONNX Runtime Web (e.g. WASM). For WebGPU, use a supported Chromium build and serve over http(s) (not file://) if modules fail.";
       banner.classList.add("visible");
     }
 
-    /** @type {import("@mlc-ai/web-llm").MLCEngine | null} */
-    let engineA = null;
-    /** @type {import("@mlc-ai/web-llm").MLCEngine | null} */
-    let engineB = null;
+    /** @type {Awaited<ReturnType<typeof pipeline>> | null} */
+    let pipeA = null;
+    /** @type {Awaited<ReturnType<typeof pipeline>> | null} */
+    let pipeB = null;
     let loadedIdA = "";
     let loadedIdB = "";
+    let backendA = "wasm";
+    let backendB = "wasm";
 
-    /** LLM: after failed load/reload, clear slot so the next attempt uses a fresh engine (best effort). */
-    function resetEngineSide(side) {
+    /** LLM: after failed load/reload, clear slot so the next attempt uses a fresh pipeline (best effort). */
+    async function resetPipelineSide(side) {
       clearWeightsSourceHint(side);
       if (side === "a") {
-        engineA = null;
+        if (pipeA && typeof pipeA.dispose === "function") {
+          try {
+            await pipeA.dispose();
+          } catch (e) {
+            console.warn(e);
+          }
+        }
+        pipeA = null;
         loadedIdA = "";
+        backendA = "wasm";
       } else {
-        engineB = null;
+        if (pipeB && typeof pipeB.dispose === "function") {
+          try {
+            await pipeB.dispose();
+          } catch (e) {
+            console.warn(e);
+          }
+        }
+        pipeB = null;
         loadedIdB = "";
+        backendB = "wasm";
       }
     }
 
@@ -540,7 +578,7 @@
       return messages;
     }
 
-    // LLM: max completion tokens from UI; clamp 1–8192, default 512 if invalid.
+    // LLM: max completion tokens from UI; clamp 1–16384, default 512 if invalid.
     function getMaxTokens() {
       const el = document.getElementById("max-tokens");
       const raw = parseInt(String(el && el.value != null ? el.value : "512"), 10);
@@ -550,13 +588,26 @@
       return Math.min(hi, Math.max(lo, raw));
     }
 
-    /** @returns {Promise<import("@mlc-ai/web-llm").MLCEngine | null>} */
-    async function ensureEngine(side, modelId, initProgressCallback) {
+    function applyEnvForKind(kind) {
+      env.allowLocalModels = true;
+      if (kind === "local") {
+        env.localModelPath = modelsDirUrl().href;
+      } else {
+        env.localModelPath = undefined;
+      }
+    }
+
+    function inferDevice() {
+      return navigator.gpu ? "webgpu" : "wasm";
+    }
+
+    /** @returns {Promise<Awaited<ReturnType<typeof pipeline>> | null>} */
+    async function ensurePipeline(side, modelId, initProgressCallback) {
       if (!modelId) {
-        setStatus(side, "Enter a model_id (pick from list or type).", "err");
+        setStatus(side, "Pick a model_id from the list.", "err");
         return null;
       }
-      const existing = side === "a" ? engineA : engineB;
+      const existing = side === "a" ? pipeA : pipeB;
       const loadedId = side === "a" ? loadedIdA : loadedIdB;
 
       const kind = await resolveModelEntry(modelId);
@@ -569,37 +620,54 @@
       }
 
       const wrapProgress = (report) => {
-        const line = "[" + labels.short + "] " + (report.text || "");
-        initProgressCallback({ ...report, text: line });
+        let line = "";
+        if (report && typeof report === "object") {
+          line = (report.status || "") + (report.file ? " " + report.file : "");
+        } else {
+          line = String(report);
+        }
+        initProgressCallback({ text: "[" + labels.short + "] " + line });
       };
 
       setStatus(side, "Loading " + modelId + " — " + labels.status + "…", "loading");
       try {
-        // Reuse MLCEngine and reload() when switching model_id to avoid leaking GPU memory.
         if (existing) {
-          await existing.reload(modelId);
-          if (side === "a") loadedIdA = modelId;
-          else loadedIdB = modelId;
-          setStatus(side, "Ready: " + modelId + " — " + labels.status, "");
-          return existing;
+          await resetPipelineSide(side);
         }
-        const engine = await webllm.CreateMLCEngine(modelId, {
-          appConfig: buildAppConfig(),
-          initProgressCallback: wrapProgress,
-          logLevel: "INFO",
-        });
+        applyEnvForKind(kind);
+        let device = inferDevice();
+        const tryLoad = async (dev) =>
+          pipeline("text-generation", modelId, {
+            dtype: "q4",
+            device: dev,
+            progress_callback: wrapProgress,
+          });
+        let gen;
+        try {
+          gen = await tryLoad(device);
+        } catch (e1) {
+          if (device === "webgpu") {
+            wrapProgress({ status: "webgpu failed, retrying wasm", file: messageOf(e1) });
+            device = "wasm";
+            gen = await tryLoad("wasm");
+          } else {
+            throw e1;
+          }
+        }
         if (side === "a") {
-          engineA = engine;
+          pipeA = gen;
           loadedIdA = modelId;
+          backendA = device;
         } else {
-          engineB = engine;
+          pipeB = gen;
           loadedIdB = modelId;
+          backendB = device;
         }
-        setStatus(side, "Ready: " + modelId + " — " + labels.status, "");
-        return engine;
+        setStatus(side, "Ready: " + modelId + " — " + labels.status + " | backend " + device, "");
+        return gen;
       } catch (e) {
         console.error(e);
-        resetEngineSide(side);
+        await resetPipelineSide(side);
         setStatus(side, friendlyLoadError(e), "err");
         return null;
       }
@@ -609,17 +677,9 @@
       outEl.scrollTop = outEl.scrollHeight;
     }
 
-    function formatGenMeta(usage, genMs) {
-      const tps =
-        usage &&
-        typeof usage.completion_tokens === "number" &&
-        usage.completion_tokens > 0 &&
-        genMs > 0
-          ? (usage.completion_tokens / (genMs / 1000)).toFixed(1)
-          : null;
-      let u =
-        " time " + genMs + " ms | tokens prompt " + (usage ? (usage.prompt_tokens ?? "?") : "?") + " / completion " + (usage ? (usage.completion_tokens ?? "?") : "?");
-      if (tps != null) u += " | " + tps + " tok/s";
+    function formatGenMeta(genMs, device, streamedLen) {
+      let u = " time " + genMs + " ms | backend " + device;
+      if (streamedLen != null) u += " | output chars " + streamedLen;
       return u;
     }
 
@@ -637,44 +697,46 @@
       };
 
       const t0 = performance.now();
-      const engine = await ensureEngine(side, modelId, initProgressCallback);
-      if (!engine) return;
+      const gen = await ensurePipeline(side, modelId, initProgressCallback);
+      if (!gen) return;
 
       try {
         const tGenStart = performance.now();
+        const backendLabel = side === "a" ? backendA : backendB;
+
         if (stream) {
-          const chunks = await engine.chat.completions.create({
-            messages,
-            temperature: 0.2,
-            max_tokens: maxTokens,
-            stream: true,
-            stream_options: { include_usage: true },
-          });
           let text = "";
-          let usage = null;
-          for await (const ch of chunks) {
-            text += ch.choices[0]?.delta?.content ?? "";
-            outEl.textContent = text;
-            scrollOutToEnd(outEl);
-            if (ch.usage) usage = ch.usage;
-          }
+          const streamer = new TextStreamer(gen.tokenizer, {
+            skip_prompt: true,
+            callback_function: (piece) => {
+              text += piece;
+              outEl.textContent = text;
+              scrollOutToEnd(outEl);
+            },
+          });
+          await gen(messages, {
+            max_new_tokens: maxTokens,
+            temperature: 0.2,
+            do_sample: true,
+            streamer,
+          });
           const genMs = Math.round(performance.now() - tGenStart);
-          const u = formatGenMeta(usage, genMs);
-          const srcTag = resolutionMemo.get(modelId) === "local" ? "local webllm-assets" : "network";
+          const u = formatGenMeta(genMs, backendLabel, text.length);
+          const srcTag = resolutionMemo.get(modelId) === "local" ? "local ONNX_Models" : "Hub";
           const wall = Math.round(performance.now() - t0);
           setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
         } else {
-          const reply = await engine.chat.completions.create({
-            messages,
+          const result = await gen(messages, {
+            max_new_tokens: maxTokens,
             temperature: 0.2,
-            max_tokens: maxTokens,
+            do_sample: true,
           });
           const genMs = Math.round(performance.now() - tGenStart);
-          const c = reply.choices[0].message.content;
+          const c = result && result[0] ? result[0].generated_text : "";
           outEl.textContent = c ?? "";
           scrollOutToEnd(outEl);
-          const u = formatGenMeta(reply.usage, genMs);
-          const srcTag = resolutionMemo.get(modelId) === "local" ? "local webllm-assets" : "network";
+          const u = formatGenMeta(genMs, backendLabel, (c || "").length);
+          const srcTag = resolutionMemo.get(modelId) === "local" ? "local ONNX_Models" : "Hub";
           const wall = Math.round(performance.now() - t0);
           setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
         }
@@ -694,10 +756,10 @@
       busy(true);
       try {
         const id = document.getElementById("model-a").value.trim();
-        await ensureEngine("a", id, (r) => setStatus("a", r.text, "loading"));
+        await ensurePipeline("a", id, (r) => setStatus("a", r.text, "loading"));
       } catch (e) {
         console.error(e);
-        resetEngineSide("a");
+        await resetPipelineSide("a");
         setStatus("a", friendlyLoadError(e), "err");
       } finally {
         busy(false);
@@ -708,10 +770,10 @@
       busy(true);
       try {
         const id = document.getElementById("model-b").value.trim();
-        await ensureEngine("b", id, (r) => setStatus("b", r.text, "loading"));
+        await ensurePipeline("b", id, (r) => setStatus("b", r.text, "loading"));
       } catch (e) {
         console.error(e);
-        resetEngineSide("b");
+        await resetPipelineSide("b");
         setStatus("b", friendlyLoadError(e), "err");
       } finally {
         busy(false);
@@ -727,8 +789,8 @@
         await runOne("b", idB);
       } catch (e) {
         console.error(e);
-        setStatus("a", friendlyLoadError(e), "err");
-        setStatus("b", friendlyLoadError(e), "err");
+        setStatus("a", friendlyChatError(e), "err");
+        setStatus("b", friendlyChatError(e), "err");
       } finally {
         busy(false);
       }
