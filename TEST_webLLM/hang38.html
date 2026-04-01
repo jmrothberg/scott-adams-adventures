@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #wordDisplay {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        #guesses {
+            margin: 10px 0;
+        }
+        #message {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hangman Game</h1>
+    <div id="wordDisplay">_ _ _ _ _ _ _ _ _ _</div>
+    <div id="guesses">Guessed Letters: <span id="guessedLetters"></span></div>
+    <div id="message"></div>
+    
+    <input type="text" id="letterInput" maxlength="1" placeholder="Enter a letter">
+    <button onclick="makeGuess()">Submit Guess</button>
+    <button onclick="resetGame()">Reset Game</button>
+
+    <script>
+        const words = ["javascript", "hangman", "developer", "computer", "keyboard", "mouse", "monitor", "internet", "software", "hardware"];
+        let currentWord = "";
+        let guessedLetters = new Set();
+        let remainingAttempts = 6;
+
+        function startGame() {
+            currentWord = words[Math.floor(Math.random() * words.length)];
+            guessedLetters.clear();
+            remainingAttempts = 6;
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            const display = document.getElementById("wordDisplay");
+            const guessedLettersSpan = document.getElementById("guessedLetters");
+            const message = document.getElementById("message");
+
+            // Update word display
+            let displayWord = "";
+            for (let char of currentWord) {
+                if (guessedLetters.has(char)) {
+                    displayWord += char + " ";
+                } else {
+                    displayWord += "_ ";
+                }
+            }
+            display.textContent = displayWord.trim();
+
+            // Update guessed letters
+            guessedLettersSpan.textContent = Array.from(guessedLetters).sort().join(", ");
+
+            // Update message
+            if (checkWin()) {
+                message.textContent = "🎉 Congratulations! You won!";
+                message.style.color = "green";
+            } else if (remainingAttempts <= 0) {
+                message.textContent = "💀 Game Over! The word was: " + currentWord;
+                message.style.color = "red";
+            } else {
+                message.textContent = "Attempts remaining: " + remainingAttempts;
+            }
+        }
+
+        function checkWin() {
+            return currentWord.split("").every(letter => guessedLetters.has(letter));
+        }
+
+        function makeGuess() {
+            const input = document.getElementById("letterInput").value.toLowerCase();
+            const message = document.getElementById("message");
+
+            if (!input || input.length !== 1 || !/^[a-z]$/.test(input)) {
+                message.textContent = "⚠️ Please enter a single letter.";
+                return;
+            }
+
+            if (guessedLetters.has(input)) {
+                message.textContent = "⚠️ You already guessed that letter.";
+                return;
+            }
+
+            guessedLetters.add(input);
+
+            if (currentWord.includes(input)) {
+                message.textContent = "✅ Correct guess!";
+            } else {
+                remainingAttempts--;
+                message.textContent = "❌ Wrong guess! Attempts remaining: " + remainingAttempts;
+            }
+
+            updateDisplay();
+            document.getElementById("letterInput").value = "";
+        }
+
+        function resetGame() {
+            startGame();
+            document.getElementById("letterInput").value = "";
+            document.getElementById("message").textContent = "";
+        }
+
+        // Start the game when the page loads
+        startGame();
+    </script>
+</body>
+</html>

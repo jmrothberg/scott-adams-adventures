@@ -39,8 +39,10 @@ Then open: `http://localhost:8765/TEST_webLLM/webllm-qwen-compare-test.html`
 ## What the page does
 
 - Loads WebLLM from the jsDelivr CDN (`@mlc-ai/web-llm`).
+- For **any** prebuilt `model_id`, the page requests `…/webllm-assets/<model_id>/resolve/main/mlc-chat-config.json` at the **site root** (next to `index.html`), not under `TEST_webLLM/`, so local copies are found when you serve the full repo. If that URL 404s, loads use **Hugging Face / CDN**. The UI shows **LOCAL** vs **NET**.
 - Defaults to two **official prebuilt** `model_id` strings from the current WebLLM catalog (closest small Qwen3 q4-style sizes). You can edit the fields to try other prebuilt IDs when MLC publishes them.
-- Lets you set optional **system** and **user** messages, load model A / B, or run the same prompt on **both** (sequentially). Streaming is optional.
+- **Model A / B** are `<select>` dropdowns (not datalist): entries found under **`webllm-assets/`** are listed first in **bold** under “Local (fast)”; the rest appear under “Catalog”.
+- Optional **system** and **user** messages; load A / B or run the same prompt on **both** (sequentially). Streaming is optional.
 
 ## Relationship to the adventure game
 

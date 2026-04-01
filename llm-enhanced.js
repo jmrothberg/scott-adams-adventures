@@ -29,6 +29,7 @@ const webllm = await (async function loadWebLLM() {
 const WASM_BY_MODEL_ID = {
   'Qwen3-1.7B-q4f16_1-MLC': 'Qwen3-1.7B-q4f16_1-ctx4k_cs1k-webgpu.wasm',
   'Qwen3-0.6B-q4f16_1-MLC': 'Qwen3-0.6B-q4f16_1-ctx4k_cs1k-webgpu.wasm',
+  'Qwen3-8B-q4f16_1-MLC': 'Qwen3-8B-q4f16_1-ctx4k_cs1k-webgpu.wasm',
 };
 
 let cachedAppConfig = null;

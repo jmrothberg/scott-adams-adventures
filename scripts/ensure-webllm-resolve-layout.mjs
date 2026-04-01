@@ -14,7 +14,11 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 
-const MODEL_IDS = ['Qwen3-1.7B-q4f16_1-MLC', 'Qwen3-0.6B-q4f16_1-MLC'];
+const MODEL_IDS = [
+  'Qwen3-1.7B-q4f16_1-MLC',
+  'Qwen3-0.6B-q4f16_1-MLC',
+  'Qwen3-8B-q4f16_1-MLC',
+];
 
 function main() {
   const assets = path.join(root, 'webllm-assets');
