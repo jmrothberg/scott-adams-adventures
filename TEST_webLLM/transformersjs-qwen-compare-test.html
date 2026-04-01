@@ -134,30 +134,11 @@
   <header>
     <h1>Transformers.js browser test — two-model compare. v 1.0 Jonathan Rothberg 2026</h1>
     <p>
-      Standalone harness for <strong>@huggingface/transformers</strong> (Transformers.js) with
-      <strong>ONNX Runtime Web</strong>. For model freshness and easier onboarding of new ONNX models
-      (versus MLC’s compile pipeline), this stack usually fits browser-only use well: it runs fully
-      in the browser, can use <strong>WebGPU</strong>, and loads models from the Hub like ordinary
-      Transformers ONNX exports. Hugging Face documents that Transformers.js runs models in the
-      browser with no server and uses ONNX Runtime underneath; ONNX Runtime Web documents browser
-      deployment with JavaScript APIs.       Defaults use small Qwen2.5-family ONNX repos closest to the
-      WebLLM page’s two sizes: <code>onnx-community/Qwen2.5-0.5B-Instruct</code> vs
-      <code>onnx-community/Qwen2.5-1.5B-Instruct</code>.
-      <strong>Note:</strong> very new exports (e.g. <code>Qwen3.5</code> / multimodal tokenizers) may list locally but
-      still fail at generation until Transformers.js adds support — use the built-in Qwen2.5 ids to confirm the page works.
-      Each field is a <strong>dropdown</strong> of curated Hub <code>model_id</code>s:
-      <strong>local disk</strong> entries live under <code>transformersjs-assets/</code> at the
-      <strong>site root</strong> — same parallel layout as <code>webllm-assets/</code> for the WebLLM
-      page: Hugging Face repo tree per <code>model_id</code>, e.g.
-      <code>transformersjs-assets/onnx-community/Qwen2.5-0.5B-Instruct/</code>. Symlink
-      <code>transformersjs-assets</code> in the repo to the folder where you keep those ONNX exports.
-      Optional <code>transformersjs-assets/_catalog.json</code> (see
-      <code>scripts/refresh-onnx-transformers-catalog.mjs</code>) merges every downloaded model into
-      the dropdown. Large models may fail on limited GPU/RAM — errors are caught and shown. On load
-      the page checks <code>transformersjs-assets/&lt;model_id&gt;/config.json</code> on <strong>this
-      origin</strong>.
-      If missing (e.g. GitHub Pages), weights come from the <strong>Hub</strong>. Status lines show
-      which path was used.
+      In-browser <strong>Transformers.js</strong> + ONNX Runtime Web (WebGPU when available); compare two Hub models side by side.<br>
+      Default pair: <code>Qwen2.5-0.5B-Instruct</code> vs <code>Qwen2.5-1.5B-Instruct</code>.<br>
+      <strong>Qwen3.5 text:</strong> <code>onnx-community/Qwen3.5-0.8B-Text-ONNX</code> — not <code>Qwen3.5-0.8B-ONNX</code> (multimodal).<br>
+      Put ONNX under <code>transformersjs-assets/&lt;model_id&gt;/</code> at the site root for local loads; optional <code>_catalog.json</code> (see <code>scripts/refresh-onnx-transformers-catalog.mjs</code>) fills the dropdown with more ids.<br>
+      Otherwise weights load from the Hub. Details: <code>TEST_webLLM/README.md</code>.
     </p>
   </header>
   <main>
@@ -175,7 +156,8 @@
     <div class="row">
       <button type="button" id="btn-load-a">Load model A</button>
       <button type="button" id="btn-load-b">Load model B</button>
-      <button type="button" class="primary" id="btn-both">Run prompt on both (A then B)</button>
+      <button type="button" class="primary" id="btn-run-a">Run prompt on A</button>
+      <button type="button" class="primary" id="btn-run-b">Run prompt on B</button>
     </div>
 
     <div class="row" style="align-items:stretch">
@@ -229,6 +211,11 @@
 
     /** Curated ONNX text-generation models (expand as needed). */
     const MODEL_CATALOG = [
+      // Qwen3.5 text-only (use this for small Qwen3.5 in browser). Avoid Qwen3.5-0.8B-ONNX without "Text" — that repo is multimodal (image-text-to-text).
+      "onnx-community/Qwen3.5-0.8B-Text-ONNX",
+      // Qwen3.5 2B: only onnx-community slug is Qwen3.5-2B-ONNX (no …-Text-ONNX yet); architecture is ForConditionalGeneration — try it; may use more RAM than 0.8B Text.
+      "onnx-community/Qwen3.5-2B-ONNX",
+      "onnx-community/Qwen3-0.6B-ONNX",
       "onnx-community/Qwen2.5-0.5B-Instruct",
       "onnx-community/Qwen2.5-Coder-0.5B-Instruct",
       "onnx-community/Qwen2.5-1.5B-Instruct",
@@ -445,11 +432,13 @@
       const note = document.getElementById("model-catalog-note");
       const btnA = document.getElementById("btn-load-a");
       const btnB = document.getElementById("btn-load-b");
-      const btnBoth = document.getElementById("btn-both");
+      const btnRunA = document.getElementById("btn-run-a");
+      const btnRunB = document.getElementById("btn-run-b");
       const lockLoads = (on) => {
         if (btnA) btnA.disabled = on;
         if (btnB) btnB.disabled = on;
-        if (btnBoth) btnBoth.disabled = on;
+        if (btnRunA) btnRunA.disabled = on;
+        if (btnRunB) btnRunB.disabled = on;
       };
       lockLoads(true);
       try {
@@ -755,6 +744,8 @@
             max_new_tokens: maxTokens,
             temperature: 0.2,
             do_sample: true,
+            // LLM: >1.0 discourages repeating n-grams (Qwen3.5 etc. looping after long runs)
+            repetition_penalty: 1.15,
             streamer,
           });
           const genMs = Math.round(performance.now() - tGenStart);
@@ -771,6 +762,7 @@
             max_new_tokens: maxTokens,
             temperature: 0.2,
             do_sample: true,
+            repetition_penalty: 1.15,
           });
           const genMs = Math.round(performance.now() - tGenStart);
           const c = result && result[0] ? result[0].generated_text : "";
@@ -794,7 +786,8 @@
     function busy(on) {
       document.getElementById("btn-load-a").disabled = on;
       document.getElementById("btn-load-b").disabled = on;
-      document.getElementById("btn-both").disabled = on;
+      document.getElementById("btn-run-a").disabled = on;
+      document.getElementById("btn-run-b").disabled = on;
     }
 
     document.getElementById("btn-load-a").addEventListener("click", async () => {
@@ -825,16 +818,26 @@
       }
     });
 
-    document.getElementById("btn-both").addEventListener("click", async () => {
+    document.getElementById("btn-run-a").addEventListener("click", async () => {
       const idA = document.getElementById("model-a").value.trim();
-      const idB = document.getElementById("model-b").value.trim();
       busy(true);
       try {
         await runOne("a", idA);
-        await runOne("b", idB);
       } catch (e) {
         console.error(e);
         setStatus("a", friendlyChatError(e), "err");
+      } finally {
+        busy(false);
+      }
+    });
+
+    document.getElementById("btn-run-b").addEventListener("click", async () => {
+      const idB = document.getElementById("model-b").value.trim();
+      busy(true);
+      try {
+        await runOne("b", idB);
+      } catch (e) {
+        console.error(e);
         setStatus("b", friendlyChatError(e), "err");
       } finally {
         busy(false);

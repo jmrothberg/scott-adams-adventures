@@ -103,7 +103,7 @@ The script writes **`_catalog.json`** there; the page loads **`transformersjs-as
 - **Model A / B** are `<select>` dropdowns (not datalist): entries found under **`webllm-assets/`** are listed first in **bold** under “Local (fast)”; the rest appear under “Catalog”.
 - Optional **system** and **user** messages; load A / B or run the same prompt on **both** (sequentially). Streaming is optional.
 
-**Transformers.js** compare (`transformersjs-qwen-compare-test.html`): loads `@huggingface/transformers` from jsDelivr. For each catalog `model_id`, it probes **`transformersjs-assets/<model_id>/config.json`** at the **site root** (parallel to WebLLM’s `webllm-assets/` check). If that 404s, weights load from the **Hub**. **Model A / B** dropdowns list local disk entries first in **bold** under “Local (fast) — transformersjs-assets”.
+**Transformers.js** compare (`transformersjs-qwen-compare-test.html`): loads `@huggingface/transformers` from jsDelivr. For each catalog `model_id`, it probes **`transformersjs-assets/<model_id>/config.json`** at the **site root** (parallel to WebLLM’s `webllm-assets/` check). If that 404s, weights load from the **Hub**. **Model A / B** dropdowns list local disk entries first in **bold** under “Local (fast) — transformersjs-assets”. **Run prompt on A** and **Run prompt on B** run the current system/user message on one side only.
 
 ## Relationship to the adventure game
 

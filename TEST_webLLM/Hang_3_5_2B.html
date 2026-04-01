@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Hangman</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            width: 60%;
+            max-width: 600px;
+        }
+        canvas {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-image: linear-gradient(#e0e7ff, #dceef9); /* Subtle grid pattern */
+        }
+        h1 { color: #333; margin-bottom: 10px; }
+        p { color: #666; margin-top: 0; }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover { background-color: #45a049; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Hangman Game</h1>
+    
+    <!-- Drawing Area -->
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div style="margin-top: 20px;">
+        <button onclick="startGame()">New Game</button>
+    </div>
+    <p id="statusText">Ready?</p>
+</div>
+
+<script>
+    // --- Configuration & State ---
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    let wordList = ["HELLO", "WORLD", "PYTHON", "CODE", "GAME"];
+    let currentWord = "";
+    let guessedLetters = [];
+    let mistakes = 0;
+    const MAX_STEPS = 6;
+    let gameOver = false;
+
+    // Colors for the sticks/shapes
+    const COLORS = [
+        "#FFA500", // Orange
+        "#C0C0C0", // Silver
+        "#E0AC69", // Bronze
+        "#DAA520", // Sienna
+        "#BDC3C7", // Dark Gray
+        "#FADADD"  // Lavender
+    ];
+
+    function startGame() {
+        // Reset variables
+        currentWord = wordList[Math.floor(Math.random() * wordList.length)];
+        guessedLetters = Array.from({ length: currentWord.length }, () => Math.random() > 0.5 ? "" : "_");
+        mistakes = 0;
+        gameOver = false;
+        updateStatus();
+        drawCurrentWord();
+        drawSticks();
+    }
+
+    function getRandomLetter() {
+        return String.fromCharCode("".split(currentWord)[Math.floor(Math.random() * currentWord.length)]);
+    }
+
+    function checkGuess(letter) {
+        if (!guessedLetters.includes(letter)) {
+            guessedLetters.push(letter);
+            
+            if (currentWord.includes(letter)) {
+                drawCurrentWord();
+                updateStatus();
+                
+                // If all steps done but no more letters left -> Win
+                if (mistakes === MAX_STEPS && !currentWord.includes(getRandomLetter())) {
+                    alert("You won!");
+                    drawFinalShape();
+                    return true;
+                }
+            } else {
+                mistakes++;
+                drawCurrentWord();
+                updateStatus();
+                drawStick(mistakes + 1);
+                if (mistakes >= MAX_STEPS) {
+                    gameOver = true;
+                    drawFinalShape();
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+
+    function drawCurrentWord() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.font = "bold 40px Arial";
+        ctx.fillStyle = "#333";
+        ctx.textAlign = "center";
+        
+        currentWord.split("").forEach((char, index) => {
+            ctx.fillText(char, canvas.width / 2, canvas.height - 20 + index * 20);
+        });
+    }
+
+    function drawSticks() {
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2, canvas.height / 2);
+        ctx.lineTo(canvas.width / 2, canvas.height / 2 + 10);
+        ctx.stroke();
+    }
+
+    function drawStick(step) {
+        ctx.strokeStyle = COLORS[step];
+        ctx.lineWidth = 4;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(canvas.width / 2, canvas.height / 2, 10, 0, Math.PI * 2);
+        ctx.stroke();
+    }
+
+    function drawFinalShape() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.save();
+        
+        // Draw Head
+        ctx.beginPath();
+        ctx.arc(canvas.width/2, 10, 10, 0, Math.PI*2, false);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        ctx.strokeStyle = "#333";
+        ctx.stroke();
+
+        // Draw Body
+        ctx.fillRect(canvas.width/2 - 10, canvas.height/2 - 10, 20, 20);
+        
+        // Draw Arms (Left then Right)
+        ctx.beginPath();
+        ctx.moveTo(canvas.width/2 - 10, canvas.height/2 - 10);
+        ctx.lineTo(canvas.width/2 - 10, canvas.height/2 - 10 + 10);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(canvas.width/2 + 10, canvas.height/2 - 10);
+        ctx.lineTo(canvas.width/2 + 10, canvas.height/2 - 10 + 10);
+        ctx.stroke();
+
+        ctx.restore();
+    }
+
+    function updateStatus() {
+        const statusText = document.getElementById("statusText");
+        if (guessedLetters.every(l => l !== "") || gameOver) {
+            statusText.innerText = `${mistakes} Mistake${mistakes===1?'':'s'} | ${guessedLetters.join("")}`;
+        } else {
+            statusText.innerText = "Keep guessing!";
+        }
+    }
+
+    // Start the game initially
+    startGame();
+</script>
+
+</body>
+</html>
