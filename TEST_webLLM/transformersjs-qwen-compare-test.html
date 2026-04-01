@@ -589,11 +589,12 @@
     }
 
     function applyEnvForKind(kind) {
-      env.allowLocalModels = true;
       if (kind === "local") {
+        env.allowLocalModels = true;
         env.localModelPath = modelsDirUrl().href;
       } else {
-        // LLM: Hub loader always pathJoin(env.localModelPath, requestURL) for HF ids; undefined → pathJoin throws (.replace on undefined).
+        // LLM: Remote Hub never use site /models/… — on GitHub Pages that fetch 404s every file (noisy, confusing). Skip local try; go straight to huggingface.co.
+        env.allowLocalModels = false;
         env.localModelPath = "/models/";
       }
     }
