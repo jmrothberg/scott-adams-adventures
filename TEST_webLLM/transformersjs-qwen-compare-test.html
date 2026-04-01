@@ -146,15 +146,15 @@
       <strong>Note:</strong> very new exports (e.g. <code>Qwen3.5</code> / multimodal tokenizers) may list locally but
       still fail at generation until Transformers.js adds support — use the built-in Qwen2.5 ids to confirm the page works.
       Each field is a <strong>dropdown</strong> of curated Hub <code>model_id</code>s:
-      <strong>local disk</strong> entries live under <code>ONNX_Models/</code> at the <strong>site
-      root</strong> (same folder layout as the Hugging Face repo id, e.g.
-      <code>onnx-community/Qwen2.5-0.5B-Instruct/</code>). On your machine, symlink
-      <code>ONNX_Models</code> in the repo to your download directory (e.g.
-      <code>/Users/you/ONNX_Models</code>) so the static server can serve files; the browser cannot read
-      arbitrary OS paths. Optional <code>ONNX_Models/_catalog.json</code> (see
+      <strong>local disk</strong> entries live under <code>transformersjs-assets/</code> at the
+      <strong>site root</strong> — same parallel layout as <code>webllm-assets/</code> for the WebLLM
+      page: Hugging Face repo tree per <code>model_id</code>, e.g.
+      <code>transformersjs-assets/onnx-community/Qwen2.5-0.5B-Instruct/</code>. Symlink
+      <code>transformersjs-assets</code> in the repo to the folder where you keep those ONNX exports.
+      Optional <code>transformersjs-assets/_catalog.json</code> (see
       <code>scripts/refresh-onnx-transformers-catalog.mjs</code>) merges every downloaded model into
       the dropdown. Large models may fail on limited GPU/RAM — errors are caught and shown. On load
-      the page checks <code>ONNX_Models/&lt;model_id&gt;/config.json</code> on <strong>this
+      the page checks <code>transformersjs-assets/&lt;model_id&gt;/config.json</code> on <strong>this
       origin</strong>.
       If missing (e.g. GitHub Pages), weights come from the <strong>Hub</strong>. Status lines show
       which path was used.
@@ -237,11 +237,11 @@
     ];
 
     /**
-     * LLM: ONNX models are served from site/repo root `ONNX_Models/` (often a symlink to ~/ONNX_Models).
-     * Relative path from this page under /TEST_webLLM/ is wrong for asset URLs — use siteRootBaseUrl().
+     * LLM: Local HF ONNX mirrors live at site/repo root `transformersjs-assets/` (parallel to
+     * `webllm-assets/` for webllm-qwen-compare-test). Relative path from /TEST_webLLM/ is wrong — use siteRootBaseUrl().
      */
-    /** @type {string} Must match the directory you symlink to your ONNX download folder. */
-    const LOCAL_ONNX_DIR = "ONNX_Models/";
+    /** @type {string} Symlink this folder at repo root to your Hugging Face–layout download directory. */
+    const LOCAL_WEIGHTS_DIR = "transformersjs-assets/";
 
     /**
      * Site root as a real URL (works for http(s) and file://). Do not use new URL(path, origin) on
@@ -264,22 +264,18 @@
     }
 
     function modelsDirUrl() {
-      return new URL(LOCAL_ONNX_DIR, siteRootBaseUrl());
+      return new URL(LOCAL_WEIGHTS_DIR, siteRootBaseUrl());
     }
 
     let pristineIds = [...MODEL_CATALOG];
     /** @type {Map<string, 'local'|'remote'>} */
     const resolutionMemo = new Map();
 
-    /** True when serving from localhost (python3 -m http.server, npm run serve-game, etc.). */
-    function isLocalServer() {
-      const h = window.location.hostname;
-      return h === "localhost" || h === "127.0.0.1" || h === "0.0.0.0";
-    }
-
-    /** On localhost: merge ONNX_Models/_catalog.json into the dropdown list. On GitHub Pages: skip (no folder there). */
+    /**
+     * LLM: Merge transformersjs-assets/_catalog.json when present (same idea as WebLLM optional extras).
+     * Always try fetch — on GitHub Pages the file 404s and we keep the built-in list only.
+     */
     async function loadExtendedCatalog() {
-      if (!isLocalServer()) return;
       try {
         const u = new URL("_catalog.json", modelsDirUrl()).href;
         const r = await fetch(u, { cache: "no-cache" });
@@ -299,13 +295,13 @@
       }
     }
 
-    /** On localhost: probe ONNX_Models/<id>/config.json. On GitHub Pages: everything is remote, skip probes entirely. */
+    /**
+     * LLM: One fetch per model_id: if transformersjs-assets/<id>/config.json exists on this origin, treat as local.
+     * Same pattern as webllm-qwen-compare-test (always probe; GitHub Pages gets 404 → remote). Works for any
+     * http(s) host (localhost, LAN IP, [::1], machine.local) — no hostname allowlist.
+     */
     async function resolveModelEntry(modelId) {
       if (resolutionMemo.has(modelId)) return resolutionMemo.get(modelId);
-      if (!isLocalServer()) {
-        resolutionMemo.set(modelId, "remote");
-        return "remote";
-      }
       try {
         const cfgUrl = new URL(modelId + "/config.json", modelsDirUrl()).href;
         const r = await fetch(cfgUrl, { cache: "no-cache" });
@@ -322,8 +318,8 @@
       if (kind === "local") {
         return {
           short: "LOCAL",
-          status: "local ONNX_Models/ (this origin — same path segments as the Hub repo id)",
-          panel: "Weights: LOCAL — ONNX_Models/ on this server (ONNX files)",
+          status: "local transformersjs-assets/ (this origin — same path segments as the Hub repo id)",
+          panel: "Weights: LOCAL — transformersjs-assets/ on this server (ONNX)",
         };
       }
       return {
@@ -367,7 +363,7 @@
       sel.innerHTML = "";
 
       const ogLoc = document.createElement("optgroup");
-      ogLoc.label = "Local (fast) — ONNX_Models";
+      ogLoc.label = "Local (fast) — transformersjs-assets";
       if (localIdsSorted.length === 0) {
         const o = document.createElement("option");
         o.disabled = true;
@@ -418,10 +414,8 @@
       try {
         await loadExtendedCatalog();
         resolutionMemo.clear();
-        if (isLocalServer()) {
-          if (note) note.textContent = "Checking ONNX_Models/ for each catalog entry…";
-          await scanAllModelsForLocal();
-        }
+        if (note) note.textContent = "Checking transformersjs-assets/ for each catalog entry…";
+        await scanAllModelsForLocal();
         const ids = [...pristineIds].sort();
         const local = ids.filter((id) => resolutionMemo.get(id) === "local");
         const remote = ids.filter((id) => resolutionMemo.get(id) !== "local");
@@ -433,7 +427,7 @@
             " models (curated ONNX list for Transformers.js " +
             "4.0.0) — " +
             local.length +
-            " on disk (bold). Put each Hub repo under ONNX_Models/org/name/ or symlink ONNX_Models to your download folder.";
+            " on disk (bold). Put each Hub repo under transformersjs-assets/org/name/ or symlink transformersjs-assets to your download folder.";
         }
       } catch (err) {
         console.error(err);
@@ -715,7 +709,7 @@
           });
           const genMs = Math.round(performance.now() - tGenStart);
           const u = formatGenMeta(genMs, backendLabel, text.length);
-          const srcTag = resolutionMemo.get(modelId) === "local" ? "local ONNX_Models" : "Hub";
+          const srcTag = resolutionMemo.get(modelId) === "local" ? "local transformersjs-assets" : "Hub";
           const wall = Math.round(performance.now() - t0);
           setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
         } else {
@@ -729,7 +723,7 @@
           outEl.textContent = c ?? "";
           scrollOutToEnd(outEl);
           const u = formatGenMeta(genMs, backendLabel, (c || "").length);
-          const srcTag = resolutionMemo.get(modelId) === "local" ? "local ONNX_Models" : "Hub";
+          const srcTag = resolutionMemo.get(modelId) === "local" ? "local transformersjs-assets" : "Hub";
           const wall = Math.round(performance.now() - t0);
           setMeta(side, "Weights: " + srcTag + " | incl. load " + wall + " ms wall |" + u);
         }

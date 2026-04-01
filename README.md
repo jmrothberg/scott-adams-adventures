@@ -30,6 +30,8 @@ Then open **http://localhost:8090** in your browser. This starts **`scripts/serv
 
 More detail: [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
 
+**Local Transformers.js weights (optional, like `webllm-assets/` for WebLLM):** from repo root run **`npm run setup-transformersjs-assets`** (downloads **`config.json`** only into **`transformersjs-assets/`** as a smoke test) or **`npm run setup-transformersjs-assets-full`** for the full ONNX model.
+
 ### Offline LLM Enhanced (Qwen3, no internet)
 
 The game’s **LLM Enhanced** mode uses [WebLLM](https://webllm.mlc.ai/) in the browser. By default it loads the library from a CDN and model weights from Hugging Face. To make it **fully offline** on this machine **or a new computer** after one online setup:

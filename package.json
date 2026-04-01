@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "setup-offline-llm": "node scripts/setup-offline-llm.mjs",
+    "setup-transformersjs-assets": "node scripts/setup-transformersjs-assets.mjs",
+    "setup-transformersjs-assets-full": "node scripts/setup-transformersjs-assets.mjs --full",
     "ensure-webllm-layout": "node scripts/ensure-webllm-resolve-layout.mjs",
     "serve-game": "python3 scripts/serve-threaded.py 8090"
   },

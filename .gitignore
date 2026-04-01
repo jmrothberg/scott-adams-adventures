@@ -4,6 +4,11 @@ node_modules/
 __pycache__/
 # MLC model weights + wasm (~1GB+) — too large for normal git/GitHub; copy USB or run npm run setup-offline-llm
 webllm-assets/
-# Local Transformers.js ONNX mirrors (often: ln -s ~/ONNX_Models ONNX_Models from repo root)
+# Transformers.js compare: repo-root transformersjs-assets/ (Hub layout org/repo/config.json).
+# From repo root: npm run setup-transformersjs-assets (one file) or setup-transformersjs-assets-full.
+# Or symlink: ln -s "$HOME/ONNX_Models" transformersjs-assets — TEST_webLLM/README.md
+transformersjs-assets/
+
+# Same ONNX tree, older repo-root symlink name; still ignored so weights are never committed.
 ONNX_Models
 # vendor/mlc-ai-web-llm is small (~13MB); commit it so clones get offline WebLLM JS without npm
