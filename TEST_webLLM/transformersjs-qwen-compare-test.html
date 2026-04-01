@@ -5,18 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transformers.js Qwen compare (test harness)</title>
   <!--
-    LLM: @huggingface/transformers 4.x imports bare names (onnxruntime-web/webgpu, onnxruntime-common).
-    Browsers require an import map; this is NOT fixed by renaming ONNX_Models or adding "./".
-    Versions match transformers@4.0.0 package.json dependency pins.
+    LLM: Use the jsDelivr +esm endpoint for @huggingface/transformers. It bundles its own onnxruntime-web
+    and onnxruntime-common via jsDelivr's ESM rewriting — no import map needed, no bare specifier errors.
   -->
-  <script type="importmap">
-  {
-    "imports": {
-      "onnxruntime-web/webgpu": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.25.0-dev.20260327-722743c0e2/dist/ort.webgpu.bundle.min.mjs",
-      "onnxruntime-common": "https://cdn.jsdelivr.net/npm/onnxruntime-common@1.24.0-dev.20251116-b39e144322/dist/esm/index.js"
-    }
-  }
-  </script>
   <style>
     :root {
       --bg: #12121a;
@@ -234,7 +225,7 @@
      * Transformers.js standalone compare page — not integrated with index.html / game.
      * Uses ONNX models from the Hub (ONNX Runtime Web + optional WebGPU).
      */
-    import { pipeline, TextStreamer, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0/dist/transformers.web.js";
+    import { pipeline, TextStreamer, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0/+esm";
 
     /** Curated ONNX text-generation models (expand as needed). */
     const MODEL_CATALOG = [
