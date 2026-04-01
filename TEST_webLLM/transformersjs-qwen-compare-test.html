@@ -267,64 +267,53 @@
       return new URL(LOCAL_ONNX_DIR, siteRootBaseUrl());
     }
 
-    /** Built-in defaults plus any ids from ONNX_Models/_catalog.json (regenerate with repo script). */
-    let pristineIds = [];
+    let pristineIds = [...MODEL_CATALOG];
     /** @type {Map<string, 'local'|'remote'>} */
     const resolutionMemo = new Map();
 
-    /** Merge MODEL_CATALOG with ONNX_Models/_catalog.json so every downloaded repo id appears in the UI. */
+    /** True when serving from localhost (python3 -m http.server, npm run serve-game, etc.). */
+    function isLocalServer() {
+      const h = window.location.hostname;
+      return h === "localhost" || h === "127.0.0.1" || h === "0.0.0.0";
+    }
+
+    /** On localhost: merge ONNX_Models/_catalog.json into the dropdown list. On GitHub Pages: skip (no folder there). */
     async function loadExtendedCatalog() {
-      const seen = new Set();
-      const out = [];
-      for (const id of MODEL_CATALOG) {
-        if (id && !seen.has(id)) {
-          seen.add(id);
-          out.push(id);
-        }
-      }
+      if (!isLocalServer()) return;
       try {
         const u = new URL("_catalog.json", modelsDirUrl()).href;
         const r = await fetch(u, { cache: "no-cache" });
-        if (r.ok) {
-          const j = await r.json();
-          const extra = Array.isArray(j.model_ids)
-            ? j.model_ids
-            : Array.isArray(j.models)
-              ? j.models
-              : [];
-          for (const id of extra) {
-            // LLM: Allow single-segment ids from flat folders (e.g. Qwen3.5-0.8B-ONNX); Hub load may not work.
-            if (typeof id === "string" && id.trim().length > 0 && !seen.has(id)) {
-              seen.add(id);
-              out.push(id);
-            }
+        if (!r.ok) return;
+        const j = await r.json();
+        const extra = Array.isArray(j.model_ids) ? j.model_ids : [];
+        const seen = new Set(pristineIds);
+        for (const id of extra) {
+          if (typeof id === "string" && id.trim().length > 0 && !seen.has(id)) {
+            seen.add(id);
+            pristineIds.push(id);
           }
         }
+        pristineIds.sort();
       } catch (err) {
         console.warn("[Transformers.js compare] Optional _catalog.json not loaded", err);
       }
-      if (out.length === 0) {
-        return [...MODEL_CATALOG].sort();
-      }
-      return out.sort();
     }
 
-    /** One fetch per model_id per page load: if config exists under ONNX_Models/ on this origin, mark local; else Hub. */
+    /** On localhost: probe ONNX_Models/<id>/config.json. On GitHub Pages: everything is remote, skip probes entirely. */
     async function resolveModelEntry(modelId) {
-      if (resolutionMemo.has(modelId)) {
-        return resolutionMemo.get(modelId);
+      if (resolutionMemo.has(modelId)) return resolutionMemo.get(modelId);
+      if (!isLocalServer()) {
+        resolutionMemo.set(modelId, "remote");
+        return "remote";
       }
       try {
         const cfgUrl = new URL(modelId + "/config.json", modelsDirUrl()).href;
         const r = await fetch(cfgUrl, { cache: "no-cache" });
         if (r.ok) {
           resolutionMemo.set(modelId, "local");
-          console.log("[Transformers.js compare] Local ONNX_Models for", modelId);
           return "local";
         }
-      } catch (err) {
-        console.warn("[Transformers.js compare] Local check failed for", modelId, err);
-      }
+      } catch (err) { /* expected on missing folders */ }
       resolutionMemo.set(modelId, "remote");
       return "remote";
     }
@@ -427,10 +416,12 @@
       };
       lockLoads(true);
       try {
-        pristineIds = await loadExtendedCatalog();
+        await loadExtendedCatalog();
         resolutionMemo.clear();
-        if (note) note.textContent = "Checking ONNX_Models/ for each catalog entry (one moment)…";
-        await scanAllModelsForLocal();
+        if (isLocalServer()) {
+          if (note) note.textContent = "Checking ONNX_Models/ for each catalog entry…";
+          await scanAllModelsForLocal();
+        }
         const ids = [...pristineIds].sort();
         const local = ids.filter((id) => resolutionMemo.get(id) === "local");
         const remote = ids.filter((id) => resolutionMemo.get(id) !== "local");
