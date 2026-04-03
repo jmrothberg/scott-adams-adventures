@@ -25,12 +25,12 @@ Then open **http://localhost:8090** in your browser. This starts **`scripts/serv
 
 | Page | GitHub Pages |
 |------|----------------|
-| **Transformers.js** — ONNX / Hub two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-qwen-compare-test.html) |
-| **WebLLM** — MLC / WebGPU two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-qwen-compare-test.html) |
+| **Transformers.js** — ONNX / Hub two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-compare-test.html) |
+| **WebLLM** — MLC / WebGPU two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-compare-test.html) |
 
 More detail: [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
 
-**Local Transformers.js weights (optional, like `webllm-assets/` for WebLLM):** from repo root run **`npm run setup-transformersjs-assets`** (downloads **`config.json`** only into **`transformersjs-assets/`** as a smoke test) or **`npm run setup-transformersjs-assets-full`** for the full ONNX model.
+**Local Transformers.js weights (optional, like `webllm-assets/` for WebLLM):** from repo root run **`npm run setup-transformersjs-assets`** (downloads **`config.json`** per catalog repo into **`transformersjs-assets/`**) or **`npm run setup-transformersjs-assets-full`** for full ONNX trees for **every** id listed on the compare page (very large).
 
 ### Offline LLM Enhanced (Qwen3, no internet)
 

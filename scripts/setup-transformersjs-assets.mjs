@@ -1,13 +1,14 @@
 /**
- * Bootstrap repo-root transformersjs-assets/ for TEST_webLLM/transformersjs-qwen-compare-test.html
+ * Bootstrap repo-root transformersjs-assets/ for TEST_webLLM/transformersjs-compare-test.html
  * — same role as setup-offline-llm.mjs for webllm-assets/, but ONNX Hub layout (org/repo/config.json).
  *
- * Default (no flags): downloads one file — config.json for the page’s default small model — so the
- * compare page detects LOCAL for that model_id and you can confirm paths / HTTP serving.
+ * Default (no flags): downloads config.json for each curated repo (see TRANSFORMERSJS_CATALOG_REPO_IDS)
+ * so folder layout exists and _catalog.json can list them. Compare page marks LOCAL only when ONNX
+ * shards exist on disk (see README).
  *
- * Full snapshot (--full): same Hugging Face flow as setup-offline-llm (hf / huggingface-cli / python),
+ * Full snapshot (--full): hf download (or CLI / python) for every id in TRANSFORMERSJS_CATALOG_REPO_IDS,
  * then rewrites transformersjs-assets/_catalog.json via refresh-onnx-transformers-catalog.mjs.
- * Large download (hundreds of MB+); use for offline inference.
+ * Very large total download; use for offline inference.
  *
  * Run from repo root:
  *   npm run setup-transformersjs-assets
@@ -23,11 +24,27 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 
-/** Matches DEFAULT_MODEL_A in transformersjs-qwen-compare-test.html */
-const REPO_ID = 'onnx-community/Qwen2.5-0.5B-Instruct';
+/**
+ * Keep in sync with MODEL_CATALOG in TEST_webLLM/transformersjs-compare-test.html.
+ * Includes onnx-community Gemma 4 E2B and E4B (both pulled on --full).
+ */
+const TRANSFORMERSJS_CATALOG_REPO_IDS = [
+  'onnx-community/Qwen3.5-0.8B-Text-ONNX',
+  'onnx-community/Qwen3.5-2B-ONNX',
+  'onnx-community/Qwen3-0.6B-ONNX',
+  'onnx-community/Qwen2.5-0.5B-Instruct',
+  'onnx-community/Qwen2.5-Coder-0.5B-Instruct',
+  'onnx-community/Qwen2.5-1.5B-Instruct',
+  'onnx-community/Qwen2.5-Coder-1.5B-Instruct',
+  'onnx-community/Llama-3.2-1B-Instruct',
+  'onnx-community/gemma-4-E2B-it-ONNX',
+  'onnx-community/gemma-4-E4B-it-ONNX',
+];
 
-function modelLocalDir() {
-  const [org, name] = REPO_ID.split('/');
+const MINIMAL_CONFIG_REPO_IDS = TRANSFORMERSJS_CATALOG_REPO_IDS;
+
+function modelLocalDirForRepo(repoId) {
+  const [org, name] = repoId.split('/');
   return path.join(root, 'transformersjs-assets', org, name);
 }
 
@@ -94,56 +111,62 @@ function tryPythonSnapshot(repoId, localDir) {
 }
 
 async function downloadConfigOnly() {
-  const url = `https://huggingface.co/${REPO_ID}/resolve/main/config.json`;
-  const dest = path.join(modelLocalDir(), 'config.json');
-  console.log('[setup-transformersjs-assets] Minimal smoke setup: one file —', path.relative(root, dest));
-  console.log('[setup-transformersjs-assets] URL:', url);
-  await downloadHttpsToFile(url, dest);
-  console.log('[setup-transformersjs-assets] Wrote', dest);
+  for (const repoId of MINIMAL_CONFIG_REPO_IDS) {
+    const url = `https://huggingface.co/${repoId}/resolve/main/config.json`;
+    const dest = path.join(modelLocalDirForRepo(repoId), 'config.json');
+    console.log('[setup-transformersjs-assets] Minimal:', path.relative(root, dest));
+    console.log('[setup-transformersjs-assets] URL:', url);
+    await downloadHttpsToFile(url, dest);
+    console.log('[setup-transformersjs-assets] Wrote', dest);
+  }
   console.log(
-    '[setup-transformersjs-assets] The compare page will list this model as LOCAL (bold), but loading/running it needs full ONNX weights — run: npm run setup-transformersjs-assets-full',
+    '[setup-transformersjs-assets] ONNX weights still need: npm run setup-transformersjs-assets-full (or hf download per repo).',
   );
 }
 
 async function downloadFull() {
-  const localDir = modelLocalDir();
-  console.log('[setup-transformersjs-assets] Full snapshot (large) ->', localDir);
-  if (tryHfDownload(REPO_ID, localDir)) return true;
-  if (tryPythonSnapshot(REPO_ID, localDir)) return true;
-  console.error('[setup-transformersjs-assets] Failed:', REPO_ID);
-  console.error(
-    '  Install: pip install huggingface_hub  then run: hf download',
-    REPO_ID,
-    '--local-dir',
-    localDir,
-  );
-  process.exitCode = 1;
-  return false;
+  let allOk = true;
+  for (const repoId of TRANSFORMERSJS_CATALOG_REPO_IDS) {
+    const localDir = modelLocalDirForRepo(repoId);
+    console.log('[setup-transformersjs-assets] Full snapshot ->', localDir);
+    if (tryHfDownload(repoId, localDir)) continue;
+    if (tryPythonSnapshot(repoId, localDir)) continue;
+    console.error('[setup-transformersjs-assets] Failed:', repoId);
+    console.error(
+      '  Install: pip install huggingface_hub  then run: hf download',
+      repoId,
+      '--local-dir',
+      localDir,
+    );
+    allOk = false;
+  }
+  if (!allOk) {
+    process.exitCode = 1;
+    return false;
+  }
+  return true;
 }
 
 async function main() {
   const full = process.argv.includes('--full');
   console.log('[setup-transformersjs-assets] Repo root:', root);
-  let fullOk = true;
   if (full) {
-    fullOk = await downloadFull();
+    await downloadFull();
   } else {
     await downloadConfigOnly();
   }
-  if (full && fullOk) {
-    try {
-      execSync('node scripts/refresh-onnx-transformers-catalog.mjs', {
-        cwd: root,
-        stdio: 'inherit',
-        env: { ...process.env, ONNX_MODELS_DIR: path.join(root, 'transformersjs-assets') },
-      });
-    } catch (e) {
-      console.warn('[setup-transformersjs-assets] Optional _catalog refresh failed:', e.message);
-    }
+  try {
+    execSync('node scripts/refresh-onnx-transformers-catalog.mjs', {
+      cwd: root,
+      stdio: 'inherit',
+      env: { ...process.env, ONNX_MODELS_DIR: path.join(root, 'transformersjs-assets') },
+    });
+  } catch (e) {
+    console.warn('[setup-transformersjs-assets] Optional _catalog refresh failed:', e.message);
   }
   if (process.exitCode !== 1) {
     console.log(
-      '[setup-transformersjs-assets] Serve repo root over HTTP, then open TEST_webLLM/transformersjs-qwen-compare-test.html (see TEST_webLLM/README.md).',
+      '[setup-transformersjs-assets] Serve repo root over HTTP, then open TEST_webLLM/transformersjs-compare-test.html (see TEST_webLLM/README.md).',
     );
   }
 }

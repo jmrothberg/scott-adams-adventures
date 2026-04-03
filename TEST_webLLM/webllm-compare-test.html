@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebLLM Qwen compare (test harness)</title>
+  <title>WebLLM LLM compare (test harness)</title>
   <style>
     :root {
       --bg: #12121a;
@@ -130,10 +130,10 @@
   <header>
     <h1>WebLLM browser test — two-model compare. v 1.1 Jonathan Rothberg 2026</h1>
     <p>
-      Standalone harness for <strong>@mlc-ai/web-llm</strong> (WebGPU). Defaults use the closest
-      <strong>official prebuilt</strong> Qwen3 q4-style weights in the current catalog:
+      Standalone harness for <strong>@mlc-ai/web-llm</strong> (WebGPU). Defaults use two small
+      <strong>official prebuilt</strong> models from the current catalog:
       <code>Qwen3-0.6B-q4f16_1-MLC</code> vs <code>Qwen3-1.7B-q4f16_1-MLC</code>
-      (nearest sizes to “~0.8B q4” and “~2B” until Qwen3.5 prebuilts appear).       Each field is a <strong>dropdown</strong> of all prebuilt <code>model_id</code>s: <strong>local disk</strong> entries (in
+      (also a good pair for local <code>npm run setup-offline-llm</code>). Each field is a <strong>dropdown</strong> of all prebuilt <code>model_id</code>s: <strong>local disk</strong> entries (in
       <code>webllm-assets/</code>) appear first and <strong>bold</strong>; the rest use the network on first load.
       Large models may fail to load on limited GPU RAM — errors are caught and shown without crashing the page.
       On each load the page checks for <code>webllm-assets/&lt;model_id&gt;/resolve/main/mlc-chat-config.json</code> on

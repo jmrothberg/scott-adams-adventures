@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transformers.js Qwen compare (test harness)</title>
+  <title>Transformers.js LLM compare (test harness)</title>
   <!--
     LLM: Use the jsDelivr +esm endpoint for @huggingface/transformers. It bundles its own onnxruntime-web
     and onnxruntime-common via jsDelivr's ESM rewriting — no import map needed, no bare specifier errors.
@@ -135,7 +135,7 @@
     <h1>Transformers.js browser test — two-model compare. v 1.0 Jonathan Rothberg 2026</h1>
     <p>
       In-browser <strong>Transformers.js</strong> + ONNX Runtime Web (WebGPU when available); compare two Hub models side by side.<br>
-      Default pair: <code>Qwen2.5-0.5B-Instruct</code> vs <code>Qwen2.5-1.5B-Instruct</code>.<br>
+      Default pair: <code>onnx-community/gemma-4-E2B-it-ONNX</code> vs <code>onnx-community/gemma-4-E4B-it-ONNX</code>.<br>
       <strong>Qwen3.5 text:</strong> <code>onnx-community/Qwen3.5-0.8B-Text-ONNX</code> — not <code>Qwen3.5-0.8B-ONNX</code> (multimodal).<br>
       Put ONNX under <code>transformersjs-assets/&lt;model_id&gt;/</code> at the site root for local loads; optional <code>_catalog.json</code> (see <code>scripts/refresh-onnx-transformers-catalog.mjs</code>) fills the dropdown with more ids.<br>
       Otherwise weights load from the Hub. Details: <code>TEST_webLLM/README.md</code>.
@@ -207,7 +207,8 @@
      * Transformers.js standalone compare page — not integrated with index.html / game.
      * Uses ONNX models from the Hub (ONNX Runtime Web + optional WebGPU).
      */
-    import { pipeline, TextStreamer, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0/+esm";
+    // LLM: Gemma 4 ONNX needs Gemma4ForConditionalGeneration in MODEL_TYPE_MAPPING — present from @huggingface/transformers 4.0.1+, not 4.0.0.
+    import { pipeline, TextStreamer, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.1/+esm";
 
     /** Curated ONNX text-generation models (expand as needed). */
     const MODEL_CATALOG = [
@@ -221,11 +222,14 @@
       "onnx-community/Qwen2.5-1.5B-Instruct",
       "onnx-community/Qwen2.5-Coder-1.5B-Instruct",
       "onnx-community/Llama-3.2-1B-Instruct",
+      // Gemma 4 instruct (onnx-community ONNX). E2B ≈2B / E4B ≈4B — may need more RAM than Qwen2.5 0.5B.
+      "onnx-community/gemma-4-E2B-it-ONNX",
+      "onnx-community/gemma-4-E4B-it-ONNX",
     ];
 
     /**
      * LLM: Local HF ONNX mirrors live at site/repo root `transformersjs-assets/` (parallel to
-     * `webllm-assets/` for webllm-qwen-compare-test). Relative path from /TEST_webLLM/ is wrong — use siteRootBaseUrl().
+     * `webllm-assets/` for webllm-compare-test). Relative path from /TEST_webLLM/ is wrong — use siteRootBaseUrl().
      */
     /** @type {string} Symlink this folder at repo root to your Hugging Face–layout download directory. */
     const LOCAL_WEIGHTS_DIR = "transformersjs-assets/";
@@ -251,7 +255,43 @@
     }
 
     function modelsDirUrl() {
-      return new URL(LOCAL_WEIGHTS_DIR, siteRootBaseUrl());
+      const u = new URL(LOCAL_WEIGHTS_DIR, siteRootBaseUrl());
+      // LLM: base must be a directory URL — if pathname lacks trailing /, new URL("id/config.json", base) drops the last segment (wrong Hub path).
+      if (!u.pathname.endsWith("/")) {
+        u.pathname += "/";
+      }
+      return u;
+    }
+
+    /** LLM: ONNX repos vary file names; try a few so "local" means at least one weight shard is on disk (not just config.json from minimal setup). */
+    const LOCAL_WEIGHT_SENTINELS = [
+      "onnx/model_q4.onnx",
+      "onnx/model_q4f16.onnx",
+      "onnx/decoder_model_merged_q4.onnx",
+      "onnx/decoder_model_merged_q4f16.onnx",
+    ];
+
+    async function probeAssetExists(absUrl) {
+      try {
+        let r = await fetch(absUrl, { method: "HEAD", cache: "no-cache" });
+        if (r.ok) return true;
+        if (r.status === 405 || r.status === 501) {
+          r = await fetch(absUrl, { method: "GET", cache: "no-cache", headers: { Range: "bytes=0-0" } });
+          return r.ok;
+        }
+      } catch (err) {
+        /* file://, CORS, or offline */
+      }
+      return false;
+    }
+
+    async function hasLocalOnnxWeights(modelId) {
+      const base = modelsDirUrl();
+      for (const rel of LOCAL_WEIGHT_SENTINELS) {
+        const href = new URL(modelId + "/" + rel, base).href;
+        if (await probeAssetExists(href)) return true;
+      }
+      return false;
     }
 
     let pristineIds = [...MODEL_CATALOG];
@@ -283,20 +323,26 @@
     }
 
     /**
-     * LLM: One fetch per model_id: if transformersjs-assets/<id>/config.json exists on this origin, treat as local.
-     * Same pattern as webllm-qwen-compare-test (always probe; GitHub Pages gets 404 → remote). Works for any
-     * http(s) host (localhost, LAN IP, [::1], machine.local) — no hostname allowlist.
+     * LLM: Local only if config.json exists AND at least one known ONNX sentinel is present — otherwise Transformers.js
+     * would still pull missing shards from the Hub while the UI said LOCAL (confusing). Same probe pattern as
+     * webllm-compare-test for http(s); GitHub Pages → remote.
      */
     async function resolveModelEntry(modelId) {
       if (resolutionMemo.has(modelId)) return resolutionMemo.get(modelId);
       try {
         const cfgUrl = new URL(modelId + "/config.json", modelsDirUrl()).href;
         const r = await fetch(cfgUrl, { cache: "no-cache" });
-        if (r.ok) {
-          resolutionMemo.set(modelId, "local");
-          return "local";
+        if (!r.ok) {
+          resolutionMemo.set(modelId, "remote");
+          return "remote";
         }
-      } catch (err) { /* expected on missing folders */ }
+        const weightsOk = await hasLocalOnnxWeights(modelId);
+        const kind = weightsOk ? "local" : "remote";
+        resolutionMemo.set(modelId, kind);
+        return kind;
+      } catch (err) {
+        /* expected on missing folders */
+      }
       resolutionMemo.set(modelId, "remote");
       return "remote";
     }
@@ -316,7 +362,7 @@
       };
     }
 
-    /** LLM: align post-run meta line with webllm-qwen-compare-test (Weights | backend | incl. load | time | tokens | tok/s). */
+    /** LLM: align post-run meta line with webllm-compare-test (Weights | backend | incl. load | time | tokens | tok/s). */
     function transformersBackendSuffix(backendLabel) {
       return " | backend " + backendLabel;
     }
@@ -373,8 +419,8 @@
       el.classList.remove("local", "remote");
     }
 
-    const DEFAULT_MODEL_A = "onnx-community/Qwen2.5-0.5B-Instruct";
-    const DEFAULT_MODEL_B = "onnx-community/Qwen2.5-1.5B-Instruct";
+    const DEFAULT_MODEL_A = "onnx-community/gemma-4-E2B-it-ONNX";
+    const DEFAULT_MODEL_B = "onnx-community/gemma-4-E4B-it-ONNX";
 
     /** LLM: one probe per catalog model at startup — fills resolutionMemo; splits UI into local vs network. */
     async function scanAllModelsForLocal() {
@@ -597,7 +643,11 @@
     function applyEnvForKind(kind) {
       if (kind === "local") {
         env.allowLocalModels = true;
-        env.localModelPath = modelsDirUrl().href;
+        // LLM: must be a pathname (e.g. "/transformersjs-assets/"), NOT a full URL. Transformers.js
+        // get_file_metadata checks isValidUrl(localPath) and SKIPS local when localPath is an http URL,
+        // falling through to the Hub for metadata + files. A bare pathname makes fetch() resolve relative
+        // to the page origin (same HTTP server), so both metadata and file loading stay local.
+        env.localModelPath = modelsDirUrl().pathname;
       } else {
         // LLM: Remote Hub never use site /models/… — on GitHub Pages that fetch 404s every file (noisy, confusing). Skip local try; go straight to huggingface.co.
         env.allowLocalModels = false;
@@ -694,7 +744,7 @@
       outEl.scrollTop = outEl.scrollHeight;
     }
 
-    /** LLM: same shape as webllm-qwen-compare-test formatGenMeta(usage, genMs). */
+    /** LLM: same shape as webllm-compare-test formatGenMeta(usage, genMs). */
     function formatGenMeta(usage, genMs) {
       const pt = usage && usage.prompt_tokens != null ? usage.prompt_tokens : "?";
       const ct = usage && usage.completion_tokens != null ? usage.completion_tokens : "?";
