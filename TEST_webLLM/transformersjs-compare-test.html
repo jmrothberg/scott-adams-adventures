@@ -637,7 +637,8 @@
       const lo = 1;
       const hi = 16384;
       if (!Number.isFinite(raw)) return 512;
-      return Math.min(hi, Math.max(lo, raw));
+      // LLM: integer — Transformers.js generation merge must not see floats/NaN as undefined-skipped pick() values.
+      return Math.trunc(Math.min(hi, Math.max(lo, raw)));
     }
 
     function applyEnvForKind(kind) {
@@ -780,6 +781,16 @@
         const tGenStart = performance.now();
         const backendLabel = side === "a" ? backendA : backendB;
 
+        // LLM: Pass max_new_tokens both top-level and inside generation_config so each pipeline (A/B) applies
+        // the UI cap the same way; model.generate() merges explicit generation_config before flat kwargs.
+        const genOptsBase = {
+          max_new_tokens: maxTokens,
+          generation_config: { max_new_tokens: maxTokens },
+          temperature: 0.2,
+          do_sample: true,
+          // LLM: >1.0 discourages repeating n-grams (Qwen3.5 etc. looping after long runs)
+          repetition_penalty: 1.15,
+        };
         if (stream) {
           let text = "";
           const streamer = new TextStreamer(gen.tokenizer, {
@@ -791,11 +802,7 @@
             },
           });
           await gen(messages, {
-            max_new_tokens: maxTokens,
-            temperature: 0.2,
-            do_sample: true,
-            // LLM: >1.0 discourages repeating n-grams (Qwen3.5 etc. looping after long runs)
-            repetition_penalty: 1.15,
+            ...genOptsBase,
             streamer,
           });
           const genMs = Math.round(performance.now() - tGenStart);
@@ -805,15 +812,18 @@
           const wall = Math.round(performance.now() - t0);
           setMeta(
             side,
-            "Weights: " + srcTag + transformersBackendSuffix(backendLabel) + " | incl. load " + wall + " ms wall |" + u
+            "Weights: " +
+              srcTag +
+              transformersBackendSuffix(backendLabel) +
+              " | max_new_tokens " +
+              maxTokens +
+              " (UI) | incl. load " +
+              wall +
+              " ms wall |" +
+              u
           );
         } else {
-          const result = await gen(messages, {
-            max_new_tokens: maxTokens,
-            temperature: 0.2,
-            do_sample: true,
-            repetition_penalty: 1.15,
-          });
+          const result = await gen(messages, { ...genOptsBase });
           const genMs = Math.round(performance.now() - tGenStart);
           const c = result && result[0] ? result[0].generated_text : "";
           outEl.textContent = c ?? "";
@@ -824,7 +834,15 @@
           const wall = Math.round(performance.now() - t0);
           setMeta(
             side,
-            "Weights: " + srcTag + transformersBackendSuffix(backendLabel) + " | incl. load " + wall + " ms wall |" + u
+            "Weights: " +
+              srcTag +
+              transformersBackendSuffix(backendLabel) +
+              " | max_new_tokens " +
+              maxTokens +
+              " (UI) | incl. load " +
+              wall +
+              " ms wall |" +
+              u
           );
         }
       } catch (e) {
