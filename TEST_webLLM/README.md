@@ -1,125 +1,75 @@
-# WebLLM browser test (`TEST_webLLM`)
+# Browser LLM compare tests (`TEST_webLLM`)
 
-This folder holds a **standalone experiment**: running [WebLLM](https://webllm.mlc.ai/) (`@mlc-ai/web-llm`) in the browser with **WebGPU** so you can compare two small Qwen-family models side by side. It is **not** connected to the Scott Adams adventure interpreter (`index.html` in the repo root).
+Standalone **two-model compare** harnesses for in-browser LLMs. **Not** connected to the Scott Adams game (`index.html`).
 
-## Run on GitHub Pages (click to test)
+| Page | Stack | Defaults |
+|------|--------|----------|
+| [`transformersjs-compare-test.html`](transformersjs-compare-test.html) | `@huggingface/transformers` + ONNX (jsDelivr **4.0.1+**; Gemma 4 needs ≥ 4.0.1) | Gemma 4 **E2B** vs **E4B** ONNX |
+| [`webllm-compare-test.html`](webllm-compare-test.html) | WebLLM / MLC + WebGPU (CDN **0.2.82**) | **Qwen3 0.6B** vs **1.7B** MLC |
 
-Use a recent **Chrome** or **Edge** (modules + WebGPU / WASM). Enable **GitHub Pages** for this repo (Settings → Pages → source `main`, folder `/ (root)`), wait a minute after each push, then open:
+Shared UI: Model A/B dropdowns (local trees listed first in **bold**), optional system/user prompts, **Max tokens (completion)** (default **512**, range 1–16384; applied to both A and B), optional streaming, Run A / Run B.
+
+Future game dual-backend notes: [`PLAN_dual_backend_llm.md`](PLAN_dual_backend_llm.md) (not implemented).
+
+## Run on GitHub Pages
+
+Chrome or Edge. After Pages is enabled for `main` / root:
 
 | What | Link |
 |------|------|
-| **Transformers.js** — two-model ONNX compare ([`transformersjs-compare-test.html`](transformersjs-compare-test.html)) | [**Open the Transformers.js compare page →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-compare-test.html) |
-| **WebLLM** — MLC / WebGPU compare ([`webllm-compare-test.html`](webllm-compare-test.html)) | [**Open the WebLLM compare page →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-compare-test.html) |
-| **Adventure game** (repo root, not this folder) | [**Open the game →**](https://jmrothberg.github.io/scott-adams-adventures/) |
+| **Transformers.js** compare | [**Open →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-compare-test.html) |
+| **WebLLM** compare | [**Open →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-compare-test.html) |
+| **Adventure game** | [**Open →**](https://jmrothberg.github.io/scott-adams-adventures/) |
 
-**Direct URL** (copy/paste):  
-`https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-compare-test.html`
+**`webllm-assets/`** and **`transformersjs-assets/`** are gitignored, so Pages always falls back to **network** (HF / CDN) for weights. No extra Pages config required.
 
-These tests live only under `TEST_webLLM/`; they do not replace or redirect the game at the site root.
+## Run locally
 
-**Design note (game + dual LLM backends):** see [`PLAN_dual_backend_llm.md`](PLAN_dual_backend_llm.md) (additive WebLLM + Transformers.js plan).
-
-### After you push — GitHub Pages still behaves the same
-
-Large folders (**`webllm-assets/`**, **`transformersjs-assets/`**) stay in **`.gitignore`**, so they are **not** on `github.io`. Both compare pages probe for local files under **`https://<user>.github.io/<repo>/…`**; those paths **404**, so models load from the **network** (Hugging Face / CDN for WebLLM, **Hub** for Transformers.js). Optional **`transformersjs-assets/_catalog.json`** also 404s — the UI uses the built-in catalog only. **No extra GitHub configuration** is required for this to keep working.
-
-## Open the test locally (double-click / paste path)
-
-1. In Finder, open the `TEST_webLLM` folder and double-click **`webllm-compare-test.html`**, or  
-2. In your browser’s address bar, paste a `file://` URL to that file, for example:  
-   `file:///Users/<you>/path/to/scott-adams-adventures/TEST_webLLM/webllm-compare-test.html`
-
-If modules or model downloads fail from `file://`, serve the repo folder over HTTP (see below).
-
-## Optional: tiny local HTTP server
-
-Some browsers restrict `file://` for ES modules or large fetches. From the **repository root**:
+Prefer the same threaded server as the game (parallel image + weight fetches):
 
 ```bash
 cd /path/to/scott-adams-adventures
-python3 -m http.server 8765
+npm run serve-game
 ```
 
-Then open: `http://localhost:8765/TEST_webLLM/webllm-compare-test.html`  
-or: `http://localhost:8765/TEST_webLLM/transformersjs-compare-test.html`
+Then open:
 
-## Local weights (parallel folders at repo root)
+- `http://localhost:8090/TEST_webLLM/transformersjs-compare-test.html`
+- `http://localhost:8090/TEST_webLLM/webllm-compare-test.html`
 
-| Page | Site-root folder | One-shot setup (from repo root) |
-|------|------------------|----------------------------------|
-| **WebLLM** compare + game LLM | **`webllm-assets/`** | **`npm run setup-offline-llm`** — wasm + MLC weights (large). See root **`README.md`**. |
-| **Transformers.js** compare | **`transformersjs-assets/`** | **`npm run setup-transformersjs-assets`** — **`config.json`** per catalog repo (layout + **`_catalog.json`** refresh; page stays **Catalog** until ONNX shards exist). **`npm run setup-transformersjs-assets-full`** — full ONNX for **every** compare-page repo (including **Gemma 4 E2B and E4B**), same **`hf` / `huggingface-cli` / `hf_download.py`** fallback as WebLLM setup. |
+`file://` may work for a quick look; use HTTP if modules or downloads fail.
 
-| Page | What’s inside the folder |
-|------|---------------------------|
-| **WebLLM** | MLC prebuilt layout (`…/resolve/main/…`, wasm in **`webllm-assets/wasm/`**). |
-| **Transformers.js** | Hugging Face repo tree: **`transformersjs-assets/org/repo/config.json`**, tokenizer files, **`onnx/`**, etc. Same layout you get from **`hf download onnx-community/Qwen2.5-0.5B-Instruct`**. |
+**`npm install` is not required** to open the HTML pages (libraries load from CDN). It **is** required for the asset setup scripts below.
 
-### Transformers.js: create `transformersjs-assets/` (like `webllm-assets/`)
+## Local weights (repo root)
 
-From the **repository root** (needs network once):
+Offline WebLLM for the **game** is documented in the root [`README.md`](../README.md) (`npm run setup-offline-llm` → **`webllm-assets/`**).
+
+| Page | Folder | Setup (from repo root) |
+|------|--------|-------------------------|
+| WebLLM compare (+ game LLM) | **`webllm-assets/`** | **`npm run setup-offline-llm`** — see root README |
+| Transformers.js compare | **`transformersjs-assets/`** | **`npm run setup-transformersjs-assets`** — `config.json` per catalog id (UI stays Hub until ONNX exists). **`npm run setup-transformersjs-assets-full`** — full ONNX for every compare-page repo (large; includes Gemma 4 E2B + E4B) |
+
+**Local (fast)** on the Transformers.js page needs **`config.json`** plus at least one weight under **`onnx/`** (e.g. `model_q4.onnx` or `decoder_model_merged_q4.onnx`). Otherwise that id loads from the Hub.
+
+Symlink alternative: point repo-root **`transformersjs-assets`** at an existing Hub-layout tree (`org/repo/config.json`, …).
+
+Optional extra dropdown ids after adding folders:
 
 ```bash
-cd /path/to/scott-adams-adventures
-npm run setup-transformersjs-assets
+node scripts/refresh-onnx-transformers-catalog.mjs
+# or: ONNX_MODELS_DIR=/path/to/parent/of/org node scripts/refresh-onnx-transformers-catalog.mjs
 ```
 
-This writes **`config.json`** for **each** id in **`MODEL_CATALOG`** (see **`transformersjs-compare-test.html`**, kept in sync with **`scripts/setup-transformersjs-assets.mjs`**). The compare page treats a model as **Local (fast)** only when **`config.json`** and at least one weight file under **`onnx/`** (for example **`model_q4.onnx`** or **`decoder_model_merged_q4.onnx`**) are present; otherwise it loads from the **Hub**. For full offline trees for **all** catalog repos (Qwen/Llama/Gemma 4 E2B **and** E4B, etc.), run:
+Writes **`_catalog.json`**; the page fetches **`transformersjs-assets/_catalog.json`**.
 
-```bash
-npm run setup-transformersjs-assets-full
-```
-
-Re-run if a download stalls — HF tools **resume** partial folders. The **full** script also runs **`refresh-onnx-transformers-catalog.mjs`** so **`transformersjs-assets/_catalog.json`** stays in sync. If both npm scripts fail, install **`pip install huggingface_hub`** and run **`hf download`** for each catalog **`repo_id`** with **`--local-dir transformersjs-assets/<repo_id>`** (same paths the full npm script uses).
-
-### Manual layout (symlink instead of repo-root folder)
-
-If ONNX files already live elsewhere, symlink **`transformersjs-assets`** at the repo root to that directory (same idea as copying **`webllm-assets/`** between machines). Layout must include paths like **`onnx-community/Qwen2.5-0.5B-Instruct/config.json`**.
-
-### Optional: `_catalog.json` for extra models
-
-After adding more **`org/repo/`** trees under **`transformersjs-assets/`**, refresh the dropdown:
-
-```bash
-ONNX_MODELS_DIR=/path/to/parent/of/org node scripts/refresh-onnx-transformers-catalog.mjs
-```
-
-If **`~/ONNX_Models`** is that parent folder: `node scripts/refresh-onnx-transformers-catalog.mjs`  
-The script writes **`_catalog.json`** there; the page loads **`transformersjs-assets/_catalog.json`** via your server.
-
-**`.gitignore`** lists **`webllm-assets/`**, **`transformersjs-assets/`**, and legacy **`ONNX_Models`** so large weights are not committed.
-
-## Requirements
-
-- A **Chromium-class** browser with **WebGPU** enabled (e.g. current Chrome or Edge).
-- **First run** downloads model weights from Hugging Face (can take a while); later runs use cache.
-
-### Transformers.js compare page — do I need `npm install`?
-
-**No** — not to **run** the page in Chrome. [`transformersjs-compare-test.html`](transformersjs-compare-test.html) loads **`@huggingface/transformers`** from **jsDelivr** in a `<script type="module">` line (pinned version, e.g. `4.0.1` — Gemma 4 needs **≥ 4.0.1**; `4.0.0` misses `Gemma4ForConditionalGeneration` in `MODEL_TYPE_MAPPING`). The browser fetches that library when you open the page (needs **network** the first time, then cache). **`npm install`** in this repo is for **setup scripts** (`setup-offline-llm`, `setup-transformersjs-assets`, etc.), not for the compare HTML itself.
-
-## What the page does
-
-- Loads WebLLM from the jsDelivr CDN (`@mlc-ai/web-llm`).
-- The dropdown lists only models in the bundled WebLLM **0.2.82** `prebuiltAppConfig` (newer HF-only repos stay out until npm ships them).
-- For **any** catalog `model_id`, the page probes `…/webllm-assets/<model_id>/resolve/main/mlc-chat-config.json` at the **site root**. If it 404s, weights load from **Hugging Face / CDN**. The UI shows **LOCAL** vs **NET**.
-- Defaults to two **official prebuilt** `model_id` strings (**`Qwen3-0.6B-q4f16_1-MLC`** vs **`Qwen3-1.7B-q4f16_1-MLC`**, same pair as **`npm run setup-offline-llm`**). Pick any other prebuilt id from the dropdown when MLC ships more.
-- **Model A / B** are `<select>` dropdowns (not datalist): entries found under **`webllm-assets/`** are listed first in **bold** under “Local (fast)”; the rest appear under “Catalog”.
-- Optional **system** and **user** messages; load A / B or run the same prompt on **both** (sequentially). Streaming is optional.
-
-**Transformers.js** compare (`transformersjs-compare-test.html`): loads `@huggingface/transformers` from jsDelivr. For each catalog `model_id`, it probes **`transformersjs-assets/<model_id>/config.json`** and a representative **`onnx/*.onnx`** file at the **site root**. If either is missing, weights load from the **Hub**. Defaults: **Gemma 4** **`onnx-community/gemma-4-E2B-it-ONNX`** vs **`onnx-community/gemma-4-E4B-it-ONNX`**. **Model A / B** dropdowns list fully mirrored trees first in **bold** under “Local (fast) — transformersjs-assets”. **Run prompt on A** and **Run prompt on B** run the current system/user message on one side only.
-
-## Relationship to the adventure game
-
-- **No integration** with the game engine or `index.html`.
-- Intended for trying in-browser LLMs (e.g. future **function calling** for commands); anything beyond this test page is a separate step.
-
-## Files
+## Files in this folder
 
 | File | Purpose |
 |------|--------|
-| `webllm-compare-test.html` | Standalone test UI (single HTML file + module script). |
-| `transformersjs-compare-test.html` | Same compare UI using **Transformers.js** (`@huggingface/transformers`) and ONNX Runtime Web. Local weights under repo-root **`transformersjs-assets/`** (parallel to **`webllm-assets/`** for WebLLM). |
-| `../scripts/setup-transformersjs-assets.mjs` | Creates **`transformersjs-assets/`** — default: **`config.json`** for every compare-page catalog repo; **`--full`**: full ONNX for all of them via `npm run setup-transformersjs-assets-full`. **Local (fast)** needs ONNX files on disk, not config alone. |
-| `../scripts/refresh-onnx-transformers-catalog.mjs` | Writes `_catalog.json` into your local ONNX tree so every downloaded `org/name` folder appears in the Transformers.js compare dropdown. |
-| `README.md` | This file. |
+| `transformersjs-compare-test.html` | ONNX / Transformers.js A–B compare |
+| `webllm-compare-test.html` | WebLLM A–B compare |
+| `PLAN_dual_backend_llm.md` | Design note for optional future game integration |
+| `README.md` | This file |
+
+Setup scripts live under **`../scripts/`** (`setup-transformersjs-assets.mjs`, `refresh-onnx-transformers-catalog.mjs`, `setup-offline-llm.mjs`, …).

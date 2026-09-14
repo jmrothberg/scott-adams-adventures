@@ -1,6 +1,6 @@
 # Scott Adams Adventures - Browser Edition
 
-Play the classic Scott Adams text adventures (1978-84) right in your browser — all 17 original games plus a mini-sampler. Created by Jonathan Rothberg using the original Scott Adams game data files. The originals ran as Level II BASIC programs on the TRS-80, reading from separate data files. This project replaces the BASIC interpreter with HTML and JavaScript, and adds AI-generated room images to bring the classic text descriptions to life.
+Play the classic Scott Adams text adventures (1978-84) right in your browser — all **17** games in the dropdown (Adventureland through Questprobe). Created by Jonathan Rothberg using the original Scott Adams game data files. The originals ran as Level II BASIC programs on the TRS-80, reading from separate data files. This project replaces the BASIC interpreter with HTML and JavaScript, and adds AI-generated room images to bring the classic text descriptions to life.
 
 ## Play Now
 
@@ -23,14 +23,14 @@ Then open **http://localhost:8090** in your browser. This starts **`scripts/serv
 
 ### Browser LLM tests (`TEST_webLLM/`, not the game)
 
+Standalone two-model compare pages (not wired into `index.html`). Links and local ONNX setup live in [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
+
 | Page | GitHub Pages |
 |------|----------------|
-| **Transformers.js** — ONNX / Hub two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-compare-test.html) |
-| **WebLLM** — MLC / WebGPU two-model compare | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-compare-test.html) |
+| **Transformers.js** — ONNX / Hub | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/transformersjs-compare-test.html) |
+| **WebLLM** — MLC / WebGPU | [**Run →**](https://jmrothberg.github.io/scott-adams-adventures/TEST_webLLM/webllm-compare-test.html) |
 
-More detail: [`TEST_webLLM/README.md`](TEST_webLLM/README.md).
-
-**Local Transformers.js weights (optional, like `webllm-assets/` for WebLLM):** from repo root run **`npm run setup-transformersjs-assets`** (downloads **`config.json`** per catalog repo into **`transformersjs-assets/`**) or **`npm run setup-transformersjs-assets-full`** for full ONNX trees for **every** id listed on the compare page (very large).
+Quick local ONNX mirror (optional): **`npm run setup-transformersjs-assets`** or **`npm run setup-transformersjs-assets-full`** — details in that README.
 
 ### Offline LLM Enhanced (Qwen3, no internet)
 
@@ -47,7 +47,9 @@ This runs `scripts/setup-offline-llm.mjs`, which:
 
 - Installs `node_modules` and copies **`vendor/mlc-ai-web-llm/`** (so `llm-enhanced.js` does not need the CDN for the library).
 - Downloads the two **WebGPU `.wasm`** files into **`webllm-assets/wasm/`**.
-- Downloads both dropdown models (**Qwen3 1.7B** and **0.6B** MLC builds) into **`webllm-assets/<model_id>/`** using **`hf download`** (or **`huggingface-cli download`**), otherwise **`python3 scripts/hf_download.py`** (requires `pip install huggingface_hub`).
+- Downloads the two **default offline** models (**Qwen3 1.7B** and **0.6B** MLC builds) into **`webllm-assets/<model_id>/`** using **`hf download`** (or **`huggingface-cli download`**), otherwise **`python3 scripts/hf_download.py`** (requires `pip install huggingface_hub`).
+
+The in-game dropdown also lists **Qwen3 8B (heavy)**; that model is **not** fetched by `setup-offline-llm` (needs a separate HF download + matching wasm, and substantial WebGPU RAM). Prefer 0.6B / 1.7B for typical machines.
 
 Re-run the same command if a download **times out** — Hugging Face tools **resume** partial folders.
 
@@ -101,7 +103,7 @@ Use this on a **second computer** so **LLM Enhanced** works **without** relying 
 - **Type commands** in the input field and press Enter
 - Commands are **VERB NOUN** (e.g., `GET AXE`, `GO NORTH`, `OPEN DOOR`)
 - Only the first 3–5 letters matter (depends on the game), so `INV` = `INVENTORY`, `GET AXE` = `GET AXEMAN`
-- In **LLM Enhanced** mode you can type natural language ("pick up the axe") and the model translates it
+- In **LLM Enhanced** mode (Chrome/Edge + WebGPU; serve with **`npm run serve-game`**, not `file://`) you can type natural language ("pick up the axe") and the model translates it
 
 ### Shortcuts
 
@@ -112,7 +114,7 @@ Use this on a **second computer** so **LLM Enhanced** works **without** relying 
 | `SCORE` | Show how many treasures you have stored (out of 100) |
 | `L` | Look around (redisplay room) |
 | `MAP` | Show an auto-generated map of rooms you have visited |
-| `HINT` | Get a progressive hint for the current room (uses hint JSON files) |
+| `HINT` | Progressive hint for the current room (`hints/<game>/…`; see [`LLM_HINT_INTEGRATION.md`](LLM_HINT_INTEGRATION.md)) |
 | `HELP` | In-game help (when the game data provides one) |
 | `SAVE` | Save game (to browser localStorage) |
 | `LOAD` | Restore saved game |
